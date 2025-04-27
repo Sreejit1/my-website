@@ -1,5 +1,50 @@
 ---
-title: "About"
+title: "About Me"
+format: html
 ---
 
-About this site
+# About Me
+
+Hello! 👋 I am **Sreejit R.K**, a passionate web developer and CMS specialist with **4 years 11 months** of professional IT experience.
+
+I specialize in building responsive, fast, and user-friendly websites using:
+- HTML, CSS, JavaScript, jQuery
+- WordPress (CMS Development)
+- Shopify (eCommerce Development)
+- Adobe Photoshop, Illustrator (for web design)
+
+---
+
+## 🎓 Academic Background
+
+- **Master of Computer Applications (MCA)**  
+  Srinivasan Engineering College, Perambalur (Anna University) — 83.8%
+- **Bachelor of Computer Applications (BCA)**  
+  Srinivasan College of Arts and Science, Perambalur — 76.5%
+
+---
+
+## 💼 Work Experience
+
+- **Inovawe Systems & Solutions Pvt Ltd, Chennai** (2013-2015)
+- **echoVME Digital Marketing Services, Chennai** (2015-2018)
+- **Cognizant Technology Solutions Pvt Ltd** (July–Oct 2018)
+- **Saintgits College of Applied Sciences, Kottayam** (2019–Present)
+
+---
+
+## 🔥 Projects Handled
+
+
+- [Saintgits College Website](https://saintgits.org)
+
+
+---
+
+## 📫 Contact
+
+- Email: [sreejitkrisnan@gmail.com](mailto:sreejitkrisnan@gmail.com)
+- Mobile: +91-8778698506
+- Languages Known: Malayalam, Hindi, English, Nepali, Tamil
+
+---
