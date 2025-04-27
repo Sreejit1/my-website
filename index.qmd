@@ -1,0 +1,9 @@
+---
+title: "My Personal Website"
+format: html
+---
+
+# Welcome to my site!
+
+Hi, I am **Sreejit**.  
+This is my first Quarto website.
