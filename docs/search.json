@@ -1,38 +1,149 @@
 [
   {
+    "objectID": "unit1.html",
+    "href": "unit1.html",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Propositional Logic\nPredicate Logic\nPropositional Equivalences\nNormal Forms\nPredicates and Quantifiers\nNested Quantifiers\nRules of Inference\n\n\n\n\n\nSet Operations\nRepresentation and Properties of Relations\nEquivalence Relations\nPartially Ordering\n\n\n\n\n\nBasics of Counting\nPigeonhole Principle\nPermutations and Combinations\nInclusion-Exclusion Principle\nMathematical Induction\nProbability\nBayes’ Theorem\n\n\n\n\n\nGroups\nSubgroups\nSemi Groups\nProduct and Quotients of Algebraic Structures\nIsomorphism\nHomomorphism\nAutomorphism\nRings\nIntegral Domains\nFields\nApplications of Group Theory\n\n\n\n\n\nSimple Graph\nMultigraph\nWeighted Graph\nPaths and Circuits\nShortest Paths\nEulerian Paths and Circuits\nHamiltonian Paths and Circuits\nPlanar Graph\nGraph Coloring\nBipartite Graphs\nTrees and Rooted Trees\nPrefix Codes\nTree Traversals\nSpanning Trees and Cut-Sets\n\n\n\n\n\nBoolean Functions\nRepresentation of Boolean Functions\nSimplification of Boolean Functions\n\n\n\n\n\nLinear Programming\nSimplex Method\nDual Simplex Method\nSensitivity Analysis\nInteger Programming\nTransportation Model\nAssignment Model\nPERT-CPM",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
+    "objectID": "unit1.html#mathematical-logic",
+    "href": "unit1.html#mathematical-logic",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Propositional Logic\nPredicate Logic\nPropositional Equivalences\nNormal Forms\nPredicates and Quantifiers\nNested Quantifiers\nRules of Inference",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
+    "objectID": "unit1.html#sets-and-relations",
+    "href": "unit1.html#sets-and-relations",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Set Operations\nRepresentation and Properties of Relations\nEquivalence Relations\nPartially Ordering",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
+    "objectID": "unit1.html#counting-mathematical-induction-and-discrete-probability",
+    "href": "unit1.html#counting-mathematical-induction-and-discrete-probability",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Basics of Counting\nPigeonhole Principle\nPermutations and Combinations\nInclusion-Exclusion Principle\nMathematical Induction\nProbability\nBayes’ Theorem",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
+    "objectID": "unit1.html#group-theory",
+    "href": "unit1.html#group-theory",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Groups\nSubgroups\nSemi Groups\nProduct and Quotients of Algebraic Structures\nIsomorphism\nHomomorphism\nAutomorphism\nRings\nIntegral Domains\nFields\nApplications of Group Theory",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
+    "objectID": "unit1.html#graph-theory",
+    "href": "unit1.html#graph-theory",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Simple Graph\nMultigraph\nWeighted Graph\nPaths and Circuits\nShortest Paths\nEulerian Paths and Circuits\nHamiltonian Paths and Circuits\nPlanar Graph\nGraph Coloring\nBipartite Graphs\nTrees and Rooted Trees\nPrefix Codes\nTree Traversals\nSpanning Trees and Cut-Sets",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
+    "objectID": "unit1.html#boolean-algebra",
+    "href": "unit1.html#boolean-algebra",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Boolean Functions\nRepresentation of Boolean Functions\nSimplification of Boolean Functions",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
+    "objectID": "unit1.html#optimization",
+    "href": "unit1.html#optimization",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Linear Programming\nSimplex Method\nDual Simplex Method\nSensitivity Analysis\nInteger Programming\nTransportation Model\nAssignment Model\nPERT-CPM",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Unit 1 – Discrete Structures and Optimization"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Sreejit R. K",
     "section": "",
-    "text": "Sreejit R.K\n\n\n\nHello! 👋 I am Sreejit R.K, a passionate web developer with 5 years of experience.\nI specialize in HTML, CSS, JavaScript, WordPress, Shopify, and responsive website design.\n\n\n\nFrontend: HTML, CSS, JavaScript, jQuery\nCMS: WordPress, Shopify\nBackend: Laravel Framework (PHP)\nDatabases: MySQL\nTools: Git, GitHub, Adobe Photoshop, Illustrator\n\n\n\n\n\nSaintgits College Website\n\n\n\n\nEmail: sreejitkrisnan@gmail.com\nPhone: +91-8778698506\n\n\n\nDownload PDF"
+    "text": "Sreejit R.K\n\n\n\nHello! 👋 I am Sreejit R.K, a passionate web developer with 5 years of experience.\nI specialize in HTML, CSS, JavaScript, WordPress, Shopify, and responsive website design.\n\n\n\nFrontend: HTML, CSS, JavaScript, jQuery\nCMS: WordPress, Shopify\nBackend: Laravel Framework (PHP)\nDatabases: MySQL\nTools: Git, GitHub, Adobe Photoshop, Illustrator\n\n\n\n\n\nSaintgits College Website\n\n\n\n\nEmail: sreejitkrisnan@gmail.com\nPhone: +91-8778698506\n\n\n\nDownload PDF",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#technical-skills",
     "href": "index.html#technical-skills",
     "title": "Sreejit R. K",
     "section": "",
-    "text": "Frontend: HTML, CSS, JavaScript, jQuery\nCMS: WordPress, Shopify\nBackend: Laravel Framework (PHP)\nDatabases: MySQL\nTools: Git, GitHub, Adobe Photoshop, Illustrator"
+    "text": "Frontend: HTML, CSS, JavaScript, jQuery\nCMS: WordPress, Shopify\nBackend: Laravel Framework (PHP)\nDatabases: MySQL\nTools: Git, GitHub, Adobe Photoshop, Illustrator",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#projects",
     "href": "index.html#projects",
     "title": "Sreejit R. K",
     "section": "",
-    "text": "Saintgits College Website"
+    "text": "Saintgits College Website",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#contact",
     "href": "index.html#contact",
     "title": "Sreejit R. K",
     "section": "",
-    "text": "Email: sreejitkrisnan@gmail.com\nPhone: +91-8778698506"
+    "text": "Email: sreejitkrisnan@gmail.com\nPhone: +91-8778698506",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#ugc-net-paper-1-syllabus",
     "href": "index.html#ugc-net-paper-1-syllabus",
     "title": "Sreejit R. K",
     "section": "",
-    "text": "Download PDF"
+    "text": "Download PDF",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "about.html",
