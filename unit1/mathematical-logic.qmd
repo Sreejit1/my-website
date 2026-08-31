@@ -1,0 +1,448 @@
+---
+title: "Mathematical Logic"
+description: "Mathematical Logic – UGC NET Computer Science"
+toc: true
+---
+
+# Mathematical Logic
+
+Mathematical Logic is an important part of **Unit 1 – Discrete Structures and Optimization**.
+
+The UGC NET syllabus includes:
+
+- Propositional Logic
+- Predicate Logic
+- Propositional Equivalences
+- Normal Forms
+- Predicates and Quantifiers
+- Nested Quantifiers
+- Rules of Inference
+
+---
+
+## 1. Propositions
+
+A **proposition** is a declarative statement that is either **True (T)** or **False (F)**, but not both.
+
+### Examples
+
+| Statement | Proposition? |
+|---|---|
+| 2 + 3 = 5 | Yes |
+| Delhi is the capital of India. | Yes |
+| 10 > 20 | Yes |
+| What is your name? | No |
+| Close the door. | No |
+
+### Important Point
+
+A proposition must have a definite truth value.
+
+---
+
+## 2. Logical Connectives
+
+The basic logical connectives are:
+
+| Symbol | Name |
+|---|---|
+| ¬p | NOT |
+| p ∧ q | AND |
+| p ∨ q | OR |
+| p → q | Implication |
+| p ↔ q | Biconditional |
+
+---
+
+## 3. NOT
+
+The negation of `p` is written as:
+
+$$
+\neg p
+$$
+
+Truth table:
+
+| p | ¬p |
+|---|---|
+| T | F |
+| F | T |
+
+---
+
+## 4. AND
+
+The conjunction of `p` and `q` is:
+
+$$
+p \land q
+$$
+
+It is **True only when both p and q are True**.
+
+| p | q | p ∧ q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | F |
+
+### Remember
+
+**AND → Both must be True.**
+
+---
+
+## 5. OR
+
+The disjunction of `p` and `q` is:
+
+$$
+p \lor q
+$$
+
+It is False only when both propositions are False.
+
+| p | q | p ∨ q |
+|---|---|---|
+| T | T | T |
+| T | F | T |
+| F | T | T |
+| F | F | F |
+
+### Remember
+
+**OR → At least one must be True.**
+
+---
+
+## 6. Implication
+
+Implication is written as:
+
+$$
+p \rightarrow q
+$$
+
+Read as:
+
+> If p, then q.
+
+Truth table:
+
+| p | q | p → q |
+|---|---|---|
+| T | T | T |
+| T | F | **F** |
+| F | T | T |
+| F | F | T |
+
+### ⭐ UGC NET Important
+
+An implication is **False only when:**
+
+$$
+p=T,\quad q=F
+$$
+
+Remember:
+
+> **T → F = F**
+
+All other cases are True.
+
+---
+
+## 7. Biconditional
+
+Biconditional is written as:
+
+$$
+p \leftrightarrow q
+$$
+
+It is True when both propositions have the **same truth value**.
+
+| p | q | p ↔ q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | T |
+
+---
+
+# 8. Tautology
+
+A proposition that is **always True** is called a tautology.
+
+Example:
+
+$$
+p \lor \neg p
+$$
+
+Truth table:
+
+| p | ¬p | p ∨ ¬p |
+|---|---|---|
+| T | F | T |
+| F | T | T |
+
+Therefore:
+
+$$
+p \lor \neg p
+$$
+
+is a **tautology**.
+
+---
+
+# 9. Contradiction
+
+A proposition that is **always False** is called a contradiction.
+
+Example:
+
+$$
+p \land \neg p
+$$
+
+| p | ¬p | p ∧ ¬p |
+|---|---|---|
+| T | F | F |
+| F | T | F |
+
+Therefore:
+
+$$
+p \land \neg p
+$$
+
+is a **contradiction**.
+
+---
+
+# 10. Contingency
+
+A proposition that is **sometimes True and sometimes False** is called a contingency.
+
+Example:
+
+$$
+p \land q
+$$
+
+Its truth value depends on the values of `p` and `q`.
+
+---
+
+# 11. Important Logical Equivalences
+
+Some important equivalences for UGC NET are:
+
+### Double Negation
+
+$$
+\neg(\neg p) \equiv p
+$$
+
+### De Morgan's Laws
+
+$$
+\neg(p \land q) \equiv \neg p \lor \neg q
+$$
+
+$$
+\neg(p \lor q) \equiv \neg p \land \neg q
+$$
+
+### Implication
+
+$$
+p \rightarrow q \equiv \neg p \lor q
+$$
+
+### Biconditional
+
+$$
+p \leftrightarrow q
+\equiv
+(p \rightarrow q) \land (q \rightarrow p)
+$$
+
+---
+
+# 12. Converse, Inverse and Contrapositive
+
+For:
+
+$$
+p \rightarrow q
+$$
+
+### Converse
+
+$$
+q \rightarrow p
+$$
+
+### Inverse
+
+$$
+\neg p \rightarrow \neg q
+$$
+
+### Contrapositive
+
+$$
+\neg q \rightarrow \neg p
+$$
+
+### ⭐ Important
+
+The original statement is logically equivalent to its contrapositive:
+
+$$
+p \rightarrow q
+\equiv
+\neg q \rightarrow \neg p
+$$
+
+But the converse is **not necessarily equivalent** to the original statement.
+
+---
+
+# 13. Normal Forms
+
+Two important normal forms are:
+
+### Conjunctive Normal Form (CNF)
+
+CNF is an **AND of OR terms**.
+
+Example:
+
+$$
+(p \lor q) \land (r \lor s)
+$$
+
+Structure:
+
+**AND of ORs**
+
+---
+
+### Disjunctive Normal Form (DNF)
+
+DNF is an **OR of AND terms**.
+
+Example:
+
+$$
+(p \land q) \lor (r \land s)
+$$
+
+Structure:
+
+**OR of ANDs**
+
+---
+
+# 14. Quick Memory Trick
+
+### CNF
+
+**C = Conjunction**
+
+So:
+
+**CNF → AND of ORs**
+
+### DNF
+
+**D = Disjunction**
+
+So:
+
+**DNF → OR of ANDs**
+
+---
+
+# 15. Practice Question
+
+### Question 1
+
+Which of the following is a tautology?
+
+**A)** $p \land \neg p$
+
+**B)** $p \lor \neg p$
+
+**C)** $p \land q$
+
+**D)** $p \rightarrow \neg p$
+
+### Answer
+
+**B) $p \lor \neg p$**
+
+Because it is always True.
+
+---
+
+# 16. Practice Question
+
+### Question 2
+
+The implication:
+
+$$
+p \rightarrow q
+$$
+
+is false when:
+
+**A)** p = T, q = T
+
+**B)** p = T, q = F
+
+**C)** p = F, q = T
+
+**D)** p = F, q = F
+
+### Answer
+
+**B) p = T, q = F**
+
+---
+
+# 🎯 UGC NET Quick Revision
+
+| Concept | Remember |
+|---|---|
+| NOT | Reverses truth value |
+| AND | Both True |
+| OR | At least one True |
+| Implication | False only for T → F |
+| Biconditional | Same truth values |
+| Tautology | Always True |
+| Contradiction | Always False |
+| CNF | AND of ORs |
+| DNF | OR of ANDs |
+| Contrapositive | ¬q → ¬p |
+
+---
+
+# 📝 Your Task
+
+Before moving ahead, try these:
+
+1. Construct the truth table for `(p → q) ∧ r`.
+2. Determine whether `p ∨ ¬p` is a tautology.
+3. Determine whether `p ∧ ¬p` is a contradiction.
+4. Find the converse, inverse and contrapositive of `p → q`.
+5. Convert a logical expression into CNF.
+6. Convert a logical expression into DNF.

@@ -10,5 +10,8 @@
   },
   "unit1.qmd": {
     "unit1.html": "315afccc"
+  },
+  "unit1/mathematical-logic.qmd": {
+    "mathematical-logic.html": "dddc47bd"
   }
 }
