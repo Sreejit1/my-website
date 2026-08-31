@@ -3,13 +3,60 @@ project:
   output-dir: docs
 
 website:
-  title: "my-website"
+  title: "UGC NET Computer Science"
+
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - teaching.qmd
+      - href: about.qmd
+        text: About
+
+  sidebar:
+    style: "docked"
+    contents:
+      - href: index.qmd
+        text: Home
+
+      - section: "Unit 1 – Discrete Structures and Optimization"
+        contents:
+          - unit1.qmd
+
+      - section: "Unit 2 – Computer System Architecture"
+        contents:
+          - unit2.qmd
+
+      - section: "Unit 3 – Programming Languages and Computer Graphics"
+        contents:
+          - unit3.qmd
+
+      - section: "Unit 4 – Database Management Systems"
+        contents:
+          - unit4.qmd
+
+      - section: "Unit 5 – System Software and Operating System"
+        contents:
+          - unit5.qmd
+
+      - section: "Unit 6 – Software Engineering"
+        contents:
+          - unit6.qmd
+
+      - section: "Unit 7 – Data Structures and Algorithms"
+        contents:
+          - unit7.qmd
+
+      - section: "Unit 8 – Theory of Computation and Compilers"
+        contents:
+          - unit8.qmd
+
+      - section: "Unit 9 – Data Communication and Computer Networks"
+        contents:
+          - unit9.qmd
+
+      - section: "Unit 10 – Artificial Intelligence"
+        contents:
+          - unit10.qmd
 
 format:
   html:
@@ -18,6 +65,3 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-
