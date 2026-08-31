@@ -9,54 +9,110 @@ website:
     left:
       - href: index.qmd
         text: Home
+
       - href: about.qmd
         text: About
 
   sidebar:
     style: "docked"
     contents:
+
       - href: index.qmd
         text: Home
 
+      # =========================
+      # UNIT 1
+      # =========================
+
       - section: "Unit 1 – Discrete Structures and Optimization"
         contents:
-          - unit1.qmd
+
+          - href: unit1.qmd
+            text: Overview
+
+          - href: mathematical-logic.qmd
+            text: Mathematical Logic
+
+      # =========================
+      # UNIT 2
+      # =========================
 
       - section: "Unit 2 – Computer System Architecture"
         contents:
-          - unit2.qmd
+          - href: unit2.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 3
+      # =========================
 
       - section: "Unit 3 – Programming Languages and Computer Graphics"
         contents:
-          - unit3.qmd
+          - href: unit3.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 4
+      # =========================
 
       - section: "Unit 4 – Database Management Systems"
         contents:
-          - unit4.qmd
+          - href: unit4.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 5
+      # =========================
 
       - section: "Unit 5 – System Software and Operating System"
         contents:
-          - unit5.qmd
+          - href: unit5.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 6
+      # =========================
 
       - section: "Unit 6 – Software Engineering"
         contents:
-          - unit6.qmd
+          - href: unit6.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 7
+      # =========================
 
       - section: "Unit 7 – Data Structures and Algorithms"
         contents:
-          - unit7.qmd
+          - href: unit7.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 8
+      # =========================
 
       - section: "Unit 8 – Theory of Computation and Compilers"
         contents:
-          - unit8.qmd
+          - href: unit8.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 9
+      # =========================
 
       - section: "Unit 9 – Data Communication and Computer Networks"
         contents:
-          - unit9.qmd
+          - href: unit9.qmd
+            text: Overview
+
+      # =========================
+      # UNIT 10
+      # =========================
 
       - section: "Unit 10 – Artificial Intelligence"
         contents:
-          - unit10.qmd
+          - href: unit10.qmd
+            text: Overview
 
 format:
   html:
