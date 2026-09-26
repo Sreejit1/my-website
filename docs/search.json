@@ -1,0 +1,528 @@
+[
+  {
+    "objectID": "unit1.html",
+    "href": "unit1.html",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Propositional Logic\nPredicate Logic\nPropositional Equivalences\nNormal Forms\nPredicates and Quantifiers\nNested Quantifiers\nRules of Inference\n\n\n\n\n\nSet Operations\nRepresentation and Properties of Relations\nEquivalence Relations\nPartially Ordering\n\n\n\n\n\nBasics of Counting\nPigeonhole Principle\nPermutations and Combinations\nInclusion-Exclusion Principle\nMathematical Induction\nProbability\nBayes’ Theorem\n\n\n\n\n\nGroups\nSubgroups\nSemi Groups\nProduct and Quotients of Algebraic Structures\nIsomorphism\nHomomorphism\nAutomorphism\nRings\nIntegral Domains\nFields\nApplications of Group Theory\n\n\n\n\n\nSimple Graph\nMultigraph\nWeighted Graph\nPaths and Circuits\nShortest Paths\nEulerian Paths and Circuits\nHamiltonian Paths and Circuits\nPlanar Graph\nGraph Coloring\nBipartite Graphs\nTrees and Rooted Trees\nPrefix Codes\nTree Traversals\nSpanning Trees and Cut-Sets\n\n\n\n\n\nBoolean Functions\nRepresentation of Boolean Functions\nSimplification of Boolean Functions\n\n\n\n\n\nLinear Programming\nSimplex Method\nDual Simplex Method\nSensitivity Analysis\nInteger Programming\nTransportation Model\nAssignment Model\nPERT-CPM",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "unit1.html#mathematical-logic",
+    "href": "unit1.html#mathematical-logic",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Propositional Logic\nPredicate Logic\nPropositional Equivalences\nNormal Forms\nPredicates and Quantifiers\nNested Quantifiers\nRules of Inference",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "unit1.html#sets-and-relations",
+    "href": "unit1.html#sets-and-relations",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Set Operations\nRepresentation and Properties of Relations\nEquivalence Relations\nPartially Ordering",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "unit1.html#counting-mathematical-induction-and-discrete-probability",
+    "href": "unit1.html#counting-mathematical-induction-and-discrete-probability",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Basics of Counting\nPigeonhole Principle\nPermutations and Combinations\nInclusion-Exclusion Principle\nMathematical Induction\nProbability\nBayes’ Theorem",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "unit1.html#group-theory",
+    "href": "unit1.html#group-theory",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Groups\nSubgroups\nSemi Groups\nProduct and Quotients of Algebraic Structures\nIsomorphism\nHomomorphism\nAutomorphism\nRings\nIntegral Domains\nFields\nApplications of Group Theory",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "unit1.html#graph-theory",
+    "href": "unit1.html#graph-theory",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Simple Graph\nMultigraph\nWeighted Graph\nPaths and Circuits\nShortest Paths\nEulerian Paths and Circuits\nHamiltonian Paths and Circuits\nPlanar Graph\nGraph Coloring\nBipartite Graphs\nTrees and Rooted Trees\nPrefix Codes\nTree Traversals\nSpanning Trees and Cut-Sets",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "unit1.html#boolean-algebra",
+    "href": "unit1.html#boolean-algebra",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Boolean Functions\nRepresentation of Boolean Functions\nSimplification of Boolean Functions",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "unit1.html#optimization",
+    "href": "unit1.html#optimization",
+    "title": "Unit 1 – Discrete Structures and Optimization",
+    "section": "",
+    "text": "Linear Programming\nSimplex Method\nDual Simplex Method\nSensitivity Analysis\nInteger Programming\nTransportation Model\nAssignment Model\nPERT-CPM",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching Aptitude",
+    "section": "",
+    "text": "Teaching means helping students learn knowledge, skills and values effectively."
+  },
+  {
+    "objectID": "teaching.html#what-is-teaching",
+    "href": "teaching.html#what-is-teaching",
+    "title": "Teaching Aptitude",
+    "section": "",
+    "text": "Teaching means helping students learn knowledge, skills and values effectively."
+  },
+  {
+    "objectID": "teaching.html#memory-level",
+    "href": "teaching.html#memory-level",
+    "title": "Teaching Aptitude",
+    "section": "1. Memory Level",
+    "text": "1. Memory Level\nStudents memorize facts and definitions.\n\nExample\nLearning formulas and dates."
+  },
+  {
+    "objectID": "teaching.html#understanding-level",
+    "href": "teaching.html#understanding-level",
+    "title": "Teaching Aptitude",
+    "section": "2. Understanding Level",
+    "text": "2. Understanding Level\nStudents understand concepts and meanings.\n\nExample\nUnderstanding why seasons change."
+  },
+  {
+    "objectID": "teaching.html#reflective-level",
+    "href": "teaching.html#reflective-level",
+    "title": "Teaching Aptitude",
+    "section": "3. Reflective Level",
+    "text": "3. Reflective Level\nStudents think deeply and solve problems independently.\n\nExample\nFinding solutions to pollution problems."
+  },
+  {
+    "objectID": "teaching.html#adolescent-learners",
+    "href": "teaching.html#adolescent-learners",
+    "title": "Teaching Aptitude",
+    "section": "Adolescent Learners",
+    "text": "Adolescent Learners\n\nEmotional changes\nCurious thinking\nSocial interaction"
+  },
+  {
+    "objectID": "teaching.html#adult-learners",
+    "href": "teaching.html#adult-learners",
+    "title": "Teaching Aptitude",
+    "section": "Adult Learners",
+    "text": "Adult Learners\n\nPractical learning\nGoal-oriented\nSelf-learning"
+  },
+  {
+    "objectID": "teaching.html#teacher-related-factors",
+    "href": "teaching.html#teacher-related-factors",
+    "title": "Teaching Aptitude",
+    "section": "Teacher Related Factors",
+    "text": "Teacher Related Factors\n\nSubject knowledge\nCommunication skill\nTeaching method"
+  },
+  {
+    "objectID": "teaching.html#learner-related-factors",
+    "href": "teaching.html#learner-related-factors",
+    "title": "Teaching Aptitude",
+    "section": "Learner Related Factors",
+    "text": "Learner Related Factors\n\nInterest\nAttention\nLearning ability"
+  },
+  {
+    "objectID": "teaching.html#institutional-factors",
+    "href": "teaching.html#institutional-factors",
+    "title": "Teaching Aptitude",
+    "section": "Institutional Factors",
+    "text": "Institutional Factors\n\nClassroom\nLibrary\nTechnology\nLearning environment"
+  },
+  {
+    "objectID": "teaching.html#teacher-centred-method",
+    "href": "teaching.html#teacher-centred-method",
+    "title": "Teaching Aptitude",
+    "section": "Teacher-Centred Method",
+    "text": "Teacher-Centred Method\nTeacher explains, students listen."
+  },
+  {
+    "objectID": "teaching.html#learner-centred-method",
+    "href": "teaching.html#learner-centred-method",
+    "title": "Teaching Aptitude",
+    "section": "Learner-Centred Method",
+    "text": "Learner-Centred Method\nStudents actively participate."
+  },
+  {
+    "objectID": "teaching.html#traditional",
+    "href": "teaching.html#traditional",
+    "title": "Teaching Aptitude",
+    "section": "Traditional",
+    "text": "Traditional\n\nBlackboard\nChalk\nBooks"
+  },
+  {
+    "objectID": "teaching.html#modern",
+    "href": "teaching.html#modern",
+    "title": "Teaching Aptitude",
+    "section": "Modern",
+    "text": "Modern\n\nSmart boards\nProjectors"
+  },
+  {
+    "objectID": "teaching.html#ict-based",
+    "href": "teaching.html#ict-based",
+    "title": "Teaching Aptitude",
+    "section": "ICT Based",
+    "text": "ICT Based\n\nInternet\nOnline classes\nEducational apps"
+  },
+  {
+    "objectID": "teaching.html#types-of-evaluation",
+    "href": "teaching.html#types-of-evaluation",
+    "title": "Teaching Aptitude",
+    "section": "Types of Evaluation",
+    "text": "Types of Evaluation\n\nFormative Evaluation\nDone during learning.\n\n\nSummative Evaluation\nDone at the end of learning."
+  },
+  {
+    "objectID": "paper1.html",
+    "href": "paper1.html",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "",
+    "text": "Teaching: Concept, Objectives, Levels of teaching (Memory, Understanding and Reflective), Characteristics and basic requirements.\nLearner’s characteristics: Characteristics of adolescent and adult learners (Academic, Social, Emotional and Cognitive), Individual differences.\nFactors affecting teaching related to: Teacher, Learner, Support material, Instructional facilities, Learning environment and Institution.\nMethods of teaching in Institutions of higher learning: Teacher centred vs. Learner centred methods; Off-line vs. On-line methods (Swayam, Swayamprabha, MOOCs etc.).\nTeaching Support System: Traditional, Modern and ICT based.\nEvaluation Systems: Elements and Types of evaluation, Evaluation in Choice Based Credit System in Higher education, Computer based testing, Innovations in evaluation systems."
+  },
+  {
+    "objectID": "paper1.html#unit-i-teaching-aptitude",
+    "href": "paper1.html#unit-i-teaching-aptitude",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "",
+    "text": "Teaching: Concept, Objectives, Levels of teaching (Memory, Understanding and Reflective), Characteristics and basic requirements.\nLearner’s characteristics: Characteristics of adolescent and adult learners (Academic, Social, Emotional and Cognitive), Individual differences.\nFactors affecting teaching related to: Teacher, Learner, Support material, Instructional facilities, Learning environment and Institution.\nMethods of teaching in Institutions of higher learning: Teacher centred vs. Learner centred methods; Off-line vs. On-line methods (Swayam, Swayamprabha, MOOCs etc.).\nTeaching Support System: Traditional, Modern and ICT based.\nEvaluation Systems: Elements and Types of evaluation, Evaluation in Choice Based Credit System in Higher education, Computer based testing, Innovations in evaluation systems."
+  },
+  {
+    "objectID": "paper1.html#unit-ii-research-aptitude",
+    "href": "paper1.html#unit-ii-research-aptitude",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-II Research Aptitude",
+    "text": "Unit-II Research Aptitude\nResearch: Meaning, Types, and Characteristics, Positivism and Postpositivistic approach to research.\nMethods of Research: Experimental, Descriptive, Historical, Qualitative and Quantitative methods.\nSteps of Research.\nThesis and Article writing: Format and styles of referencing.\nApplication of ICT in research.\nResearch ethics."
+  },
+  {
+    "objectID": "paper1.html#unit-iii-comprehension",
+    "href": "paper1.html#unit-iii-comprehension",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-III Comprehension",
+    "text": "Unit-III Comprehension\nA passage of text be given. Questions be asked from the passage to be answered."
+  },
+  {
+    "objectID": "paper1.html#unit-iv-communication",
+    "href": "paper1.html#unit-iv-communication",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-IV Communication",
+    "text": "Unit-IV Communication\nCommunication: Meaning, types and characteristics of communication.\nEffective communication: Verbal and Non-verbal, Inter-Cultural and group communications, Classroom communication.\nBarriers to effective communication.\nMass-Media and Society."
+  },
+  {
+    "objectID": "paper1.html#unit-v-mathematical-reasoning-and-aptitude",
+    "href": "paper1.html#unit-v-mathematical-reasoning-and-aptitude",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-V Mathematical Reasoning and Aptitude",
+    "text": "Unit-V Mathematical Reasoning and Aptitude\nTypes of reasoning.\nNumber series, Letter series, Codes and Relationships.\nMathematical Aptitude: Fraction, Time & Distance, Ratio, Proportion and Percentage, Profit and Loss, Interest and Discounting, Averages etc."
+  },
+  {
+    "objectID": "paper1.html#unit-vi-logical-reasoning",
+    "href": "paper1.html#unit-vi-logical-reasoning",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-VI Logical Reasoning",
+    "text": "Unit-VI Logical Reasoning\nUnderstanding the structure of arguments: Argument forms, structure of categorical propositions, Mood and Figure, Formal and Informal fallacies, Uses of language, Connotations and denotations of terms, Classical square of opposition.\nEvaluating and distinguishing deductive and inductive reasoning.\nAnalogies.\nVenn diagram: Simple and multiple use for establishing validity of arguments.\nIndian Logic: Means of knowledge.\nPramanas:\n\nPratyaksha (Perception)\nAnumana (Inference)\nUpamana (Comparison)\nShabda (Verbal testimony)\nArthapatti (Implication)\nAnupalabddhi (Non-apprehension)\n\nStructure and kinds of Anumana (inference), Vyapti (invariable relation), Hetvabhasas (fallacies of inference)."
+  },
+  {
+    "objectID": "paper1.html#unit-vii-data-interpretation",
+    "href": "paper1.html#unit-vii-data-interpretation",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-VII Data Interpretation",
+    "text": "Unit-VII Data Interpretation\nSources, acquisition and classification of Data.\nQuantitative and Qualitative Data.\nGraphical representation: Bar-chart, Histograms, Pie-chart, Table-chart and Line-chart and mapping of Data.\nData Interpretation.\nData and Governance."
+  },
+  {
+    "objectID": "paper1.html#unit-viii-information-and-communication-technology-ict",
+    "href": "paper1.html#unit-viii-information-and-communication-technology-ict",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-VIII Information and Communication Technology (ICT)",
+    "text": "Unit-VIII Information and Communication Technology (ICT)\nICT: General abbreviations and terminology.\nBasics of Internet, Intranet, E-mail, Audio and Video-conferencing.\nDigital initiatives in higher education.\nICT and Governance."
+  },
+  {
+    "objectID": "paper1.html#unit-ix-people-development-and-environment",
+    "href": "paper1.html#unit-ix-people-development-and-environment",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-IX People, Development and Environment",
+    "text": "Unit-IX People, Development and Environment\nDevelopment and environment: Millennium development and Sustainable development goals.\nHuman and environment interaction: Anthropogenic activities and their impacts on environment.\nEnvironmental issues: Local, Regional and Global; Air pollution, Water pollution, Soil pollution, Noise pollution, Waste (solid, liquid, biomedical, hazardous, electronic), Climate change and its Socio-Economic and Political dimensions.\nImpacts of pollutants on human health.\nNatural and energy resources: Solar, Wind, Soil, Hydro, Geothermal, Biomass, Nuclear and Forests.\nNatural hazards and disasters: Mitigation strategies.\nEnvironmental Protection Act (1986), National Action Plan on Climate Change, International agreements/efforts: Montreal Protocol, Rio Summit, Convention on Biodiversity, Kyoto Protocol, Paris Agreement, International Solar Alliance."
+  },
+  {
+    "objectID": "paper1.html#unit-x-higher-education-system",
+    "href": "paper1.html#unit-x-higher-education-system",
+    "title": "UGC NET Paper 1 Syllabus",
+    "section": "Unit-X Higher Education System",
+    "text": "Unit-X Higher Education System\nInstitutions of higher learning and education in ancient India.\nEvolution of higher learning and research in Post Independence India.\nOriental, Conventional and Non-conventional learning programmes in India.\nProfessional, Technical and Skill Based education.\nValue education and environmental education.\nPolicies, Governance, and Administration."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Hello! 👋 I am Sreejit R.K, a passionate web developer and CMS specialist with 4 years 11 months of professional IT experience.\nI specialize in building responsive, fast, and user-friendly websites using:\n\nHTML, CSS, JavaScript, jQuery\nWordPress (CMS Development)\nShopify (eCommerce Development)\nAdobe Photoshop, Illustrator (for web design)\n\n\n\n\n\nMaster of Computer Applications (MCA)\nSrinivasan Engineering College, Perambalur (Anna University) — 83.8%\nBachelor of Computer Applications (BCA)\nSrinivasan College of Arts and Science, Perambalur — 76.5%\n\n\n\n\n\n\nInovawe Systems & Solutions Pvt Ltd, Chennai — 2013–2015\nechoVME Digital Marketing Services, Chennai — 2015–2018\nCognizant Technology Solutions Pvt Ltd — July–October 2018\nSaintgits College of Applied Sciences, Kottayam — 2019–Present\n\n\n\n\n\n\nEmail: sreejitkrisnan@gmail.com\nLanguages Known: Malayalam, Hindi, English, Nepali, Tamil"
+  },
+  {
+    "objectID": "about.html#academic-background",
+    "href": "about.html#academic-background",
+    "title": "About Me",
+    "section": "",
+    "text": "Master of Computer Applications (MCA)\nSrinivasan Engineering College, Perambalur (Anna University) — 83.8%\nBachelor of Computer Applications (BCA)\nSrinivasan College of Arts and Science, Perambalur — 76.5%"
+  },
+  {
+    "objectID": "about.html#work-experience",
+    "href": "about.html#work-experience",
+    "title": "About Me",
+    "section": "",
+    "text": "Inovawe Systems & Solutions Pvt Ltd, Chennai — 2013–2015\nechoVME Digital Marketing Services, Chennai — 2015–2018\nCognizant Technology Solutions Pvt Ltd — July–October 2018\nSaintgits College of Applied Sciences, Kottayam — 2019–Present"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About Me",
+    "section": "",
+    "text": "Email: sreejitkrisnan@gmail.com\nLanguages Known: Malayalam, Hindi, English, Nepali, Tamil"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sreejit R. K",
+    "section": "",
+    "text": "Sreejit R.K\n\n\n\nHello! 👋 I am Sreejit R.K, a passionate web developer with 5 years of experience.\nI specialize in HTML, CSS, JavaScript, WordPress, Shopify, and responsive website design.\n\n\n\nFrontend: HTML, CSS, JavaScript, jQuery\nCMS: WordPress, Shopify\nBackend: Laravel Framework (PHP)\nDatabases: MySQL\nTools: Git, GitHub, Adobe Photoshop, Illustrator\n\n\n\n\nEmail: sreejitkrisnan@gmail.com\n\n\n\nDownload PDF",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#technical-skills",
+    "href": "index.html#technical-skills",
+    "title": "Sreejit R. K",
+    "section": "",
+    "text": "Frontend: HTML, CSS, JavaScript, jQuery\nCMS: WordPress, Shopify\nBackend: Laravel Framework (PHP)\nDatabases: MySQL\nTools: Git, GitHub, Adobe Photoshop, Illustrator",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Sreejit R. K",
+    "section": "",
+    "text": "Email: sreejitkrisnan@gmail.com",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#ugc-net-paper-1-syllabus",
+    "href": "index.html#ugc-net-paper-1-syllabus",
+    "title": "Sreejit R. K",
+    "section": "",
+    "text": "Download PDF",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "paper2.html",
+    "href": "paper2.html",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "",
+    "text": "Mathematical Logic: Propositional and Predicate Logic, Propositional Equivalences, Normal Forms, Predicates and Quantifiers, Nested Quantifiers, Rules of Inference.\nSets and Relations: Set Operations, Representation and Properties of Relations, Equivalence Relations, Partially Ordering.\nCounting, Mathematical Induction and Discrete Probability: Basics of Counting, Pigeonhole Principle, Permutations and Combinations, Inclusion-Exclusion Principle, Mathematical Induction, Probability, Bayes’ Theorem.\nGroup Theory: Groups, Subgroups, Semi Groups, Product and Quotients of Algebraic Structures, Isomorphism, Homomorphism, Automorphism, Rings, Integral Domains, Fields, Applications of Group Theory.\nGraph Theory: Simple Graph, Multigraph, Weighted Graph, Paths and Circuits, Shortest Paths in Weighted Graphs, Eulerian Paths and Circuits, Hamiltonian Paths and Circuits, Planner graph, Graph Coloring, Bipartite Graphs, Trees and Rooted Trees, Prefix Codes, Tree Traversals, Spanning Trees and Cut-Sets.\nBoolean Algebra: Boolean Functions and its Representation, Simplifications of Boolean Functions.\nOptimization: Linear Programming - Mathematical Model, Graphical Solution, Simplex and Dual Simplex Method, Sensitive Analysis; Integer Programming, Transportation and Assignment Models, PERT-CPM: Diagram Representation, Critical Path Calculations, Resource Levelling, Cost Consideration in Project Scheduling."
+  },
+  {
+    "objectID": "paper2.html#unit---1-discrete-structures-and-optimization",
+    "href": "paper2.html#unit---1-discrete-structures-and-optimization",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "",
+    "text": "Mathematical Logic: Propositional and Predicate Logic, Propositional Equivalences, Normal Forms, Predicates and Quantifiers, Nested Quantifiers, Rules of Inference.\nSets and Relations: Set Operations, Representation and Properties of Relations, Equivalence Relations, Partially Ordering.\nCounting, Mathematical Induction and Discrete Probability: Basics of Counting, Pigeonhole Principle, Permutations and Combinations, Inclusion-Exclusion Principle, Mathematical Induction, Probability, Bayes’ Theorem.\nGroup Theory: Groups, Subgroups, Semi Groups, Product and Quotients of Algebraic Structures, Isomorphism, Homomorphism, Automorphism, Rings, Integral Domains, Fields, Applications of Group Theory.\nGraph Theory: Simple Graph, Multigraph, Weighted Graph, Paths and Circuits, Shortest Paths in Weighted Graphs, Eulerian Paths and Circuits, Hamiltonian Paths and Circuits, Planner graph, Graph Coloring, Bipartite Graphs, Trees and Rooted Trees, Prefix Codes, Tree Traversals, Spanning Trees and Cut-Sets.\nBoolean Algebra: Boolean Functions and its Representation, Simplifications of Boolean Functions.\nOptimization: Linear Programming - Mathematical Model, Graphical Solution, Simplex and Dual Simplex Method, Sensitive Analysis; Integer Programming, Transportation and Assignment Models, PERT-CPM: Diagram Representation, Critical Path Calculations, Resource Levelling, Cost Consideration in Project Scheduling."
+  },
+  {
+    "objectID": "paper2.html#unit---2-computer-system-architecture",
+    "href": "paper2.html#unit---2-computer-system-architecture",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit - 2 : Computer System Architecture",
+    "text": "Unit - 2 : Computer System Architecture\nDigital Logic Circuits and Components: Digital Computers, Logic Gates, Boolean Algebra, Map Simplifications, Combinational Circuits, Flip-Flops, Sequential Circuits, Integrated Circuits, Decoders, Multiplexers, Registers and Counters, Memory Unit.\nData Representation: Data Types, Number Systems and Conversion, Complements, Fixed Point Representation, Floating Point Representation, Error Detection Codes, Computer Arithmetic - Addition, Subtraction, Multiplication and Division Algorithms.\nRegister Transfer and Microoperations: Register Transfer Language, Bus and Memory Transfers, Arithmetic, Logic and Shift Microoperations.\nBasic Computer Organization and Design: Stored Program Organization and Instruction Codes, Computer Registers, Computer Instructions, Timing and Control, Instruction Cycle, Memory-Reference Instructions, Input-Output, Interrupt.\nProgramming the Basic Computer: Machine Language, Assembly Language, Assembler, Program Loops, Subroutines, Input-Output Programming.\nMicroprogrammed Control: Control Memory, Address Sequencing, Design of Control Unit.\nCentral Processing Unit: General Register Organization, Stack Organization, Instruction Formats, Addressing Modes, RISC Computer, CISC Computer.\nPipeline and Vector Processing: Parallel Processing, Pipelining, Arithmetic Pipeline, Instruction Pipeline, Vector Processing Array Processors.\nInput-Output Organization: Peripheral Devices, Input-Output Interface, Asynchronous Data Transfer, Modes of Transfer, Priority Interrupt, DMA, Serial Communication.\nMemory Hierarchy: Main Memory, Auxillary Memory, Associative Memory, Cache Memory, Virtual Memory, Memory Management Hardware.\nMultiprocessors: Characteristics of Multiprocessors, Interconnection Structures, Interprocessor Arbitration, Interprocessor Communication and Synchronization, Cache Coherence, Multicore Processors."
+  },
+  {
+    "objectID": "paper2.html#unit---3-programming-languages-and-computer-graphics",
+    "href": "paper2.html#unit---3-programming-languages-and-computer-graphics",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit - 3 : Programming Languages and Computer Graphics",
+    "text": "Unit - 3 : Programming Languages and Computer Graphics\nLanguage Design and Translation Issues: Programming Language Concepts, Paradigms and Models, Programming Environments, Virtual Computers and Binding Times, Programming Language Syntax, Stages in Translation, Formal Transition Models.\nElementary Data Types: Properties of Types and Objects; Scalar and Composite Data Types.\nProgramming in C: Tokens, Identifiers, Data Types, Sequence Control, Subprogram Control, Arrays, Structures, Union, String, Pointers, Functions, File Handling, Command Line Arguments, Preprocessors.\nObject Oriented Programming: Class, Object, Instantiation, Inheritance, Encapsulation, Abstract Class, Polymorphism.\nProgramming in C++: Tokens, Identifiers, Variables and Constants; Data types, Operators, Control statements, Functions Parameter Passing, Virtual Functions, Class and Objects; Constructors and Destructors; Overloading, Inheritance, Templates, Exception and Event Handling; Streams and Files; Multifile Programs.\nWeb Programming: HTML, DHTML, XML, Scripting, Java, Servlets, Applets.\nComputer Graphics: Video-Display Devices, Raster-Scan and Random-Scan Systems; Graphics Monitors, Input Devices, Points and Lines; Line Drawing Algorithms, Mid-Point Circle and Ellipse Algorithms; Scan Line Polygon Fill Algorithm, Boundary-Fill and Flood-Fill.\n2-D Geometrical Transforms and Viewing: Translation, Scaling, Rotation, Reflection and Shear Transformations; Matrix Representations and Homogeneous Coordinates; Composite Transforms, Transformations Between Coordinate Systems, Viewing Pipeline, Viewing Coordinate Reference Frame, Window to View-Port Coordinate Transformation, Viewing Functions, Line and Polygon Clipping Algorithms.\n3-D Object Representation, Geometric Transformations and Viewing: Polygon Surfaces, Quadric Surfaces, Spline Representation, Bezier and B-Spline Curves; Bezier and B-Spline Surfaces; Illumination Models, Polygon Rendering Methods, Viewing Pipeline and Coordinates; General Projection Transforms and Clipping."
+  },
+  {
+    "objectID": "paper2.html#unit-4-database-management-systems",
+    "href": "paper2.html#unit-4-database-management-systems",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit – 4 : Database Management Systems",
+    "text": "Unit – 4 : Database Management Systems\nDatabase System Concepts and Architecture: Data Models, Schemas, and Instances; Three-Schema Architecture and Data Independence; Database Languages and Interfaces; Centralized and Client/Server Architectures for DBMS.\nData Modeling: Entity-Relationship Diagram, Relational Model - Constraints, Languages, Design, and Programming, Relational Database Schemas, Update Operations and Dealing with Constraint Violations; Relational Algebra and Relational Calculus; Codd Rules.\nSQL: Data Definition and Data Types; Constraints, Queries, Insert, Delete, and Update Statements; Views, Stored Procedures and Functions; Database Triggers, SQL Injection.\nNormalization for Relational Databases: Functional Dependencies and Normalization; Algorithms for Query Processing and Optimization; Transaction Processing, Concurrency Control Techniques, Database Recovery Techniques, Object and Object-Relational Databases; Database Security and Authorization.\nEnhanced Data Models: Temporal Database Concepts, Multimedia Databases, Deductive Databases, XML and Internet Databases; Mobile Databases, Geographic Information Systems, Genome Data Management, Distributed Databases and Client-Server Architectures.\nData Warehousing and Data Mining: Data Modeling for Data Warehouses, Concept Hierarchy, OLAP and OLTP; Association Rules, Classification, Clustering, Regression.\nMachine Learning and Related Topics: Support Vector Machine, K-Nearest Neighbour, Hidden Markov Model, Summarization, Dependency Modeling, Link Analysis, Sequencing Analysis, Social Network Analysis.\nBig Data Systems: Big Data Characteristics, Types of Big Data, Big Data Architecture, Introduction to Map-Reduce and Hadoop; Distributed File System, HDFS.\nNOSQL: NOSQL and Query Optimization; Different NOSQL Products, Querying and Managing NOSQL; Indexing and Ordering Data Sets; NOSQL in Cloud."
+  },
+  {
+    "objectID": "paper2.html#unit-5-system-software-and-operating-system",
+    "href": "paper2.html#unit-5-system-software-and-operating-system",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit – 5 : System Software and Operating System",
+    "text": "Unit – 5 : System Software and Operating System\nSystem Software: Machine, Assembly and High-Level Languages; Compilers and Interpreters; Loading, Linking and Relocation; Macros, Debuggers.\nBasics of Operating Systems: Operating System Structure, Operations and Services; System Calls, Operating-System Design and Implementation; System Boot.\nProcess Management: Process Scheduling and Operations; Interprocess Communication, Communication in Client–Server Systems, Process Synchronization, Critical-Section Problem, Peterson’s Solution, Semaphores, Synchronization.\nThreads: Multicore Programming, Multithreading Models, Thread Libraries, Implicit Threading, Threading Issues.\nCPU Scheduling: Scheduling Criteria and Algorithms; Thread Scheduling, Multiple-Processor Scheduling, Real-Time CPU Scheduling.\nDeadlocks: Deadlock Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Avoidance and Detection; Recovery from Deadlock.\nMemory Management: Contiguous Memory Allocation, Swapping, Paging, Segmentation, Demand Paging, Page Replacement, Allocation of Frames, Thrashing, Memory-Mapped Files.\nStorage Management: Mass-Storage Structure, Disk Structure, Scheduling and Management, RAID Structure.\nFile and Input/Output Systems: Access Methods, Directory and Disk Structure; File-System Mounting, File Sharing, File-System Structure and Implementation; Directory Implementation, Allocation Methods, Free-Space Management, Efficiency and Performance; Recovery, I/O Hardware, Application I/O Interface, Kernel I/O Subsystem, Transforming I/O Requests to Hardware Operations.\nSecurity: Protection, Access Matrix, Access Control, Revocation of Access Rights, Program Threats, System and Network Threats; Cryptography as a Security Tool, User Authentication, Implementing Security Defenses.\nVirtual Machines: Types of Virtual Machines and Implementations; Virtualization.\nLinux Operating Systems: Design Principles, Kernel Modules, Process Management, Scheduling, Memory Management, File Systems, Input and Output; Interprocess Communication, Network Structure.\nWindows Operating Systems: Design Principles, System Components, Terminal Services and Fast User Switching; File System, Networking.\nDistributed Systems: Types of Network based Operating Systems, Network Structure, Communication Structure and Protocols; Robustness, Design Issues, Distributed File Systems."
+  },
+  {
+    "objectID": "paper2.html#unit-6-software-engineering",
+    "href": "paper2.html#unit-6-software-engineering",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit – 6 : Software Engineering",
+    "text": "Unit – 6 : Software Engineering\nSoftware Process Models: Software Process, Generic Process Model – Framework Activity, Task Set and Process Patterns; Process Lifecycle, Prescriptive Process Models, Project Management, Component Based Development, Aspect-Oriented Software Development, Formal Methods, Agile Process Models – Extreme Programming (XP), Adaptive Software Development, Scrum, Dynamic System Development Model, Feature Driven Development, Crystal, Web Engineering.\nSoftware Requirements: Functional and Non-Functional Requirements; Eliciting Requirements, Developing Use Cases, Requirement Analysis and Modelling; Requirements Review, Software Requirement and Specification (SRS) Document.\nSoftware Design: Abstraction, Architecture, Patterns, Separation of Concerns, Modularity, Information Hiding, Functional Independence, Cohesion and Coupling; Object-Oriented Design, Data Design, Architectural Design, User Interface Design, Component Level Design.\nSoftware Quality: McCall’s Quality Factors, ISO 9126 Quality Factors, Quality Control, Quality Assurance, Risk Management, Risk Mitigation, Monitoring and Management (RMMM); Software Reliability.\nEstimation and Scheduling of Software Projects: Software Sizing, LOC and FP based Estimations; Estimating Cost and Effort; Estimation Models, Constructive Cost Model (COCOMO), Project Scheduling and Staffing; Time-line Charts.\nSoftware Testing: Verification and Validation; Error, Fault, Bug and Failure; Unit and Integration Testing; White-box and Black-box Testing; Basis Path Testing, Control Structure Testing, Deriving Test Cases, Alpha and Beta Testing; Regression Testing, Performance Testing, Stress Testing.\nSoftware Configuration Management: Change Control and Version Control; Software Reuse, Software Re-engineering, Reverse Engineering."
+  },
+  {
+    "objectID": "paper2.html#unit-7-data-structures-and-algorithms",
+    "href": "paper2.html#unit-7-data-structures-and-algorithms",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit – 7 : Data Structures and Algorithms",
+    "text": "Unit – 7 : Data Structures and Algorithms\nData Structures: Arrays and their Applications; Sparse Matrix, Stacks, Queues, Priority Queues, Linked Lists, Trees, Forest, Binary Tree, Threaded Binary Tree, Binary Search Tree, AVL Tree, B Tree, B+ Tree, B* Tree, Data Structure for Sets, Graphs, Sorting and Searching Algorithms; Hashing.\nPerformance Analysis of Algorithms and Recurrences: Time and Space Complexities; Asymptotic Notation, Recurrence Relations.\nDesign Techniques: Divide and Conquer; Dynamic Programming, Greedy Algorithms, Backtracking, Branch and Bound.\nLower Bound Theory: Comparison Trees, Lower Bounds through Reductions.\nGraph Algorithms: Breadth-First Search, Depth-First Search, Shortest Paths, Maximum Flow, Minimum Spanning Trees.\nComplexity Theory: P and NP Class Problems; NP-completeness and Reducibility.\nSelected Topics: Number Theoretic Algorithms, Polynomial Arithmetic, Fast Fourier Transform, String Matching Algorithms.\nAdvanced Algorithms: Parallel Algorithms for Sorting, Searching and Merging, Approximation Algorithms, Randomized Algorithms."
+  },
+  {
+    "objectID": "paper2.html#unit-8-theory-of-computation-and-compilers",
+    "href": "paper2.html#unit-8-theory-of-computation-and-compilers",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit – 8 : Theory of Computation and Compilers",
+    "text": "Unit – 8 : Theory of Computation and Compilers\n\nTheory of Computation\nTheory of Computation: Formal Language, Non-Computational Problems, Diagonal Argument, Russels’s Paradox.\nRegular Language Models: Deterministic Finite Automaton (DFA), Non-Deterministic Finite Automaton (NDFA), Equivalence of DFA and NDFA, Regular Languages, Regular Grammars, Regular Expressions, Properties of Regular Language, Pumping Lemma, Non-Regular Languages, Lexical Analysis.\nContext Free Language: Pushdown Automaton (PDA), Non-Deterministic Pushdown Automaton (NPDA), Context Free Grammar, Chomsky Normal Form, Greibach Normal Form, Ambiguity, Parse Tree Representation of Derivation Trees, Equivalence of PDA’s and Context Free Grammars; Properties of Context Free Language.\nTuring Machines (TM): Standard Turing Machine and its Variations; Universal Turing Machines, Models of Computation and Church-Turing Thesis; Recursive and Recursively-Enumerable Languages; Context-Sensitive Languages, Unrestricted Grammars, Chomsky Hierarchy of Languages, Construction of TM for Simple Problems.\nUnsolvable Problems and Computational Complexity: Unsolvable Problem, Halting Problem, Post Correspondence Problem, Unsolvable Problems for Context-Free Languages, Measuring and Classifying Complexity, Tractable and Intractable Problems.\n\n\nCompilers\nSyntax Analysis: Associativity, Precedence, Grammar Transformations, Top Down Parsing, Recursive Descent Predictive Parsing, LL(1) Parsing, Bottom up Parsing, LR Parser, LALR(1) Parser.\nSemantic Analysis: Attribute Grammar, Syntax Directed Definitions, Inherited and Synthesized Attributes; Dependency Graph, Evaluation Order, S-attributed and L-attributed Definitions; Type-Checking.\nRun Time System: Storage Organization, Activation Tree, Activation Record, Stack Allocation of Activation Records, Parameter Passing Mechanisms, Symbol Table.\nIntermediate Code Generation: Intermediate Representations, Translation of Declarations, Assignments, Control Flow, Boolean Expressions and Procedure Calls.\nCode Generation and Code Optimization: Control-flow, Data-flow Analysis, Local Optimization, Global Optimization, Loop Optimization, Peep-Hole Optimization, Instruction Scheduling."
+  },
+  {
+    "objectID": "paper2.html#unit-9-data-communication-and-computer-networks",
+    "href": "paper2.html#unit-9-data-communication-and-computer-networks",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit – 9 : Data Communication and Computer Networks",
+    "text": "Unit – 9 : Data Communication and Computer Networks\nData Communication: Components of a Data Communication System, Simplex, Half-Duplex and Duplex Modes of Communication; Analog and Digital Signals; Noiseless and Noisy Channels; Bandwidth, Throughput and Latency; Digital and Analog Transmission; Data Encoding and Modulation Techniques; Broadband and Baseband Transmission; Multiplexing, Transmission Media, Transmission Errors, Error Handling Mechanisms.\nComputer Networks: Network Topologies, Local Area Networks, Metropolitan Area Networks, Wide Area Network, Wireless Networks, Internet.\nNetwork Models: Layered Architecture, OSI Reference Model and its Protocols; TCP/IP Protocol Suite, Physical, Logical, Port and Specific Addresses; Switching Techniques.\nFunctions of OSI and TCP/IP Layers: Framing, Error Detection and Correction; Flow and Error Control; Sliding Window Protocol, HDLC, Multiple Access – CSMA/CD, CSMA/CA, Reservation, Polling, Token Passing, FDMA, CDMA, TDMA, Network Devices, Backbone Networks, Virtual LANs.\nInternet Protocols: IPv4 Structure and Address Space; Classful and Classless Addressing; Datagram, Fragmentation and Checksum; IPv6 Packet Format, Mapping Logical to Physical Address (ARP), Direct and Indirect Network Layer Delivery; Routing Algorithms, TCP, UDP and SCTP Protocols; Flow Control, Error Control and Congestion Control in TCP and SCTP.\nWorld Wide Web (WWW): Uniform Resource Locator (URL), Domain Name Service (DNS), Resolution - Mapping Names to Addresses and Addresses to Names; Electronic Mail Architecture, SMTP, POP and IMAP; TELNET and FTP.\nNetwork Security: Malwares, Cryptography and Steganography; Secret-Key Algorithms, Public-Key Algorithms, Digital Signature, Virtual Private Networks, Firewalls.\nMobile Technology: GSM and CDMA; Services and Architecture of GSM and Mobile Computing; Middleware and Gateway for Mobile Computing; Mobile IP and Mobile Communication Protocol; Communication Satellites, Wireless Networks and Topologies; Cellular Topology, Mobile Adhoc Networks, Wireless Transmission and Wireless LANs; Wireless Geolocation Systems, GPRS and SMS.\nCloud Computing and IoT: SaaS, PaaS, IaaS, Public and Private Cloud; Virtualization, Virtual Server, Cloud Storage, Database Storage, Resource Management, Service Level Agreement, Basics of IoT."
+  },
+  {
+    "objectID": "paper2.html#unit-10-artificial-intelligence-ai",
+    "href": "paper2.html#unit-10-artificial-intelligence-ai",
+    "title": "UGC NET Paper 2 – Computer Science & Applications",
+    "section": "Unit – 10 : Artificial Intelligence (AI)",
+    "text": "Unit – 10 : Artificial Intelligence (AI)\nApproaches to AI: Turing Test and Rational Agent Approaches; State Space Representation of Problems, Heuristic Search Techniques, Game Playing, Min-Max Search, Alpha Beta Cutoff Procedures.\nKnowledge Representation: Logic, Semantic Networks, Frames, Rules, Scripts, Conceptual Dependency and Ontologies; Expert Systems, Handling Uncertainty in Knowledge.\nPlanning: Components of a Planning System, Linear and Non Linear Planning; Goal Stack Planning, Hierarchical Planning, STRIPS, Partial Order Planning.\nNatural Language Processing: Grammar and Language; Parsing Techniques, Semantic Analysis and Pragmatics.\nMulti Agent Systems: Agents and Objects; Agents and Expert Systems; Generic Structure of Multiagent System, Semantic Web, Agent Communication, Knowledge Sharing using Ontologies, Agent Development Tools.\nFuzzy Sets: Notion of Fuzziness, Membership Functions, Fuzzification and Defuzzification; Operations on Fuzzy Sets, Fuzzy Functions and Linguistic Variables; Fuzzy Relations, Fuzzy Rules and Fuzzy Inference; Fuzzy Control System and Fuzzy Rule Based Systems.\nGenetic Algorithms (GA): Encoding Strategies, Genetic Operators, Fitness Functions and GA Cycle; Problem Solving using GA.\nArtificial Neural Networks (ANN): Supervised, Unsupervised and Reinforcement Learning; Single Perceptron, Multi Layer Perceptron, Self Organizing Maps, Hopfield Network."
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html",
+    "href": "unit1/mathematical-logic.html",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "Mathematical Logic is an important part of Unit 1 – Discrete Structures and Optimization.\nThe UGC NET syllabus includes:\n\nPropositional Logic\nPredicate Logic\nPropositional Equivalences\nNormal Forms\nPredicates and Quantifiers\nNested Quantifiers\nRules of Inference\n\n\n\n\nA proposition is a declarative statement that is either True (T) or False (F), but not both.\n\n\n\n\n\nStatement\nProposition?\n\n\n\n\n2 + 3 = 5\nYes\n\n\nDelhi is the capital of India.\nYes\n\n\n10 &gt; 20\nYes\n\n\nWhat is your name?\nNo\n\n\nClose the door.\nNo\n\n\n\n\n\n\nA proposition must have a definite truth value.\n\n\n\n\n\nThe basic logical connectives are:\n\n\n\nSymbol\nName\n\n\n\n\n¬p\nNOT\n\n\np ∧ q\nAND\n\n\np ∨ q\nOR\n\n\np → q\nImplication\n\n\np ↔︎ q\nBiconditional\n\n\n\n\n\n\n\nThe negation of p is written as:\n\\[\n\\neg p\n\\]\nTruth table:\n\n\n\np\n¬p\n\n\n\n\nT\nF\n\n\nF\nT\n\n\n\n\n\n\n\nThe conjunction of p and q is:\n\\[\np \\land q\n\\]\nIt is True only when both p and q are True.\n\n\n\np\nq\np ∧ q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nF\n\n\nF\nT\nF\n\n\nF\nF\nF\n\n\n\n\n\nAND → Both must be True.\n\n\n\n\n\nThe disjunction of p and q is:\n\\[\np \\lor q\n\\]\nIt is False only when both propositions are False.\n\n\n\np\nq\np ∨ q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nT\n\n\nF\nT\nT\n\n\nF\nF\nF\n\n\n\n\n\nOR → At least one must be True.\n\n\n\n\n\nImplication is written as:\n\\[\np \\rightarrow q\n\\]\nRead as:\n\nIf p, then q.\n\nTruth table:\n\n\n\np\nq\np → q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nF\n\n\nF\nT\nT\n\n\nF\nF\nT\n\n\n\n\n\nAn implication is False only when:\n\\[\np=T,\\quad q=F\n\\]\nRemember:\n\nT → F = F\n\nAll other cases are True.\n\n\n\n\n\nBiconditional is written as:\n\\[\np \\leftrightarrow q\n\\]\nIt is True when both propositions have the same truth value.\n\n\n\np\nq\np ↔︎ q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nF\n\n\nF\nT\nF\n\n\nF\nF\nT",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html#propositions",
+    "href": "unit1/mathematical-logic.html#propositions",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "A proposition is a declarative statement that is either True (T) or False (F), but not both.\n\n\n\n\n\nStatement\nProposition?\n\n\n\n\n2 + 3 = 5\nYes\n\n\nDelhi is the capital of India.\nYes\n\n\n10 &gt; 20\nYes\n\n\nWhat is your name?\nNo\n\n\nClose the door.\nNo\n\n\n\n\n\n\nA proposition must have a definite truth value.",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html#logical-connectives",
+    "href": "unit1/mathematical-logic.html#logical-connectives",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "The basic logical connectives are:\n\n\n\nSymbol\nName\n\n\n\n\n¬p\nNOT\n\n\np ∧ q\nAND\n\n\np ∨ q\nOR\n\n\np → q\nImplication\n\n\np ↔︎ q\nBiconditional",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html#not",
+    "href": "unit1/mathematical-logic.html#not",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "The negation of p is written as:\n\\[\n\\neg p\n\\]\nTruth table:\n\n\n\np\n¬p\n\n\n\n\nT\nF\n\n\nF\nT",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html#and",
+    "href": "unit1/mathematical-logic.html#and",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "The conjunction of p and q is:\n\\[\np \\land q\n\\]\nIt is True only when both p and q are True.\n\n\n\np\nq\np ∧ q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nF\n\n\nF\nT\nF\n\n\nF\nF\nF\n\n\n\n\n\nAND → Both must be True.",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html#or",
+    "href": "unit1/mathematical-logic.html#or",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "The disjunction of p and q is:\n\\[\np \\lor q\n\\]\nIt is False only when both propositions are False.\n\n\n\np\nq\np ∨ q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nT\n\n\nF\nT\nT\n\n\nF\nF\nF\n\n\n\n\n\nOR → At least one must be True.",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html#implication",
+    "href": "unit1/mathematical-logic.html#implication",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "Implication is written as:\n\\[\np \\rightarrow q\n\\]\nRead as:\n\nIf p, then q.\n\nTruth table:\n\n\n\np\nq\np → q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nF\n\n\nF\nT\nT\n\n\nF\nF\nT\n\n\n\n\n\nAn implication is False only when:\n\\[\np=T,\\quad q=F\n\\]\nRemember:\n\nT → F = F\n\nAll other cases are True.",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  },
+  {
+    "objectID": "unit1/mathematical-logic.html#biconditional",
+    "href": "unit1/mathematical-logic.html#biconditional",
+    "title": "Mathematical Logic",
+    "section": "",
+    "text": "Biconditional is written as:\n\\[\np \\leftrightarrow q\n\\]\nIt is True when both propositions have the same truth value.\n\n\n\np\nq\np ↔︎ q\n\n\n\n\nT\nT\nT\n\n\nT\nF\nF\n\n\nF\nT\nF\n\n\nF\nF\nT",
+    "crumbs": [
+      "Home",
+      "Unit 1 – Discrete Structures and Optimization",
+      "Mathematical Logic"
+    ]
+  }
+]

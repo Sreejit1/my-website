@@ -1,0 +1,32 @@
+---
+title: "Sreejit R. K"
+format: html
+---
+
+# Welcome to My Website
+
+<div style="text-align: center;">
+  ![Sreejit R.K](Sreejit-1.jpg){width=200px}
+</div>
+
+
+
+Hello! 👋 I am **Sreejit R.K**, a passionate web developer with 5 years of experience.  
+I specialize in **HTML, CSS, JavaScript, WordPress, Shopify**, and responsive website design.
+
+## 🛠 Technical Skills
+
+- Frontend: HTML, CSS, JavaScript, jQuery
+- CMS: WordPress, Shopify
+- Backend: Laravel Framework (PHP)
+- Databases: MySQL
+- Tools: Git, GitHub, Adobe Photoshop, Illustrator
+
+
+## Contact
+Email: [sreejitkrisnan@gmail.com](mailto:sreejitkrisnan@gmail.com)  
+
+
+## UGC NET Paper 1 Syllabus
+
+[Download PDF](pdfs/ugc-net-paper1-syllabus.pdf)

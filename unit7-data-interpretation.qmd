@@ -1,0 +1,1584 @@
+---
+title: "Unit VII – Data Interpretation"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+---
+
+
+## 1. Introduction
+
+Data Interpretation means understanding, analyzing and drawing conclusions from data.
+
+Data may be presented in the form of:
+
+- Tables
+- Bar charts
+- Histograms
+- Pie charts
+- Line charts
+- Maps
+- Graphs
+
+UGC NET questions may ask you to:
+
+- Read data
+- Compare values
+- Calculate totals
+- Find percentages
+- Identify increases and decreases
+- Calculate averages
+- Identify trends
+- Draw conclusions
+- Interpret relationships between values
+
+---
+
+# 2. What is Data?
+
+Data means a collection of facts, observations or information.
+
+### Example
+
+Suppose the number of students in five departments is:
+
+```text
+BCA     → 120
+BBA     → 100
+BCom    → 150
+MCA     → 80
+MBA     → 90
+```
+
+These numbers are data.
+
+When we analyze this data and answer questions such as:
+
+> Which department has the highest number of students?
+
+we are performing **Data Interpretation**.
+
+---
+
+# 3. Sources of Data
+
+Data can come from different sources.
+
+The two major sources are:
+
+1. Primary data
+2. Secondary data
+
+---
+
+# 4. Primary Data
+
+Primary data is data collected directly by the researcher for a specific purpose.
+
+### Examples
+
+- Surveys
+- Interviews
+- Questionnaires
+- Observations
+- Experiments
+- Measurements
+
+### Example
+
+A researcher wants to know how many hours college students spend using the internet.
+
+The researcher directly asks 500 students.
+
+The collected responses are primary data.
+
+---
+
+# 5. Secondary Data
+
+Secondary data is data that has already been collected by someone else and is used by another researcher or organization.
+
+### Examples
+
+- Government reports
+- Census reports
+- Research papers
+- Books
+- Journals
+- Websites
+- Institutional records
+- Published statistics
+
+### Example
+
+A researcher uses population data published by the government.
+
+This is secondary data.
+
+---
+
+# 6. Primary vs Secondary Data
+
+| Primary Data | Secondary Data |
+|---|---|
+| Collected directly | Already collected |
+| Collected for a specific study | Originally collected for another purpose |
+| Researcher controls collection | Researcher uses an existing source |
+| Surveys and interviews | Government reports and publications |
+| Usually more specific to the research problem | May be less specific |
+
+---
+
+# 7. Data Acquisition
+
+Data acquisition means collecting or obtaining data.
+
+The method depends on the type of study.
+
+### Common methods
+
+- Questionnaire
+- Interview
+- Observation
+- Experiment
+- Survey
+- Sensors
+- Databases
+- Government records
+- Online sources
+
+---
+
+# 8. Questionnaire
+
+A questionnaire is a set of questions used to collect information from respondents.
+
+### Example
+
+A college may ask:
+
+```text
+How many hours do you study per day?
+
+☐ Less than 1 hour
+☐ 1–2 hours
+☐ 2–4 hours
+☐ More than 4 hours
+```
+
+The responses become data.
+
+---
+
+# 9. Interview
+
+An interview involves asking questions directly to participants.
+
+It may be:
+
+- Structured
+- Semi-structured
+- Unstructured
+
+### Example
+
+A researcher interviews teachers about the use of artificial intelligence in education.
+
+---
+
+# 10. Observation
+
+Observation involves collecting data by watching and recording events or behaviour.
+
+### Example
+
+A researcher observes:
+
+> How students use computers in a laboratory.
+
+The observations are recorded and analyzed.
+
+---
+
+# 11. Experiment
+
+An experiment collects data under controlled conditions.
+
+### Example
+
+A researcher tests whether a new teaching method improves examination performance.
+
+Two groups may be compared:
+
+```text
+Group A → Traditional teaching
+
+Group B → New teaching method
+```
+
+The examination scores are collected and analyzed.
+
+---
+
+# 12. Classification of Data
+
+Data can be classified in several ways.
+
+Important classifications include:
+
+- Qualitative data
+- Quantitative data
+- Primary data
+- Secondary data
+- Discrete data
+- Continuous data
+
+---
+
+# 13. Qualitative Data
+
+Qualitative data describes qualities or characteristics.
+
+It is generally non-numerical.
+
+### Examples
+
+- Gender
+- Colour
+- Type of occupation
+- Opinion
+- Satisfaction level
+- Type of product
+
+Example:
+
+```text
+Student satisfaction:
+
+Satisfied
+Very satisfied
+Neutral
+Dissatisfied
+```
+
+These categories describe characteristics.
+
+---
+
+# 14. Quantitative Data
+
+Quantitative data is numerical data.
+
+It represents quantities that can be counted or measured.
+
+### Examples
+
+- Age
+- Height
+- Weight
+- Salary
+- Number of students
+- Examination marks
+
+Example:
+
+```text
+Marks:
+
+65
+72
+81
+90
+76
+```
+
+These are quantitative data.
+
+---
+
+# 15. Qualitative vs Quantitative Data
+
+| Qualitative | Quantitative |
+|---|---|
+| Describes qualities | Describes quantities |
+| Usually non-numerical | Numerical |
+| Categories or descriptions | Counts or measurements |
+| Example: colour | Example: height |
+| Example: satisfaction | Example: marks |
+
+### Easy memory
+
+```text
+Qualitative → Quality
+
+Quantitative → Quantity
+```
+
+---
+
+# 16. Discrete Data
+
+Discrete data consists of countable values.
+
+### Examples
+
+- Number of students
+- Number of books
+- Number of computers
+- Number of employees
+
+Example:
+
+```text
+Number of students = 45
+```
+
+We normally do not say:
+
+```text
+45.7 students
+```
+
+Therefore, number of students is discrete data.
+
+---
+
+# 17. Continuous Data
+
+Continuous data can take values within a range.
+
+### Examples
+
+- Height
+- Weight
+- Temperature
+- Time
+- Distance
+
+Example:
+
+```text
+Height = 165.5 cm
+```
+
+A continuous variable can have decimal values.
+
+---
+
+# 18. Discrete vs Continuous Data
+
+| Discrete | Continuous |
+|---|---|
+| Countable | Measurable |
+| Usually whole-number counts | Can have decimal values |
+| Number of students | Height |
+| Number of books | Weight |
+| Number of computers | Temperature |
+
+---
+
+# 19. Data Classification – Quick Revision
+
+```text
+DATA
+  │
+  ├── Source
+  │     ├── Primary
+  │     └── Secondary
+  │
+  ├── Nature
+  │     ├── Qualitative
+  │     └── Quantitative
+  │
+  └── Quantitative type
+        ├── Discrete
+        └── Continuous
+```
+
+---
+
+# 20. Presentation of Data
+
+Raw data can be difficult to understand.
+
+Therefore, data is often presented using:
+
+- Tables
+- Bar charts
+- Histograms
+- Pie charts
+- Line charts
+- Maps
+
+Good presentation makes data easier to understand.
+
+---
+
+# 21. Table
+
+A table organizes information using rows and columns.
+
+### Example
+
+| Department | Students |
+|---|---:|
+| BCA | 120 |
+| BBA | 100 |
+| BCom | 150 |
+| MCA | 80 |
+| MBA | 90 |
+
+From the table we can identify:
+
+- Highest value
+- Lowest value
+- Total
+- Difference
+- Average
+- Percentage
+
+---
+
+# 22. Table Chart
+
+A table chart presents data systematically using rows and columns.
+
+### Example
+
+| Year | Students |
+|---|---:|
+| 2022 | 400 |
+| 2023 | 450 |
+| 2024 | 500 |
+| 2025 | 575 |
+
+Possible questions:
+
+1. What was the number of students in 2024?
+2. What was the increase from 2022 to 2025?
+3. Which year had the highest number?
+4. What was the average number of students?
+
+---
+
+# 23. Bar Chart
+
+A bar chart represents data using rectangular bars.
+
+The length or height of a bar represents the value.
+
+### Example
+
+Suppose:
+
+```text
+BCA  → 120
+BBA  → 100
+BCom → 150
+MCA  → 80
+```
+
+A bar chart can compare these departments.
+
+### Best used for
+
+- Comparing categories
+- Comparing departments
+- Comparing products
+- Comparing years
+
+---
+
+# 24. Features of a Bar Chart
+
+Important features include:
+
+- Categories
+- Bars
+- Axis
+- Scale
+- Labels
+- Values
+
+Bars are generally separated from each other.
+
+---
+
+# 25. Types of Bar Charts
+
+Common types include:
+
+### 1. Simple Bar Chart
+
+Shows one variable.
+
+Example:
+
+```text
+Department → Number of students
+```
+
+### 2. Multiple Bar Chart
+
+Compares two or more related variables.
+
+Example:
+
+```text
+Boys vs Girls
+```
+
+### 3. Stacked Bar Chart
+
+Shows components within a total.
+
+Example:
+
+```text
+Total students
+= Boys + Girls
+```
+
+---
+
+# 26. Histogram
+
+A histogram represents the distribution of continuous numerical data.
+
+The data is grouped into intervals called classes.
+
+### Example
+
+| Marks | Number of Students |
+|---|---:|
+| 0–20 | 5 |
+| 21–40 | 12 |
+| 41–60 | 20 |
+| 61–80 | 30 |
+| 81–100 | 15 |
+
+This data can be represented using a histogram.
+
+---
+
+# 27. Bar Chart vs Histogram
+
+| Bar Chart | Histogram |
+|---|---|
+| Used mainly for categories | Used for numerical intervals |
+| Bars usually separated | Bars usually touch |
+| Categories are distinct | Classes represent continuous ranges |
+| Example: Departments | Example: Marks ranges |
+
+### Important UGC NET Point
+
+> **Histogram is mainly used to represent the distribution of continuous data.**
+
+---
+
+# 28. Pie Chart
+
+A pie chart represents parts of a whole.
+
+The entire circle represents:
+
+```text
+100%
+```
+
+Each sector represents a proportion of the total.
+
+### Example
+
+Suppose a family's monthly expenditure is:
+
+```text
+Food       → 40%
+Education  → 20%
+Transport  → 15%
+Rent       → 15%
+Others     → 10%
+```
+
+All parts together:
+
+```text
+40 + 20 + 15 + 15 + 10 = 100%
+```
+
+---
+
+# 29. Pie Chart Calculation
+
+To convert a percentage into an angle:
+
+```text
+Angle = (Percentage ÷ 100) × 360°
+```
+
+### Example
+
+If food represents 25%:
+
+```text
+Angle = (25 ÷ 100) × 360°
+
+Angle = 90°
+```
+
+Therefore, the food sector occupies 90°.
+
+---
+
+# 30. Important Pie Chart Values
+
+Remember:
+
+```text
+Complete circle = 360°
+
+100% = 360°
+
+50% = 180°
+
+25% = 90°
+
+10% = 36°
+```
+
+---
+
+# 31. Line Chart
+
+A line chart represents values using points connected by lines.
+
+It is particularly useful for showing:
+
+- Trends
+- Changes over time
+- Growth
+- Decline
+- Fluctuations
+
+### Example
+
+```text
+Year    Students
+
+2022    400
+2023    450
+2024    500
+2025    575
+```
+
+A line chart can show the increasing trend.
+
+---
+
+# 32. Bar Chart vs Line Chart
+
+| Bar Chart | Line Chart |
+|---|---|
+| Good for category comparison | Good for trends |
+| Uses bars | Uses points and lines |
+| Example: students by department | Example: students over years |
+| Focuses on comparison | Focuses on change |
+
+---
+
+# 33. Mapping of Data
+
+Data can also be represented geographically using maps.
+
+This is called data mapping.
+
+Maps can show:
+
+- Population
+- Rainfall
+- Temperature
+- Literacy
+- Disease distribution
+- Agricultural production
+- Natural resources
+
+---
+
+# 34. Example of Data Mapping
+
+Suppose a map shows literacy rates in different states.
+
+```text
+State A → 90%
+State B → 82%
+State C → 75%
+State D → 68%
+```
+
+The map can use different shades or symbols to represent the values.
+
+This makes geographical patterns easier to identify.
+
+---
+
+# 35. Why Data Visualization is Important
+
+Data visualization helps us:
+
+- Understand large amounts of data
+- Identify patterns
+- Compare values
+- Identify trends
+- Detect unusual values
+- Communicate information clearly
+- Make decisions
+
+---
+
+# 36. Data Interpretation
+
+Data Interpretation means analyzing presented data and answering questions based on it.
+
+The data may be given as:
+
+- Table
+- Bar chart
+- Histogram
+- Pie chart
+- Line chart
+- Combination of charts
+
+---
+
+# 37. Important Calculations in Data Interpretation
+
+UGC NET questions may involve:
+
+- Total
+- Difference
+- Average
+- Percentage
+- Ratio
+- Percentage increase
+- Percentage decrease
+- Maximum
+- Minimum
+
+---
+
+# 38. Finding the Total
+
+Example:
+
+```text
+BCA = 120
+BBA = 100
+BCom = 150
+```
+
+Total:
+
+```text
+Total = 120 + 100 + 150
+
+Total = 370
+```
+
+---
+
+# 39. Finding the Difference
+
+Example:
+
+```text
+BCom = 150
+BBA = 100
+```
+
+Difference:
+
+```text
+Difference = 150 − 100
+
+Difference = 50
+```
+
+---
+
+# 40. Finding the Average
+
+Remember:
+
+```text
+Average = Total ÷ Number of values
+```
+
+Example:
+
+```text
+Values = 20, 30, 40
+
+Total = 20 + 30 + 40
+      = 90
+
+Number of values = 3
+
+Average = 90 ÷ 3
+        = 30
+```
+
+---
+
+# 41. Finding Percentage
+
+Remember:
+
+```text
+Percentage = (Part ÷ Whole) × 100
+```
+
+Example:
+
+A student scores 75 out of 100.
+
+```text
+Percentage = (75 ÷ 100) × 100
+
+Percentage = 75%
+```
+
+---
+
+# 42. Percentage Increase
+
+Remember:
+
+```text
+Percentage Increase =
+(Increase ÷ Original Value) × 100
+```
+
+Example:
+
+Students increased from 400 to 500.
+
+Increase:
+
+```text
+500 − 400 = 100
+```
+
+Percentage increase:
+
+```text
+(100 ÷ 400) × 100
+
+= 25%
+```
+
+---
+
+# 43. Percentage Decrease
+
+Remember:
+
+```text
+Percentage Decrease =
+(Decrease ÷ Original Value) × 100
+```
+
+Example:
+
+Students decreased from 500 to 400.
+
+Decrease:
+
+```text
+500 − 400 = 100
+```
+
+Percentage decrease:
+
+```text
+(100 ÷ 500) × 100
+
+= 20%
+```
+
+---
+
+# 44. Ratio in Data Interpretation
+
+A ratio compares two quantities.
+
+Example:
+
+```text
+Boys = 60
+Girls = 40
+```
+
+Ratio of boys to girls:
+
+```text
+60 : 40
+```
+
+Divide both by 20:
+
+```text
+3 : 2
+```
+
+Therefore:
+
+> Boys : Girls = 3 : 2
+
+---
+
+# 45. Comparing Data
+
+When comparing data, look for:
+
+### Highest value
+
+Find the largest number.
+
+### Lowest value
+
+Find the smallest number.
+
+### Difference
+
+Subtract the smaller value from the larger value.
+
+### Ratio
+
+Compare the values using division.
+
+### Percentage
+
+Use:
+
+```text
+(Part ÷ Whole) × 100
+```
+
+---
+
+# 46. Trend Analysis
+
+A trend shows the general direction of data.
+
+### Increasing trend
+
+```text
+100 → 120 → 140 → 160
+```
+
+### Decreasing trend
+
+```text
+160 → 140 → 120 → 100
+```
+
+### Fluctuating trend
+
+```text
+100 → 140 → 110 → 150 → 120
+```
+
+The values move up and down.
+
+---
+
+# 47. Reading a Data Table
+
+When given a table:
+
+### Step 1
+
+Read the title.
+
+### Step 2
+
+Read the row headings.
+
+### Step 3
+
+Read the column headings.
+
+### Step 4
+
+Check the units.
+
+### Step 5
+
+Identify the values.
+
+### Step 6
+
+Read the question carefully.
+
+### Step 7
+
+Perform only the required calculation.
+
+---
+
+# 48. Reading a Bar Chart
+
+When given a bar chart:
+
+1. Read the title.
+2. Identify the categories.
+3. Check the scale.
+4. Read the values.
+5. Compare the bars.
+6. Perform the required calculation.
+
+### Important
+
+Never assume the scale starts at zero.
+
+Always check the axis.
+
+---
+
+# 49. Reading a Line Chart
+
+For a line chart:
+
+1. Identify the X-axis.
+2. Identify the Y-axis.
+3. Check the units.
+4. Identify the time periods.
+5. Observe increases and decreases.
+6. Compare values.
+
+---
+
+# 50. Reading a Pie Chart
+
+For a pie chart:
+
+1. Identify the total.
+2. Read the percentages or angles.
+3. Identify the largest sector.
+4. Identify the smallest sector.
+5. Compare sectors.
+6. Calculate the required value.
+
+---
+
+# 51. Example – Data Interpretation
+
+Consider the following table:
+
+| Year | Number of Students |
+|---|---:|
+| 2022 | 400 |
+| 2023 | 450 |
+| 2024 | 500 |
+| 2025 | 600 |
+
+### Question 1
+
+Which year has the highest number of students?
+
+Answer:
+
+> 2025
+
+### Question 2
+
+What was the increase from 2022 to 2025?
+
+```text
+600 − 400 = 200
+```
+
+Answer:
+
+> 200 students
+
+### Question 3
+
+What is the average number of students?
+
+```text
+Total = 400 + 450 + 500 + 600
+      = 1950
+
+Number of years = 4
+
+Average = 1950 ÷ 4
+        = 487.5
+```
+
+Answer:
+
+> 487.5 students
+
+---
+
+# 52. Data Interpretation Strategy
+
+Use the following method:
+
+```text
+READ
+  ↓
+UNDERSTAND
+  ↓
+IDENTIFY GIVEN VALUES
+  ↓
+IDENTIFY WHAT IS ASKED
+  ↓
+SELECT FORMULA
+  ↓
+CALCULATE
+  ↓
+CHECK ANSWER
+```
+
+---
+
+# 53. Avoid Unnecessary Calculations
+
+In UGC NET, do not calculate everything in the chart.
+
+First read the question.
+
+### Example
+
+If the question asks:
+
+> Which year had the highest value?
+
+You only need to identify the largest value.
+
+There is no need to calculate the average.
+
+---
+
+# 54. Check Units Carefully
+
+Data may be expressed in:
+
+- Units
+- Thousands
+- Lakhs
+- Crores
+- Millions
+- Percentages
+- Kilometres
+- Tonnes
+
+### Example
+
+If a chart says:
+
+```text
+Population (in thousands)
+```
+
+and the value is:
+
+```text
+250
+```
+
+the actual population is:
+
+```text
+250,000
+```
+
+Always check the unit before calculating.
+
+---
+
+# 55. Data and Governance
+
+Data plays an important role in governance.
+
+Governments collect and use data for:
+
+- Policy making
+- Planning
+- Resource allocation
+- Public services
+- Healthcare
+- Education
+- Agriculture
+- Transportation
+- Disaster management
+- Economic planning
+
+---
+
+# 56. Data-Driven Governance
+
+Data-driven governance means using data and evidence to support government decisions.
+
+### Example
+
+Suppose government data shows that a particular district has:
+
+```text
+High unemployment
+Low literacy
+Limited healthcare facilities
+```
+
+The government can use this information to plan appropriate programmes.
+
+---
+
+# 57. Importance of Data in Governance
+
+Data can help governments:
+
+### 1. Identify problems
+
+Example:
+
+> High dropout rate in a district.
+
+### 2. Allocate resources
+
+Example:
+
+> More schools may be required in areas with growing populations.
+
+### 3. Monitor programmes
+
+Data can show whether a government programme is achieving its objectives.
+
+### 4. Evaluate policies
+
+Before and after data can be compared.
+
+### 5. Improve public services
+
+Data can help identify areas where services are inadequate.
+
+---
+
+# 58. Examples of Government Data
+
+Government organizations may collect data relating to:
+
+- Population
+- Employment
+- Education
+- Health
+- Agriculture
+- Industry
+- Income
+- Environment
+- Infrastructure
+
+Such information can support planning and policy implementation.
+
+---
+
+# 59. Data Quality
+
+Good decisions require good-quality data.
+
+Important characteristics of good data include:
+
+- Accuracy
+- Reliability
+- Completeness
+- Consistency
+- Timeliness
+- Relevance
+
+### Easy memory
+
+```text
+Good Data
+→ Accurate
+→ Reliable
+→ Complete
+→ Consistent
+→ Timely
+→ Relevant
+```
+
+---
+
+# 60. Data Privacy
+
+Data may contain personal or sensitive information.
+
+Therefore, data collection and use should consider:
+
+- Privacy
+- Security
+- Appropriate access
+- Responsible use
+- Protection against unauthorized disclosure
+
+---
+
+# 61. Data Interpretation – Common Mistakes
+
+### Mistake 1 – Ignoring the scale
+
+Always check the scale of the graph.
+
+### Mistake 2 – Ignoring units
+
+Check whether values are in:
+
+```text
+Thousands
+Lakhs
+Crores
+Millions
+Percentages
+```
+
+### Mistake 3 – Using the wrong base
+
+For percentage change, use the original value as the base.
+
+### Mistake 4 – Confusing average and middle value
+
+Average is:
+
+```text
+Average = Total ÷ Number of values
+```
+
+It is not automatically the middle value.
+
+### Mistake 5 – Reading the wrong category
+
+Carefully match the row and column.
+
+---
+
+# 62. Important Comparison Table
+
+| Representation | Main Purpose |
+|---|---|
+| Table | Organize exact values |
+| Bar chart | Compare categories |
+| Histogram | Show distribution of continuous data |
+| Pie chart | Show parts of a whole |
+| Line chart | Show trends over time |
+| Map | Show geographical patterns |
+
+---
+
+# 63. Important Formulas
+
+```text
+Average = Total ÷ Number of values
+
+Percentage = (Part ÷ Whole) × 100
+
+Percentage Increase =
+(Increase ÷ Original Value) × 100
+
+Percentage Decrease =
+(Decrease ÷ Original Value) × 100
+
+Difference =
+Larger Value − Smaller Value
+
+Pie Chart Angle =
+(Percentage ÷ 100) × 360°
+```
+
+---
+
+# 64. UGC NET Focus Areas
+
+Pay particular attention to:
+
+- Sources of data
+- Primary data
+- Secondary data
+- Data acquisition
+- Qualitative data
+- Quantitative data
+- Discrete data
+- Continuous data
+- Tables
+- Bar charts
+- Histograms
+- Pie charts
+- Line charts
+- Data mapping
+- Percentage calculations
+- Ratio calculations
+- Average calculations
+- Data comparison
+- Trend analysis
+- Data interpretation
+- Data and governance
+- Data quality
+- Data privacy
+
+---
+
+# 65. One-Minute Revision
+
+```text
+                 DATA
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+      SOURCE                NATURE
+        │                     │
+   ┌────┴────┐          ┌─────┴─────┐
+   │         │          │           │
+Primary  Secondary  Qualitative Quantitative
+                                  │
+                           ┌──────┴──────┐
+                           │             │
+                       Discrete     Continuous
+```
+
+### Data Representation
+
+```text
+Table
+  ↓
+Bar Chart
+  ↓
+Histogram
+  ↓
+Pie Chart
+  ↓
+Line Chart
+  ↓
+Map
+```
+
+### Data Interpretation
+
+```text
+Read
+ ↓
+Understand
+ ↓
+Compare
+ ↓
+Calculate
+ ↓
+Interpret
+```
+
+---
+
+# 66. Final Exam Tip
+
+For Data Interpretation questions, **do not start calculating immediately**.
+
+First identify:
+
+```text
+1. What type of data is given?
+
+2. What is the unit?
+
+3. What does the graph/table represent?
+
+4. What exactly is being asked?
+
+5. Which calculation is required?
+```
+
+Then solve.
+
+The most important skills are:
+
+> **Read the data correctly → Identify what is asked → Calculate carefully → Check the answer.**
+
+---
+
+# 67. Final Quick Revision
+
+```text
+PRIMARY DATA
+→ Collected directly
+
+SECONDARY DATA
+→ Already collected
+
+QUALITATIVE DATA
+→ Quality / category
+
+QUANTITATIVE DATA
+→ Numerical quantity
+
+DISCRETE DATA
+→ Countable
+
+CONTINUOUS DATA
+→ Measurable
+
+BAR CHART
+→ Compare categories
+
+HISTOGRAM
+→ Continuous data distribution
+
+PIE CHART
+→ Parts of a whole
+
+LINE CHART
+→ Trends over time
+
+MAP
+→ Geographical patterns
+
+DATA INTERPRETATION
+→ Analyze and understand data
+
+DATA GOVERNANCE
+→ Use data for planning,
+   decision-making and public services
+
+AVERAGE
+→ Total ÷ Number
+
+PERCENTAGE
+→ (Part ÷ Whole) × 100
+
+PIE ANGLE
+→ (Percentage ÷ 100) × 360°
+```
+
+# 68. Final Summary
+
+Unit VII focuses on the ability to understand and interpret information presented in different forms.
+
+The most important areas are:
+
+- **Sources and acquisition of data**
+- **Classification of data**
+- **Qualitative and quantitative data**
+- **Discrete and continuous data**
+- **Tables**
+- **Bar charts**
+- **Histograms**
+- **Pie charts**
+- **Line charts**
+- **Data mapping**
+- **Data interpretation**
+- **Data and governance**
+
+The key principle is:
+
+> **Do not just read numbers. Understand what the numbers mean.**
+--- 

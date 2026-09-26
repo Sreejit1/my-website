@@ -1,0 +1,1857 @@
+---
+title: "Unit V – Mathematical Reasoning and Aptitude"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+---
+
+
+
+## 1. Introduction
+
+Mathematical Reasoning and Aptitude tests the ability to:
+
+- Identify patterns
+- Apply mathematical concepts
+- Perform calculations
+- Solve numerical problems
+- Identify relationships
+- Apply logical rules
+- Interpret mathematical information
+
+The major areas in this unit are:
+
+1. Types of reasoning
+2. Number series
+3. Letter series
+4. Codes
+5. Relationships
+6. Fractions
+7. Time and distance
+8. Ratio
+9. Proportion
+10. Percentage
+11. Profit and loss
+12. Interest
+13. Discounting
+14. Averages
+
+---
+
+# 2. Types of Reasoning
+
+Reasoning is the process of using information, facts, rules or relationships to arrive at a conclusion.
+
+Important types include:
+
+- Deductive reasoning
+- Inductive reasoning
+- Analogical reasoning
+
+---
+
+# 3. Deductive Reasoning
+
+Deductive reasoning moves from a **general statement or rule to a specific conclusion**.
+
+### Structure
+
+```text
+General Rule
+     ↓
+Specific Case
+     ↓
+Conclusion
+```
+
+### Example
+
+All teachers are professionals.
+
+Ravi is a teacher.
+
+Therefore:
+
+Ravi is a professional.
+
+The conclusion follows from the premises.
+
+### Key Point
+
+> **Deduction = General → Specific**
+
+---
+
+# 4. Inductive Reasoning
+
+Inductive reasoning moves from **specific observations to a general conclusion**.
+
+### Structure
+
+```text
+Specific Observations
+        ↓
+     Pattern
+        ↓
+General Conclusion
+```
+
+### Example
+
+A researcher observes that:
+
+- Student A performs better after regular practice.
+- Student B performs better after regular practice.
+- Student C performs better after regular practice.
+
+The researcher may conclude:
+
+> Regular practice may improve student performance.
+
+The conclusion is based on observations and is not necessarily certain.
+
+### Key Point
+
+> **Induction = Specific → General**
+
+---
+
+# 5. Analogical Reasoning
+
+Analogical reasoning identifies a relationship between two things and applies a similar relationship to another pair.
+
+### Example
+
+```text
+Teacher : School :: Doctor : Hospital
+```
+
+The relationship is:
+
+> A teacher works in a school.
+
+Therefore:
+
+> A doctor works in a hospital.
+
+### Key Point
+
+> **Analogy = Relationship between two pairs**
+
+---
+
+# 6. Deductive vs Inductive Reasoning
+
+| Deductive | Inductive |
+|---|---|
+| General → Specific | Specific → General |
+| Starts with a rule/principle | Starts with observations |
+| Conclusion can follow necessarily from true premises | Conclusion is usually probable |
+| Example: All A are B; X is A; therefore X is B | Several observed A are B; therefore A may generally be B |
+
+---
+
+# 7. Number Series
+
+A number series is a sequence of numbers arranged according to a particular pattern.
+
+### Example
+
+```text
+2, 4, 6, 8, 10, ?
+```
+
+The difference between consecutive numbers is:
+
+```text
++2, +2, +2, +2
+```
+
+Therefore:
+
+```text
+Answer = 12
+```
+
+---
+
+# 8. Common Number Series Patterns
+
+When solving a number series, check for:
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Squares
+6. Cubes
+7. Alternating patterns
+8. Increasing differences
+9. Decreasing differences
+10. Combination of operations
+
+---
+
+# 9. Addition Series
+
+Example:
+
+```text
+5, 10, 15, 20, ?
+```
+
+Pattern:
+
+```text
++5, +5, +5
+```
+
+Therefore:
+
+```text
+Answer = 25
+```
+
+---
+
+# 10. Subtraction Series
+
+Example:
+
+```text
+50, 45, 40, 35, ?
+```
+
+Pattern:
+
+```text
+-5, -5, -5
+```
+
+Therefore:
+
+```text
+Answer = 30
+```
+
+---
+
+# 11. Multiplication Series
+
+Example:
+
+```text
+2, 4, 8, 16, ?
+```
+
+Pattern:
+
+```text
+×2, ×2, ×2
+```
+
+Therefore:
+
+```text
+Answer = 32
+```
+
+---
+
+# 12. Division Series
+
+Example:
+
+```text
+64, 32, 16, 8, ?
+```
+
+Pattern:
+
+```text
+÷2, ÷2, ÷2
+```
+
+Therefore:
+
+```text
+Answer = 4
+```
+
+---
+
+# 13. Square Number Series
+
+Example:
+
+```text
+1, 4, 9, 16, 25, ?
+```
+
+These are squares:
+
+```text
+1² = 1
+2² = 4
+3² = 9
+4² = 16
+5² = 25
+```
+
+Therefore:
+
+```text
+6² = 36
+```
+
+---
+
+# 14. Cube Number Series
+
+Example:
+
+```text
+1, 8, 27, 64, ?
+```
+
+These are cubes:
+
+```text
+1³ = 1
+2³ = 8
+3³ = 27
+4³ = 64
+```
+
+Therefore:
+
+```text
+5³ = 125
+```
+
+---
+
+# 15. Increasing Difference Series
+
+Example:
+
+```text
+2, 5, 10, 17, 26, ?
+```
+
+Find the differences:
+
+```text
++3, +5, +7, +9
+```
+
+The differences increase by 2.
+
+Next difference:
+
+```text
++11
+```
+
+Therefore:
+
+```text
+26 + 11 = 37
+```
+
+---
+
+# 16. Alternating Series
+
+Sometimes odd and even positions follow different patterns.
+
+Example:
+
+```text
+2, 5, 4, 10, 6, 15, ?
+```
+
+Separate the positions:
+
+```text
+Odd positions:
+2, 4, 6, ?
+
+Even positions:
+5, 10, 15
+```
+
+Odd positions increase by 2.
+
+Therefore:
+
+```text
+Answer = 8
+```
+
+---
+
+# 17. Strategy for Number Series
+
+When you see a number series:
+
+### Step 1
+
+Check differences.
+
+### Step 2
+
+Check multiplication or division.
+
+### Step 3
+
+Check squares and cubes.
+
+### Step 4
+
+Check increasing or decreasing differences.
+
+### Step 5
+
+Check odd and even positions separately.
+
+### Step 6
+
+Look for a combination of operations.
+
+---
+
+# 18. Letter Series
+
+A letter series consists of letters arranged according to a particular pattern.
+
+To solve letter series questions, remember the alphabetical positions:
+
+```text
+A = 1
+B = 2
+C = 3
+D = 4
+E = 5
+...
+Z = 26
+```
+
+---
+
+# 19. Simple Letter Series
+
+Example:
+
+```text
+A, C, E, G, ?
+```
+
+Positions:
+
+```text
+1, 3, 5, 7, ?
+```
+
+The pattern is:
+
+```text
++2
+```
+
+Therefore:
+
+```text
+I = 9
+```
+
+Answer:
+
+> **I**
+
+---
+
+# 20. Reverse Alphabet
+
+Remember:
+
+```text
+Z = 26
+Y = 25
+X = 24
+...
+A = 1
+```
+
+Example:
+
+```text
+Z, X, V, T, ?
+```
+
+The positions are:
+
+```text
+26, 24, 22, 20
+```
+
+Pattern:
+
+```text
+-2
+```
+
+Therefore:
+
+```text
+18 = R
+```
+
+Answer:
+
+> **R**
+
+---
+
+# 21. Letter Series with Skipping
+
+Example:
+
+```text
+A, D, G, J, ?
+```
+
+Positions:
+
+```text
+1, 4, 7, 10
+```
+
+Pattern:
+
+```text
++3
+```
+
+Next position:
+
+```text
+13 = M
+```
+
+Answer:
+
+> **M**
+
+---
+
+# 22. Codes
+
+Coding-decoding questions involve replacing letters, numbers or words according to a specific rule.
+
+### Example
+
+If:
+
+```text
+CAT → DBU
+```
+
+Each letter is shifted by +1:
+
+```text
+C → D
+A → B
+T → U
+```
+
+Therefore:
+
+```text
+DOG → EPH
+```
+
+---
+
+# 23. Common Coding Patterns
+
+Look for:
+
+- Alphabet position
+- Forward shifting
+- Backward shifting
+- Reversal
+- Substitution
+- Numerical coding
+- Symbol coding
+- Combination of operations
+
+---
+
+# 24. Relationships
+
+Relationship questions test the ability to identify relationships between people, objects or concepts.
+
+Examples include:
+
+- Blood relationships
+- Family relationships
+- Direction relationships
+- Logical relationships
+
+---
+
+# 25. Blood Relationship Problems
+
+Example:
+
+> A is the brother of B. B is the sister of C. How is A related to C?
+
+A is male and is the sibling of B.
+
+B is the sibling of C.
+
+Therefore:
+
+> A is the **brother of C**.
+
+### Strategy
+
+Draw a small relationship diagram instead of trying to remember everything mentally.
+
+---
+
+# 26. Mathematical Aptitude
+
+Mathematical aptitude involves applying mathematical concepts to solve numerical problems.
+
+The syllabus includes:
+
+- Fractions
+- Time and distance
+- Ratio
+- Proportion
+- Percentage
+- Profit and loss
+- Interest
+- Discounting
+- Averages
+
+---
+
+# 27. Fractions
+
+A fraction represents a part of a whole.
+
+It is written as:
+
+
+```text
+a ÷ b
+```
+
+
+where:
+
+- `a` = numerator
+- `b` = denominator
+
+and:
+
+
+```text
+b ≠ 0
+```
+
+
+### Example
+
+
+```text
+3/5
+```
+
+
+means 3 parts out of 5 equal parts.
+
+---
+
+# 28. Types of Fractions
+
+### Proper Fraction
+
+Numerator < Denominator.
+
+Example:
+
+
+```text
+3/5
+```
+
+
+### Improper Fraction
+
+Numerator ≥ Denominator.
+
+Example:
+
+
+```text
+7/5
+```
+
+
+### Mixed Fraction
+
+Contains a whole number and a fraction.
+
+Example:
+
+
+```text
+2 1/3
+```
+
+
+---
+
+# 29. Addition of Fractions
+
+Example:
+
+
+```text
+1/2 + 1/3
+```
+
+
+LCM of 2 and 3 = 6.
+
+Therefore:
+
+
+```text
+1/2 = 3/6
+```
+
+
+and:
+
+
+```text
+1/3 = 2/6
+```
+
+
+Therefore:
+
+
+```text
+(3 ÷ 6)+(2 ÷ 6)
+=
+(5 ÷ 6)
+```
+
+
+---
+
+# 30. Multiplication of Fractions
+
+Example:
+
+
+```text
+2/3 × 4/5
+```
+
+
+Multiply numerators:
+
+
+```text
+2 × 4 = 8
+```
+
+
+Multiply denominators:
+
+
+```text
+3 × 5 = 15
+```
+
+
+Therefore:
+
+
+```text
+(2 ÷ 3) × (4 ÷ 5)
+=
+(8 ÷ 15)
+```
+
+
+---
+
+# 31. Time and Distance
+
+Important formula:
+
+
+```text
+Speed = Distance ÷ Time
+```
+
+
+Therefore:
+
+
+```text
+Distance = Speed × Time
+```
+
+
+and:
+
+
+```text
+Time = Distance ÷ Speed
+```
+
+
+### Easy Triangle
+
+```text
+       Distance
+      ----------
+      Speed | Time
+```
+
+---
+
+# 32. Example – Speed
+
+A car travels 120 km in 3 hours.
+
+Find its speed.
+
+
+```text
+Speed = Distance ÷ Time
+```
+
+
+
+```text
+=(120 ÷ 3)
+```
+
+
+
+```text
+=40 km/h
+```
+
+
+Answer:
+
+> **40 km/h**
+
+---
+
+# 33. Unit Conversion
+
+Important conversions:
+
+```text
+1 km = 1000 m
+
+1 hour = 60 minutes
+
+1 minute = 60 seconds
+```
+
+For speed:
+
+```text
+1 km/hour = 5/18 m/second
+
+1 m/second = 18/5 km/hour
+```
+
+---
+
+# 34. Average Speed
+
+Average speed is:
+
+
+```text
+Average Speed=
+(Total Distance ÷ Total Time)
+```
+
+
+It is not always equal to the simple average of two speeds.
+
+### Example
+
+If a person travels:
+
+- 60 km in 2 hours
+- 40 km in 1 hour
+
+Total distance:
+
+
+```text
+60+40=100 km
+```
+
+
+Total time:
+
+
+```text
+2+1=3 hours
+```
+
+
+Therefore:
+
+
+```text
+Average Speed=(100 ÷ 3)
+```
+
+
+
+```text
+=33.33 km/h
+```
+
+
+---
+
+# 35. Ratio
+
+A ratio compares two quantities of the same kind.
+
+It is written as:
+
+
+```text
+a : b
+```
+
+
+### Example
+
+If a class has 20 boys and 30 girls:
+
+Ratio of boys to girls:
+
+
+```text
+20:30
+```
+
+
+Divide by 10:
+
+
+```text
+2:3
+```
+
+
+---
+
+# 36. Equivalent Ratios
+
+Ratios can be multiplied or divided by the same non-zero number.
+
+Example:
+
+
+```text
+2:3
+```
+
+
+Multiplying both terms by 4:
+
+
+```text
+8:12
+```
+
+
+Therefore:
+
+```text
+2 : 3 = 8 : 12
+```
+
+---
+
+# 37. Proportion
+
+A proportion states that two ratios are equal.
+
+Example:
+
+
+```text
+2/3 = 4/6
+```
+
+
+Therefore:
+
+```text
+2 : 3 = 4 : 6
+```
+
+This is a proportion.
+
+---
+
+# 38. Direct Proportion
+
+In direct proportion, when one quantity increases, the other also increases in the same relationship.
+
+Example:
+
+If 1 book costs ₹100:
+
+```text
+2 books = ₹200
+3 books = ₹300
+```
+
+More books → More cost.
+
+---
+
+# 39. Inverse Proportion
+
+In inverse proportion, when one quantity increases, the other decreases.
+
+Example:
+
+If more workers are employed to complete the same task, the required time may decrease, assuming other conditions remain the same.
+
+```text
+Workers ↑
+    ↓
+Time ↓
+```
+
+---
+
+# 40. Percentage
+
+Percentage means "per hundred".
+
+The symbol is:
+
+```text
+%
+```
+
+### Formula
+
+
+```text
+Percentage=
+(Part ÷ Whole) × 100
+```
+
+
+---
+
+# 41. Example – Percentage
+
+A student scores 72 marks out of 90.
+
+Percentage:
+
+
+```text
+(72 ÷ 90) × 100
+```
+
+
+
+```text
+=80%
+```
+
+
+Answer:
+
+> **80%**
+
+---
+
+# 42. Converting Percentage to Fraction
+
+Example:
+
+
+```text
+25%
+```
+
+
+means:
+
+
+```text
+25/100
+```
+
+
+Simplify:
+
+
+```text
+1/4
+```
+
+
+Therefore:
+
+> 25% = 1/4
+
+---
+
+# 43. Percentage Increase
+
+Formula:
+
+
+```text
+Percentage Increase=
+(Increase ÷ Original Value) × 100
+```
+
+
+### Example
+
+A price increases from ₹500 to ₹600.
+
+Increase:
+
+
+```text
+600-500=100
+```
+
+
+Percentage increase:
+
+
+```text
+(100 ÷ 500) × 100 = 20%
+```
+
+
+---
+
+# 44. Percentage Decrease
+
+Formula:
+
+
+```text
+Percentage Decrease=
+(Decrease ÷ Original Value) × 100
+```
+
+
+### Example
+
+A price decreases from ₹800 to ₹600.
+
+Decrease:
+
+
+```text
+800-600=200
+```
+
+
+Percentage decrease:
+
+
+```text
+(200 ÷ 800) × 100 = 25%
+```
+
+
+---
+
+# 45. Profit and Loss
+
+Important terms:
+
+### Cost Price (CP)
+
+The price at which an item is purchased.
+
+### Selling Price (SP)
+
+The price at which an item is sold.
+
+### Profit
+
+When:
+
+
+```text
+SP > CP
+```
+
+
+Profit:
+
+
+```text
+Profit = SP − CP
+```
+
+
+### Loss
+
+When:
+
+
+```text
+CP > SP
+```
+
+
+Loss:
+
+
+```text
+Loss = CP − SP
+```
+
+
+---
+
+# 46. Profit Percentage
+
+
+```text
+Profit%=
+(Profit ÷ CP) × 100
+```
+
+
+### Example
+
+CP = ₹500
+
+SP = ₹600
+
+Profit:
+
+
+```text
+600-500=100
+```
+
+
+Profit percentage:
+
+
+```text
+(100 ÷ 500) × 100 = 20%
+```
+
+
+---
+
+# 47. Loss Percentage
+
+
+```text
+Loss%=
+(Loss ÷ CP) × 100
+```
+
+
+### Example
+
+CP = ₹800
+
+SP = ₹600
+
+Loss:
+
+
+```text
+800-600=200
+```
+
+
+Loss percentage:
+
+
+```text
+(200 ÷ 800) × 100 = 25%
+```
+
+
+---
+
+# 48. Discount
+
+Discount is the reduction given on the marked price.
+
+### Important Terms
+
+**Marked Price (MP)** = Price written on the product.
+
+**Discount** = Reduction from marked price.
+
+**Selling Price (SP)** = Price paid after discount.
+
+Formula:
+
+
+```text
+Discount = MP − SP
+```
+
+
+---
+
+# 49. Discount Percentage
+
+
+```text
+Discount%=
+(Discount ÷ MP) × 100
+```
+
+
+### Example
+
+Marked price = ₹1000
+
+Discount = ₹200
+
+Therefore:
+
+
+```text
+Discount%=
+(200 ÷ 1000) × 100
+```
+
+
+
+```text
+=20%
+```
+
+
+Selling price:
+
+
+```text
+1000-200=₹800
+```
+
+
+---
+
+# 50. Simple Interest
+
+Simple Interest is calculated only on the original principal.
+
+Formula:
+
+
+```text
+Simple Interest = (P × R × T) ÷ 100
+```
+
+
+where:
+
+- `P` = Principal
+- `R` = Rate of interest
+- `T` = Time
+
+### Example
+
+Find the simple interest on ₹5,000 at 10% per year for 2 years.
+
+
+```text
+SI=(5000 × 10 × 2 ÷ 100)
+```
+
+
+
+```text
+=₹1000
+```
+
+
+Amount:
+
+
+```text
+Amount = Principal + Interest
+```
+
+
+
+```text
+=5000+1000
+```
+
+
+
+```text
+=₹6000
+```
+
+
+---
+
+# 51. Compound Interest
+
+Compound interest is calculated on the principal plus accumulated interest.
+
+For annual compounding:
+
+
+```text
+A = P × (1 + R/100)^T
+```
+
+
+Compound interest:
+
+
+```text
+CI = A − P
+```
+
+
+where:
+
+- `A` = Amount
+- `P` = Principal
+- `R` = Rate
+- `T` = Time
+
+### Example
+
+For ₹1,000 at 10% per year for 2 years:
+
+
+```text
+A = 1000 × (1.10)^2
+```
+
+
+
+```text
+A=1210
+```
+
+
+Therefore:
+
+
+```text
+CI = 1210 − 1000
+```
+
+
+
+```text
+=₹210
+```
+
+
+---
+
+# 52. Simple Interest vs Compound Interest
+
+| Simple Interest | Compound Interest |
+|---|---|
+| Calculated on original principal | Calculated on accumulated amount |
+| Interest remains based on principal | Interest earns further interest |
+| Formula: PRT/100 | Uses compound growth formula |
+
+---
+
+# 53. Averages
+
+Average is a measure of central tendency.
+
+Formula:
+
+
+```text
+Average=
+(Sum of observations ÷ Number of observations)
+```
+
+
+---
+
+# 54. Example – Average
+
+Find the average of:
+
+```text
+10, 20, 30, 40, 50
+```
+
+Sum:
+
+
+```text
+10+20+30+40+50=150
+```
+
+
+Number of observations:
+
+
+```text
+5
+```
+
+
+Therefore:
+
+
+```text
+Average = 150 ÷ 5 = 30
+```
+
+
+Answer:
+
+> **30**
+
+---
+
+# 55. Finding the Missing Value Using Average
+
+Suppose the average of five numbers is 20.
+
+Therefore:
+
+
+```text
+Total = 20 × 5
+```
+
+
+
+```text
+=100
+```
+
+
+If four numbers are:
+
+```text
+10, 15, 20, 25
+```
+
+Their sum is:
+
+
+```text
+70
+```
+
+
+Missing number:
+
+
+```text
+100-70=30
+```
+
+
+Answer:
+
+> **30**
+
+---
+
+# 56. Important Mathematical Formulas
+
+| Topic | Formula |
+|---|---|
+| Speed | Distance / Time |
+| Distance | Speed × Time |
+| Time | Distance / Speed |
+| Percentage | Part / Whole × 100 |
+| Profit | SP − CP |
+| Loss | CP − SP |
+| Profit % | Profit / CP × 100 |
+| Loss % | Loss / CP × 100 |
+| Discount | MP − SP |
+| Discount % | Discount / MP × 100 |
+| Simple Interest | PRT / 100 |
+| Amount | Principal + Interest |
+| Average | Sum / Number of observations |
+
+---
+
+# 57. Fast Calculation Strategy
+
+For UGC NET aptitude questions:
+
+### Step 1
+
+Read the question carefully.
+
+### Step 2
+
+Identify what is given.
+
+### Step 3
+
+Identify what must be found.
+
+### Step 4
+
+Write the relevant formula.
+
+### Step 5
+
+Substitute the values.
+
+### Step 6
+
+Calculate carefully.
+
+### Step 7
+
+Check whether the answer is reasonable.
+
+---
+
+# 58. Common Mistakes
+
+### Mistake 1 – Using the Wrong Base for Percentage
+
+Profit percentage is calculated using **Cost Price**, not Selling Price.
+
+### Mistake 2 – Confusing Marked Price and Cost Price
+
+Discount is calculated from the **Marked Price**.
+
+### Mistake 3 – Confusing Distance and Speed
+
+Remember:
+
+
+```text
+Speed = Distance ÷ Time
+```
+
+
+### Mistake 4 – Forgetting Unit Conversion
+
+For example:
+
+```text
+Hours → Minutes
+Kilometres → Metres
+```
+
+### Mistake 5 – Incorrect Average
+
+Average is:
+
+
+```text
+(Total ÷ Number)
+```
+
+
+not simply the middle value.
+
+---
+
+# 59. UGC NET Focus Areas
+
+Pay particular attention to:
+
+- Deductive reasoning
+- Inductive reasoning
+- Analogies
+- Number series
+- Letter series
+- Coding-decoding
+- Relationship problems
+- Fractions
+- Speed, distance and time
+- Ratio
+- Proportion
+- Percentage
+- Profit and loss
+- Simple interest
+- Compound interest
+- Discount
+- Average
+
+---
+
+# 60. Quick Revision
+
+### Reasoning
+
+```text
+Deductive → General → Specific
+
+Inductive → Specific → General
+
+Analogy → Relationship between pairs
+```
+
+### Number Series
+
+Look for:
+
+```text
++
+-
+×
+÷
+Squares
+Cubes
+Alternating patterns
+Increasing differences
+```
+
+### Percentage
+
+
+```text
+Percentage = (Part ÷ Whole) × 100
+```
+
+
+### Speed
+
+
+```text
+Speed = Distance ÷ Time
+```
+
+
+### Profit
+
+
+```text
+Profit = SP − CP
+```
+
+
+### Loss
+
+
+```text
+Loss = CP − SP
+```
+
+
+### Simple Interest
+
+
+```text
+Simple Interest = (P × R × T) ÷ 100
+```
+
+
+### Average
+
+
+```text
+Average=(Sum ÷ Number)
+```
+
+
+---
+
+# 61. One-Minute Revision
+
+```text
+MATHEMATICAL REASONING & APTITUDE
+              ↓
+       ┌──────┴──────┐
+       ↓             ↓
+    Reasoning     Mathematics
+       ↓             ↓
+ Deductive       Fractions
+ Inductive       Time & Distance
+ Analogy         Ratio
+                 Proportion
+ Number Series   Percentage
+ Letter Series   Profit & Loss
+ Codes           Interest
+ Relationships   Discount
+                 Average
+```
+
+---
+
+# 62. Final Exam Tip
+
+For numerical questions, do not immediately start calculating.
+
+First ask:
+
+> **What type of problem is this?**
+
+For example:
+
+```text
+Question about price reduction
+          ↓
+       Discount
+
+Question about buying and selling
+          ↓
+     Profit / Loss
+
+Question about movement
+          ↓
+    Speed / Distance / Time
+
+Question about comparison
+          ↓
+        Ratio
+
+Question about "per hundred"
+          ↓
+      Percentage
+
+Question about central value
+          ↓
+        Average
+```
+
+Correctly identifying the type of problem is often the first and most important step toward solving it.

@@ -1,0 +1,2658 @@
+---
+title: "Unit III – Programming Languages and Computer Graphics"
+subtitle: "UGC NET Computer Science and Applications – Paper II"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+This unit covers programming language concepts, C, C++, object-oriented programming, web programming, and computer graphics.
+
+# Part A – Programming Languages
+
+## 1. Programming Language Concepts
+
+A programming language is a formal language used to write instructions that a computer can execute.
+
+Examples:
+
+- C
+- C++
+- Java
+- Python
+- JavaScript
+
+A programming language provides syntax, data types, operators, control structures, functions or procedures, and rules for writing programs.
+
+### Syntax
+
+Syntax means the rules for writing valid statements.
+
+```c
+int x = 10;
+```
+
+### Semantics
+
+Semantics means the meaning of a statement.
+
+```c
+x = x + 1;
+```
+
+This means the value of `x` is increased by 1.
+
+| Syntax | Semantics |
+|---|---|
+| Rules for writing a program | Meaning of a program |
+| Concerned with form | Concerned with meaning |
+
+## 2. Programming Paradigms and Models
+
+A programming paradigm is a style or approach used for solving problems.
+
+### Procedural Programming
+
+The program is organized into procedures or functions.
+
+Example: C.
+
+```c
+void display()
+{
+    printf("Hello");
+}
+```
+
+### Object-Oriented Programming
+
+The program is organized around objects and classes.
+
+Examples:
+
+- C++
+- Java
+
+Important concepts:
+
+- Class
+- Object
+- Encapsulation
+- Abstraction
+- Inheritance
+- Polymorphism
+
+### Functional Programming
+
+Computation is expressed using functions.
+
+Examples:
+
+- Lisp
+- Haskell
+
+### Logic Programming
+
+Programs are based on facts and rules.
+
+Example:
+
+- Prolog
+
+### Event-Driven Programming
+
+Program execution is controlled by events such as mouse clicks and keyboard input.
+
+| Paradigm | Main idea | Example |
+|---|---|---|
+| Procedural | Procedures/functions | C |
+| Object-oriented | Objects/classes | C++ |
+| Functional | Functions | Haskell |
+| Logic | Facts and rules | Prolog |
+| Event-driven | Events control execution | JavaScript |
+
+## 3. Programming Environments
+
+A programming environment provides tools required to develop and execute programs.
+
+Common components:
+
+- Text editor
+- Compiler
+- Linker
+- Debugger
+- Libraries
+- Runtime environment
+- IDE
+
+### IDE
+
+IDE means Integrated Development Environment.
+
+Examples:
+
+- Visual Studio
+- Code::Blocks
+- Eclipse
+
+An IDE commonly combines an editor, compiler/interpreter, debugger, and project management tools.
+
+## 4. Virtual Computers
+
+A virtual computer is an abstract machine used to describe how a program can execute.
+
+Java provides a well-known example.
+
+```text
+Java Source Code
+       |
+       v
+    Compiler
+       |
+       v
+    Bytecode
+       |
+       v
+      JVM
+       |
+       v
+   Execution
+```
+
+The JVM means **Java Virtual Machine**.
+
+## 5. Binding Times
+
+Binding means associating a property with a program element.
+
+Important binding times:
+
+1. Language design time
+2. Language implementation time
+3. Compile time
+4. Link time
+5. Load time
+6. Run time
+
+### Static and Dynamic Binding
+
+| Static | Dynamic |
+|---|---|
+| Decided earlier | Decided during execution |
+| Usually before execution | Usually at run time |
+| Common in statically typed situations | Important in dynamic/runtime polymorphism |
+
+## 6. Programming Language Syntax
+
+Syntax describes the structure of valid programs.
+
+### Grammar
+
+A grammar defines how valid statements can be formed.
+
+Example:
+
+```text
+<digit> ::= 0 | 1 | 2 | ... | 9
+```
+
+### BNF
+
+BNF means **Backus-Naur Form**.
+
+It is a formal notation for describing the syntax of programming languages.
+
+### Lexical Structure
+
+Lexical analysis divides source code into tokens.
+
+For:
+
+```c
+int total = 10;
+```
+
+tokens include:
+
+```text
+int
+total
+=
+10
+;
+```
+
+## 7. Stages in Translation
+
+A high-level program passes through several stages before execution.
+
+```text
+Source Program
+      |
+      v
+Lexical Analysis
+      |
+      v
+Syntax Analysis
+      |
+      v
+Semantic Analysis
+      |
+      v
+Intermediate Code
+      |
+      v
+Code Optimization
+      |
+      v
+Code Generation
+      |
+      v
+Object Code
+      |
+      v
+Linking
+      |
+      v
+Executable Program
+```
+
+### Lexical Analysis
+
+Converts characters into tokens.
+
+### Syntax Analysis
+
+Checks whether tokens follow grammar rules.
+
+It is also called parsing.
+
+### Semantic Analysis
+
+Checks meaning and type-related rules.
+
+Example:
+
+```c
+int x;
+x = "Hello";
+```
+
+This is semantically incorrect because an integer variable is assigned a string.
+
+### Intermediate Code Generation
+
+Produces an intermediate representation.
+
+Example:
+
+```text
+t1 = b + 10
+a = t1
+```
+
+### Code Optimization
+
+Improves code efficiency.
+
+Possible goals:
+
+- Faster execution
+- Less memory usage
+- Removal of unnecessary operations
+
+### Code Generation
+
+Produces target code.
+
+### Linking
+
+Combines object files with required libraries.
+
+### Loading
+
+Loads the executable into memory for execution.
+
+## 8. Formal Transition Models
+
+A formal transition model describes how a program changes from one state to another.
+
+```text
+Current State
+     |
+     | instruction/action
+     v
+Next State
+```
+
+Important ideas:
+
+- State
+- Transition
+- Execution
+- Program behavior
+
+# Part B – Elementary Data Types
+
+## 9. Properties of Types and Objects
+
+A data type specifies:
+
+- Possible values
+- Representation
+- Operations
+- Storage requirements
+
+Examples:
+
+```text
+int
+float
+char
+boolean
+```
+
+An object is a region of memory that stores a value.
+
+Example:
+
+```c
+int age = 20;
+```
+
+Here:
+
+```text
+int  → type
+age  → variable/object
+20   → value
+```
+
+## 10. Scalar Data Types
+
+A scalar type represents a single value.
+
+Examples:
+
+- Integer
+- Character
+- Floating point
+- Boolean
+
+## 11. Composite Data Types
+
+A composite type combines multiple values.
+
+Examples:
+
+- Array
+- Structure
+- Union
+- Class
+
+| Scalar | Composite |
+|---|---|
+| Single value | Multiple values |
+| int | Array |
+| char | Structure |
+| float | Union |
+
+# Part C – Programming in C
+
+## 12. C Language
+
+C is a general-purpose procedural programming language.
+
+Important characteristics:
+
+- Structured programming
+- Efficient
+- Portable
+- Functions
+- Pointers
+- Direct memory manipulation
+
+## 13. Tokens in C
+
+A token is the smallest meaningful unit of a C program.
+
+Main token categories:
+
+1. Keywords
+2. Identifiers
+3. Constants
+4. String literals
+5. Operators
+6. Punctuators
+
+Example:
+
+```c
+int sum = a + b;
+```
+
+| Token | Category |
+|---|---|
+| int | Keyword |
+| sum | Identifier |
+| = | Operator |
+| a | Identifier |
+| + | Operator |
+| b | Identifier |
+| ; | Punctuator |
+
+## 14. Identifiers
+
+An identifier is a name given to a program element.
+
+Valid:
+
+```text
+total
+student_name
+marks1
+```
+
+Invalid:
+
+```text
+1marks
+student-name
+int
+```
+
+Rules:
+
+- Can contain letters, digits and underscore
+- Cannot start with a digit
+- Cannot be a keyword
+- C is case-sensitive
+
+## 15. Data Types in C
+
+Basic data types include:
+
+```text
+char
+int
+float
+double
+void
+```
+
+Type modifiers include:
+
+```text
+short
+long
+signed
+unsigned
+```
+
+Example:
+
+```c
+unsigned int count;
+long int population;
+```
+
+## 16. Sequence Control
+
+Sequence control means statements execute in their normal order.
+
+```c
+int a = 10;
+int b = 20;
+int c = a + b;
+printf("%d", c);
+```
+
+Execution occurs from top to bottom.
+
+## 17. Selection Statements
+
+### if
+
+```c
+if(age >= 18)
+    printf("Adult");
+```
+
+### if-else
+
+```c
+if(mark >= 50)
+    printf("Pass");
+else
+    printf("Fail");
+```
+
+### switch
+
+```c
+switch(choice)
+{
+    case 1:
+        printf("One");
+        break;
+
+    case 2:
+        printf("Two");
+        break;
+}
+```
+
+## 18. Loop Statements
+
+### for
+
+```c
+for(i = 0; i < 10; i++)
+{
+    printf("%d", i);
+}
+```
+
+### while
+
+```c
+while(i < 10)
+{
+    i++;
+}
+```
+
+### do-while
+
+```c
+do
+{
+    i++;
+} while(i < 10);
+```
+
+## 19. Arrays
+
+An array stores multiple values of the same type.
+
+```c
+int marks[5];
+```
+
+For a five-element array:
+
+```text
+marks[0]
+marks[1]
+marks[2]
+marks[3]
+marks[4]
+```
+
+Indexing normally starts at 0.
+
+Two-dimensional array:
+
+```c
+int matrix[3][3];
+```
+
+## 20. Structures
+
+A structure groups variables of different types.
+
+```c
+struct Student
+{
+    int roll;
+    char name[50];
+    float mark;
+};
+```
+
+Create an object:
+
+```c
+struct Student s1;
+```
+
+## 21. Union
+
+A union allows its members to share the same memory area.
+
+```c
+union Data
+{
+    int i;
+    float f;
+    char c;
+};
+```
+
+### Structure vs Union
+
+| Structure | Union |
+|---|---|
+| Members have separate storage | Members share storage |
+| Multiple member values can coexist | Normally one member value is meaningful at a time |
+| Size relates to combined member storage | Size is based mainly on the largest member |
+
+## 22. Strings
+
+C strings are character arrays terminated by the null character:
+
+```text
+'\0'
+```
+
+Example:
+
+```c
+char name[20] = "Sreejit";
+```
+
+Common functions:
+
+```text
+strlen()
+strcpy()
+strcat()
+strcmp()
+```
+
+Header:
+
+```c
+#include <string.h>
+```
+
+## 23. Pointers
+
+A pointer stores the address of another variable.
+
+```c
+int x = 10;
+int *p;
+
+p = &x;
+```
+
+Important operators:
+
+```text
+& → address-of
+* → dereference
+```
+
+Therefore:
+
+```c
+*p
+```
+
+gives the value stored at the address contained in `p`.
+
+## 24. Functions
+
+A function is a block of code designed to perform a particular task.
+
+```c
+int add(int a, int b)
+{
+    return a + b;
+}
+```
+
+Calling:
+
+```c
+int result = add(10, 20);
+```
+
+Function-related concepts:
+
+- Declaration/prototype
+- Definition
+- Function call
+- Parameters
+- Return value
+
+## 25. Parameter Passing
+
+### Call by Value
+
+A copy of the value is passed.
+
+Changes to the parameter do not directly change the original variable.
+
+### Address-based Modification
+
+C can pass an address using pointers.
+
+```c
+void change(int *x)
+{
+    *x = 100;
+}
+```
+
+Call:
+
+```c
+int a = 10;
+change(&a);
+```
+
+Now `a` becomes 100.
+
+## 26. File Handling
+
+Files allow permanent storage of data.
+
+Common functions:
+
+```text
+fopen()
+fclose()
+fprintf()
+fscanf()
+fgetc()
+fputc()
+fgets()
+fputs()
+fread()
+fwrite()
+```
+
+Example:
+
+```c
+FILE *fp;
+
+fp = fopen("data.txt", "w");
+
+fprintf(fp, "Hello");
+
+fclose(fp);
+```
+
+### File Modes
+
+| Mode | Meaning |
+|---|---|
+| r | Read |
+| w | Write |
+| a | Append |
+| r+ | Read and write |
+| w+ | Write and read |
+| a+ | Append and read |
+
+## 27. Command-Line Arguments
+
+Command-line arguments pass values to a program when it starts.
+
+```c
+int main(int argc, char *argv[])
+```
+
+Here:
+
+```text
+argc → argument count
+argv → argument vector
+```
+
+## 28. C Preprocessor
+
+The preprocessor works before compilation.
+
+Directives begin with `#`.
+
+Examples:
+
+```c
+#include <stdio.h>
+#define PI 3.14159
+```
+
+Common directives:
+
+```text
+#include
+#define
+#undef
+#ifdef
+#ifndef
+#if
+#else
+#endif
+```
+
+# Part D – Object-Oriented Programming
+
+## 29. OOP
+
+Object-Oriented Programming organizes programs around classes and objects.
+
+Major concepts:
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+## 30. Class
+
+A class is a blueprint for creating objects.
+
+```cpp
+class Student
+{
+public:
+    int roll;
+
+    void display()
+    {
+        cout << roll;
+    }
+};
+```
+
+## 31. Object
+
+An object is an instance of a class.
+
+```cpp
+Student s1;
+```
+
+```text
+Student → class
+s1      → object
+```
+
+## 32. Instantiation
+
+Instantiation means creating an object from a class.
+
+```cpp
+Student s1;
+```
+
+## 33. Encapsulation
+
+Encapsulation means combining data and functions into a single unit and controlling access to the data.
+
+```cpp
+class Account
+{
+private:
+    double balance;
+
+public:
+    void deposit(double amount)
+    {
+        balance += amount;
+    }
+};
+```
+
+## 34. Abstraction
+
+Abstraction means showing essential features while hiding unnecessary implementation details.
+
+Example:
+
+An ATM exposes operations such as:
+
+```text
+Withdraw
+Deposit
+Balance
+```
+
+The internal implementation is hidden.
+
+## 35. Inheritance
+
+Inheritance allows a new class to acquire properties and behavior from an existing class.
+
+```cpp
+class Animal
+{
+};
+
+class Dog : public Animal
+{
+};
+```
+
+Types:
+
+- Single
+- Multiple
+- Multilevel
+- Hierarchical
+- Hybrid
+
+## 36. Polymorphism
+
+Polymorphism means one interface can have multiple forms.
+
+Two major types:
+
+1. Compile-time polymorphism
+2. Run-time polymorphism
+
+Examples:
+
+- Function overloading
+- Operator overloading
+- Virtual functions
+
+## 37. Abstract Class
+
+An abstract class is intended to be used as a base class and may contain pure virtual functions.
+
+```cpp
+class Shape
+{
+public:
+    virtual void draw() = 0;
+};
+```
+
+An abstract class cannot normally be instantiated directly.
+
+# Part E – Programming in C++
+
+## 38. C++ Concepts
+
+C++ supports procedural and object-oriented programming.
+
+Important features:
+
+- Classes
+- Objects
+- Inheritance
+- Polymorphism
+- Templates
+- Exception handling
+- Streams
+- Files
+
+## 39. Tokens
+
+C++ tokens include:
+
+- Keywords
+- Identifiers
+- Constants
+- Strings
+- Operators
+- Punctuators
+
+## 40. Variables and Constants
+
+Variable:
+
+```cpp
+int age = 20;
+```
+
+Constant:
+
+```cpp
+const int MAX = 100;
+```
+
+## 41. Operators
+
+Important categories:
+
+```text
+Arithmetic
+Relational
+Logical
+Assignment
+Increment/decrement
+Bitwise
+Conditional
+```
+
+## 42. Control Statements
+
+C++ supports:
+
+- if
+- if-else
+- switch
+- for
+- while
+- do-while
+- break
+- continue
+
+## 43. Functions and Parameter Passing
+
+C++ supports:
+
+- Normal parameters
+- References
+- Default arguments
+- Function overloading
+- Inline functions
+- Templates
+
+Example:
+
+```cpp
+int add(int a, int b)
+{
+    return a + b;
+}
+```
+
+## 44. Virtual Functions
+
+A virtual function supports run-time polymorphism.
+
+```cpp
+class Animal
+{
+public:
+    virtual void sound()
+    {
+        cout << "Animal";
+    }
+};
+```
+
+A derived class can override the function.
+
+## 45. Constructors
+
+A constructor initializes an object.
+
+It has the same name as the class and has no return type.
+
+```cpp
+class Student
+{
+public:
+    Student()
+    {
+        cout << "Constructor";
+    }
+};
+```
+
+## 46. Destructors
+
+A destructor is called when an object is destroyed.
+
+```cpp
+~Student()
+{
+}
+```
+
+The destructor begins with `~`.
+
+| Constructor | Destructor |
+|---|---|
+| Initializes object | Performs cleanup |
+| Same name as class | Same name preceded by `~` |
+| Called during creation | Called during destruction |
+| Can be overloaded | Cannot be overloaded like constructors |
+
+## 47. Function Overloading
+
+Same function name with different parameter lists.
+
+```cpp
+int add(int a, int b)
+{
+    return a + b;
+}
+
+float add(float a, float b)
+{
+    return a + b;
+}
+```
+
+This is compile-time polymorphism.
+
+## 48. Operator Overloading
+
+Operators can be given special behavior for user-defined types.
+
+```cpp
+Complex operator+(const Complex& c)
+{
+    ...
+}
+```
+
+## 49. Templates
+
+Templates support generic programming.
+
+```cpp
+template <class T>
+T maximum(T a, T b)
+{
+    return (a > b) ? a : b;
+}
+```
+
+## 50. Exception Handling
+
+Main keywords:
+
+```text
+try
+catch
+throw
+```
+
+Example:
+
+```cpp
+try
+{
+    throw 10;
+}
+catch(int x)
+{
+    cout << "Exception";
+}
+```
+
+## 51. Streams and Files
+
+Common streams:
+
+```text
+cin
+cout
+cerr
+clog
+```
+
+File classes:
+
+```text
+ifstream
+ofstream
+fstream
+```
+
+Example:
+
+```cpp
+ofstream file("data.txt");
+
+file << "Hello";
+
+file.close();
+```
+
+## 52. Multifile Programs
+
+A large program can be divided into multiple files.
+
+Example:
+
+```text
+student.h
+student.cpp
+main.cpp
+```
+
+Advantages:
+
+- Easier maintenance
+- Reuse
+- Better organization
+- Team development
+
+# Part F – Web Programming
+
+## 53. HTML
+
+HTML means **HyperText Markup Language**.
+
+It structures web pages.
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello</h1>
+<p>Welcome.</p>
+
+</body>
+</html>
+```
+
+Common tags:
+
+```text
+<html>
+<head>
+<title>
+<body>
+<h1>
+<p>
+<a>
+<img>
+<table>
+<form>
+```
+
+## 54. DHTML
+
+DHTML means **Dynamic HTML**.
+
+It is not a separate programming language.
+
+It generally combines:
+
+- HTML
+- CSS
+- JavaScript
+- DOM
+
+DHTML allows web-page content to change dynamically.
+
+## 55. XML
+
+XML means **eXtensible Markup Language**.
+
+It is used to represent structured data.
+
+```xml
+<student>
+    <name>Sreejit</name>
+    <mark>90</mark>
+</student>
+```
+
+| HTML | XML |
+|---|---|
+| Structures/presents web content | Represents structured data |
+| Uses established HTML elements | Allows user-defined elements |
+| Strongly associated with web documents | Focuses on data representation |
+
+## 56. Scripting
+
+Scripting can add dynamic behavior and automate tasks.
+
+Examples:
+
+- JavaScript
+- Python
+- PHP
+
+Example:
+
+```javascript
+alert("Hello");
+```
+
+## 57. Java
+
+Java is an object-oriented programming language.
+
+Important features:
+
+- Object-oriented
+- Platform-independent through JVM
+- Strongly typed
+- Multithreading
+- Automatic memory management
+
+```text
+Java Source
+    |
+    v
+Java Compiler
+    |
+    v
+Bytecode
+    |
+    v
+JVM
+    |
+    v
+Execution
+```
+
+## 58. Servlets
+
+A Servlet is a Java program that runs on the server and processes client requests.
+
+```text
+Browser
+   |
+   | HTTP Request
+   v
+Servlet Container
+   |
+   v
+Servlet
+   |
+   | Response
+   v
+Browser
+```
+
+## 59. Applets
+
+A Java applet was historically a client-side Java program designed to run in a browser/plugin environment.
+
+Modern browsers no longer support the old Java browser-plugin model.
+
+For UGC NET:
+
+```text
+Applet  → historical client-side Java
+Servlet → server-side Java
+```
+
+# Part G – Computer Graphics
+
+## 60. Computer Graphics
+
+Computer graphics deals with creating, storing, manipulating, and displaying images using computers.
+
+Applications:
+
+- CAD
+- Games
+- Animation
+- Scientific visualization
+- Medical imaging
+- Education
+- Simulation
+- Virtual reality
+
+## 61. Video Display Devices
+
+Important concepts:
+
+- Pixel
+- Resolution
+- Refresh rate
+- Frame buffer
+- Color depth
+
+### Pixel
+
+A pixel is a picture element.
+
+### Resolution
+
+Resolution describes the number of pixels.
+
+Example:
+
+```text
+1920 × 1080
+```
+
+means:
+
+```text
+1920 horizontal pixels
+1080 vertical pixels
+```
+
+## 62. Raster-Scan Systems
+
+A raster-scan display refreshes the screen line by line.
+
+```text
+Line 1  →→→→
+Line 2  →→→→
+Line 3  →→→→
+...
+```
+
+Characteristics:
+
+- Uses scan lines
+- Suitable for filled images
+- Common display approach
+
+## 63. Random-Scan Systems
+
+A random-scan system draws only the required lines.
+
+It is also called a vector display.
+
+| Raster Scan | Random Scan |
+|---|---|
+| Scans screen line by line | Draws required lines |
+| Suitable for images and filled regions | Suitable for line drawings |
+| Uses scan lines | Uses vector-style drawing |
+
+## 64. Graphics Monitors
+
+Important properties:
+
+- Resolution
+- Refresh rate
+- Color depth
+- Pixel density
+- Screen size
+
+## 65. Input Devices
+
+Examples:
+
+- Keyboard
+- Mouse
+- Trackball
+- Joystick
+- Light pen
+- Touch screen
+- Graphics tablet
+- Scanner
+
+# Part H – Drawing Algorithms
+
+## 66. Points and Lines
+
+A 2-D point:
+
+```text
+P = (x, y)
+```
+
+A line can be represented using endpoints:
+
+```text
+P1 = (x1, y1)
+P2 = (x2, y2)
+```
+
+## 67. DDA Line Drawing Algorithm
+
+DDA means **Digital Differential Analyzer**.
+
+Given:
+
+```text
+(x1, y1)
+(x2, y2)
+```
+
+Calculate:
+
+```text
+dx = x2 - x1
+dy = y2 - y1
+```
+
+Number of steps:
+
+```text
+steps = maximum(|dx|, |dy|)
+```
+
+Increments:
+
+```text
+x_increment = dx / steps
+y_increment = dy / steps
+```
+
+Then repeatedly add the increments.
+
+### Example
+
+Given:
+
+```text
+P1 = (2, 2)
+P2 = (6, 4)
+```
+
+Then:
+
+```text
+dx = 4
+dy = 2
+steps = 4
+
+x_increment = 1
+y_increment = 0.5
+```
+
+## 68. Bresenham Line Drawing Algorithm
+
+Bresenham's algorithm uses a decision parameter to choose the next pixel.
+
+For a common case where:
+
+```text
+0 <= slope <= 1
+```
+
+the initial decision parameter is:
+
+```text
+p0 = 2dy - dx
+```
+
+The algorithm chooses between neighboring pixels.
+
+Advantages:
+
+- Efficient
+- Uses integer arithmetic in the basic formulation
+- Avoids repeated floating-point calculations
+
+| DDA | Bresenham |
+|---|---|
+| Incremental calculations | Decision parameter |
+| May use floating-point arithmetic | Integer arithmetic in basic form |
+| Simple | Efficient |
+
+## 69. Midpoint Circle Algorithm
+
+Circle equation:
+
+```text
+x² + y² = r²
+```
+
+The midpoint circle algorithm uses symmetry.
+
+A circle has **8-way symmetry**.
+
+A commonly used initial decision parameter is:
+
+```text
+p0 = 1 - r
+```
+
+## 70. Midpoint Ellipse Algorithm
+
+Ellipse:
+
+```text
+x²/rx² + y²/ry² = 1
+```
+
+where:
+
+```text
+rx = x-radius
+ry = y-radius
+```
+
+The algorithm uses two regions because the slope changes.
+
+```text
+Region 1
+Region 2
+```
+
+## 71. Scan-Line Polygon Fill
+
+Basic steps:
+
+1. Select a horizontal scan line.
+2. Find intersections with polygon edges.
+3. Sort intersections.
+4. Fill between pairs.
+5. Continue with the next scan line.
+
+```text
+Scan line ---------------------
+           |████████████|
+```
+
+## 72. Boundary-Fill
+
+Boundary fill starts from an interior point and continues until the boundary color is reached.
+
+It can use:
+
+- 4-connected filling
+- 8-connected filling
+
+## 73. Flood-Fill
+
+Flood fill replaces a connected region having an old color with a new color.
+
+| Boundary Fill | Flood Fill |
+|---|---|
+| Stops at boundary color | Replaces connected old-color region |
+| Uses boundary information | Uses old/interior color |
+| 4-connected or 8-connected | 4-connected or 8-connected |
+
+# Part I – 2-D Transformations and Viewing
+
+## 74. 2-D Geometrical Transformations
+
+Important transformations:
+
+1. Translation
+2. Scaling
+3. Rotation
+4. Reflection
+5. Shearing
+
+## 75. Translation
+
+Translation moves an object.
+
+```text
+x' = x + tx
+y' = y + ty
+```
+
+Homogeneous matrix:
+
+```text
+| x' |   | 1  0  tx | | x |
+| y' | = | 0  1  ty | | y |
+| 1  |   | 0  0   1 | | 1 |
+```
+
+## 76. Scaling
+
+```text
+x' = sx × x
+y' = sy × y
+```
+
+Matrix:
+
+```text
+| x' |   | sx  0   0 | | x |
+| y' | = |  0 sy   0 | | y |
+| 1  |   |  0  0   1 | | 1 |
+```
+
+## 77. Rotation
+
+For counter-clockwise rotation by angle θ:
+
+```text
+x' = x cosθ - y sinθ
+y' = x sinθ + y cosθ
+```
+
+Matrix:
+
+```text
+| x' |   | cosθ  -sinθ  0 | | x |
+| y' | = | sinθ   cosθ  0 | | y |
+| 1  |   |  0       0    1 | | 1 |
+```
+
+## 78. Reflection
+
+### About x-axis
+
+```text
+x' = x
+y' = -y
+```
+
+### About y-axis
+
+```text
+x' = -x
+y' = y
+```
+
+### About origin
+
+```text
+x' = -x
+y' = -y
+```
+
+## 79. Shearing
+
+### X-shear
+
+```text
+x' = x + shx × y
+y' = y
+```
+
+### Y-shear
+
+```text
+x' = x
+y' = y + shy × x
+```
+
+## 80. Homogeneous Coordinates
+
+A 2-D point:
+
+```text
+(x, y)
+```
+
+is represented as:
+
+```text
+(x, y, 1)
+```
+
+Homogeneous coordinates allow translation to be represented using matrix multiplication.
+
+## 81. Composite Transformations
+
+Applying multiple transformations is called a composite transformation.
+
+Example:
+
+```text
+Scale → Rotate → Translate
+```
+
+The order matters.
+
+In general:
+
+```text
+AB != BA
+```
+
+Therefore transformation matrices are not generally commutative.
+
+## 82. Coordinate Systems
+
+Important coordinate systems:
+
+- Object/model coordinates
+- World coordinates
+- Viewing coordinates
+- Device/screen coordinates
+
+An object may be transformed from one coordinate system to another.
+
+## 83. Viewing Pipeline
+
+A simplified pipeline is:
+
+```text
+Object Coordinates
+       |
+       v
+World Coordinates
+       |
+       v
+Viewing Coordinates
+       |
+       v
+Projection
+       |
+       v
+Clipping
+       |
+       v
+Viewport Transformation
+       |
+       v
+Device Coordinates
+```
+
+## 84. Viewing Coordinate Reference Frame
+
+The viewing coordinate system represents the scene from the viewpoint.
+
+Important elements:
+
+- Viewing position
+- Viewing direction
+- Up direction
+- Viewing plane
+
+## 85. Window and Viewport
+
+A **window** is the selected region in world coordinates.
+
+A **viewport** is the corresponding region on the display.
+
+```text
+World
++-----------------------+
+|       WINDOW          |
+|       +-------+       |
+|       |Object |       |
+|       +-------+       |
++-----------------------+
+
+             |
+             v
+
+Screen
++-----------------------+
+|     VIEWPORT          |
+|     +-------+         |
+|     |Object |         |
+|     +-------+         |
++-----------------------+
+```
+
+## 86. Window-to-Viewport Transformation
+
+For x:
+
+```text
+xv = xvmin + (xw - xwmin) × (xvmax - xvmin) / (xwmax - xwmin)
+```
+
+For y:
+
+```text
+yv = yvmin + (yw - ywmin) × (yvmax - yvmin) / (ywmax - ywmin)
+```
+
+where:
+
+```text
+Window:
+(xwmin, ywmin) to (xwmax, ywmax)
+
+Viewport:
+(xvmin, yvmin) to (xvmax, yvmax)
+```
+
+## 87. Line Clipping
+
+Clipping removes portions of objects outside the viewing region.
+
+Important algorithms:
+
+- Cohen-Sutherland
+- Liang-Barsky
+
+## 88. Cohen-Sutherland Algorithm
+
+Cohen-Sutherland uses a 4-bit region code.
+
+The four regions represent:
+
+- Above
+- Below
+- Right
+- Left
+
+A common coding is:
+
+```text
+TOP    = 1000
+BOTTOM = 0100
+RIGHT  = 0010
+LEFT   = 0001
+```
+
+### Trivial acceptance
+
+If:
+
+```text
+code1 OR code2 = 0000
+```
+
+the line is completely inside.
+
+### Trivial rejection
+
+If:
+
+```text
+code1 AND code2 != 0000
+```
+
+the line is completely outside in a common outside region.
+
+Otherwise, calculate an intersection and continue.
+
+## 89. Liang-Barsky Algorithm
+
+Liang-Barsky uses the parametric line:
+
+```text
+x = x1 + u(x2 - x1)
+y = y1 + u(y2 - y1)
+```
+
+where:
+
+```text
+0 <= u <= 1
+```
+
+It uses clipping-boundary inequalities to determine the visible interval.
+
+| Cohen-Sutherland | Liang-Barsky |
+|---|---|
+| Region-code method | Parametric method |
+| Uses 4-bit codes | Uses parameter limits |
+| Simple concept | Efficient for rectangular clipping |
+
+## 90. Polygon Clipping
+
+A common polygon clipping algorithm is **Sutherland-Hodgman**.
+
+The polygon is clipped against each boundary of the clipping window.
+
+Typical boundaries:
+
+```text
+Left
+Right
+Bottom
+Top
+```
+
+# Part J – 3-D Object Representation
+
+## 91. 3-D Objects
+
+A 3-D point has:
+
+```text
+(x, y, z)
+```
+
+Representation methods include:
+
+- Polygon surfaces
+- Quadric surfaces
+- Spline representation
+
+## 92. Polygon Surfaces
+
+Objects can be represented using polygonal faces.
+
+Example:
+
+A cube can be represented using six rectangular faces.
+
+Advantages:
+
+- Simple
+- Easy to render
+- Widely used
+
+Curved objects may require many polygons.
+
+## 93. Quadric Surfaces
+
+Quadric surfaces are described using second-degree equations.
+
+Examples:
+
+- Sphere
+- Ellipsoid
+- Cone
+- Cylinder
+
+Sphere:
+
+```text
+x² + y² + z² = r²
+```
+
+## 94. Spline Representation
+
+Splines are mathematical curves used for smooth shape representation.
+
+Important types:
+
+- Bézier
+- B-spline
+
+Advantages:
+
+- Smooth curves
+- Compact representation
+- Useful for design and modeling
+
+## 95. Bézier Curves
+
+A Bézier curve is controlled by control points.
+
+For a cubic Bézier curve:
+
+```text
+P(u) =
+(1-u)^3 P0
++ 3(1-u)^2u P1
++ 3(1-u)u² P2
++ u³ P3
+```
+
+where:
+
+```text
+0 <= u <= 1
+```
+
+Important properties:
+
+- Starts at P0
+- Ends at P3
+- P1 and P2 control the shape
+- Convex-hull property
+- Affine invariance
+
+## 96. B-Spline Curves
+
+B-splines use control points and basis functions.
+
+Important properties:
+
+- Local control
+- Smooth curves
+- Flexible shape control
+- Useful for complex shapes
+
+| Bézier | B-Spline |
+|---|---|
+| Overall curve influenced by control points | Local control |
+| Simpler representation | More flexible |
+| Good for simple curves | Good for complex curves |
+
+## 97. Bézier Surfaces
+
+Bézier surfaces extend Bézier curves to two dimensions.
+
+They use a grid of control points.
+
+Parameters:
+
+```text
+u
+v
+```
+
+A bicubic Bézier surface uses a:
+
+```text
+4 × 4
+```
+
+control-point grid.
+
+## 98. B-Spline Surfaces
+
+B-spline surfaces extend B-spline curves.
+
+Applications:
+
+- CAD
+- Automobile design
+- Industrial design
+- Animation
+
+A major advantage is local control over surface shape.
+
+# Part K – Illumination and Rendering
+
+## 99. Illumination Models
+
+Illumination models describe how light interacts with surfaces.
+
+Important components:
+
+1. Ambient
+2. Diffuse
+3. Specular
+
+## 100. Ambient Reflection
+
+Ambient light provides background illumination.
+
+A simplified model:
+
+```text
+Iambient = ka × Ia
+```
+
+where:
+
+```text
+ka = ambient reflection coefficient
+Ia = ambient intensity
+```
+
+## 101. Diffuse Reflection
+
+Diffuse reflection occurs when light is scattered by a rough surface.
+
+A common model:
+
+```text
+Idiffuse = kd × I × max(0, N · L)
+```
+
+where:
+
+```text
+kd = diffuse coefficient
+I  = light intensity
+N  = surface normal
+L  = light direction
+```
+
+## 102. Specular Reflection
+
+Specular reflection produces highlights on shiny surfaces.
+
+A common Phong-style term is proportional to:
+
+```text
+ks × I × (R · V)^n
+```
+
+where:
+
+```text
+ks = specular coefficient
+R  = reflection direction
+V  = viewer direction
+n  = shininess exponent
+```
+
+## 103. Polygon Rendering Methods
+
+Important methods:
+
+- Flat shading
+- Gouraud shading
+- Phong shading
+
+### Flat Shading
+
+One intensity is calculated for an entire polygon.
+
+### Gouraud Shading
+
+Intensity is calculated at vertices and interpolated across the polygon.
+
+### Phong Shading
+
+Normal vectors are interpolated and lighting is calculated more finely across the surface.
+
+| Flat | Gouraud | Phong |
+|---|---|---|
+| One value per polygon | Vertex values interpolated | Normals interpolated |
+| Simple | Smoother | Better highlights |
+| Lower computation | Medium | Higher computation |
+
+# Part L – 3-D Viewing and Projection
+
+## 104. 3-D Viewing Pipeline
+
+A simplified pipeline:
+
+```text
+Model/Object Coordinates
+          |
+          v
+World Coordinates
+          |
+          v
+Viewing Coordinates
+          |
+          v
+Projection
+          |
+          v
+Clipping
+          |
+          v
+Viewport / Device Coordinates
+```
+
+## 105. Projection
+
+Projection converts a 3-D scene into a 2-D representation.
+
+Two major types:
+
+1. Parallel projection
+2. Perspective projection
+
+## 106. Parallel Projection
+
+Projection lines are parallel.
+
+Types:
+
+- Orthographic
+- Oblique
+
+### Orthographic Projection
+
+Projection lines are perpendicular to the projection plane.
+
+Useful in engineering drawings.
+
+### Oblique Projection
+
+Projection lines are not perpendicular to the projection plane.
+
+## 107. Perspective Projection
+
+Projection lines converge at a viewpoint.
+
+Objects farther away appear smaller.
+
+```text
+Near object → larger
+Far object  → smaller
+```
+
+| Parallel | Perspective |
+|---|---|
+| Projection lines are parallel | Projection lines converge |
+| No depth-based size reduction in the basic model | Far objects appear smaller |
+| Useful in engineering drawings | More realistic |
+| No vanishing-point effect in the same sense | Vanishing points occur |
+
+## 108. General Projection Transformations
+
+Projection transformations map 3-D coordinates onto a projection plane.
+
+Important concepts:
+
+- Viewing direction
+- Projection plane
+- Projection center
+- Projection type
+- Coordinate transformation
+
+## 109. 3-D Clipping
+
+3-D clipping removes portions outside the visible viewing volume.
+
+Typical clipping planes:
+
+```text
+Left
+Right
+Top
+Bottom
+Near
+Far
+```
+
+# 110. Important Comparison Table
+
+| Topic | Key point |
+|---|---|
+| DDA | Incremental line drawing |
+| Bresenham | Decision-parameter line drawing |
+| Midpoint circle | 8-way symmetry |
+| Midpoint ellipse | Two-region algorithm |
+| Boundary fill | Stops at boundary |
+| Flood fill | Replaces connected old-color region |
+| Translation | Changes position |
+| Scaling | Changes size |
+| Rotation | Changes orientation |
+| Reflection | Mirror image |
+| Shearing | Slants shape |
+| Cohen-Sutherland | Region-code line clipping |
+| Liang-Barsky | Parametric line clipping |
+| Sutherland-Hodgman | Polygon clipping |
+| Bézier | Control-point curve |
+| B-spline | Local control |
+| Raster scan | Line-by-line scanning |
+| Random scan | Required vectors are drawn |
+| Parallel projection | Parallel projectors |
+| Perspective projection | Converging projectors |
+
+# 111. Important C and C++ Differences
+
+| C | C++ |
+|---|---|
+| Mainly procedural | Procedural + object-oriented |
+| No classes | Classes |
+| No function overloading | Function overloading |
+| No operator overloading | Operator overloading |
+| No inheritance | Inheritance |
+| No templates | Templates |
+| `printf` and `scanf` commonly used | `cout` and `cin` commonly used |
+| Structures mainly group data | Classes support data and member functions |
+
+# 112. Important OOP Revision
+
+```text
+Class        → Blueprint
+Object       → Instance
+Instantiation → Creating an object
+Encapsulation → Combining/hiding data and operations
+Abstraction   → Hiding unnecessary details
+Inheritance   → Acquiring properties/behavior
+Polymorphism  → Multiple forms
+```
+
+# 113. Important Graphics Formulas
+
+## Translation
+
+```text
+x' = x + tx
+y' = y + ty
+```
+
+## Scaling
+
+```text
+x' = sx × x
+y' = sy × y
+```
+
+## Rotation
+
+```text
+x' = x cosθ - y sinθ
+y' = x sinθ + y cosθ
+```
+
+## X-Shear
+
+```text
+x' = x + shx × y
+y' = y
+```
+
+## Y-Shear
+
+```text
+x' = x
+y' = y + shy × x
+```
+
+## Circle
+
+```text
+x² + y² = r²
+```
+
+## Sphere
+
+```text
+x² + y² + z² = r²
+```
+
+# 114. UGC NET High-Priority Areas
+
+## Programming Languages
+
+Focus on:
+
+- Programming paradigms
+- Binding times
+- Syntax and semantics
+- BNF
+- Translation phases
+- C tokens
+- Pointers
+- Arrays
+- Structures and unions
+- Functions
+- File handling
+- Command-line arguments
+- Preprocessor
+- Classes and objects
+- Encapsulation
+- Abstraction
+- Inheritance
+- Polymorphism
+- Constructors/destructors
+- Virtual functions
+- Overloading
+- Templates
+- Exception handling
+- HTML
+- DHTML
+- XML
+- Java
+- Servlets
+- Applets
+
+## Computer Graphics
+
+Focus on:
+
+- Raster scan vs random scan
+- DDA
+- Bresenham
+- Midpoint circle
+- Midpoint ellipse
+- Scan-line polygon fill
+- Boundary fill
+- Flood fill
+- 2-D transformations
+- Homogeneous coordinates
+- Composite transformations
+- Window-to-viewport mapping
+- Cohen-Sutherland
+- Liang-Barsky
+- Sutherland-Hodgman
+- Bézier curves
+- B-spline curves
+- Bézier surfaces
+- B-spline surfaces
+- Illumination models
+- Flat/Gouraud/Phong shading
+- Parallel and perspective projection
+- 3-D clipping
+
+# 115. Common Mistakes
+
+### Syntax vs Semantics
+
+```text
+Syntax   = Form
+Semantics = Meaning
+```
+
+### Structure vs Union
+
+```text
+Structure → separate member storage
+Union     → shared storage
+```
+
+### Constructor vs Destructor
+
+```text
+Constructor → initialization
+Destructor  → cleanup
+```
+
+### Overloading vs Overriding
+
+```text
+Overloading → same name, different parameter list
+Overriding  → derived class provides another implementation
+```
+
+### Boundary Fill vs Flood Fill
+
+```text
+Boundary Fill → boundary color
+Flood Fill    → old/interior color
+```
+
+### Window vs Viewport
+
+```text
+Window   → selected world-coordinate area
+Viewport → display-coordinate area
+```
+
+### Bézier vs B-Spline
+
+```text
+Bézier  → overall control
+B-Spline → local control
+```
+
+### Parallel vs Perspective
+
+```text
+Parallel    → parallel projectors
+Perspective → converging projectors
+```
+
+# 116. One-Minute Revision
+
+```text
+Programming Languages
+        ↓
+Syntax + Semantics
+        ↓
+Paradigms
+        ↓
+Translation
+        ↓
+C
+        ↓
+C++
+        ↓
+OOP
+        ↓
+Web Programming
+        ↓
+Computer Graphics
+        ↓
+Line Drawing
+        ↓
+2-D Transformations
+        ↓
+Clipping
+        ↓
+3-D Modeling
+        ↓
+Illumination
+        ↓
+Rendering
+        ↓
+Projection
+```
+
+Remember:
+
+```text
+DDA               → Line
+Bresenham         → Line
+Midpoint Circle   → Circle
+Midpoint Ellipse  → Ellipse
+Boundary Fill     → Boundary
+Flood Fill        → Old color
+Cohen-Sutherland  → Line clipping
+Liang-Barsky      → Parametric clipping
+Sutherland-Hodgman → Polygon clipping
+
+Translation → Position
+Scaling     → Size
+Rotation    → Orientation
+Reflection  → Mirror
+Shearing    → Slant
+
+Bézier      → Curve using control points
+B-Spline    → Local control
+Parallel    → Parallel projectors
+Perspective → Converging projectors
+```
+
+# 117. Final Exam Strategy
+
+Study the unit in this order:
+
+1. Programming language concepts
+2. Translation stages
+3. C programming
+4. Pointers, arrays, structures and unions
+5. OOP concepts
+6. C++
+7. Web programming
+8. Computer graphics fundamentals
+9. Line and circle algorithms
+10. 2-D transformations
+11. Clipping algorithms
+12. 3-D representation
+13. Bézier and B-spline curves
+14. Illumination and rendering
+15. Projection and 3-D clipping
+
+For numerical questions, practice:
+
+- DDA
+- Bresenham
+- Midpoint circle
+- Transformation matrices
+- Composite transformations
+- Window-to-viewport mapping
+- Cohen-Sutherland
+- Liang-Barsky
+
+For theory questions, revise:
+
+- C vs C++
+- Structure vs union
+- Overloading vs overriding
+- Constructor vs destructor
+- Raster vs random scan
+- Boundary fill vs flood fill
+- Bézier vs B-spline
+- Parallel vs perspective projection
+- Flat vs Gouraud vs Phong shading
+
+# 118. Final Summary
+
+Unit III combines programming languages and computer graphics.
+
+The programming portion requires strong understanding of:
+
+```text
+Language concepts
+Translation
+C
+C++
+OOP
+Web programming
+```
+
+The graphics portion requires strong understanding of:
+
+```text
+Display systems
+Line drawing
+Circle and ellipse algorithms
+Polygon filling
+2-D transformations
+Viewing
+Clipping
+3-D representation
+Curves and surfaces
+Illumination
+Rendering
+Projection
+```
+
+For UGC NET preparation, repeatedly revise the **algorithms, transformation formulas, comparison tables, and common mistakes**.

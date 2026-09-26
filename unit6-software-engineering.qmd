@@ -1,0 +1,2262 @@
+---
+title: "Unit VI – Software Engineering"
+subtitle: "UGC NET Computer Science and Applications – Paper 2"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+
+## 1. Introduction to Software Engineering
+
+### 1.1 What is Software?
+
+Software is a collection of programs, data, procedures, and related documentation that makes a computer perform useful tasks.
+
+Examples:
+
+- Operating systems such as Windows and Linux
+- Web applications
+- Mobile applications
+- Banking software
+- Hospital management systems
+- Artificial intelligence applications
+
+### 1.2 What is Software Engineering?
+
+**Software Engineering** is the systematic and disciplined approach used to develop, operate, maintain, and improve software.
+
+The main objectives are:
+
+- Develop software that satisfies user requirements.
+- Complete the project within the available time.
+- Control development cost.
+- Produce reliable and maintainable software.
+- Detect and remove defects.
+- Manage changes effectively.
+
+### 1.3 Why is Software Engineering Needed?
+
+Software projects can become difficult when:
+
+- Requirements are unclear.
+- The project is very large.
+- Many developers work together.
+- Requirements change frequently.
+- Testing is inadequate.
+- Cost and schedule are not controlled.
+
+Software engineering provides methods, processes, techniques, and tools to manage these problems.
+
+---
+
+# 2. Software Process
+
+A **software process** is a structured set of activities used to develop a software product.
+
+A general software process contains:
+
+1. Communication
+2. Planning
+3. Modeling
+4. Construction
+5. Deployment
+
+These activities may be performed repeatedly depending on the process model.
+
+## 2.1 Generic Process Model
+
+A generic software process framework commonly contains five framework activities.
+
+### 1. Communication
+
+The development team communicates with customers and stakeholders.
+
+Activities include:
+
+- Understanding the problem
+- Identifying stakeholders
+- Collecting requirements
+- Clarifying user needs
+
+### 2. Planning
+
+The project is planned.
+
+Planning includes:
+
+- Schedule
+- Cost
+- Resources
+- Staffing
+- Risks
+- Milestones
+
+### 3. Modeling
+
+The requirements are converted into models.
+
+Examples:
+
+- Data models
+- Architectural models
+- Interface models
+- Design models
+
+### 4. Construction
+
+The actual software is produced.
+
+Construction includes:
+
+- Coding
+- Testing
+- Debugging
+
+### 5. Deployment
+
+The software is delivered to users.
+
+Deployment may include:
+
+- Installation
+- Training
+- Feedback
+- Maintenance
+
+## 2.2 Framework Activity
+
+A **framework activity** is a major activity in the software process.
+
+The major framework activities are:
+
+| Activity | Main purpose |
+|---|---|
+| Communication | Understand requirements |
+| Planning | Plan resources, time and cost |
+| Modeling | Analyze and design |
+| Construction | Code and test |
+| Deployment | Deliver and obtain feedback |
+
+## 2.3 Task Set
+
+A **task set** is a collection of tasks used to accomplish a framework activity.
+
+For example, under communication:
+
+- Identify stakeholders
+- Conduct interviews
+- Collect requirements
+- Document requirements
+- Validate requirements
+
+## 2.4 Process Patterns
+
+A **process pattern** describes a reusable solution to a recurring problem in software development.
+
+A process pattern generally describes:
+
+- Problem
+- Context
+- Solution
+- Consequences
+
+Process patterns help organizations reuse successful development practices.
+
+---
+
+# 3. Process Lifecycle
+
+The software process moves through different stages.
+
+A simplified lifecycle is:
+
+**Requirements → Design → Coding → Testing → Deployment → Maintenance**
+
+Maintenance may lead to new requirements, so the process can repeat.
+
+## 3.1 Important Lifecycle Activities
+
+### Requirements
+
+Determine what the customer needs.
+
+### Design
+
+Determine how the software will be built.
+
+### Implementation
+
+Write the program.
+
+### Testing
+
+Check whether the software works correctly.
+
+### Deployment
+
+Make the software available to users.
+
+### Maintenance
+
+Modify the software after delivery.
+
+---
+
+# 4. Prescriptive Process Models
+
+A **prescriptive process model** defines a structured approach for software development.
+
+Important models include:
+
+- Waterfall model
+- Incremental model
+- Evolutionary models
+- Prototype model
+- Spiral model
+
+---
+
+# 5. Waterfall Model
+
+The **Waterfall model** is a sequential software development model.
+
+Typical sequence:
+
+**Requirements → Design → Implementation → Testing → Deployment → Maintenance**
+
+Each phase generally finishes before the next phase begins.
+
+## Advantages
+
+- Simple to understand
+- Easy to manage
+- Clear milestones
+- Documentation is emphasized
+
+## Disadvantages
+
+- Difficult to accommodate changing requirements
+- Working software appears relatively late
+- Problems may be discovered late
+- Not ideal when requirements are uncertain
+
+## UGC NET Point
+
+**Waterfall = sequential development model.**
+
+---
+
+# 6. Incremental Model
+
+In the incremental model, the software is developed and delivered in multiple increments.
+
+For example:
+
+- Increment 1: Login
+- Increment 2: Student registration
+- Increment 3: Payment
+- Increment 4: Reports
+
+Each increment adds functionality.
+
+## Advantages
+
+- Early delivery of useful functionality
+- Easier feedback
+- Changes can be incorporated into later increments
+- Lower risk than delivering everything at once
+
+---
+
+# 7. Evolutionary Process Models
+
+Evolutionary models develop software through repeated versions.
+
+Important examples:
+
+- Prototyping
+- Spiral model
+
+## 7.1 Prototyping
+
+A prototype is an early version of a system developed to understand requirements or demonstrate functionality.
+
+Useful when:
+
+- Requirements are unclear.
+- Users need to see an early version.
+- User interface requirements are uncertain.
+
+## 7.2 Spiral Model
+
+The Spiral model combines iterative development with systematic risk analysis.
+
+A typical cycle includes:
+
+1. Planning
+2. Risk analysis
+3. Engineering
+4. Customer evaluation
+
+### Important Point
+
+**Risk analysis is a major characteristic of the Spiral model.**
+
+---
+
+# 8. Component-Based Development
+
+**Component-Based Development (CBD)** develops software by assembling reusable software components.
+
+A component is a relatively independent software unit that provides a defined service.
+
+Examples:
+
+- Authentication component
+- Payment component
+- Reporting component
+
+## Advantages
+
+- Reuse
+- Reduced development time
+- Potentially lower cost
+- Easier maintenance
+
+---
+
+# 9. Aspect-Oriented Software Development
+
+Some concerns affect many parts of a software system.
+
+Examples:
+
+- Logging
+- Security
+- Error handling
+- Transaction management
+
+These are called **cross-cutting concerns**.
+
+Aspect-Oriented Software Development separates such concerns from the main business logic.
+
+### Key Terms
+
+**Aspect:** A modular representation of a cross-cutting concern.
+
+**Join point:** A point in program execution where an aspect can be applied.
+
+**Advice:** Action taken by an aspect at a join point.
+
+---
+
+# 10. Formal Methods
+
+Formal methods use mathematical techniques to specify and verify software systems.
+
+They are particularly useful when correctness and safety are extremely important.
+
+Examples:
+
+- Safety-critical systems
+- Aerospace systems
+- Medical systems
+- Nuclear control systems
+
+## Advantages
+
+- Precise specifications
+- Can identify errors early
+- Supports verification
+
+## Limitation
+
+Formal methods can require specialized mathematical knowledge and may be expensive for some projects.
+
+---
+
+# 11. Agile Process Models
+
+**Agile development** emphasizes:
+
+- Frequent delivery
+- Customer collaboration
+- Working software
+- Continuous feedback
+- Responding to change
+
+Agile is useful when requirements change frequently.
+
+## Agile Values
+
+Important ideas include:
+
+- Individuals and interactions
+- Working software
+- Customer collaboration
+- Responding to change
+
+---
+
+# 12. Extreme Programming (XP)
+
+**Extreme Programming (XP)** is an Agile software development method.
+
+Important XP practices include:
+
+- Pair programming
+- Test-driven development
+- Continuous integration
+- Refactoring
+- Small releases
+- Simple design
+- Customer involvement
+
+## Pair Programming
+
+Two programmers work together:
+
+- One writes code.
+- The other reviews the code.
+
+They can switch roles.
+
+## Test-Driven Development
+
+TDD generally follows:
+
+**Write test → Write code → Refactor**
+
+---
+
+# 13. Adaptive Software Development
+
+**Adaptive Software Development (ASD)** is an Agile approach designed for environments with changing requirements.
+
+A commonly associated cycle is:
+
+**Speculate → Collaborate → Learn**
+
+### Speculate
+
+Develop an initial plan while accepting uncertainty.
+
+### Collaborate
+
+Team members work together.
+
+### Learn
+
+The team uses feedback and experience to improve the next iteration.
+
+---
+
+# 14. Scrum
+
+**Scrum** is an Agile framework for iterative and incremental product development.
+
+Important Scrum concepts include:
+
+- Product Backlog
+- Sprint
+- Sprint Backlog
+- Increment
+- Product Owner
+- Scrum Master
+- Developers
+
+## Product Backlog
+
+A prioritized list of desired product work.
+
+## Sprint
+
+A fixed development period during which a usable increment is created.
+
+## Sprint Backlog
+
+The selected work for a Sprint.
+
+## Product Owner
+
+Responsible for maximizing product value and managing the Product Backlog.
+
+## Scrum Master
+
+Helps the team understand and use Scrum and helps remove impediments.
+
+## Daily Scrum
+
+A short daily event used by developers to inspect progress and adapt their plan.
+
+### UGC NET Focus
+
+Remember:
+
+**Product Backlog → overall prioritized work**
+
+**Sprint Backlog → work selected for a Sprint**
+
+---
+
+# 15. Dynamic Systems Development Method
+
+The **Dynamic Systems Development Method (DSDM)** is an Agile approach that emphasizes:
+
+- Frequent delivery
+- Active user involvement
+- Iterative development
+- Business needs
+- Timeboxing
+
+Timeboxing means allocating a fixed amount of time to a development activity.
+
+---
+
+# 16. Feature Driven Development
+
+**Feature Driven Development (FDD)** organizes development around features.
+
+A simplified sequence is:
+
+1. Develop overall model
+2. Build feature list
+3. Plan by feature
+4. Design by feature
+5. Build by feature
+
+A feature represents a small client-valued capability.
+
+---
+
+# 17. Crystal
+
+**Crystal** is a family of Agile methodologies.
+
+Crystal emphasizes:
+
+- People
+- Communication
+- Frequent delivery
+- Adaptability
+- Team interaction
+
+Different Crystal methods can be selected depending on factors such as team size and project criticality.
+
+---
+
+# 18. Web Engineering
+
+**Web Engineering** is the systematic approach to developing and maintaining web applications.
+
+It considers:
+
+- Requirements
+- Web architecture
+- Navigation
+- User interface
+- Content
+- Security
+- Performance
+- Testing
+- Deployment
+- Maintenance
+
+Web applications often have additional concerns such as:
+
+- Browser compatibility
+- Responsive design
+- Searchability
+- High traffic
+- Security
+- Frequent content changes
+
+---
+
+# 19. Software Requirements
+
+A **software requirement** describes a capability or condition that the software must satisfy.
+
+Requirements answer:
+
+**What should the system do?**
+
+---
+
+# 20. Functional Requirements
+
+A **functional requirement** describes a specific function or service provided by the system.
+
+Examples:
+
+- The system shall allow users to log in.
+- The system shall calculate student marks.
+- The system shall generate a monthly report.
+- The system shall send an email confirmation.
+
+### Easy way to remember
+
+**Functional = What the system does.**
+
+---
+
+# 21. Non-Functional Requirements
+
+Non-functional requirements describe qualities, constraints, or characteristics of the system.
+
+Examples:
+
+- Performance
+- Security
+- Reliability
+- Usability
+- Maintainability
+- Availability
+- Scalability
+
+Example:
+
+> The system shall respond to a user request within 2 seconds.
+
+This is a performance requirement.
+
+### Comparison
+
+| Functional | Non-functional |
+|---|---|
+| Describes functions | Describes qualities/constraints |
+| What the system does | How well the system performs |
+| Login | Response time |
+| Generate report | Security |
+| Calculate marks | Reliability |
+
+---
+
+# 22. Requirements Elicitation
+
+**Requirements elicitation** is the process of discovering and understanding requirements from stakeholders.
+
+Common techniques:
+
+- Interviews
+- Questionnaires
+- Observation
+- Workshops
+- Brainstorming
+- Document analysis
+- Prototyping
+- Focus groups
+
+## Interview
+
+The analyst asks stakeholders questions.
+
+## Observation
+
+The analyst observes users performing their work.
+
+## Questionnaire
+
+A structured set of questions is given to users.
+
+## Workshop
+
+Stakeholders and analysts discuss requirements together.
+
+## Prototyping
+
+An early model is developed to help users clarify requirements.
+
+---
+
+# 23. Developing Use Cases
+
+A **use case** describes how an actor interacts with a system to achieve a goal.
+
+### Example: Online Library
+
+Actor:
+
+**Student**
+
+Use cases:
+
+- Search book
+- Borrow book
+- Return book
+- Renew book
+
+### Important Terms
+
+**Actor:** Person or external system interacting with the system.
+
+**Use case:** A goal-oriented interaction with the system.
+
+**System boundary:** Defines what is inside the system.
+
+---
+
+# 24. Requirements Analysis and Modelling
+
+Requirements analysis examines collected requirements and identifies:
+
+- Missing requirements
+- Conflicting requirements
+- Ambiguous requirements
+- Incomplete requirements
+- Feasibility issues
+
+Common models include:
+
+- Use-case models
+- Data-flow models
+- Class models
+- State models
+- Entity-relationship models
+
+---
+
+# 25. Requirements Review
+
+Requirements should be reviewed before design and implementation.
+
+Review checks:
+
+- Correctness
+- Completeness
+- Consistency
+- Clarity
+- Feasibility
+- Testability
+- Traceability
+
+### Common Requirement Problems
+
+**Ambiguous:** Can have multiple meanings.
+
+**Incomplete:** Important information is missing.
+
+**Inconsistent:** Two requirements conflict.
+
+---
+
+# 26. Software Requirements Specification (SRS)
+
+An **SRS** document describes the software requirements in a structured form.
+
+Typical SRS contents include:
+
+1. Introduction
+2. Overall description
+3. Functional requirements
+4. Non-functional requirements
+5. External interface requirements
+6. Constraints
+7. Assumptions
+8. Other requirements
+
+## Characteristics of a Good SRS
+
+A good SRS should be:
+
+- Correct
+- Unambiguous
+- Complete
+- Consistent
+- Verifiable
+- Modifiable
+- Traceable
+
+### UGC NET Point
+
+**SRS describes what the software must provide, not the detailed implementation of how it will be built.**
+
+---
+
+# 27. Software Design
+
+Software design transforms requirements into a blueprint for implementation.
+
+The major design levels include:
+
+- Data design
+- Architectural design
+- Interface design
+- Component-level design
+
+---
+
+# 28. Abstraction
+
+**Abstraction** means focusing on important features while hiding unnecessary details.
+
+Example:
+
+A user presses a **Print** button without knowing the internal printer communication mechanism.
+
+### Simple idea
+
+**Abstraction = Show important things, hide unnecessary details.**
+
+---
+
+# 29. Software Architecture
+
+Software architecture describes the high-level structure of a software system.
+
+It identifies:
+
+- Major components
+- Relationships between components
+- Communication mechanisms
+- Major architectural decisions
+
+Examples of architectural styles:
+
+- Layered architecture
+- Client-server architecture
+- Repository architecture
+- Pipe-and-filter architecture
+
+---
+
+# 30. Design Patterns
+
+A **design pattern** is a reusable solution to a commonly occurring software design problem.
+
+Examples:
+
+- Singleton
+- Factory
+- Observer
+- Adapter
+- Strategy
+
+A design pattern is not usually a complete program. It is a reusable design idea.
+
+---
+
+# 31. Separation of Concerns
+
+**Separation of concerns** means dividing a system into parts so that each part deals with a particular concern.
+
+Example:
+
+A web application may separate:
+
+- User interface
+- Business logic
+- Database access
+
+Benefits:
+
+- Easier maintenance
+- Better understanding
+- Easier testing
+- Reduced complexity
+
+---
+
+# 32. Modularity
+
+**Modularity** means dividing software into smaller modules.
+
+Example:
+
+A college management system may have:
+
+- Student module
+- Faculty module
+- Examination module
+- Fee module
+- Attendance module
+
+Good modularity makes software easier to understand and maintain.
+
+---
+
+# 33. Information Hiding
+
+**Information hiding** means hiding internal implementation details of a module from other modules.
+
+For example, a class may expose methods for accessing data without exposing the internal representation of that data.
+
+### Abstraction vs Information Hiding
+
+| Abstraction | Information Hiding |
+|---|---|
+| Focuses on essential features | Hides design/implementation details |
+| Reduces conceptual complexity | Protects module internals |
+| What is important | What should remain hidden |
+
+---
+
+# 34. Functional Independence
+
+A module has **functional independence** when it performs a well-defined task and has minimal dependence on other modules.
+
+Functional independence is related to:
+
+- High cohesion
+- Low coupling
+
+### Important UGC NET Point
+
+**Good design → High cohesion + Low coupling**
+
+---
+
+# 35. Cohesion
+
+**Cohesion** measures how strongly the elements of a module belong together.
+
+Higher cohesion is generally desirable.
+
+From lower to higher cohesion, a commonly taught ordering is:
+
+1. Coincidental
+2. Logical
+3. Temporal
+4. Procedural
+5. Communicational
+6. Sequential
+7. Functional
+
+### Functional Cohesion
+
+All elements of the module contribute to one well-defined function.
+
+---
+
+# 36. Coupling
+
+**Coupling** measures the degree of dependency between modules.
+
+Lower coupling is generally desirable.
+
+A commonly taught ordering from stronger to weaker coupling is:
+
+1. Content coupling
+2. Common coupling
+3. External coupling
+4. Control coupling
+5. Stamp coupling
+6. Data coupling
+
+### Key Point
+
+**High cohesion + Low coupling = desirable software design.**
+
+---
+
+# 37. Object-Oriented Design
+
+Object-oriented design represents a system using objects and classes.
+
+Important concepts:
+
+- Class
+- Object
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
+
+Example:
+
+Class:
+
+`Student`
+
+Attributes:
+
+- Student ID
+- Name
+- Department
+
+Methods:
+
+- Register()
+- ViewMarks()
+
+---
+
+# 38. Data Design
+
+Data design determines:
+
+- Data structures
+- Database structures
+- Relationships
+- Data organization
+- Data storage
+
+The goal is to organize data efficiently and correctly.
+
+---
+
+# 39. Architectural Design
+
+Architectural design identifies the major components of the software and their relationships.
+
+Example:
+
+A three-layer application:
+
+**Presentation Layer → Business Layer → Data Layer**
+
+---
+
+# 40. User Interface Design
+
+User interface design determines how users interact with software.
+
+Important principles:
+
+- Consistency
+- Simplicity
+- Feedback
+- Error prevention
+- Easy navigation
+- Clear messages
+- Accessibility
+
+---
+
+# 41. Component-Level Design
+
+Component-level design describes the internal design of individual software components.
+
+It may specify:
+
+- Algorithms
+- Data structures
+- Interfaces
+- Methods
+- Processing logic
+
+---
+
+# 42. Software Quality
+
+Software quality refers to the degree to which software satisfies stated and implied requirements.
+
+Important quality attributes include:
+
+- Correctness
+- Reliability
+- Usability
+- Efficiency
+- Maintainability
+- Portability
+- Security
+
+---
+
+# 43. McCall's Quality Factors
+
+McCall's model groups software quality factors into three broad categories.
+
+## Product Operation
+
+- Correctness
+- Reliability
+- Efficiency
+- Integrity
+- Usability
+
+## Product Revision
+
+- Maintainability
+- Flexibility
+- Testability
+
+## Product Transition
+
+- Portability
+- Reusability
+- Interoperability
+
+### Easy Memory
+
+**Operation → Revision → Transition**
+
+---
+
+# 44. ISO 9126 Quality Factors
+
+ISO/IEC 9126 traditionally identified six major software quality characteristics:
+
+1. Functionality
+2. Reliability
+3. Usability
+4. Efficiency
+5. Maintainability
+6. Portability
+
+### Easy Memory
+
+**F R U E M P**
+
+Functionality → Reliability → Usability → Efficiency → Maintainability → Portability
+
+---
+
+# 45. Quality Control
+
+**Quality Control (QC)** focuses on identifying defects in products or deliverables.
+
+Examples:
+
+- Testing
+- Inspection
+- Reviews
+- Defect detection
+
+QC is mainly concerned with:
+
+**Finding defects.**
+
+---
+
+# 46. Quality Assurance
+
+**Quality Assurance (QA)** focuses on improving and ensuring the processes used to produce software.
+
+Examples:
+
+- Process standards
+- Audits
+- Reviews
+- Process improvement
+- Quality procedures
+
+### QA vs QC
+
+| QA | QC |
+|---|---|
+| Process-oriented | Product-oriented |
+| Preventive emphasis | Detection emphasis |
+| Improves development process | Finds defects |
+| Establishes standards | Performs testing/inspection |
+
+---
+
+# 47. Risk Management
+
+A **risk** is an uncertain event or condition that may negatively affect a project.
+
+Examples:
+
+- Requirement changes
+- Staff turnover
+- Technology failure
+- Schedule delay
+- Budget problems
+- Security problems
+
+Risk management includes:
+
+1. Risk identification
+2. Risk analysis
+3. Risk planning
+4. Risk monitoring
+
+---
+
+# 48. Risk Mitigation
+
+Risk mitigation means taking action to reduce the probability or impact of a risk.
+
+Example:
+
+Risk: Key developer may leave.
+
+Mitigation:
+
+- Cross-training
+- Documentation
+- Knowledge sharing
+
+---
+
+# 49. RMMM Plan
+
+**RMMM = Risk Mitigation, Monitoring and Management**
+
+An RMMM plan describes:
+
+- Identified risks
+- Risk mitigation
+- Monitoring activities
+- Management actions
+
+### Example
+
+Risk:
+
+Database server failure.
+
+Mitigation:
+
+Regular backup and redundant server.
+
+Monitoring:
+
+Monitor server health.
+
+Management:
+
+Switch to backup server when failure occurs.
+
+---
+
+# 50. Software Reliability
+
+**Software reliability** is the probability that software performs its required functions without failure for a specified period under specified conditions.
+
+Important terms:
+
+- Failure
+- Reliability
+- Availability
+- Mean Time Between Failures (MTBF)
+
+A commonly used relationship is:
+
+**MTBF = MTTF + MTTR**
+
+where:
+
+- MTTF = Mean Time To Failure
+- MTTR = Mean Time To Repair
+
+Availability can be represented as:
+
+**Availability = MTBF ÷ (MTBF + MTTR)**
+
+---
+
+# 51. Software Estimation
+
+Software estimation predicts:
+
+- Size
+- Effort
+- Cost
+- Schedule
+- Resources
+
+Accurate estimation helps project managers plan effectively.
+
+---
+
+# 52. Software Sizing
+
+Software size can be estimated using measures such as:
+
+- LOC
+- Function Points
+
+---
+
+# 53. LOC
+
+**LOC = Lines of Code**
+
+LOC estimates software size based on the number of source-code lines.
+
+Example:
+
+If a project contains approximately 20,000 lines of source code:
+
+**Size = 20 KLOC**
+
+where:
+
+**KLOC = Thousand Lines of Code**
+
+## Advantages
+
+- Easy to understand
+- Can be used with historical data
+
+## Limitations
+
+- Depends on programming language
+- Difficult to estimate before coding
+- Does not directly measure functionality
+
+---
+
+# 54. Function Point Analysis
+
+Function Point (FP) measures software size based on functionality delivered to the user.
+
+Traditional function point analysis considers:
+
+1. External Inputs
+2. External Outputs
+3. External Inquiries
+4. Internal Logical Files
+5. External Interface Files
+
+A basic form is:
+
+**FP = UFP × VAF**
+
+where:
+
+- UFP = Unadjusted Function Points
+- VAF = Value Adjustment Factor
+
+### Important Point
+
+**LOC measures code size; Function Points focus on functionality.**
+
+---
+
+# 55. Cost and Effort Estimation
+
+Software effort may be measured in:
+
+**Person-months**
+
+Example:
+
+If 5 people work for 4 months:
+
+**Effort = 5 × 4 = 20 person-months**
+
+This is a simple illustration; actual productivity varies.
+
+---
+
+# 56. Estimation Models
+
+Estimation models use mathematical relationships and historical information to estimate project effort, cost, or schedule.
+
+Examples:
+
+- COCOMO
+- Function Point based estimation
+- Expert judgment
+- Analogy-based estimation
+
+---
+
+# 57. COCOMO
+
+**COCOMO = Constructive Cost Model**
+
+COCOMO was proposed by Barry Boehm.
+
+The basic COCOMO model estimates effort using:
+
+**Effort = a × (KLOC)^b**
+
+where:
+
+- Effort is measured in person-months.
+- KLOC = thousand lines of code.
+- a and b depend on the project mode.
+
+Development time can be estimated using:
+
+**Development Time = c × (Effort)^d**
+
+---
+
+# 58. COCOMO Project Modes
+
+The traditional Basic COCOMO model uses three project modes:
+
+### Organic
+
+Suitable for relatively small and simple projects with experienced teams.
+
+### Semi-detached
+
+Suitable for projects of intermediate complexity.
+
+### Embedded
+
+Suitable for complex projects with strong constraints.
+
+## Basic COCOMO Coefficients
+
+| Mode | a | b | c | d |
+|---|---:|---:|---:|---:|
+| Organic | 2.4 | 1.05 | 2.5 | 0.38 |
+| Semi-detached | 3.0 | 1.12 | 2.5 | 0.35 |
+| Embedded | 3.6 | 1.20 | 2.5 | 0.32 |
+
+### Example
+
+Suppose an organic project has:
+
+**KLOC = 10**
+
+Then:
+
+**Effort = 2.4 × (10)^1.05**
+
+The result is approximately **26.9 person-months**.
+
+### UGC NET Focus
+
+Remember:
+
+**COCOMO → Effort, Development Time, KLOC, Project Mode**
+
+---
+
+# 59. Project Scheduling
+
+Project scheduling determines:
+
+- What tasks must be performed
+- When tasks begin
+- When tasks finish
+- Dependencies between tasks
+- Who performs each task
+
+Important scheduling concepts:
+
+- Activities
+- Milestones
+- Dependencies
+- Resources
+- Deadlines
+
+---
+
+# 60. Project Staffing
+
+Staffing determines the people required for the project.
+
+It considers:
+
+- Number of developers
+- Required skills
+- Project phase
+- Workload
+- Availability
+- Cost
+
+Adding more people does not always reduce project duration because communication and coordination overhead can increase.
+
+---
+
+# 61. Timeline Charts
+
+A timeline chart shows project activities against time.
+
+A common example is the **Gantt chart**.
+
+A Gantt chart represents:
+
+- Tasks
+- Start dates
+- End dates
+- Duration
+- Progress
+
+Example:
+
+| Task | Week 1 | Week 2 | Week 3 | Week 4 |
+|---|---|---|---|---|
+| Requirements | ███ | | | |
+| Design | | ███ | | |
+| Coding | | | ███ | |
+| Testing | | | | ███ |
+
+---
+
+# 62. Software Testing
+
+Software testing is the process of evaluating software to find defects and determine whether it satisfies requirements.
+
+Testing can reveal:
+
+- Incorrect output
+- Missing functionality
+- Performance problems
+- Security problems
+- Interface problems
+
+---
+
+# 63. Verification and Validation
+
+### Verification
+
+Verification asks:
+
+**Are we building the product right?**
+
+It checks whether software work products satisfy specified requirements.
+
+Examples:
+
+- Reviews
+- Inspections
+- Walkthroughs
+
+### Validation
+
+Validation asks:
+
+**Are we building the right product?**
+
+It checks whether the final software satisfies user needs.
+
+Examples:
+
+- Testing
+- User acceptance testing
+
+### Easy Memory
+
+**Verification → Product built right**
+
+**Validation → Right product**
+
+---
+
+# 64. Error, Fault, Bug and Failure
+
+These terms are related but different.
+
+### Error
+
+A human mistake.
+
+Example:
+
+Developer writes `x + y` instead of `x - y`.
+
+### Fault
+
+A defect in the software caused by an error.
+
+### Bug
+
+Common informal term for a software defect.
+
+### Failure
+
+The software behaves incorrectly during execution.
+
+### Relationship
+
+**Human Error → Fault/Bug → Failure**
+
+---
+
+# 65. Unit Testing
+
+Unit testing tests individual software units.
+
+A unit may be:
+
+- Function
+- Method
+- Class
+- Module
+
+Example:
+
+Testing a function that calculates student percentage.
+
+---
+
+# 66. Integration Testing
+
+Integration testing tests interactions between combined modules.
+
+Example:
+
+- Student registration module
+- Payment module
+- Database module
+
+The purpose is to find interface and interaction problems.
+
+### Unit vs Integration
+
+| Unit Testing | Integration Testing |
+|---|---|
+| Tests individual units | Tests combined units |
+| Early testing | After individual units are available |
+| Focus on local behavior | Focus on interactions |
+
+---
+
+# 67. White-Box Testing
+
+White-box testing uses knowledge of the internal program structure.
+
+The tester can examine:
+
+- Statements
+- Branches
+- Conditions
+- Paths
+- Loops
+
+Examples:
+
+- Basis path testing
+- Control structure testing
+
+### Easy Memory
+
+**White-box → Inside the code is known.**
+
+---
+
+# 68. Black-Box Testing
+
+Black-box testing tests functionality without requiring knowledge of the internal implementation.
+
+The tester focuses on:
+
+- Inputs
+- Outputs
+- Requirements
+- External behavior
+
+Examples:
+
+- Equivalence partitioning
+- Boundary value analysis
+- Decision table testing
+
+### Easy Memory
+
+**Black-box → Internal code is not the focus.**
+
+---
+
+# 69. Basis Path Testing
+
+Basis path testing is a white-box testing technique based on the control-flow structure of a program.
+
+It uses **cyclomatic complexity** to determine the number of linearly independent paths.
+
+A common formula is:
+
+**V(G) = E - N + 2**
+
+where:
+
+- E = number of edges
+- N = number of nodes
+
+For a connected flow graph, cyclomatic complexity can also be calculated as:
+
+**V(G) = P + 1**
+
+where:
+
+- P = number of predicate nodes
+
+### Important Point
+
+Cyclomatic complexity gives the number of independent paths that form a basis set.
+
+---
+
+# 70. Control Structure Testing
+
+Control structure testing examines control structures in a program.
+
+Examples:
+
+- Condition testing
+- Loop testing
+- Data-flow testing
+
+## Loop Testing
+
+Loops should be tested for cases such as:
+
+- Zero iterations
+- One iteration
+- Typical iterations
+- Maximum iterations
+- Boundary conditions
+
+---
+
+# 71. Deriving Test Cases
+
+A good test case should specify:
+
+- Input
+- Preconditions
+- Expected output
+- Actual output
+- Pass/fail result
+
+Test cases should include normal and abnormal situations.
+
+---
+
+# 72. Alpha Testing
+
+**Alpha testing** is performed at the developer's site or controlled development environment before wider release.
+
+It is generally performed by internal testers and/or selected users under controlled conditions.
+
+---
+
+# 73. Beta Testing
+
+**Beta testing** is performed by selected external users in a real or realistic user environment before final release.
+
+### Alpha vs Beta
+
+| Alpha | Beta |
+|---|---|
+| Controlled environment | Real user environment |
+| Usually before beta | After alpha |
+| Developer organization | Selected external users |
+
+---
+
+# 74. Regression Testing
+
+**Regression testing** ensures that changes have not introduced unintended defects into previously working functionality.
+
+It is important after:
+
+- Bug fixes
+- New features
+- Code modifications
+- Configuration changes
+
+### Key Point
+
+**Regression testing = retest affected existing functionality after changes.**
+
+---
+
+# 75. Performance Testing
+
+Performance testing evaluates system behavior under expected workloads.
+
+It may examine:
+
+- Response time
+- Throughput
+- Resource utilization
+- Scalability
+
+---
+
+# 76. Stress Testing
+
+Stress testing evaluates software under extreme or beyond-normal conditions.
+
+Examples:
+
+- Very high number of users
+- Very large input
+- Limited memory
+- High transaction load
+
+### Performance vs Stress
+
+| Performance Testing | Stress Testing |
+|---|---|
+| Expected workload | Extreme workload |
+| Measures performance | Tests behavior under overload |
+| Response time/throughput | Stability and failure behavior |
+
+---
+
+# 77. Software Configuration Management
+
+**Software Configuration Management (SCM)** manages changes to software and related artifacts throughout the software lifecycle.
+
+SCM helps maintain consistency and traceability.
+
+Configuration items may include:
+
+- Source code
+- Requirements
+- Design documents
+- Test cases
+- Build files
+- Documentation
+
+---
+
+# 78. Change Control
+
+Change control is a systematic process for handling requested changes.
+
+Typical steps:
+
+1. Submit change request
+2. Analyze impact
+3. Approve or reject
+4. Implement change
+5. Test change
+6. Record change
+
+### Why Change Control is Needed
+
+Without controlled changes:
+
+- Versions can become inconsistent.
+- Defects may be introduced.
+- Requirements may be lost.
+- Project cost may increase.
+
+---
+
+# 79. Version Control
+
+Version control manages different versions of files and source code.
+
+Examples of version control systems include:
+
+- Git
+- Subversion
+
+Version control provides:
+
+- History
+- Branching
+- Merging
+- Collaboration
+- Rollback
+
+### Example
+
+A Git repository can maintain:
+
+- Version 1.0
+- Version 1.1
+- Version 2.0
+
+---
+
+# 80. Software Reuse
+
+**Software reuse** means using existing software assets to develop new software.
+
+Reusable assets may include:
+
+- Code
+- Components
+- Libraries
+- Frameworks
+- Designs
+- Requirements
+- Test cases
+
+## Advantages
+
+- Reduced development time
+- Lower cost
+- Improved reliability when reused components are proven
+- Reduced duplication
+
+---
+
+# 81. Software Re-engineering
+
+**Software re-engineering** is the process of examining and modifying an existing software system to improve it, maintain it, or migrate it to a better form.
+
+It may involve:
+
+- Code restructuring
+- Data restructuring
+- Documentation improvement
+- Architecture improvement
+- Migration
+
+### Example
+
+An old desktop application may be re-engineered into a modern web-based application.
+
+---
+
+# 82. Reverse Engineering
+
+**Reverse engineering** extracts higher-level information from an existing software system.
+
+For example:
+
+**Source code → Design information**
+
+It attempts to understand an existing system.
+
+### Important Difference
+
+**Reverse engineering:** Understand an existing system.
+
+**Re-engineering:** Modify/improve an existing system.
+
+---
+
+# 83. Important Comparisons for UGC NET
+
+## Waterfall vs Agile
+
+| Waterfall | Agile |
+|---|---|
+| Sequential | Iterative/incremental |
+| Change is more difficult | Welcomes changing requirements |
+| Feedback usually later | Frequent feedback |
+| Detailed upfront planning | Adaptive planning |
+
+## Functional vs Non-functional Requirements
+
+| Functional | Non-functional |
+|---|---|
+| What system does | Quality/constraint |
+| Login | Security |
+| Calculate salary | Performance |
+
+## QA vs QC
+
+| QA | QC |
+|---|---|
+| Process | Product |
+| Preventive emphasis | Defect detection |
+| Standards and process improvement | Testing and inspection |
+
+## White-box vs Black-box
+
+| White-box | Black-box |
+|---|---|
+| Internal structure known/used | Internal implementation not required |
+| Code-oriented | Requirement/function-oriented |
+| Basis path | Boundary value analysis |
+
+## Reverse Engineering vs Re-engineering
+
+| Reverse Engineering | Re-engineering |
+|---|---|
+| Understand existing system | Improve/modify existing system |
+| Extract higher-level information | Transform existing system |
+
+---
+
+# 84. Important Formulas
+
+## COCOMO
+
+**Effort = a × (KLOC)^b**
+
+**Development Time = c × (Effort)^d**
+
+## Function Points
+
+**FP = UFP × VAF**
+
+## Cyclomatic Complexity
+
+**V(G) = E - N + 2**
+
+or
+
+**V(G) = P + 1**
+
+## Availability
+
+**Availability = MTBF ÷ (MTBF + MTTR)**
+
+## Effort
+
+**Effort = Number of people × Time**
+
+---
+
+# 85. UGC NET High-Priority Topics
+
+Focus especially on:
+
+1. Waterfall model
+2. Spiral model
+3. Agile development
+4. XP
+5. Scrum
+6. ASD
+7. DSDM
+8. FDD
+9. Functional and non-functional requirements
+10. Requirements elicitation
+11. Use cases
+12. SRS characteristics
+13. Cohesion and coupling
+14. Abstraction and information hiding
+15. Design patterns
+16. McCall's quality factors
+17. ISO 9126
+18. QA vs QC
+19. Risk management
+20. RMMM
+21. LOC vs Function Points
+22. COCOMO
+23. Verification vs validation
+24. Error/fault/failure
+25. Unit and integration testing
+26. White-box and black-box testing
+27. Cyclomatic complexity
+28. Alpha and beta testing
+29. Regression testing
+30. Performance vs stress testing
+31. Configuration management
+32. Version control
+33. Reuse
+34. Reverse engineering
+35. Re-engineering
+
+---
+
+# 86. Common UGC NET Confusions
+
+### Confusion 1
+
+**Verification vs Validation**
+
+Remember:
+
+> Verification = Are we building the product right?
+
+> Validation = Are we building the right product?
+
+### Confusion 2
+
+**Cohesion vs Coupling**
+
+Remember:
+
+> Cohesion = relationship within a module.
+
+> Coupling = relationship between modules.
+
+Desired:
+
+**High cohesion + Low coupling**
+
+### Confusion 3
+
+**QA vs QC**
+
+Remember:
+
+> QA = process-oriented.
+
+> QC = product-oriented.
+
+### Confusion 4
+
+**White-box vs Black-box**
+
+Remember:
+
+> White-box = internal program structure.
+
+> Black-box = external behavior.
+
+### Confusion 5
+
+**Reverse Engineering vs Re-engineering**
+
+Remember:
+
+> Reverse = understand.
+
+> Re-engineering = transform/improve.
+
+### Confusion 6
+
+**Alpha vs Beta**
+
+Remember:
+
+> Alpha = controlled/developer environment.
+
+> Beta = selected external users/realistic environment.
+
+---
+
+# 87. One-Minute Revision
+
+## Software Process
+
+**Communication → Planning → Modeling → Construction → Deployment**
+
+## Agile
+
+**Frequent delivery + customer collaboration + adaptability**
+
+## Requirements
+
+**Functional = what**
+
+**Non-functional = quality/constraint**
+
+## Design
+
+**High cohesion + Low coupling**
+
+## Quality
+
+**QA = process**
+
+**QC = product**
+
+## Risk
+
+**Identify → Analyze → Plan → Monitor**
+
+## Estimation
+
+**LOC → code size**
+
+**FP → functionality**
+
+**COCOMO → effort/time estimation**
+
+## Testing
+
+**Verification → building the product right**
+
+**Validation → building the right product**
+
+**White-box → internal structure**
+
+**Black-box → external behavior**
+
+## Configuration
+
+**Change control + Version control**
+
+## Legacy Software
+
+**Reverse engineering → understand**
+
+**Re-engineering → improve/transform**
+
+---
+
+# 88. Final Exam Strategy
+
+For Software Engineering questions, concentrate on:
+
+- Definitions
+- Process model characteristics
+- Agile terminology
+- Scrum roles and artifacts
+- SRS characteristics
+- Cohesion and coupling
+- Quality models
+- COCOMO equations
+- Cyclomatic complexity
+- Testing classifications
+- QA and QC
+- Risk management
+- Configuration management
+- Reverse engineering and re-engineering
+
+For numerical questions, practice:
+
+- COCOMO
+- Function Point calculations
+- Cyclomatic complexity
+- Reliability and availability
+- Effort calculations
+
+For comparison questions, memorize the differences between:
+
+- Waterfall and Agile
+- Functional and non-functional requirements
+- Cohesion and coupling
+- QA and QC
+- Verification and validation
+- White-box and black-box testing
+- Alpha and beta testing
+- Performance and stress testing
+- Reverse engineering and re-engineering
+
+---
+
+# 89. Final Quick Revision Table
+
+| Topic | Key Point |
+|---|---|
+| Waterfall | Sequential |
+| Spiral | Risk-driven |
+| Agile | Adaptive and iterative |
+| XP | Agile method |
+| Scrum | Agile framework |
+| Functional requirement | What system does |
+| Non-functional requirement | Quality/constraint |
+| SRS | Requirements specification |
+| Cohesion | Within a module |
+| Coupling | Between modules |
+| Good design | High cohesion, low coupling |
+| McCall | Software quality factors |
+| ISO 9126 | Six quality characteristics |
+| QA | Process-oriented |
+| QC | Product-oriented |
+| LOC | Lines of Code |
+| FP | Functionality |
+| COCOMO | Effort estimation model |
+| Verification | Building product right |
+| Validation | Building right product |
+| Unit testing | Individual unit |
+| Integration testing | Interaction between units |
+| White-box | Internal structure |
+| Black-box | External behavior |
+| Cyclomatic complexity | Independent paths |
+| Alpha testing | Controlled/internal environment |
+| Beta testing | Selected external users |
+| Regression testing | Test after changes |
+| Stress testing | Extreme load |
+| SCM | Manage software changes |
+| Version control | Manage versions |
+| Reverse engineering | Understand existing system |
+| Re-engineering | Improve/transform existing system |
+
+# 90. Final Summary
+
+Software Engineering provides systematic methods for developing reliable and maintainable software.
+
+The major areas in this unit are:
+
+**Software Process → Requirements → Design → Quality → Estimation → Scheduling → Testing → Configuration Management**
+
+For UGC NET, understand the concepts rather than memorizing isolated definitions.
+
+The most important relationships to remember are:
+
+**High Cohesion + Low Coupling**
+
+**QA = Process**
+
+**QC = Product**
+
+**Verification = Product right**
+
+**Validation = Right product**
+
+**White-box = Internal structure**
+
+**Black-box = External behavior**
+
+**Reverse Engineering = Understand**
+
+**Re-engineering = Improve/Transform**

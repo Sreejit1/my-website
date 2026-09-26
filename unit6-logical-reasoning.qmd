@@ -1,0 +1,2136 @@
+---
+title: "Unit VI – Logical Reasoning"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+---
+
+## 1. Introduction
+
+Logical Reasoning is the study of how we use statements, arguments, evidence and rules to reach conclusions.
+
+In UGC NET, this unit mainly tests your ability to:
+
+- Understand arguments
+- Identify premises and conclusions
+- Understand categorical propositions
+- Identify Mood and Figure
+- Distinguish deductive and inductive reasoning
+- Identify formal and informal fallacies
+- Understand the use of language
+- Understand connotation and denotation
+- Use the Classical Square of Opposition
+- Solve analogy questions
+- Use Venn diagrams to test arguments
+- Understand Indian Logic
+- Understand the six Pramanas
+- Understand Anumana or inference
+- Understand Vyapti
+- Identify Hetvabhasas or fallacies of inference
+
+---
+
+# 2. What is Logic?
+
+Logic is the systematic study of correct reasoning.
+
+### Simple meaning
+
+Logic helps us answer:
+
+> "Does the conclusion really follow from the information given?"
+
+### Example
+
+All humans are mortal.
+
+Ravi is a human.
+
+Therefore, Ravi is mortal.
+
+Here:
+
+- "All humans are mortal" → Premise
+- "Ravi is a human" → Premise
+- "Ravi is mortal" → Conclusion
+
+The conclusion follows logically from the premises.
+
+---
+
+# 3. Argument
+
+An argument is a group of statements in which one or more statements provide support for another statement.
+
+An argument normally contains:
+
+1. Premises
+2. Conclusion
+
+### Premise
+
+A premise is a statement that provides evidence or support.
+
+### Conclusion
+
+A conclusion is the statement that the argument tries to establish.
+
+### Example
+
+All teachers are educated.
+
+Anita is a teacher.
+
+Therefore, Anita is educated.
+
+Here:
+
+```text
+Premise 1 → All teachers are educated.
+
+Premise 2 → Anita is a teacher.
+
+Conclusion → Anita is educated.
+```
+
+---
+
+# 4. How to Identify the Conclusion
+
+Look for conclusion indicators such as:
+
+- Therefore
+- Hence
+- Thus
+- So
+- Consequently
+- It follows that
+- Hence we can conclude
+
+### Example
+
+Ravi studies regularly. Therefore, Ravi is likely to perform well.
+
+The conclusion is:
+
+> Ravi is likely to perform well.
+
+---
+
+# 5. How to Identify Premises
+
+Common premise indicators include:
+
+- Because
+- Since
+- As
+- Given that
+- For
+- Due to the fact that
+
+### Example
+
+Ravi may perform well because he studies regularly.
+
+Premise:
+
+> Ravi studies regularly.
+
+Conclusion:
+
+> Ravi may perform well.
+
+---
+
+# 6. Structure of an Argument
+
+An argument can be represented as:
+
+```text
+Premise 1
+Premise 2
+Premise 3
+   ↓
+Conclusion
+```
+
+### Example
+
+```text
+All researchers use evidence.
+
+Dr. Arun is a researcher.
+
+Therefore:
+
+Dr. Arun uses evidence.
+```
+
+---
+
+# 7. Argument Forms
+
+An argument form describes the logical structure of an argument.
+
+Consider:
+
+```text
+If P, then Q.
+
+P.
+
+Therefore Q.
+```
+
+This is a valid argument form called:
+
+> Modus Ponens
+
+### Example
+
+If it rains, the ground becomes wet.
+
+It is raining.
+
+Therefore, the ground is wet.
+
+---
+
+# 8. Modus Ponens
+
+Structure:
+
+```text
+If P → Q
+P
+Therefore Q
+```
+
+### Example
+
+If a student studies, the student may improve.
+
+Ravi studies.
+
+Therefore, Ravi may improve.
+
+### Key Point
+
+```text
+P → Q
+P
+Therefore Q
+```
+
+---
+
+# 9. Modus Tollens
+
+Structure:
+
+```text
+If P → Q
+Not Q
+Therefore Not P
+```
+
+### Example
+
+If the computer is connected to the internet, the browser can access online content.
+
+The browser cannot access online content.
+
+Therefore, the computer may not be connected to the internet.
+
+### Key Point
+
+```text
+P → Q
+Not Q
+Therefore Not P
+```
+
+---
+
+# 10. Categorical Proposition
+
+A categorical proposition is a proposition that relates two classes or categories.
+
+### Example
+
+> All students are learners.
+
+It relates:
+
+- Students
+- Learners
+
+A categorical proposition generally contains:
+
+```text
+Quantifier + Subject + Copula + Predicate
+```
+
+Example:
+
+```text
+All + students + are + learners
+```
+
+---
+
+# 11. Four Types of Categorical Propositions
+
+The four standard categorical propositions are:
+
+| Type | Form | Meaning |
+|---|---|---|
+| A | All S are P | Universal Affirmative |
+| E | No S are P | Universal Negative |
+| I | Some S are P | Particular Affirmative |
+| O | Some S are not P | Particular Negative |
+
+Remember:
+
+```text
+A → Universal Affirmative
+E → Universal Negative
+I → Particular Affirmative
+O → Particular Negative
+```
+
+---
+
+# 12. A Proposition – Universal Affirmative
+
+Form:
+
+> All S are P.
+
+Example:
+
+> All teachers are professionals.
+
+Meaning:
+
+Every member of the subject class belongs to the predicate class.
+
+### Symbolic form
+
+```text
+All S are P
+```
+
+---
+
+# 13. E Proposition – Universal Negative
+
+Form:
+
+> No S are P.
+
+Example:
+
+> No birds are mammals.
+
+Meaning:
+
+The two classes do not overlap.
+
+```text
+No S are P
+```
+
+---
+
+# 14. I Proposition – Particular Affirmative
+
+Form:
+
+> Some S are P.
+
+Example:
+
+> Some students are researchers.
+
+Meaning:
+
+At least one member of S belongs to P.
+
+```text
+Some S are P
+```
+
+---
+
+# 15. O Proposition – Particular Negative
+
+Form:
+
+> Some S are not P.
+
+Example:
+
+> Some students are not researchers.
+
+Meaning:
+
+At least one member of S does not belong to P.
+
+```text
+Some S are not P
+```
+
+---
+
+# 16. Easy Way to Remember A, E, I and O
+
+```text
+A → All S are P
+
+E → No S are P
+
+I → Some S are P
+
+O → Some S are not P
+```
+
+### Memory Trick
+
+```text
+A → All
+E → No
+I → Some + positive
+O → Some + negative
+```
+
+---
+
+# 17. Subject and Predicate
+
+Consider:
+
+> All teachers are professionals.
+
+Subject:
+
+> Teachers
+
+Predicate:
+
+> Professionals
+
+The proposition tells us something about the relationship between these two classes.
+
+---
+
+# 18. Distribution of Terms
+
+Distribution tells us whether a proposition refers to all members of a class or only some members.
+
+For UGC NET, remember this table:
+
+| Proposition | Subject | Predicate |
+|---|---|---|
+| A – All S are P | Distributed | Undistributed |
+| E – No S are P | Distributed | Distributed |
+| I – Some S are P | Undistributed | Undistributed |
+| O – Some S are not P | Undistributed | Distributed |
+
+### Easy memory
+
+```text
+A → S distributed
+E → Both distributed
+I → Neither distributed
+O → P distributed
+```
+
+---
+
+# 19. Mood of a Categorical Syllogism
+
+Mood refers to the combination of the types of the three propositions in a categorical syllogism.
+
+The three propositions are:
+
+1. Major premise
+2. Minor premise
+3. Conclusion
+
+### Example
+
+```text
+All M are P       → A
+All S are M       → A
+Therefore,
+All S are P       → A
+```
+
+The mood is:
+
+> AAA
+
+---
+
+# 20. Figure of a Categorical Syllogism
+
+Figure depends on the position of the middle term in the premises.
+
+There are four figures.
+
+### Figure 1
+
+```text
+M – P
+S – M
+-----
+S – P
+```
+
+### Figure 2
+
+```text
+P – M
+S – M
+-----
+S – P
+```
+
+### Figure 3
+
+```text
+M – P
+M – S
+-----
+S – P
+```
+
+### Figure 4
+
+```text
+P – M
+M – S
+-----
+S – P
+```
+
+### Important
+
+There are:
+
+```text
+4 Figures
+```
+
+---
+
+# 21. Mood and Figure
+
+Mood and Figure together identify the form of a categorical syllogism.
+
+Example:
+
+```text
+AAA – Figure 1
+```
+
+The mood tells us:
+
+> What type of propositions are used?
+
+The figure tells us:
+
+> Where is the middle term located?
+
+---
+
+# 22. Deductive Reasoning
+
+Deductive reasoning moves from a general statement to a specific conclusion.
+
+```text
+General
+   ↓
+Specific
+```
+
+Example:
+
+```text
+All humans are mortal.
+
+Ravi is a human.
+
+Therefore Ravi is mortal.
+```
+
+If the premises are true and the argument is valid, the conclusion follows necessarily.
+
+---
+
+# 23. Inductive Reasoning
+
+Inductive reasoning moves from specific observations to a general conclusion.
+
+```text
+Specific observations
+        ↓
+General conclusion
+```
+
+Example:
+
+```text
+Student A improved after practice.
+
+Student B improved after practice.
+
+Student C improved after practice.
+
+Therefore, regular practice may improve performance.
+```
+
+The conclusion is probable rather than necessarily certain.
+
+---
+
+# 24. Deductive vs Inductive Reasoning
+
+| Deductive | Inductive |
+|---|---|
+| General → Specific | Specific → General |
+| Based on rules or premises | Based on observations |
+| Conclusion can be necessary | Conclusion is usually probable |
+| Validity is important | Strength is important |
+| Example: syllogism | Example: generalization |
+
+---
+
+# 25. Formal Fallacy
+
+A formal fallacy is an error in the logical structure or form of an argument.
+
+### Example
+
+```text
+If P → Q
+
+Q
+
+Therefore P
+```
+
+This is not a valid form.
+
+This error is called:
+
+> Affirming the consequent.
+
+---
+
+# 26. Informal Fallacy
+
+An informal fallacy is an error caused by the content, language, assumptions or context of an argument rather than simply its logical structure.
+
+Examples include:
+
+- Ad hominem
+- Appeal to authority
+- Appeal to emotion
+- Straw man
+- Hasty generalization
+- False cause
+- Appeal to ignorance
+
+---
+
+# 27. Ad Hominem
+
+Ad hominem means attacking the person instead of addressing the argument.
+
+### Example
+
+> Ravi's argument about education is wrong because Ravi is inexperienced.
+
+The person's characteristics are attacked instead of the argument.
+
+### Key Point
+
+```text
+Attack the person
+instead of
+Answering the argument
+```
+
+---
+
+# 28. Hasty Generalization
+
+A conclusion is made about a whole group based on insufficient examples.
+
+### Example
+
+A student meets two rude tourists from a particular city and concludes:
+
+> Everyone from that city is rude.
+
+This is a hasty generalization.
+
+---
+
+# 29. Appeal to Authority
+
+An argument claims something is true simply because an authority or famous person says it.
+
+### Example
+
+> A famous actor says this medicine works, so it must work.
+
+The statement requires appropriate evidence, not merely celebrity endorsement.
+
+---
+
+# 30. Straw Man Fallacy
+
+A person's argument is changed into a weaker or exaggerated version and then attacked.
+
+### Example
+
+Person A:
+
+> We should reduce unnecessary use of plastic.
+
+Person B:
+
+> Person A wants to completely ban every plastic product.
+
+Person B has changed the original argument.
+
+This is a straw man.
+
+---
+
+# 31. False Cause
+
+False cause occurs when one event is assumed to have caused another without sufficient evidence.
+
+### Example
+
+> I wore a particular shirt and passed the examination. Therefore, the shirt caused my success.
+
+The conclusion does not establish causation.
+
+---
+
+# 32. Uses of Language
+
+Language can be used for different purposes.
+
+Important uses include:
+
+### 1. Informative
+
+Provides information.
+
+Example:
+
+> The examination begins at 10 AM.
+
+### 2. Expressive
+
+Expresses feelings or emotions.
+
+Example:
+
+> I am extremely happy today.
+
+### 3. Directive
+
+Attempts to influence behaviour.
+
+Example:
+
+> Please close the door.
+
+### 4. Performative
+
+An utterance performs an action in an appropriate context.
+
+Example:
+
+> I apologize.
+
+---
+
+# 33. Denotation
+
+Denotation refers to the direct or literal meaning of a term.
+
+Example:
+
+> "Rose" denotes a particular type of flowering plant.
+
+It refers to the object or class represented by the word.
+
+---
+
+# 34. Connotation
+
+Connotation refers to the associated, implied or emotional meaning of a term.
+
+For example, the word:
+
+> "Home"
+
+may connote:
+
+- Comfort
+- Security
+- Family
+- Belonging
+
+### Easy difference
+
+```text
+Denotation → Direct meaning
+
+Connotation → Associated meaning
+```
+
+---
+
+# 35. Denotation vs Connotation
+
+| Denotation | Connotation |
+|---|---|
+| Literal meaning | Associated meaning |
+| Direct reference | Implied/emotional association |
+| More objective | Can vary with context |
+| Example: snake = reptile | Snake may connote danger or fear |
+
+---
+
+# 36. Classical Square of Opposition
+
+The Classical Square of Opposition shows relationships among the four categorical propositions:
+
+```text
+A – All S are P
+E – No S are P
+I – Some S are P
+O – Some S are not P
+```
+
+The basic structure is:
+
+```text
+        A
+       / \
+      /   \
+     E     I
+      \   /
+       \ /
+        O
+```
+
+More precisely, the traditional square contains four important relationships:
+
+1. Contradictory
+2. Contrary
+3. Subcontrary
+4. Subalternation
+
+---
+
+# 37. Contradictory Propositions
+
+Contradictory propositions cannot both be true and cannot both be false.
+
+Pairs:
+
+```text
+A ↔ O
+
+E ↔ I
+```
+
+Examples:
+
+A:
+
+> All students are punctual.
+
+O:
+
+> Some students are not punctual.
+
+If A is true, O must be false.
+
+If O is true, A must be false.
+
+---
+
+# 38. Contrary Propositions
+
+Contrary propositions cannot both be true, but they can both be false.
+
+Pair:
+
+```text
+A ↔ E
+```
+
+Example:
+
+A:
+
+> All students are punctual.
+
+E:
+
+> No students are punctual.
+
+Both cannot be true simultaneously.
+
+But both can be false if:
+
+> Some students are punctual and some are not.
+
+---
+
+# 39. Subcontrary Propositions
+
+Subcontrary propositions can both be true, but traditionally cannot both be false.
+
+Pair:
+
+```text
+I ↔ O
+```
+
+Example:
+
+I:
+
+> Some students are punctual.
+
+O:
+
+> Some students are not punctual.
+
+Both can be true.
+
+---
+
+# 40. Subalternation
+
+Subalternation is the relationship between:
+
+```text
+A → I
+
+E → O
+```
+
+A is the universal affirmative and I is the particular affirmative.
+
+E is the universal negative and O is the particular negative.
+
+### Traditional rule
+
+If the universal proposition is true, the corresponding particular proposition is true.
+
+---
+
+# 41. Square of Opposition – Quick Revision
+
+| Relationship | Pair |
+|---|---|
+| Contradictory | A – O |
+| Contradictory | E – I |
+| Contrary | A – E |
+| Subcontrary | I – O |
+| Subalternation | A – I |
+| Subalternation | E – O |
+
+### Memory Trick
+
+```text
+Contradictory:
+A ↔ O
+E ↔ I
+
+Contrary:
+A ↔ E
+
+Subcontrary:
+I ↔ O
+
+Subaltern:
+A → I
+E → O
+```
+
+---
+
+# 42. Analogical Reasoning
+
+Analogy is based on similarity or relationship.
+
+Example:
+
+```text
+Teacher : School :: Doctor : Hospital
+```
+
+Relationship:
+
+```text
+Teacher works in School.
+
+Doctor works in Hospital.
+```
+
+Therefore, the relationship is preserved.
+
+---
+
+# 43. How to Solve Analogy Questions
+
+Follow these steps:
+
+### Step 1
+
+Identify the relationship between the first pair.
+
+### Step 2
+
+Apply the same relationship to the second pair.
+
+### Step 3
+
+Select the option that maintains the same relationship.
+
+### Example
+
+```text
+Bird : Nest :: Bee : ?
+```
+
+Answer:
+
+> Hive
+
+Because:
+
+```text
+Bird → Nest
+
+Bee → Hive
+```
+
+---
+
+# 44. Venn Diagrams
+
+A Venn diagram uses circles to represent relationships between classes or sets.
+
+It is useful for:
+
+- Understanding categorical propositions
+- Testing arguments
+- Showing inclusion
+- Showing exclusion
+- Showing overlap
+
+---
+
+# 45. Venn Diagram – All S are P
+
+Statement:
+
+> All S are P.
+
+The S circle is completely inside the P circle.
+
+```text
+      _____________
+     /             \
+    /      P        \
+   |     ______      |
+   |    /  S   \     |
+   |    \______ /    |
+    \             /
+     \___________/
+```
+
+Meaning:
+
+Every S belongs to P.
+
+---
+
+# 46. Venn Diagram – No S are P
+
+Statement:
+
+> No S are P.
+
+The two circles do not overlap.
+
+```text
+    _______       _______
+   /       \     /       \
+  /    S    \   /    P    \
+  \         /   \         /
+   \_______/     \_______/
+```
+
+Meaning:
+
+There is no common member.
+
+---
+
+# 47. Venn Diagram – Some S are P
+
+Statement:
+
+> Some S are P.
+
+The two circles overlap.
+
+```text
+       _______
+      /       \
+     /   S   __\____
+     \      /  P    \
+      \____/         /
+           \________/
+```
+
+The overlapping region represents members that belong to both S and P.
+
+---
+
+# 48. Venn Diagram – Some S are Not P
+
+Statement:
+
+> Some S are not P.
+
+There must be at least one member in the S region outside P.
+
+The important idea is:
+
+```text
+S
+┌───────────────┐
+│   x           │
+│       ┌───────┼──────┐
+│       │   P   │      │
+└───────┴───────┴──────┘
+```
+
+The `x` represents existence of at least one S that is not P.
+
+---
+
+# 49. Using Venn Diagrams to Test Arguments
+
+Consider:
+
+```text
+All humans are mortal.
+
+Socrates is a human.
+
+Therefore, Socrates is mortal.
+```
+
+The relationship can be represented as:
+
+```text
+Humans ⊂ Mortals
+
+Socrates ∈ Humans
+```
+
+Therefore:
+
+```text
+Socrates ∈ Mortals
+```
+
+The conclusion follows.
+
+---
+
+# 50. Simple and Multiple Venn Diagrams
+
+### Simple Venn Diagram
+
+Usually involves two or three classes.
+
+Example:
+
+```text
+Students
+Teachers
+Researchers
+```
+
+### Multiple Venn Diagram
+
+Used when several classes and relationships must be represented simultaneously.
+
+The main purpose is to determine whether the conclusion follows from the premises.
+
+---
+
+# 51. Indian Logic
+
+Indian Logic is an important part of the UGC NET Logical Reasoning syllabus.
+
+Indian philosophical traditions developed systematic methods of acquiring knowledge and establishing valid cognition.
+
+One important concept is:
+
+> Pramana
+
+---
+
+# 52. Meaning of Pramana
+
+Pramana means a means or source of valid knowledge.
+
+Different Indian philosophical schools recognize different numbers and types of Pramanas.
+
+The syllabus specifically includes six:
+
+1. Pratyaksha
+2. Anumana
+3. Upamana
+4. Shabda
+5. Arthapatti
+6. Anupalabdhi
+
+---
+
+# 53. Six Pramanas
+
+| Pramana | Simple meaning |
+|---|---|
+| Pratyaksha | Perception |
+| Anumana | Inference |
+| Upamana | Comparison |
+| Shabda | Verbal testimony |
+| Arthapatti | Implication / Postulation |
+| Anupalabdhi | Non-apprehension |
+
+---
+
+# 54. Pratyaksha – Perception
+
+Pratyaksha means knowledge obtained through perception.
+
+In simple terms:
+
+> Knowledge gained through direct observation or experience.
+
+### Example
+
+You see smoke.
+
+The visual perception of smoke is an example of perceptual knowledge.
+
+Another simple example:
+
+> You see a tree in front of you.
+
+---
+
+# 55. Anumana – Inference
+
+Anumana means inference.
+
+It is knowledge obtained by reasoning from something observed to something not directly observed.
+
+### Famous example
+
+```text
+There is fire on the hill.
+
+Why?
+
+Because there is smoke.
+```
+
+The reasoning is:
+
+```text
+Smoke → Fire
+```
+
+More carefully:
+
+> Wherever there is smoke, there is fire.
+
+There is smoke on the hill.
+
+Therefore:
+
+> There is fire on the hill.
+
+---
+
+# 56. Upamana – Comparison
+
+Upamana means comparison or analogy.
+
+Knowledge is obtained by comparing something with something already known.
+
+### Example
+
+Suppose someone tells you:
+
+> A gavaya is an animal similar to a cow.
+
+Later you see an unfamiliar animal that resembles a cow and recognize it as a gavaya.
+
+The knowledge is based on comparison.
+
+### Key Point
+
+```text
+Upamana = Comparison
+```
+
+---
+
+# 57. Shabda – Verbal Testimony
+
+Shabda means verbal testimony or reliable verbal instruction.
+
+Knowledge is obtained from a reliable source.
+
+### Example
+
+A qualified teacher tells a student:
+
+> The Earth revolves around the Sun.
+
+The student obtains knowledge through verbal testimony.
+
+### Key Point
+
+```text
+Shabda = Verbal testimony
+```
+
+---
+
+# 58. Arthapatti – Implication / Postulation
+
+Arthapatti refers to postulation or implication used to explain facts that otherwise cannot be adequately explained.
+
+### Simple example
+
+Suppose:
+
+> Ravi is usually seen fasting during the day.
+
+But:
+
+> Ravi is gaining weight.
+
+A possible postulation is:
+
+> Ravi must be eating at night.
+
+The second fact is used to explain the first set of observations.
+
+### Key Point
+
+```text
+Arthapatti = Postulation / Implication
+```
+
+---
+
+# 59. Anupalabdhi – Non-Apprehension
+
+Anupalabdhi means knowledge of the absence of something through non-perception.
+
+### Example
+
+You look at a table and do not see a book on it.
+
+Under the relevant conditions, you know:
+
+> There is no book on the table.
+
+### Key Point
+
+```text
+Anupalabdhi = Knowledge of absence through non-apprehension
+```
+
+---
+
+# 60. Six Pramanas – Easy Memory
+
+Remember:
+
+```text
+P A U S A A
+
+Pratyaksha
+Anumana
+Upamana
+Shabda
+Arthapatti
+Anupalabdhi
+```
+
+Or remember their meanings:
+
+```text
+See
+Infer
+Compare
+Hear
+Postulate
+Know absence
+```
+
+---
+
+# 61. Structure of Anumana
+
+Anumana is inference.
+
+A classical Nyaya inference is commonly presented using five members:
+
+1. Pratijna
+2. Hetu
+3. Udaharana
+4. Upanaya
+5. Nigamana
+
+---
+
+# 62. Pratijna
+
+Pratijna is the proposition or statement to be established.
+
+Example:
+
+> The hill has fire.
+
+This is the claim.
+
+---
+
+# 63. Hetu
+
+Hetu is the reason or middle term.
+
+Example:
+
+> Because there is smoke on the hill.
+
+Here:
+
+> Smoke = Hetu
+
+---
+
+# 64. Udaharana
+
+Udaharana provides an example illustrating the universal relationship.
+
+Example:
+
+> Wherever there is smoke, there is fire, as in a kitchen.
+
+This establishes the relationship between smoke and fire.
+
+---
+
+# 65. Upanaya
+
+Upanaya applies the general relationship to the particular case.
+
+Example:
+
+> The hill has smoke of that kind.
+
+---
+
+# 66. Nigamana
+
+Nigamana is the final conclusion.
+
+Example:
+
+> Therefore, the hill has fire.
+
+---
+
+# 67. Five Members of Anumana
+
+| Member | Meaning | Example |
+|---|---|---|
+| Pratijna | Proposition | Hill has fire |
+| Hetu | Reason | Because of smoke |
+| Udaharana | Example | Smoke and fire in kitchen |
+| Upanaya | Application | Hill has such smoke |
+| Nigamana | Conclusion | Therefore hill has fire |
+
+### Memory
+
+```text
+P → H → U → U → N
+
+Pratijna
+Hetu
+Udaharana
+Upanaya
+Nigamana
+```
+
+---
+
+# 68. Important Terms in Anumana
+
+Some important terms are:
+
+- Paksha
+- Sadhya
+- Hetu
+- Vyapti
+- Sapaksha
+- Vipaksha
+
+---
+
+# 69. Paksha
+
+Paksha is the subject or locus about which the inference is made.
+
+Example:
+
+> Hill
+
+In:
+
+> The hill has fire because it has smoke.
+
+The hill is the Paksha.
+
+---
+
+# 70. Sadhya
+
+Sadhya is what is to be established.
+
+Example:
+
+> Fire
+
+The inference tries to establish that fire exists on the hill.
+
+Therefore:
+
+```text
+Sadhya = Fire
+```
+
+---
+
+# 71. Hetu
+
+Hetu is the reason used to establish the Sadhya.
+
+Example:
+
+```text
+Smoke
+```
+
+Therefore:
+
+```text
+Hetu = Smoke
+```
+
+---
+
+# 72. Vyapti
+
+Vyapti means an invariable or universal relation between the Hetu and Sadhya.
+
+In the famous example:
+
+```text
+Smoke → Fire
+```
+
+The required relationship is:
+
+> Wherever there is smoke, there is fire.
+
+This relationship is called Vyapti.
+
+### Easy meaning
+
+```text
+Vyapti = Invariable relation
+```
+
+---
+
+# 73. Sapaksha
+
+Sapaksha refers to cases where the Sadhya is present.
+
+Example:
+
+If fire is the Sadhya, places where fire is present can serve as Sapaksha examples.
+
+A kitchen with fire and smoke can be an example.
+
+---
+
+# 74. Vipaksha
+
+Vipaksha refers to cases where the Sadhya is absent.
+
+If fire is the Sadhya, a place where there is no fire can be considered a Vipaksha case.
+
+The purpose is to examine whether the Hetu is absent where the Sadhya is absent.
+
+---
+
+# 75. Types of Anumana
+
+Inference can be classified in different ways in Indian logic.
+
+Important classifications include:
+
+### 1. Svarthanumana
+
+Inference for oneself.
+
+### 2. Pararthanumana
+
+Inference presented for the understanding of another person.
+
+---
+
+# 76. Svarthanumana
+
+Svarthanumana means inference for oneself.
+
+The person internally reasons from the evidence to the conclusion.
+
+Example:
+
+You see smoke coming from a distant hill and infer:
+
+> There is fire on the hill.
+
+---
+
+# 77. Pararthanumana
+
+Pararthanumana means inference presented to establish a conclusion for another person.
+
+It is commonly expressed through the five-member structure:
+
+```text
+Pratijna
+↓
+Hetu
+↓
+Udaharana
+↓
+Upanaya
+↓
+Nigamana
+```
+
+---
+
+# 78. Hetvabhasa
+
+Hetvabhasa means a fallacy of inference.
+
+The word can be understood as:
+
+```text
+Hetu = reason
+Abhasa = appearance
+```
+
+So Hetvabhasa refers to a reason that appears to be valid but is actually defective.
+
+---
+
+# 79. Common Hetvabhasas
+
+Important Hetvabhasas include:
+
+1. Savyabhichara
+2. Viruddha
+3. Satpratipaksha
+4. Asiddha
+5. Badhita
+
+---
+
+# 80. Savyabhichara
+
+Savyabhichara is an irregular or inconclusive reason.
+
+The Hetu does not maintain the required invariable relationship with the Sadhya.
+
+### Simple idea
+
+```text
+Reason is not consistently connected with conclusion.
+```
+
+---
+
+# 81. Viruddha
+
+Viruddha means contradictory reason.
+
+The stated reason actually establishes the opposite of what the argument intends to establish.
+
+### Simple idea
+
+```text
+The reason supports the opposite conclusion.
+```
+
+---
+
+# 82. Satpratipaksha
+
+Satpratipaksha occurs when another valid reason establishes a conclusion that contradicts the original conclusion.
+
+### Simple idea
+
+```text
+One reason supports conclusion A.
+
+Another valid reason supports conclusion not-A.
+```
+
+The original inference is therefore challenged.
+
+---
+
+# 83. Asiddha
+
+Asiddha means an unestablished reason.
+
+The Hetu itself is not properly established.
+
+### Simple idea
+
+```text
+The reason being used has not been established.
+```
+
+---
+
+# 84. Badhita
+
+Badhita occurs when the proposed conclusion is contradicted by stronger or more direct evidence.
+
+### Simple idea
+
+```text
+The conclusion is contradicted by stronger evidence.
+```
+
+---
+
+# 85. Hetvabhasa – Quick Revision
+
+| Hetvabhasa | Simple meaning |
+|---|---|
+| Savyabhichara | Irregular / inconclusive reason |
+| Viruddha | Contradictory reason |
+| Satpratipaksha | Counter-reason |
+| Asiddha | Unestablished reason |
+| Badhita | Contradicted by stronger evidence |
+
+---
+
+# 86. Important Comparison: Western and Indian Logic
+
+| Western Logic | Indian Logic |
+|---|---|
+| Arguments and propositions | Pramanas and inference |
+| Categorical propositions | Anumana |
+| Syllogism | Five-member inference |
+| Premise and conclusion | Pratijna and Nigamana |
+| Logical validity | Vyapti and reasoning |
+| Fallacies | Hetvabhasas |
+
+---
+
+# 87. Important Terms – Quick Revision
+
+```text
+Logic
+→ Study of correct reasoning
+
+Argument
+→ Premises + Conclusion
+
+Deduction
+→ General → Specific
+
+Induction
+→ Specific → General
+
+Analogy
+→ Relationship between pairs
+
+A
+→ All S are P
+
+E
+→ No S are P
+
+I
+→ Some S are P
+
+O
+→ Some S are not P
+
+Vyapti
+→ Invariable relation
+
+Hetu
+→ Reason
+
+Sadhya
+→ What is to be established
+
+Paksha
+→ Subject of inference
+```
+
+---
+
+# 88. Classical Square – One-Minute Revision
+
+```text
+A = All S are P
+E = No S are P
+I = Some S are P
+O = Some S are not P
+```
+
+Relationships:
+
+```text
+A ↔ O = Contradictory
+
+E ↔ I = Contradictory
+
+A ↔ E = Contrary
+
+I ↔ O = Subcontrary
+
+A → I = Subalternation
+
+E → O = Subalternation
+```
+
+---
+
+# 89. Six Pramanas – One-Minute Revision
+
+```text
+Pratyaksha
+→ Perception
+
+Anumana
+→ Inference
+
+Upamana
+→ Comparison
+
+Shabda
+→ Verbal testimony
+
+Arthapatti
+→ Postulation / Implication
+
+Anupalabdhi
+→ Non-apprehension
+```
+
+---
+
+# 90. Anumana – One-Minute Revision
+
+```text
+Pratijna
+→ Proposition
+
+Hetu
+→ Reason
+
+Udaharana
+→ Example
+
+Upanaya
+→ Application
+
+Nigamana
+→ Conclusion
+```
+
+---
+
+# 91. Hetvabhasa – One-Minute Revision
+
+```text
+Savyabhichara
+→ Irregular reason
+
+Viruddha
+→ Contradictory reason
+
+Satpratipaksha
+→ Counter-reason
+
+Asiddha
+→ Unestablished reason
+
+Badhita
+→ Contradicted by stronger evidence
+```
+
+---
+
+# 92. UGC NET Focus Areas
+
+Pay particular attention to:
+
+- Premise and conclusion
+- Argument forms
+- Modus Ponens
+- Modus Tollens
+- Categorical propositions
+- A, E, I and O propositions
+- Distribution of terms
+- Mood
+- Figure
+- Deductive reasoning
+- Inductive reasoning
+- Formal fallacies
+- Informal fallacies
+- Connotation
+- Denotation
+- Classical Square of Opposition
+- Contradictory
+- Contrary
+- Subcontrary
+- Subalternation
+- Analogies
+- Venn diagrams
+- Indian Logic
+- Pramana
+- Six Pramanas
+- Anumana
+- Five members of Anumana
+- Vyapti
+- Hetvabhasas
+
+---
+
+# 93. Common Mistakes
+
+### Mistake 1 – Confusing Deduction and Induction
+
+Remember:
+
+```text
+Deduction → General to Specific
+
+Induction → Specific to General
+```
+
+### Mistake 2 – Confusing A and E
+
+```text
+A → All S are P
+
+E → No S are P
+```
+
+### Mistake 3 – Confusing I and O
+
+```text
+I → Some S are P
+
+O → Some S are not P
+```
+
+### Mistake 4 – Confusing Connotation and Denotation
+
+```text
+Denotation → Direct/literal meaning
+
+Connotation → Associated meaning
+```
+
+### Mistake 5 – Confusing Hetu and Sadhya
+
+```text
+Hetu → Reason
+
+Sadhya → What we want to establish
+```
+
+### Mistake 6 – Confusing Vyapti and Hetu
+
+```text
+Hetu → Particular reason
+
+Vyapti → Invariable relationship
+```
+
+---
+
+# 94. Final Revision Chart
+
+```text
+                    LOGICAL REASONING
+                           │
+          ┌────────────────┴────────────────┐
+          │                                 │
+       ARGUMENTS                         INDIAN LOGIC
+          │                                 │
+   ┌──────┼──────┐                    Pramanas
+   │      │      │                        │
+Deduction Induction Analogy          ┌─────┴─────┐
+   │      │      │                   │           │
+Argument Categorical              Anumana     Other
+Forms     Propositions               │        Pramanas
+   │         │                       │
+Fallacies   A E I O             Five Members
+   │         │                       │
+Formal/     Square                Vyapti
+Informal    Opposition               │
+                                  Hetvabhasa
+```
+
+---
+
+# 95. Final Exam Tip
+
+When solving a Logical Reasoning question, do not immediately choose an answer.
+
+First identify:
+
+```text
+What is the question asking?
+        ↓
+Argument?
+        ↓
+Categorical proposition?
+        ↓
+Fallacy?
+        ↓
+Deduction or induction?
+        ↓
+Analogy?
+        ↓
+Venn diagram?
+        ↓
+Indian Logic?
+        ↓
+Pramana?
+        ↓
+Anumana?
+        ↓
+Hetvabhasa?
+```
+
+The most important skill in Logical Reasoning is **identifying the type of problem first**.
+
+Once you identify the type, apply the appropriate rule.
+
+---
+
+# 96. Final Quick Revision
+
+```text
+ARGUMENT
+Premises → Conclusion
+
+DEDUCTION
+General → Specific
+
+INDUCTION
+Specific → General
+
+ANALOGY
+Relationship between pairs
+
+CATEGORICAL PROPOSITIONS
+A → All S are P
+E → No S are P
+I → Some S are P
+O → Some S are not P
+
+SQUARE OF OPPOSITION
+A-O → Contradictory
+E-I → Contradictory
+A-E → Contrary
+I-O → Subcontrary
+A-I → Subalternation
+E-O → Subalternation
+
+INDIAN LOGIC
+Pratyaksha → Perception
+Anumana → Inference
+Upamana → Comparison
+Shabda → Verbal testimony
+Arthapatti → Postulation
+Anupalabdhi → Non-apprehension
+
+ANUMANA
+Pratijna → Proposition
+Hetu → Reason
+Udaharana → Example
+Upanaya → Application
+Nigamana → Conclusion
+
+IMPORTANT TERMS
+Paksha → Subject
+Sadhya → What is to be established
+Hetu → Reason
+Vyapti → Invariable relation
+
+HETVABHASA
+Savyabhichara → Irregular reason
+Viruddha → Contradictory reason
+Satpratipaksha → Counter-reason
+Asiddha → Unestablished reason
+Badhita → Contradicted by stronger evidence
+```

@@ -1,0 +1,2438 @@
+---
+title: "Unit II – Computer System Architecture"
+subtitle: "UGC NET Computer Science and Applications – Paper 2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+---
+
+
+## 1. Introduction
+
+Computer System Architecture explains how the internal components of a computer are organized and how they work together.
+
+This unit covers:
+
+- Digital Logic Circuits and Components
+- Data Representation
+- Register Transfer and Microoperations
+- Basic Computer Organization and Design
+- Programming the Basic Computer
+- Microprogrammed Control
+- Central Processing Unit
+- Pipeline and Vector Processing
+- Input-Output Organization
+- Memory Hierarchy
+- Multiprocessors
+
+A simple view is:
+
+**Input → Memory ↔ CPU → Output**
+
+The CPU contains:
+
+**Control Unit + ALU + Registers**
+
+---
+
+# 2. Digital Computers
+
+A digital computer represents information using discrete values, normally binary digits 0 and 1.
+
+Major functions:
+
+1. Input
+2. Storage
+3. Processing
+4. Output
+
+## 2.1 Major Components
+
+### Input Unit
+
+Accepts data and instructions.
+
+Examples:
+
+- Keyboard
+- Mouse
+- Scanner
+- Microphone
+
+### Memory Unit
+
+Stores:
+
+- Instructions
+- Data
+- Intermediate results
+- Final results
+
+### Arithmetic Logic Unit
+
+The ALU performs:
+
+- Addition
+- Subtraction
+- Logical operations
+- Comparisons
+- Shifting
+
+### Control Unit
+
+Coordinates computer operations by generating control signals.
+
+### Output Unit
+
+Provides results to the user.
+
+Examples:
+
+- Monitor
+- Printer
+- Speaker
+
+---
+
+# 3. Logic Gates
+
+Logic gates are basic building blocks of digital circuits.
+
+Important gates:
+
+- AND
+- OR
+- NOT
+- NAND
+- NOR
+- XOR
+- XNOR
+
+## 3.1 AND Gate
+
+**Y = A · B**
+
+Output is 1 only when both inputs are 1.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+## 3.2 OR Gate
+
+**Y = A + B**
+
+Output is 1 when at least one input is 1.
+
+| A | B | Y |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+## 3.3 NOT Gate
+
+**Y = A'**
+
+| A | Y |
+|---|---|
+| 0 | 1 |
+| 1 | 0 |
+
+## 3.4 NAND Gate
+
+**Y = (A · B)'**
+
+NAND is a universal gate.
+
+## 3.5 NOR Gate
+
+**Y = (A + B)'**
+
+NOR is also a universal gate.
+
+## 3.6 XOR Gate
+
+**Y = A ⊕ B**
+
+Output is 1 when inputs are different.
+
+## 3.7 XNOR Gate
+
+Output is 1 when inputs are the same.
+
+### Memory
+
+**XOR → Different**
+
+**XNOR → Same**
+
+---
+
+# 4. Boolean Algebra
+
+Boolean algebra uses values 0 and 1.
+
+Important laws:
+
+### Identity
+
+**A + 0 = A**
+
+**A · 1 = A**
+
+### Null
+
+**A + 1 = 1**
+
+**A · 0 = 0**
+
+### Idempotent
+
+**A + A = A**
+
+**A · A = A**
+
+### Complement
+
+**A + A' = 1**
+
+**A · A' = 0**
+
+### Involution
+
+**(A')' = A**
+
+### Absorption
+
+**A + A·B = A**
+
+**A(A+B) = A**
+
+### De Morgan's Laws
+
+**(A+B)' = A'B'**
+
+**(AB)' = A' + B'**
+
+---
+
+# 5. Karnaugh Map Simplification
+
+A Karnaugh Map (K-map) is a graphical method for simplifying Boolean expressions.
+
+For SOP:
+
+**Group 1s.**
+
+For POS:
+
+**Group 0s.**
+
+Groups should normally contain:
+
+**1, 2, 4, 8, ...**
+
+cells.
+
+Use the largest possible groups.
+
+K-map cells follow Gray-code ordering so adjacent cells differ in only one variable.
+
+---
+
+# 6. Combinational Circuits
+
+A combinational circuit depends only on the present inputs.
+
+Examples:
+
+- Adders
+- Subtractors
+- Multiplexers
+- Demultiplexers
+- Encoders
+- Decoders
+
+**Combinational circuit → No memory**
+
+## 6.1 Half Adder
+
+Adds two one-bit numbers.
+
+Outputs:
+
+- Sum
+- Carry
+
+**Sum = A ⊕ B**
+
+**Carry = A · B**
+
+## 6.2 Full Adder
+
+Adds A, B and carry-in.
+
+**S = A ⊕ B ⊕ Cin**
+
+**Cout = AB + ACin + BCin**
+
+## 6.3 Half Subtractor
+
+Performs A − B.
+
+**Difference = A ⊕ B**
+
+**Borrow = A'B**
+
+## 6.4 Multiplexer
+
+A MUX is a many-to-one selector.
+
+For 2^n inputs:
+
+**Select lines = n**
+
+Example:
+
+4-to-1 MUX → 4 inputs, 2 select lines, 1 output.
+
+**MUX → Many to One**
+
+## 6.5 Demultiplexer
+
+A DEMUX sends one input to one of several outputs.
+
+**DEMUX → One to Many**
+
+## 6.6 Decoder
+
+A decoder converts n input lines into up to 2^n output lines.
+
+Example:
+
+2-to-4 decoder → 2 inputs and 4 outputs.
+
+## 6.7 Encoder
+
+An encoder performs the reverse type of conversion:
+
+**2^n input lines → n output lines**
+
+A priority encoder gives priority when multiple inputs are active.
+
+---
+
+# 7. Sequential Circuits
+
+A sequential circuit depends on:
+
+- Present inputs
+- Previous state
+
+Therefore it has memory.
+
+Examples:
+
+- Flip-flops
+- Registers
+- Counters
+
+| Combinational | Sequential |
+|---|---|
+| Present input | Present input + previous state |
+| No memory | Has memory |
+| Adders, MUX | Flip-flops, counters |
+
+---
+
+# 8. Flip-Flops
+
+A flip-flop stores one bit.
+
+Types:
+
+- SR
+- JK
+- D
+- T
+
+## 8.1 SR Flip-Flop
+
+For a common active-high SR implementation:
+
+| S | R | Operation |
+|---|---|---|
+| 0 | 0 | Hold |
+| 0 | 1 | Reset |
+| 1 | 0 | Set |
+| 1 | 1 | Invalid |
+
+The exact invalid state depends on the implementation.
+
+## 8.2 JK Flip-Flop
+
+| J | K | Operation |
+|---|---|---|
+| 0 | 0 | Hold |
+| 0 | 1 | Reset |
+| 1 | 0 | Set |
+| 1 | 1 | Toggle |
+
+**J = K = 1 → Toggle**
+
+## 8.3 D Flip-Flop
+
+**Q(next) = D**
+
+Used extensively in registers and storage.
+
+## 8.4 T Flip-Flop
+
+| T | Operation |
+|---|---|
+| 0 | Hold |
+| 1 | Toggle |
+
+**Q(next) = T ⊕ Q**
+
+---
+
+# 9. Race-Around Condition
+
+In a level-triggered JK flip-flop, race-around can occur when:
+
+**J = K = 1**
+
+and the clock pulse remains active long enough for repeated toggling.
+
+Solutions include:
+
+- Edge triggering
+- Master-slave JK flip-flop
+- Short clock pulse
+
+---
+
+# 10. Registers
+
+A register is a group of flip-flops used to store multiple bits.
+
+A 4-bit register contains:
+
+**4 flip-flops**
+
+Registers are used for:
+
+- Temporary storage
+- Data transfer
+- Shifting
+- CPU operations
+
+## Shift Registers
+
+Types:
+
+- SISO
+- SIPO
+- PISO
+- PIPO
+
+| Type | Meaning |
+|---|---|
+| SISO | Serial In, Serial Out |
+| SIPO | Serial In, Parallel Out |
+| PISO | Parallel In, Serial Out |
+| PIPO | Parallel In, Parallel Out |
+
+---
+
+# 11. Counters
+
+A counter is a sequential circuit that moves through a sequence of states.
+
+Types:
+
+- Asynchronous/ripple
+- Synchronous
+- Up
+- Down
+- Up-down
+- Ring
+- Johnson
+
+## Asynchronous Counter
+
+Clock is applied to the first stage and ripples through later stages.
+
+Advantage:
+
+- Simple
+
+Disadvantage:
+
+- Accumulated propagation delay
+
+## Synchronous Counter
+
+All flip-flops receive the clock together.
+
+Advantage:
+
+- Faster than ripple counters in many designs
+
+---
+
+# 12. Memory Unit
+
+Memory stores:
+
+- Instructions
+- Data
+- Intermediate results
+- Final results
+
+Important types:
+
+- RAM
+- ROM
+- Cache
+- Main memory
+- Auxiliary memory
+
+---
+
+# 13. Data Representation
+
+Computers internally represent information using binary.
+
+Important topics:
+
+- Number systems
+- Conversions
+- Complements
+- Fixed point
+- Floating point
+- Error detection
+- Computer arithmetic
+
+---
+
+# 14. Number Systems
+
+| System | Base | Digits |
+|---|---:|---|
+| Binary | 2 | 0,1 |
+| Octal | 8 | 0–7 |
+| Decimal | 10 | 0–9 |
+| Hexadecimal | 16 | 0–9, A–F |
+
+---
+
+# 15. Number-System Conversion
+
+## Binary to Decimal
+
+Example:
+
+**1011₂**
+
+= 1×2^3 + 0×2^2 + 1×2^1 + 1×2^0
+
+= 8 + 0 + 2 + 1
+
+= **11₁₀**
+
+## Decimal to Binary
+
+Repeatedly divide by 2 and read remainders from bottom to top.
+
+13 decimal:
+
+13 → remainder 1
+
+6 → remainder 0
+
+3 → remainder 1
+
+1 → remainder 1
+
+Therefore:
+
+**13₁₀ = 1101₂**
+
+## Binary to Octal
+
+Group into 3 bits.
+
+**101101₂ = 101 | 101 = 55₈**
+
+## Binary to Hexadecimal
+
+Group into 4 bits.
+
+**10101111₂ = 1010 | 1111 = AF₁₆**
+
+---
+
+# 16. Hexadecimal Digits
+
+| Decimal | Hex |
+|---:|---|
+| 0–9 | 0–9 |
+| 10 | A |
+| 11 | B |
+| 12 | C |
+| 13 | D |
+| 14 | E |
+| 15 | F |
+
+---
+
+# 17. Complements
+
+Complements are useful for negative representation and subtraction.
+
+Important types:
+
+- 1's complement
+- 2's complement
+- 9's complement
+- 10's complement
+
+## 1's Complement
+
+Invert every bit.
+
+Example:
+
+**101100 → 010011**
+
+## 2's Complement
+
+Take 1's complement and add 1.
+
+**101100 → 010011 → 010100**
+
+Therefore 2's complement is:
+
+**010100**
+
+## 9's Complement
+
+For each decimal digit d:
+
+**9 − d**
+
+## 10's Complement
+
+**9's complement + 1**
+
+---
+
+# 18. Signed Number Representation
+
+Common methods:
+
+- Sign magnitude
+- 1's complement
+- 2's complement
+
+In sign magnitude:
+
+- MSB 0 → positive
+- MSB 1 → negative
+
+In n-bit 2's complement representation:
+
+**Range = −2^(n−1) to 2^(n−1)−1**
+
+For 8 bits:
+
+**−128 to +127**
+
+---
+
+# 19. Fixed Point Representation
+
+Fixed-point representation places the binary point at a predetermined position.
+
+Example:
+
+**1011.101**
+
+Advantages:
+
+- Simple hardware
+- Fast arithmetic
+- Useful in embedded systems
+
+Limitation:
+
+- Fixed range and precision
+
+---
+
+# 20. Floating Point Representation
+
+Floating point uses:
+
+**Sign + Exponent + Fraction/Significand**
+
+Conceptually:
+
+**(−1)^sign × significand × base^exponent**
+
+It provides a large dynamic range.
+
+## IEEE 754
+
+Binary32:
+
+- 1 sign bit
+- 8 exponent bits
+- 23 fraction bits
+
+Total:
+
+**32 bits**
+
+Binary64:
+
+- 1 sign bit
+- 11 exponent bits
+- 52 fraction bits
+
+Total:
+
+**64 bits**
+
+---
+
+# 21. Error Detection Codes
+
+Important error detection techniques:
+
+- Parity
+- Checksum
+- CRC
+
+## Parity
+
+Even parity:
+
+Total number of 1s is even.
+
+Odd parity:
+
+Total number of 1s is odd.
+
+Parity detects many errors but cannot detect every possible multiple-bit error.
+
+## Checksum
+
+A calculated value based on data is transmitted and checked by the receiver.
+
+## CRC
+
+Cyclic Redundancy Check uses polynomial division over binary data.
+
+A generator polynomial is used to calculate a remainder.
+
+---
+
+# 22. Computer Arithmetic
+
+Important operations:
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+
+## Binary Addition
+
+**0+0=0**
+
+**0+1=1**
+
+**1+0=1**
+
+**1+1=10**
+
+**1+1+1=11**
+
+## Subtraction
+
+Subtraction can be implemented using complements.
+
+For 2's complement arithmetic:
+
+**A − B = A + 2's complement(B)**
+
+## Multiplication
+
+Important algorithms:
+
+- Shift-and-add
+- Booth's algorithm
+
+## Division
+
+Important algorithms:
+
+- Restoring division
+- Non-restoring division
+
+---
+
+# 23. Booth's Algorithm
+
+Booth's algorithm is used for signed binary multiplication.
+
+In the standard version, examine the current and previous multiplier bits:
+
+- 00 → No operation
+- 11 → No operation
+- 01 → Add multiplicand
+- 10 → Subtract multiplicand
+
+Then perform an arithmetic shift.
+
+---
+
+# 24. Register Transfer Language
+
+Register Transfer Language (RTL) describes transfers and microoperations.
+
+Example:
+
+**R2 ← R1**
+
+means the contents of R1 are transferred to R2.
+
+R1 itself is not changed by this transfer.
+
+---
+
+# 25. Bus and Memory Transfers
+
+A bus is a shared communication path.
+
+It can transfer information between:
+
+- Registers
+- CPU
+- Memory
+- I/O
+
+Memory read conceptually:
+
+**Memory → Register**
+
+Memory write conceptually:
+
+**Register → Memory**
+
+---
+
+# 26. Microoperations
+
+A microoperation is a basic operation performed on data stored in registers.
+
+Main categories:
+
+1. Arithmetic
+2. Logic
+3. Shift
+
+## Arithmetic
+
+- Add
+- Subtract
+- Increment
+- Decrement
+- Negate
+
+## Logic
+
+- AND
+- OR
+- XOR
+- Complement
+
+## Shift
+
+- Logical shift
+- Arithmetic shift
+- Circular shift
+
+---
+
+# 27. Logical and Arithmetic Shifts
+
+### Logical Shift
+
+Zeros enter the vacated positions.
+
+### Arithmetic Right Shift
+
+The sign bit is preserved.
+
+### Circular Shift
+
+Bits shifted out at one end re-enter at the other end.
+
+---
+
+# 28. Basic Computer Organization
+
+A basic computer contains:
+
+- Memory
+- CPU
+- Input
+- Output
+- Registers
+- Control unit
+
+The stored-program concept is fundamental.
+
+---
+
+# 29. Stored Program Organization
+
+In a stored-program computer:
+
+> Instructions and data are stored in memory.
+
+The processor:
+
+**Fetches → Decodes → Executes**
+
+instructions.
+
+---
+
+# 30. Instruction Code
+
+An instruction can contain:
+
+- Opcode
+- Address field
+- Register information
+- Addressing information
+
+The opcode specifies the operation.
+
+Examples:
+
+- ADD
+- LOAD
+- STORE
+- JUMP
+
+---
+
+# 31. Important Computer Registers
+
+Common registers include:
+
+- Program Counter (PC)
+- Instruction Register (IR)
+- Accumulator (AC)
+- Address Register / MAR
+- Data Register / MDR
+- Stack Pointer (SP)
+- General-purpose registers
+
+## Program Counter
+
+Contains the address of the next instruction, subject to control-transfer operations.
+
+## Instruction Register
+
+Contains the current instruction.
+
+## Accumulator
+
+Stores operands and intermediate arithmetic/logic results in many basic computer organizations.
+
+---
+
+# 32. Timing and Control
+
+The control unit generates signals that coordinate:
+
+- Register transfers
+- ALU operations
+- Memory access
+- I/O
+- Instruction sequencing
+
+---
+
+# 33. Instruction Cycle
+
+Basic instruction cycle:
+
+1. Fetch
+2. Decode
+3. Determine effective address if required
+4. Execute
+5. Handle interrupt if applicable
+
+## Fetch
+
+Conceptually:
+
+**MAR ← PC**
+
+**Memory Read**
+
+**IR ← Memory**
+
+**PC ← PC + 1**
+
+Exact register names depend on the architecture.
+
+## Decode
+
+Control unit determines:
+
+- Opcode
+- Addressing mode
+- Operand location
+- Required operations
+
+---
+
+# 34. Memory-Reference Instructions
+
+These instructions access memory for operands or results.
+
+Examples:
+
+- Load
+- Store
+- Add
+- Subtract
+- Branch instructions with memory-based addressing in suitable architectures
+
+---
+
+# 35. Input-Output and Interrupt
+
+I/O instructions allow CPU communication with peripherals.
+
+An interrupt causes the CPU to temporarily suspend normal execution and service an event.
+
+Possible sources:
+
+- I/O device
+- Timer
+- Hardware fault
+- Software-generated event
+
+---
+
+# 36. Interrupt Cycle
+
+A simplified sequence:
+
+1. Complete current instruction.
+2. Save necessary state.
+3. Identify interrupt source/vector.
+4. Transfer control to ISR.
+5. Execute ISR.
+6. Restore state.
+7. Resume interrupted program.
+
+ISR means:
+
+**Interrupt Service Routine**
+
+---
+
+# 37. Programming the Basic Computer
+
+## Machine Language
+
+Machine language consists of binary instructions directly understood by hardware.
+
+It is:
+
+- Fast to execute
+- Machine dependent
+- Difficult to write
+
+## Assembly Language
+
+Uses symbolic mnemonics such as:
+
+- ADD
+- LOAD
+- STORE
+- JMP
+
+## Assembler
+
+Converts assembly language into machine/object code.
+
+**Assembly → Assembler → Machine/Object Code**
+
+---
+
+# 38. Program Loops
+
+A loop repeats instructions.
+
+Typical structure:
+
+1. Initialize
+2. Test
+3. Execute
+4. Update
+5. Repeat
+
+---
+
+# 39. Subroutines
+
+A subroutine is a reusable sequence of instructions.
+
+Benefits:
+
+- Code reuse
+- Less duplication
+- Easier maintenance
+
+A CALL transfers control to the subroutine.
+
+A RETURN transfers control back.
+
+---
+
+# 40. I/O Programming
+
+Main approaches:
+
+- Programmed I/O
+- Interrupt-driven I/O
+- DMA
+
+---
+
+# 41. Microprogrammed Control
+
+A control unit can be:
+
+- Hardwired
+- Microprogrammed
+
+## Hardwired Control
+
+Control signals are generated through hardware logic.
+
+Advantage:
+
+- Usually faster
+
+Disadvantage:
+
+- Difficult to modify
+
+## Microprogrammed Control
+
+Control signals are generated from microinstructions stored in control memory.
+
+Advantages:
+
+- Easier to modify
+- Useful for complex instruction sets
+
+---
+
+# 42. Control Memory
+
+Control memory stores microinstructions.
+
+A microinstruction specifies the control signals or microoperations to be performed.
+
+---
+
+# 43. Address Sequencing
+
+Address sequencing determines the address of the next microinstruction.
+
+Sources may include:
+
+- Next sequential address
+- Branch address
+- Instruction opcode mapping
+- Conditional branch information
+
+---
+
+# 44. Central Processing Unit
+
+Major CPU components:
+
+- ALU
+- Control Unit
+- Registers
+
+CPU operations are coordinated by control signals.
+
+---
+
+# 45. General Register Organization
+
+A CPU may have a set of general-purpose registers connected through:
+
+- Multiplexers
+- ALU
+- Control logic
+
+Registers hold:
+
+- Operands
+- Addresses
+- Intermediate results
+
+---
+
+# 46. Stack Organization
+
+A stack is:
+
+**LIFO = Last In, First Out**
+
+Operations:
+
+- PUSH
+- POP
+
+The stack pointer identifies the current top of the stack.
+
+Applications:
+
+- Function calls
+- Recursion
+- Expression evaluation
+- Interrupt handling
+
+---
+
+# 47. Instruction Formats
+
+An instruction format describes fields such as:
+
+- Opcode
+- Address
+- Register
+- Addressing mode
+
+Based on explicit addresses:
+
+- Three-address
+- Two-address
+- One-address
+- Zero-address
+
+## Three-address
+
+**ADD R1,R2,R3**
+
+Conceptually:
+
+**R1 ← R2 + R3**
+
+## Two-address
+
+**ADD R1,R2**
+
+Conceptually:
+
+**R1 ← R1 + R2**
+
+## One-address
+
+Uses an implied accumulator.
+
+**ADD X**
+
+Conceptually:
+
+**AC ← AC + M[X]**
+
+## Zero-address
+
+Common in stack machines.
+
+**ADD**
+
+Uses operands implicitly from the stack.
+
+---
+
+# 48. Addressing Modes
+
+Addressing mode determines how an operand or effective address is obtained.
+
+Important modes:
+
+- Immediate
+- Direct
+- Indirect
+- Register
+- Register indirect
+- Indexed
+- Relative
+- Base
+- Auto-increment
+- Auto-decrement
+
+## Immediate
+
+Operand is part of instruction.
+
+Example:
+
+**MOV R1,#25**
+
+## Direct
+
+**EA = Address field**
+
+## Indirect
+
+**EA = M[Address field]**
+
+## Register
+
+Register contains operand.
+
+## Register Indirect
+
+Register contains effective address.
+
+## Indexed
+
+**EA = Address + Index Register**
+
+## Relative
+
+**EA = PC + displacement**
+
+---
+
+# 49. RISC
+
+RISC = **Reduced Instruction Set Computer**
+
+Typical characteristics:
+
+- Relatively simple instructions
+- Load/store architecture common
+- Large register use
+- Fewer addressing modes
+- Fixed-length instructions are common
+- Pipeline-friendly design
+
+---
+
+# 50. CISC
+
+CISC = **Complex Instruction Set Computer**
+
+Typical characteristics:
+
+- Large instruction set
+- Complex instructions
+- More addressing modes
+- Variable-length instructions are common
+- Memory operands may be supported by instructions
+
+---
+
+# 51. RISC vs CISC
+
+| RISC | CISC |
+|---|---|
+| Smaller/simple instruction set | Larger/complex instruction set |
+| Fewer addressing modes | More addressing modes |
+| Load/store architecture common | Memory operands may be allowed |
+| Fixed length often used | Variable length often used |
+| Pipeline-friendly | More complex decoding |
+
+---
+
+# 52. Pipeline Processing
+
+Pipelining divides instruction execution into stages.
+
+Example:
+
+**Fetch → Decode → Execute → Memory → Write Back**
+
+Several instructions can occupy different stages at the same time.
+
+---
+
+# 53. Parallel Processing
+
+Parallel processing performs multiple operations concurrently.
+
+Types:
+
+- Bit-level
+- Instruction-level
+- Data-level
+- Task-level parallelism
+
+---
+
+# 54. Pipeline Performance
+
+For k stages and n instructions, ideal completion time is approximately:
+
+**k + n − 1 cycles**
+
+when every stage takes one cycle and there are no stalls.
+
+Ideal speedup for a large number of instructions approaches approximately:
+
+**k**
+
+compared with a corresponding non-pipelined design.
+
+---
+
+# 55. Pipeline Hazards
+
+Three main hazards:
+
+1. Structural
+2. Data
+3. Control
+
+## Structural Hazard
+
+Hardware resource conflict.
+
+## Data Hazard
+
+Instructions depend on data from other instructions.
+
+Types:
+
+- RAW
+- WAR
+- WAW
+
+**RAW = Read After Write**
+
+## Control Hazard
+
+Caused by branches and control-transfer instructions.
+
+Solutions can include:
+
+- Branch prediction
+- Pipeline flushing
+- Delayed branching
+- Speculation
+
+---
+
+# 56. Arithmetic Pipeline
+
+Arithmetic operations can be divided into stages.
+
+Example:
+
+**Fetch operands → Calculate → Normalize → Store**
+
+Different data items can be processed simultaneously in different stages.
+
+---
+
+# 57. Instruction Pipeline
+
+Typical stages:
+
+1. Instruction Fetch
+2. Instruction Decode
+3. Operand Fetch
+4. Execute
+5. Memory Access
+6. Write Back
+
+Actual pipeline stages depend on architecture.
+
+---
+
+# 58. Vector Processing
+
+Vector processing performs the same operation on multiple data elements.
+
+Example:
+
+**C[i] = A[i] + B[i]**
+
+Useful for:
+
+- Scientific computing
+- Image processing
+- Matrix operations
+- Machine learning
+
+---
+
+# 59. Array Processors
+
+Array processors contain multiple processing elements that can operate on data arrays in parallel.
+
+They are useful for data-parallel applications.
+
+---
+
+# 60. Input-Output Organization
+
+I/O organization manages communication among:
+
+- CPU
+- Memory
+- Peripheral devices
+
+---
+
+# 61. Peripheral Devices
+
+Examples:
+
+### Input
+
+- Keyboard
+- Mouse
+- Scanner
+
+### Output
+
+- Monitor
+- Printer
+
+### Storage
+
+- HDD
+- SSD
+- Optical storage
+
+### Communication
+
+- Network adapter
+- Modem
+
+---
+
+# 62. I/O Interface
+
+An I/O interface connects the CPU/system bus with peripheral devices.
+
+It may contain:
+
+- Data register
+- Status register
+- Control register
+- Address decoding
+- Control logic
+
+---
+
+# 63. Asynchronous Data Transfer
+
+Asynchronous transfer does not depend on a common clock between communicating units.
+
+Important methods:
+
+- Strobe
+- Handshaking
+
+## Strobe
+
+A strobe indicates when data is valid.
+
+## Handshaking
+
+Uses request and acknowledge signals.
+
+Handshaking is more robust when communicating units have different speeds.
+
+---
+
+# 64. Modes of Transfer
+
+Important modes:
+
+1. Programmed I/O
+2. Interrupt-initiated I/O
+3. DMA
+
+## Programmed I/O
+
+CPU repeatedly checks device status.
+
+Also called polling in common usage.
+
+Disadvantage:
+
+**CPU time is wasted waiting.**
+
+## Interrupt I/O
+
+Device interrupts CPU when service is required.
+
+## DMA
+
+DMA transfers blocks of data between device and memory with limited CPU involvement after setup.
+
+---
+
+# 65. DMA
+
+DMA = **Direct Memory Access**
+
+Typical sequence:
+
+1. CPU initializes DMA.
+2. DMA controller manages transfer.
+3. Data moves between device and memory.
+4. DMA reports completion, often through an interrupt.
+
+DMA is especially useful for large or high-speed transfers.
+
+---
+
+# 66. Priority Interrupt
+
+When several devices request service, a priority mechanism determines which request is handled first.
+
+Methods include:
+
+- Software polling
+- Daisy chaining
+- Parallel priority hardware
+
+---
+
+# 67. Serial Communication
+
+Serial communication sends bits sequentially.
+
+Concepts:
+
+- Baud rate
+- Start bit
+- Stop bit
+- Parity
+- Synchronous communication
+- Asynchronous communication
+
+Advantages:
+
+- Fewer physical lines
+- Suitable for many communication environments
+
+---
+
+# 68. Memory Hierarchy
+
+A simplified hierarchy:
+
+**Registers**
+
+↓
+
+**Cache**
+
+↓
+
+**Main Memory**
+
+↓
+
+**Auxiliary/Secondary Memory**
+
+Moving upward generally means:
+
+- Faster
+- Smaller
+- More expensive per bit
+
+Moving downward generally means:
+
+- Slower
+- Larger
+- Cheaper per bit
+
+---
+
+# 69. Main Memory
+
+Main memory directly supports CPU execution.
+
+Common forms include:
+
+- RAM
+- ROM
+
+RAM is generally volatile.
+
+---
+
+# 70. Auxiliary Memory
+
+Auxiliary memory provides large, non-volatile storage.
+
+Examples:
+
+- HDD
+- SSD
+- Optical storage
+
+It is generally slower than main memory but has much larger capacity.
+
+---
+
+# 71. Associative Memory
+
+Associative memory is also called:
+
+**Content Addressable Memory (CAM)**
+
+It searches for information based on content rather than a normal address.
+
+Applications include:
+
+- Fast lookup
+- Routing
+- Cache-related structures
+
+---
+
+# 72. Cache Memory
+
+Cache is a small, fast memory close to the CPU.
+
+It stores frequently used data and instructions.
+
+Cache exploits locality.
+
+## Temporal Locality
+
+Recently used data is likely to be used again.
+
+Example:
+
+Repeated loop instructions.
+
+## Spatial Locality
+
+Nearby memory locations are likely to be used.
+
+Example:
+
+Sequential array access.
+
+---
+
+# 73. Cache Hit and Miss
+
+### Hit
+
+Requested data is found in cache.
+
+### Miss
+
+Requested data is not found in cache.
+
+A miss requires additional memory access.
+
+---
+
+# 74. Cache Mapping
+
+Main methods:
+
+1. Direct mapping
+2. Fully associative mapping
+3. Set-associative mapping
+
+## Direct Mapping
+
+Each memory block maps to one specific cache line.
+
+Advantage:
+
+- Simple
+
+Disadvantage:
+
+- More conflict misses
+
+## Fully Associative
+
+A block can occupy any cache line.
+
+Advantage:
+
+- Flexible
+
+Disadvantage:
+
+- Expensive hardware
+
+## Set Associative
+
+A block maps to one set but can occupy any line within that set.
+
+This provides a compromise.
+
+---
+
+# 75. Cache Replacement
+
+When replacement is necessary, policies include:
+
+- LRU
+- FIFO
+- Random
+
+LRU means:
+
+**Least Recently Used**
+
+---
+
+# 76. Cache Write Policies
+
+## Write-through
+
+Write to cache and main memory immediately.
+
+Advantage:
+
+- Main memory remains current.
+
+Disadvantage:
+
+- More memory traffic.
+
+## Write-back
+
+Write to cache first and update main memory later.
+
+Advantage:
+
+- Less memory traffic.
+
+Disadvantage:
+
+- More management complexity.
+
+---
+
+# 77. Virtual Memory
+
+Virtual memory allows a program to use a logical address space larger than physical main memory.
+
+It uses secondary storage to support the virtual address space.
+
+Important concepts:
+
+- Pages
+- Frames
+- Page table
+- Page fault
+- TLB
+
+---
+
+# 78. Paging
+
+Virtual memory is commonly implemented using paging.
+
+Virtual address:
+
+**Page number + Offset**
+
+Physical address:
+
+**Frame number + Offset**
+
+A page table maps virtual pages to physical frames.
+
+---
+
+# 79. Page Fault
+
+A page fault occurs when a referenced virtual page is not currently in physical memory.
+
+Basic sequence:
+
+1. Reference page.
+2. Page absent.
+3. Page fault.
+4. OS loads page from secondary storage.
+5. Page table is updated.
+6. Execution resumes.
+
+---
+
+# 80. TLB
+
+TLB = **Translation Lookaside Buffer**
+
+It is a fast cache containing recent address translations.
+
+It reduces virtual-to-physical translation time.
+
+---
+
+# 81. Memory Management Hardware
+
+Memory-management hardware supports:
+
+- Address translation
+- Protection
+- Paging
+- Segmentation
+- TLB
+- Access control
+
+The MMU commonly performs virtual-to-physical address translation.
+
+---
+
+# 82. Multiprocessors
+
+A multiprocessor system contains multiple processors working together.
+
+Advantages may include:
+
+- Higher performance
+- Parallel execution
+- Higher throughput
+- Better availability in some systems
+
+---
+
+# 83. Characteristics of Multiprocessors
+
+Important features:
+
+- Multiple processing units
+- Shared or coordinated resources
+- Parallel execution
+- Interprocessor communication
+- Synchronization
+
+---
+
+# 84. Interconnection Structures
+
+Processors and memory communicate using structures such as:
+
+- Shared bus
+- Crossbar
+- Multistage interconnection network
+
+## Shared Bus
+
+Simple and inexpensive but can become a bottleneck.
+
+## Crossbar
+
+Allows many possible source-destination connections.
+
+Advantage:
+
+- High communication parallelism
+
+Disadvantage:
+
+- Hardware cost increases substantially with size.
+
+---
+
+# 85. Interprocessor Arbitration
+
+When multiple processors request a shared resource simultaneously, arbitration decides who receives access.
+
+Methods:
+
+- Priority
+- Round-robin
+- Daisy-chain
+- Centralized arbitration
+
+---
+
+# 86. Interprocessor Communication
+
+Processors communicate using:
+
+- Shared memory
+- Message passing
+- Interprocessor interrupts
+
+---
+
+# 87. Synchronization
+
+Synchronization coordinates concurrent processors or threads.
+
+Important mechanisms:
+
+- Locks
+- Semaphores
+- Barriers
+- Atomic instructions
+- Mutual exclusion
+
+---
+
+# 88. Race Condition
+
+A race condition occurs when the result depends on the timing/order of concurrent operations.
+
+Example:
+
+Two processors update the same variable without proper synchronization.
+
+---
+
+# 89. Cache Coherence
+
+Multiple processors may have copies of the same data in their caches.
+
+If one processor changes a value, other caches may have stale copies.
+
+Cache coherence maintains consistency of cached copies according to the coherence protocol.
+
+Common approaches:
+
+- Snooping
+- Directory-based coherence
+
+MESI is a well-known protocol with:
+
+- Modified
+- Exclusive
+- Shared
+- Invalid
+
+---
+
+# 90. Multicore Processors
+
+A multicore processor contains multiple processing cores on a single chip/package.
+
+Benefits:
+
+- Parallel execution
+- Better multitasking
+- Better performance for parallel workloads
+- Potential energy efficiency
+
+Actual performance depends on software parallelism and architecture.
+
+---
+
+# 91. Important Comparison Tables
+
+## Combinational vs Sequential
+
+| Combinational | Sequential |
+|---|---|
+| Present input | Present input + previous state |
+| No memory | Memory |
+| Adders, MUX | Flip-flops, counters |
+
+## RISC vs CISC
+
+| RISC | CISC |
+|---|---|
+| Simple instruction set | Complex instruction set |
+| Fewer addressing modes | More addressing modes |
+| Load/store common | Memory operands may be supported |
+| Fixed length often common | Variable length often common |
+| Pipeline-friendly | More complex decoding |
+
+## I/O Methods
+
+| Programmed I/O | Interrupt I/O | DMA |
+|---|---|---|
+| CPU polls | Device interrupts CPU | DMA controller transfers |
+| CPU waiting is high | Less waiting | Minimal CPU involvement after setup |
+| Simple | More efficient | Good for bulk transfer |
+
+## Cache vs Main Memory
+
+| Cache | Main Memory |
+|---|---|
+| Smaller | Larger |
+| Faster | Slower |
+| Higher cost per bit | Lower cost per bit |
+| Near CPU | Main working memory |
+
+---
+
+# 92. Important Addressing Modes
+
+| Mode | Main idea |
+|---|---|
+| Immediate | Operand is in instruction |
+| Direct | Address field is operand address |
+| Indirect | Address field points to effective address |
+| Register | Register contains operand |
+| Register indirect | Register contains effective address |
+| Indexed | Address + index |
+| Relative | PC + displacement |
+
+---
+
+# 93. Important Register Terms
+
+| Register | Purpose |
+|---|---|
+| PC | Next instruction address |
+| IR | Current instruction |
+| AC | Accumulator/intermediate result |
+| MAR/AR | Memory address |
+| MDR/DR | Memory data |
+| SP | Stack top |
+| General registers | Operand/data storage |
+
+---
+
+# 94. Important Memory Terms
+
+| Term | Meaning |
+|---|---|
+| Cache | Fast memory near CPU |
+| CAM | Content-based lookup |
+| Virtual memory | Logical address space supported by secondary storage |
+| Page | Virtual-memory block |
+| Frame | Physical-memory block |
+| TLB | Cache of address translations |
+| Page fault | Referenced page not in physical memory |
+
+---
+
+# 95. Important Pipeline Terms
+
+| Term | Meaning |
+|---|---|
+| Pipeline | Overlap execution stages |
+| Structural hazard | Resource conflict |
+| Data hazard | Dependency |
+| Control hazard | Branch dependency |
+| RAW | Read after write |
+| WAR | Write after read |
+| WAW | Write after write |
+
+---
+
+# 96. Important Formulas and Facts
+
+### Truth-table combinations
+
+**n binary inputs → 2^n combinations**
+
+### Decoder
+
+**n inputs → up to 2^n outputs**
+
+### MUX
+
+**2^n inputs → n select lines**
+
+### 2's complement range
+
+For n bits:
+
+**−2^(n−1) to 2^(n−1)−1**
+
+### IEEE 754 binary32
+
+**1 + 8 + 23 = 32 bits**
+
+### IEEE 754 binary64
+
+**1 + 11 + 52 = 64 bits**
+
+### Ideal pipeline cycles
+
+For k stages and n instructions:
+
+**k + n − 1 cycles**
+
+under ideal assumptions.
+
+---
+
+# 97. High-Priority UGC NET Topics
+
+## Digital Logic
+
+- Logic gates
+- Universal gates
+- Boolean algebra
+- K-map
+- Adders
+- Multiplexers
+- Decoders
+- Flip-flops
+- Registers
+- Counters
+
+## Data Representation
+
+- Number conversions
+- Complements
+- Signed numbers
+- Fixed point
+- Floating point
+- IEEE 754
+- Error detection
+- Binary arithmetic
+- Booth algorithm
+
+## Basic Computer
+
+- Registers
+- Stored program
+- Instruction format
+- Instruction cycle
+- Timing and control
+- Interrupts
+- I/O
+
+## CPU
+
+- General registers
+- Stack
+- Instruction formats
+- Addressing modes
+- RISC
+- CISC
+
+## Pipeline
+
+- Pipeline stages
+- Hazards
+- Speedup
+- Arithmetic pipeline
+- Instruction pipeline
+- Vector processing
+- Array processors
+
+## I/O
+
+- Interfaces
+- Asynchronous transfer
+- Programmed I/O
+- Interrupt I/O
+- DMA
+- Priority interrupts
+- Serial communication
+
+## Memory
+
+- Hierarchy
+- Cache
+- Mapping
+- Replacement
+- Virtual memory
+- Paging
+- TLB
+- Associative memory
+
+## Multiprocessors
+
+- Interconnection
+- Arbitration
+- Communication
+- Synchronization
+- Cache coherence
+- Multicore
+
+---
+
+# 98. Common UGC NET Confusions
+
+### NAND and NOR
+
+Both are universal gates.
+
+### MUX and DEMUX
+
+**MUX → Many to One**
+
+**DEMUX → One to Many**
+
+### Encoder and Decoder
+
+**Encoder → Many inputs to coded output**
+
+**Decoder → Coded input to multiple outputs**
+
+### Combinational and Sequential
+
+**Combinational → No memory**
+
+**Sequential → Has memory**
+
+### RISC and CISC
+
+RISC does not simply mean "better" or "faster"; the terms describe different instruction-set and implementation approaches.
+
+### Cache and Virtual Memory
+
+**Cache → Reduces average memory access time**
+
+**Virtual memory → Provides a larger logical address space**
+
+### DMA and Interrupt I/O
+
+Both reduce continuous polling, but DMA is designed for efficient bulk data transfer.
+
+---
+
+# 99. Quick Revision Map
+
+## Digital Logic
+
+**Gates → Boolean Algebra → K-map → Combinational → Flip-Flops → Sequential → Registers → Counters**
+
+## Data Representation
+
+**Number Systems → Complements → Fixed Point → Floating Point → Error Detection → Arithmetic**
+
+## Basic Computer
+
+**Registers → Instruction → Fetch → Decode → Execute → I/O → Interrupt**
+
+## CPU
+
+**Registers → ALU → Control → Instruction Format → Addressing → RISC/CISC**
+
+## Pipeline
+
+**Stages → Parallelism → Hazards → Arithmetic Pipeline → Instruction Pipeline → Vector Processing**
+
+## I/O
+
+**Peripheral → Interface → Transfer → Interrupt → DMA → Serial Communication**
+
+## Memory
+
+**Registers → Cache → Main Memory → Auxiliary Memory → Virtual Memory**
+
+## Multiprocessors
+
+**Multiple processors → Interconnection → Arbitration → Communication → Synchronization → Coherence**
+
+---
+
+# 100. One-Minute Revision
+
+Remember:
+
+- **NAND/NOR → Universal gates**
+- **MUX → Many to one**
+- **DEMUX → One to many**
+- **Decoder → n to 2^n**
+- **Combinational → No memory**
+- **Sequential → Memory**
+- **JK, J=K=1 → Toggle**
+- **D flip-flop → Q(next)=D**
+- **T flip-flop → Toggle**
+- **Ripple counter → Asynchronous**
+- **Synchronous counter → Common clock**
+- **1's complement → Invert bits**
+- **2's complement → 1's complement + 1**
+- **Binary32 → 32 bits**
+- **Binary64 → 64 bits**
+- **Parity → Error detection**
+- **CRC → Polynomial error detection**
+- **PC → Next instruction**
+- **IR → Current instruction**
+- **SP → Stack**
+- **RISC → Reduced/simple instruction approach**
+- **CISC → Complex instruction approach**
+- **Pipeline → Overlapping stages**
+- **RAW → Read after write**
+- **DMA → Direct memory access**
+- **Cache → Fast memory**
+- **TLB → Translation cache**
+- **Virtual memory → Pages and frames**
+- **Cache coherence → Consistency of cached data**
+- **Multicore → Multiple cores**
+
+---
+
+# 101. Final Exam Strategy
+
+Study this unit in four stages.
+
+## Stage 1 – Understand
+
+Understand the flow:
+
+**Gate → Circuit → Register → ALU → CPU → Memory → I/O**
+
+## Stage 2 – Memorize
+
+Focus on:
+
+- Truth tables
+- Flip-flop tables
+- Number systems
+- Complements
+- Addressing modes
+- RISC/CISC
+- I/O modes
+- Cache mapping
+- Pipeline hazards
+
+## Stage 3 – Solve
+
+Practice:
+
+- Binary conversion
+- 1's and 2's complement
+- Floating-point representation
+- Boolean simplification
+- K-map
+- Cache questions
+- Addressing-mode questions
+- Pipeline questions
+- Memory questions
+- DMA/I/O questions
+
+## Stage 4 – Revise
+
+Use the one-minute revision and comparison tables repeatedly.
+
+The most useful sequence is:
+
+**Understand → Memorize → Solve → Revise**

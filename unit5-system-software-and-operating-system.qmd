@@ -1,0 +1,3173 @@
+---
+title: "Unit V – System Software and Operating System"
+subtitle: "UGC NET Computer Science and Applications – Paper II"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+
+This unit covers system software, operating-system concepts, processes, threads, CPU scheduling, deadlocks, memory management, storage management, file systems, security, virtual machines, Linux, Windows, and distributed operating systems.
+
+# Part A – System Software
+
+## 1. System Software
+
+System software provides a platform and services for application programs.
+
+Examples:
+
+- Operating systems
+- Compilers
+- Assemblers
+- Linkers
+- Loaders
+- Debuggers
+- Macro processors
+
+System software works close to the hardware.
+
+# 2. Machine Language
+
+Machine language consists of instructions directly represented in binary form.
+
+Example:
+
+```text
+10110000 01100001
+```
+
+Advantages:
+
+- Directly executed by hardware
+- No translation required at execution time
+
+Disadvantages:
+
+- Difficult for humans to write
+- Difficult to debug
+- Machine dependent
+
+# 3. Assembly Language
+
+Assembly language uses symbolic instructions instead of binary codes.
+
+Example:
+
+```asm
+MOV AX, 10
+ADD AX, 20
+```
+
+An **assembler** translates assembly language into machine code.
+
+```text
+Assembly Program
+       |
+       v
+   Assembler
+       |
+       v
+ Machine/Object Code
+```
+
+# 4. High-Level Languages
+
+High-level languages are closer to human language than machine language.
+
+Examples:
+
+- C
+- C++
+- Java
+- Python
+
+Advantages:
+
+- Easier to write
+- Easier to maintain
+- More portable
+- Supports abstraction
+
+# 5. Machine vs Assembly vs High-Level Language
+
+| Machine | Assembly | High-level |
+|---|---|---|
+| Binary instructions | Mnemonics | Human-oriented syntax |
+| Very difficult | Easier than machine language | Easier |
+| Machine dependent | Usually machine dependent | More portable |
+| No assembler required | Requires assembler | Requires compiler/interpreter |
+
+# 6. Compiler
+
+A compiler translates a high-level program into target code.
+
+```text
+Source Program
+      |
+      v
+   Compiler
+      |
+      v
+Object/Target Code
+```
+
+A compiler generally analyzes the entire source program before producing target code, although modern implementations can use many compilation strategies.
+
+Common compiler phases include:
+
+```text
+Lexical Analysis
+       ↓
+Syntax Analysis
+       ↓
+Semantic Analysis
+       ↓
+Intermediate Representation
+       ↓
+Optimization
+       ↓
+Code Generation
+```
+
+# 7. Interpreter
+
+An interpreter executes a program through interpretation rather than producing a traditional standalone machine-code executable in the same way as a conventional ahead-of-time compiler.
+
+Simplified view:
+
+```text
+Source Program
+      |
+      v
+ Interpreter
+      |
+      v
+ Execution
+```
+
+# 8. Compiler vs Interpreter
+
+| Compiler | Interpreter |
+|---|---|
+| Usually translates source toward target code | Executes by interpretation |
+| Compilation occurs before normal execution | Translation/interpretation occurs during execution |
+| Errors can be reported during compilation | Errors may appear as execution reaches the relevant code |
+| Generated code can be reused | Interpretation may repeat work |
+
+Modern languages may use combinations of compilation, interpretation, and just-in-time compilation.
+
+# 9. Linker
+
+A linker combines object files and libraries to create an executable or another linked program.
+
+```text
+Object File 1
+Object File 2
+Library
+    |
+    v
+  Linker
+    |
+    v
+Executable
+```
+
+# 10. Loader
+
+A loader loads an executable program into memory and prepares it for execution.
+
+Typical sequence:
+
+```text
+Source
+  ↓
+Compiler
+  ↓
+Object Code
+  ↓
+Linker
+  ↓
+Executable
+  ↓
+Loader
+  ↓
+Main Memory
+```
+
+# 11. Relocation
+
+Relocation adjusts address-dependent code or data when a program is placed at a particular memory location.
+
+A program may contain relocatable addresses before loading.
+
+The loader/linker can adjust them according to the actual placement.
+
+# 12. Macros
+
+A macro is a named sequence of instructions or source statements that can be expanded when used.
+
+Example:
+
+```text
+INCR X
+```
+
+may expand into several instructions.
+
+A **macro processor** performs macro expansion.
+
+Advantages:
+
+- Reduces repeated source code
+- Improves source-level convenience
+
+# 13. Debugger
+
+A debugger helps programmers find and analyze program errors.
+
+Common debugger features:
+
+- Breakpoints
+- Step-by-step execution
+- Variable inspection
+- Stack inspection
+- Watch expressions
+- Call stack
+
+# Part B – Basics of Operating Systems
+
+# 14. Operating System
+
+An Operating System (OS) is system software that manages computer hardware and provides services to application programs.
+
+Main responsibilities:
+
+- Process management
+- Memory management
+- File management
+- I/O management
+- Storage management
+- Protection and security
+- Networking
+- User interface
+
+Examples:
+
+- Linux
+- Windows
+- macOS
+- Android
+
+# 15. Operating System Structure
+
+An OS can be organized using different structures.
+
+Common approaches:
+
+- Simple structure
+- Layered structure
+- Monolithic structure
+- Microkernel
+- Modular structure
+- Hybrid structure
+
+# 16. Monolithic Structure
+
+Most OS services execute in a large kernel address space.
+
+Advantages:
+
+- Efficient communication
+- Good performance
+
+Disadvantages:
+
+- Large kernel
+- Less isolation between components
+
+# 17. Layered Structure
+
+The OS is divided into layers.
+
+```text
+User Programs
+     ↓
+Application Services
+     ↓
+File System
+     ↓
+Memory / Process Management
+     ↓
+Hardware
+```
+
+Each layer provides services to the layer above it.
+
+# 18. Microkernel
+
+A microkernel keeps only essential services in the kernel.
+
+Other services can run in user space.
+
+Typical microkernel responsibilities:
+
+- Basic scheduling
+- Interprocess communication
+- Basic memory management
+
+Advantages:
+
+- Modularity
+- Better isolation
+- Easier extension
+
+Potential disadvantage:
+
+- Communication overhead can affect performance depending on implementation.
+
+# 19. OS Operations
+
+An operating system manages:
+
+```text
+CPU
+Memory
+Storage
+I/O Devices
+Files
+Processes
+Users
+Security
+```
+
+It also handles interrupts and exceptions.
+
+# 20. Operating-System Services
+
+Common OS services:
+
+1. Program execution
+2. I/O operations
+3. File-system manipulation
+4. Communication
+5. Error detection
+6. Resource allocation
+7. Accounting
+8. Protection and security
+
+# 21. System Calls
+
+A system call provides an interface between a user program and the operating-system kernel.
+
+```text
+User Program
+     |
+     | System Call
+     v
+   Kernel
+     |
+     v
+Hardware / OS Service
+```
+
+Examples of system-call categories:
+
+- Process control
+- File management
+- Device management
+- Information maintenance
+- Communication
+- Protection
+
+# 22. System Call Examples
+
+Unix/Linux examples include:
+
+```text
+fork()
+exec()
+wait()
+open()
+read()
+write()
+close()
+```
+
+# 23. OS Design and Implementation
+
+Important design considerations:
+
+- Performance
+- Reliability
+- Security
+- Portability
+- Maintainability
+- Modularity
+- Scalability
+
+Implementation may involve:
+
+- C
+- C++
+- Assembly
+- Other low-level languages
+
+# 24. System Boot
+
+Booting is the process of starting a computer and loading the operating system.
+
+Simplified sequence:
+
+```text
+Power On
+   ↓
+Firmware
+   ↓
+Bootloader
+   ↓
+OS Kernel
+   ↓
+System Initialization
+   ↓
+Login / User Environment
+```
+
+# Part C – Process Management
+
+# 25. Process
+
+A process is a program in execution.
+
+A process contains resources such as:
+
+- Program code
+- Data
+- Stack
+- CPU state
+- Program counter
+- Registers
+- Open files
+
+# 26. Program vs Process
+
+| Program | Process |
+|---|---|
+| Passive entity | Active entity |
+| Stored instructions | Program in execution |
+| Does not itself have execution state | Has execution state |
+
+# 27. Process States
+
+Common process states:
+
+```text
+New
+ |
+ v
+Ready <----> Running
+              |
+              v
+           Waiting
+              |
+              v
+            Ready
+
+Running
+   |
+   v
+Terminated
+```
+
+Typical states:
+
+- New
+- Ready
+- Running
+- Waiting/Blocked
+- Terminated
+
+# 28. Process Control Block
+
+The **PCB** stores information about a process.
+
+Typical fields:
+
+- Process ID
+- Process state
+- Program counter
+- CPU registers
+- CPU scheduling information
+- Memory-management information
+- Accounting information
+- I/O status information
+
+# 29. Process Scheduling
+
+The OS selects processes for execution.
+
+Important scheduling queues:
+
+- Job queue
+- Ready queue
+- Device queues
+
+# 30. Context Switch
+
+A context switch occurs when the CPU changes from one process/thread to another.
+
+The OS saves the state of the current process and restores the state of the next process.
+
+```text
+Process A
+   |
+   | Save state
+   v
+Kernel
+   |
+   | Restore state
+   v
+Process B
+```
+
+Context switching has overhead.
+
+# 31. Process Operations
+
+Typical process operations:
+
+- Create
+- Execute
+- Block
+- Wake
+- Suspend
+- Resume
+- Terminate
+
+# 32. Interprocess Communication
+
+IPC means **Interprocess Communication**.
+
+Processes may communicate using:
+
+1. Shared memory
+2. Message passing
+
+# 33. Shared Memory
+
+Processes communicate through a shared memory region.
+
+```text
+Process A
+    \
+     \ 
+   Shared Memory
+     /
+    /
+Process B
+```
+
+Advantages:
+
+- Fast after setup
+- Suitable for large data exchange
+
+Challenge:
+
+- Requires synchronization
+
+# 34. Message Passing
+
+Processes exchange messages.
+
+Operations may be:
+
+```text
+send(message)
+receive(message)
+```
+
+Advantages:
+
+- Useful for distributed systems
+- No shared address space required
+
+# 35. Client-Server Communication
+
+Client/server systems can use IPC and networking mechanisms.
+
+Common approaches:
+
+- Sockets
+- Remote Procedure Calls
+- Pipes in suitable local scenarios
+
+```text
+Client
+   |
+ Request
+   |
+   v
+Server
+   |
+ Response
+   |
+   v
+Client
+```
+
+# Part D – Process Synchronization
+
+# 36. Process Synchronization
+
+Synchronization coordinates processes or threads accessing shared resources.
+
+It prevents incorrect results caused by uncontrolled concurrent execution.
+
+# 37. Race Condition
+
+A race condition occurs when the result depends on the timing or order of concurrent operations.
+
+Example:
+
+Two processes update the same bank balance simultaneously.
+
+Without proper synchronization:
+
+```text
+Initial balance = 1000
+
+Process A reads 1000
+Process B reads 1000
+
+A writes 1100
+B writes 900
+
+Final = 900
+```
+
+The expected result may be 1000, depending on the intended operations.
+
+# 38. Critical Section
+
+A critical section is a part of a program where shared data or a shared resource is accessed.
+
+Requirements for a correct critical-section solution:
+
+1. Mutual exclusion
+2. Progress
+3. Bounded waiting
+
+# 39. Mutual Exclusion
+
+Only one process can execute its critical section for the same shared resource at a time.
+
+# 40. Progress
+
+If no process is executing in its critical section, processes that want to enter should not be postponed indefinitely.
+
+# 41. Bounded Waiting
+
+A process should not wait forever after requesting entry into its critical section.
+
+# 42. Peterson's Solution
+
+Peterson's solution is a classical software solution for mutual exclusion between two processes.
+
+It uses shared variables conceptually similar to:
+
+```text
+flag[i]
+turn
+```
+
+The flag indicates interest in entering the critical section.
+
+The turn variable helps decide which process should enter.
+
+Important limitation:
+
+- Classical Peterson's solution is for two processes and relies on assumptions about memory operations that may not hold directly on modern hardware without appropriate memory-ordering considerations.
+
+# 43. Semaphores
+
+A semaphore is a synchronization variable accessed using atomic operations.
+
+Two classic operations:
+
+```text
+wait()
+signal()
+```
+
+They are also commonly called:
+
+```text
+P()
+V()
+```
+
+## Binary Semaphore
+
+Can represent:
+
+```text
+0 or 1
+```
+
+It can be used for mutual exclusion.
+
+## Counting Semaphore
+
+Can represent a non-negative count of available instances of a resource.
+
+# 44. Synchronization Example
+
+Suppose only one process can access a printer at a time.
+
+```text
+wait(printer)
+
+Use printer
+
+signal(printer)
+```
+
+# Part E – Threads
+
+# 45. Thread
+
+A thread is a unit of CPU execution within a process.
+
+Threads of the same process can share:
+
+- Code
+- Data
+- Files
+- Address space
+
+Each thread normally has its own:
+
+- Program counter
+- Registers
+- Stack
+
+# 46. Process vs Thread
+
+| Process | Thread |
+|---|---|
+| Independent execution environment | Execution unit within a process |
+| More expensive to create | Usually cheaper to create |
+| Separate address space normally | Threads share process address space |
+| IPC can be expensive | Communication can be easier through shared memory |
+
+# 47. Multicore Programming
+
+A multicore processor has multiple CPU cores.
+
+Multithreading can allow work to run in parallel on multiple cores.
+
+Challenges:
+
+- Identifying parallel tasks
+- Synchronization
+- Load balancing
+- Data dependencies
+- Debugging
+
+# 48. Multithreading Models
+
+Common models:
+
+1. Many-to-one
+2. One-to-one
+3. Many-to-many
+
+## Many-to-One
+
+Many user threads map to one kernel thread.
+
+```text
+T T T T
+ \| |/
+  Kernel Thread
+```
+
+A blocking system call can block all user threads, and true parallelism on multiple cores is not obtained through that single kernel thread.
+
+## One-to-One
+
+Each user thread maps to one kernel thread.
+
+```text
+T → K
+T → K
+T → K
+```
+
+Allows greater parallelism but may have higher overhead.
+
+## Many-to-Many
+
+Many user threads are multiplexed over a set of kernel threads.
+
+# 49. Thread Libraries
+
+Thread libraries provide APIs for creating and managing threads.
+
+Examples:
+
+- POSIX Pthreads
+- Windows threads
+- Java threading APIs
+
+# 50. Implicit Threading
+
+Implicit threading allows compilers, runtime systems, or libraries to manage much of the thread creation and scheduling.
+
+Examples/concepts:
+
+- Thread pools
+- OpenMP
+- Grand Central Dispatch
+- Task-based parallelism
+
+# 51. Threading Issues
+
+Important issues:
+
+- Thread cancellation
+- Signal handling
+- Thread pools
+- Thread-local storage
+- Fork and exec semantics
+- Synchronization
+
+# Part F – CPU Scheduling
+
+# 52. CPU Scheduling
+
+CPU scheduling selects a process/thread from the ready queue for CPU execution.
+
+Goals can include:
+
+- High CPU utilization
+- High throughput
+- Low turnaround time
+- Low waiting time
+- Low response time
+- Fairness
+
+# 53. Scheduling Criteria
+
+## CPU Utilization
+
+Percentage of time the CPU is busy.
+
+Goal:
+
+```text
+Maximize
+```
+
+## Throughput
+
+Number of processes completed per unit time.
+
+Goal:
+
+```text
+Maximize
+```
+
+## Turnaround Time
+
+Time from process submission to completion.
+
+```text
+Turnaround Time =
+Completion Time - Arrival Time
+```
+
+## Waiting Time
+
+Total time spent waiting in the ready queue.
+
+## Response Time
+
+Time from request submission until the first response.
+
+# 54. Preemptive vs Non-Preemptive
+
+### Preemptive
+
+The OS can interrupt a running process and assign the CPU to another process.
+
+### Non-Preemptive
+
+A running process normally keeps the CPU until it terminates, blocks, or voluntarily gives up the CPU.
+
+# 55. First-Come, First-Served
+
+FCFS schedules processes according to arrival order.
+
+Example:
+
+```text
+P1 → P2 → P3
+```
+
+Advantages:
+
+- Simple
+- Easy to implement
+
+Disadvantage:
+
+- Can produce large waiting times
+- Convoy effect
+
+# 56. Shortest-Job-First
+
+SJF selects the process with the smallest CPU burst.
+
+Advantages:
+
+- Minimum average waiting time under ideal assumptions for non-preemptive scheduling
+
+Disadvantages:
+
+- Requires burst-time prediction
+- Long processes may starve
+
+# 57. Shortest-Remaining-Time-First
+
+SRTF is the preemptive version associated with shortest-job scheduling.
+
+The process with the smallest remaining CPU burst is selected.
+
+# 58. Priority Scheduling
+
+Each process receives a priority.
+
+The scheduler selects a process according to priority.
+
+A problem can be:
+
+```text
+Starvation
+```
+
+A common solution is:
+
+```text
+Aging
+```
+
+Aging gradually increases the priority of waiting processes.
+
+# 59. Round Robin
+
+Round Robin uses a time quantum.
+
+Example:
+
+```text
+P1 → P2 → P3 → P1 → P2 → ...
+```
+
+Advantages:
+
+- Good response for interactive systems
+- Fair CPU sharing
+
+Important parameter:
+
+```text
+Time quantum
+```
+
+If the quantum is too small:
+
+- Many context switches
+
+If it is too large:
+
+- Behavior approaches FCFS
+
+# 60. Multilevel Queue
+
+The ready queue is divided into separate queues.
+
+Example:
+
+```text
+System processes
+Interactive processes
+Batch processes
+```
+
+Each queue may use its own scheduling policy.
+
+# 61. Multilevel Feedback Queue
+
+Processes can move between queues based on their behavior and scheduling rules.
+
+It can provide flexible scheduling but is more complex to configure.
+
+# 62. Scheduling Algorithm Comparison
+
+| Algorithm | Preemptive? | Important point |
+|---|---|---|
+| FCFS | No | Arrival order |
+| SJF | No | Shortest burst |
+| SRTF | Yes | Shortest remaining time |
+| Priority | Can be either | Priority based |
+| Round Robin | Yes | Time quantum |
+| Multilevel Queue | Depends | Separate fixed queues |
+| MLFQ | Usually preemptive | Processes can move between queues |
+
+# 63. Thread Scheduling
+
+Thread scheduling may be performed at:
+
+- User level
+- Kernel level
+
+Many-to-one systems can schedule user threads within a process while the kernel schedules the process.
+
+# 64. Multiple-Processor Scheduling
+
+In multiprocessor systems, scheduling involves multiple CPUs/cores.
+
+Important approaches:
+
+- Asymmetric multiprocessing
+- Symmetric multiprocessing
+
+### Asymmetric Multiprocessing
+
+One processor may handle scheduling/system activities while others execute assigned work.
+
+### Symmetric Multiprocessing
+
+Each processor can perform scheduling and other OS activities.
+
+Important issue:
+
+```text
+Load balancing
+```
+
+# 65. Real-Time CPU Scheduling
+
+Real-time systems have timing requirements.
+
+Two broad categories:
+
+### Hard Real-Time
+
+Missing a deadline can cause unacceptable failure.
+
+### Soft Real-Time
+
+Missing a deadline reduces quality but may not cause total system failure.
+
+Important algorithms/concepts:
+
+- Rate Monotonic Scheduling
+- Earliest Deadline First
+
+## Rate Monotonic
+
+Static priority based on task period.
+
+Shorter period:
+
+```text
+Higher priority
+```
+
+## Earliest Deadline First
+
+The task with the earliest deadline gets higher scheduling priority.
+
+# Part G – Deadlocks
+
+# 66. Deadlock
+
+A deadlock occurs when a set of processes are permanently waiting for resources held by one another.
+
+Example:
+
+```text
+P1 holds R1 → waits for R2
+P2 holds R2 → waits for R1
+```
+
+# 67. Four Necessary Conditions
+
+Deadlock requires all four conditions:
+
+1. Mutual exclusion
+2. Hold and wait
+3. No preemption
+4. Circular wait
+
+## Mutual Exclusion
+
+At least one resource is non-shareable.
+
+## Hold and Wait
+
+A process holds resources while waiting for additional resources.
+
+## No Preemption
+
+Resources cannot be forcibly taken away under the model.
+
+## Circular Wait
+
+A circular chain of waiting processes exists.
+
+# 68. Resource Allocation Graph
+
+A resource allocation graph can represent processes and resources.
+
+```text
+P1 → R1
+R1 → P2
+P2 → R2
+R2 → P1
+```
+
+A cycle may indicate deadlock under appropriate assumptions, especially when each resource type has a single instance.
+
+# 69. Methods for Handling Deadlocks
+
+Four general approaches:
+
+1. Deadlock prevention
+2. Deadlock avoidance
+3. Deadlock detection and recovery
+4. Ignore the problem in some systems when appropriate
+
+# 70. Deadlock Prevention
+
+Prevention ensures at least one necessary condition cannot hold.
+
+Examples:
+
+- Break hold-and-wait
+- Allow preemption where possible
+- Impose a total ordering on resources to prevent circular wait
+
+# 71. Deadlock Avoidance
+
+Avoidance requires information about future resource needs.
+
+The system checks whether granting a request keeps the system in a safe state.
+
+# 72. Banker's Algorithm
+
+The Banker's algorithm is a classical deadlock-avoidance algorithm.
+
+Important concepts:
+
+```text
+Available
+Max
+Allocation
+Need
+```
+
+Formula:
+
+```text
+Need = Max - Allocation
+```
+
+A state is safe if there is an order in which every process can obtain its remaining resources and finish.
+
+# 73. Deadlock Detection
+
+A system may allow deadlocks and periodically detect them.
+
+For multiple instances of resources, detection uses data such as:
+
+```text
+Available
+Allocation
+Request
+```
+
+# 74. Deadlock Recovery
+
+After detecting deadlock, possible actions include:
+
+- Terminating processes
+- Preempting resources
+- Rolling back selected processes
+
+# Part H – Memory Management
+
+# 75. Memory Management
+
+The OS manages allocation and deallocation of main memory.
+
+Responsibilities:
+
+- Track memory use
+- Allocate memory
+- Deallocate memory
+- Provide address translation
+- Protect processes
+
+# 76. Contiguous Memory Allocation
+
+Each process occupies one contiguous block of memory.
+
+Approaches include:
+
+- Fixed partitioning
+- Variable partitioning
+
+Problems:
+
+- Internal fragmentation
+- External fragmentation
+
+# 77. Internal Fragmentation
+
+Allocated memory contains unused space inside the allocated region.
+
+# 78. External Fragmentation
+
+Free memory exists, but it is divided into small non-contiguous holes.
+
+# 79. Swapping
+
+Swapping temporarily moves a process between main memory and secondary storage.
+
+```text
+Main Memory
+    |
+    | Swap out
+    v
+Disk
+    |
+    | Swap in
+    v
+Main Memory
+```
+
+# 80. Paging
+
+Paging divides:
+
+```text
+Logical memory → Pages
+Physical memory → Frames
+```
+
+Pages and frames normally have the same fixed size.
+
+A page table maps pages to frames.
+
+```text
+Logical Address
+     |
+     v
+Page Number + Offset
+     |
+     v
+Page Table
+     |
+     v
+Frame Number + Offset
+     |
+     v
+Physical Address
+```
+
+# 81. Page Number and Offset
+
+If page size is:
+
+```text
+2^n bytes
+```
+
+then the offset requires:
+
+```text
+n bits
+```
+
+The remaining logical-address bits identify the page number.
+
+# 82. Translation Lookaside Buffer
+
+TLB is a fast cache containing recent page-table mappings.
+
+```text
+CPU
+ |
+ v
+TLB
+ | \
+ |  \ Miss
+ |   \
+Hit   Page Table
+ |       |
+ +-------+
+     |
+Physical Address
+```
+
+A TLB hit is faster than accessing the page table in memory for the mapping.
+
+# 83. Segmentation
+
+Segmentation divides a program into logical segments.
+
+Examples:
+
+- Code
+- Data
+- Stack
+- Procedures
+
+A logical address can be represented as:
+
+```text
+Segment Number + Offset
+```
+
+# 84. Paging vs Segmentation
+
+| Paging | Segmentation |
+|---|---|
+| Fixed-size pages | Variable-size logical segments |
+| Based on physical-memory frames | Represents logical program units |
+| Reduces external fragmentation | Can have external fragmentation |
+| Page table | Segment table |
+
+# 85. Demand Paging
+
+Demand paging loads a page into memory only when it is needed.
+
+If the required page is not in memory:
+
+```text
+Page fault
+```
+
+# 86. Page Fault
+
+Basic sequence:
+
+```text
+CPU references page
+       |
+       v
+Page present?
+   /       \
+ Yes        No
+ |          |
+Continue   Page Fault
+              |
+              v
+        Load page from disk
+              |
+              v
+        Update page table
+              |
+              v
+        Restart instruction
+```
+
+# 87. Page Replacement
+
+When no free frame is available, the OS may replace an existing page.
+
+Important algorithms:
+
+- FIFO
+- Optimal
+- LRU
+- Second-Chance/Clock
+
+# 88. FIFO Page Replacement
+
+FIFO replaces the page that entered memory first.
+
+Advantage:
+
+- Simple
+
+Disadvantage:
+
+- Can suffer from Belady's anomaly
+
+# 89. Optimal Page Replacement
+
+Replaces the page that will not be used for the longest time in the future.
+
+It gives the minimum possible page faults for a reference string under the standard model.
+
+Limitation:
+
+- Future references are not known in actual execution
+
+It is mainly used as a benchmark.
+
+# 90. LRU
+
+LRU means **Least Recently Used**.
+
+It replaces the page that has not been used for the longest time in the past.
+
+# 91. Page Replacement Comparison
+
+| Algorithm | Principle |
+|---|---|
+| FIFO | Oldest loaded page |
+| Optimal | Farthest future use |
+| LRU | Least recent past use |
+| Clock | Approximation of LRU |
+
+# 92. Allocation of Frames
+
+The OS decides how many frames each process receives.
+
+Approaches:
+
+- Equal allocation
+- Proportional allocation
+- Priority allocation
+
+# 93. Thrashing
+
+Thrashing occurs when a system spends excessive time handling page faults and swapping pages rather than executing useful work.
+
+Causes:
+
+- Too few frames
+- Excessive degree of multiprogramming
+- Poor locality relative to available memory
+
+Symptoms:
+
+```text
+High paging activity
+Low CPU utilization
+Poor performance
+```
+
+# 94. Memory-Mapped Files
+
+A file is mapped into a process's virtual address space.
+
+The process accesses the file through memory-like operations.
+
+Advantages:
+
+- Convenient file access
+- Can improve performance for suitable workloads
+- Useful for sharing data between processes in some systems
+
+# Part I – Storage Management
+
+# 95. Mass Storage
+
+Mass storage provides large-capacity persistent storage.
+
+Examples:
+
+- HDD
+- SSD
+- Optical storage
+- Other persistent storage technologies
+
+# 96. Disk Structure
+
+A traditional magnetic disk contains:
+
+- Platters
+- Tracks
+- Sectors
+- Cylinders
+- Read/write heads
+
+A disk address may be described using these physical concepts, although modern systems commonly use logical block addressing.
+
+# 97. Disk Scheduling
+
+Disk scheduling determines the order in which disk requests are serviced.
+
+Important algorithms:
+
+- FCFS
+- SSTF
+- SCAN
+- C-SCAN
+- LOOK
+- C-LOOK
+
+# 98. FCFS Disk Scheduling
+
+Services requests in arrival order.
+
+Advantage:
+
+- Simple
+
+Disadvantage:
+
+- May result in large head movement
+
+# 99. SSTF
+
+SSTF means **Shortest Seek Time First**.
+
+The request closest to the current head position is selected.
+
+Advantage:
+
+- Can reduce average seek distance
+
+Disadvantage:
+
+- Possible starvation of far-away requests
+
+# 100. SCAN
+
+SCAN moves the disk head in one direction, servicing requests, then reverses direction.
+
+It is often called the **elevator algorithm**.
+
+# 101. C-SCAN
+
+C-SCAN services requests in one direction.
+
+After reaching one end, the head returns to the beginning without servicing requests on the return path.
+
+# 102. LOOK and C-LOOK
+
+LOOK stops at the last pending request in a direction rather than moving all the way to the physical end.
+
+C-LOOK is the circular version.
+
+# 103. Disk Scheduling Comparison
+
+| Algorithm | Main idea |
+|---|---|
+| FCFS | Arrival order |
+| SSTF | Nearest request |
+| SCAN | Elevator movement |
+| C-SCAN | Circular scan |
+| LOOK | SCAN without going to physical end |
+| C-LOOK | Circular LOOK |
+
+# 104. RAID
+
+RAID means **Redundant Array of Independent Disks**.
+
+It combines multiple disks to improve:
+
+- Reliability
+- Performance
+- Capacity utilization
+
+# 105. RAID Levels
+
+## RAID 0
+
+Striping without redundancy.
+
+```text
+Data → Disk 1 + Disk 2 + Disk 3
+```
+
+Advantages:
+
+- High performance
+
+Disadvantage:
+
+- No fault tolerance
+
+## RAID 1
+
+Mirroring.
+
+```text
+Disk 1 = Data
+Disk 2 = Copy
+```
+
+Advantage:
+
+- High redundancy
+
+Disadvantage:
+
+- Uses additional storage
+
+## RAID 5
+
+Striping with distributed parity.
+
+Can tolerate failure of one disk in the standard RAID 5 configuration.
+
+## RAID 6
+
+Striping with double distributed parity.
+
+Can tolerate failure of two disks in the standard configuration.
+
+# Part J – File and I/O Systems
+
+# 106. File
+
+A file is a named collection of related information stored on secondary storage.
+
+File attributes may include:
+
+- Name
+- Type
+- Size
+- Location
+- Protection
+- Creation time
+- Modification time
+
+# 107. File Access Methods
+
+Common methods:
+
+1. Sequential access
+2. Direct/random access
+3. Indexed access
+
+## Sequential Access
+
+Records are processed in order.
+
+## Direct Access
+
+The program can access a particular location directly.
+
+## Indexed Access
+
+An index helps locate records efficiently.
+
+# 108. Directory Structure
+
+Common directory structures:
+
+- Single-level
+- Two-level
+- Tree-structured
+- Acyclic graph
+- General graph
+
+## Single-Level Directory
+
+All files are in one directory.
+
+## Two-Level Directory
+
+Each user has a separate directory.
+
+## Tree Structure
+
+Directories can contain subdirectories.
+
+```text
+Root
+ |
+ +-- User
+ |    +-- Documents
+ |    +-- Pictures
+ |
+ +-- System
+```
+
+# 109. File-System Mounting
+
+Mounting makes a file system available at a directory or mount point.
+
+Conceptually:
+
+```text
+Storage Device
+      |
+      v
+   File System
+      |
+      v
+    Mount
+      |
+      v
+Directory Tree
+```
+
+# 110. File Sharing
+
+File systems can support sharing between users and processes.
+
+Mechanisms include:
+
+- Access permissions
+- ACLs
+- File locks
+- Network file sharing
+
+# 111. File-System Structure
+
+A file system manages:
+
+- Files
+- Directories
+- Metadata
+- Free space
+- Allocation
+- Protection
+
+Typical conceptual layers:
+
+```text
+Application
+     ↓
+Logical File System
+     ↓
+File-Organization Module
+     ↓
+Basic File System
+     ↓
+I/O Control
+     ↓
+Device Drivers
+     ↓
+Hardware
+```
+
+# 112. Directory Implementation
+
+Directory information can be implemented using:
+
+- Linear lists
+- Hash tables
+- Tree structures in some systems
+
+Hashing can improve lookup performance.
+
+# 113. File Allocation Methods
+
+Common allocation methods:
+
+1. Contiguous allocation
+2. Linked allocation
+3. Indexed allocation
+
+## Contiguous Allocation
+
+File blocks are stored consecutively.
+
+Advantages:
+
+- Fast sequential access
+- Fast direct access
+
+Disadvantages:
+
+- External fragmentation
+- Difficult file growth
+
+## Linked Allocation
+
+Each file block points to the next block.
+
+Advantage:
+
+- No external fragmentation caused by requiring contiguous blocks
+
+Disadvantage:
+
+- Poor direct access
+- Pointer overhead
+
+## Indexed Allocation
+
+An index block stores pointers to file blocks.
+
+Advantage:
+
+- Supports direct access
+
+Disadvantage:
+
+- Index block overhead
+
+# 114. Free-Space Management
+
+The file system tracks unused blocks.
+
+Methods:
+
+- Bitmaps/bit vectors
+- Linked lists
+- Grouping
+- Counting
+
+## Bitmap
+
+One bit represents whether a block is free or allocated.
+
+Example:
+
+```text
+0 1 1 0 0 1
+```
+
+The exact meaning of 0/1 depends on the implementation.
+
+# 115. File-System Efficiency and Performance
+
+Important considerations:
+
+- Caching
+- Buffering
+- Read-ahead
+- Disk scheduling
+- Block size
+- Allocation method
+- Free-space management
+
+# 116. File-System Recovery
+
+Recovery techniques can include:
+
+- Journaling
+- Consistency checking
+- Backup
+- Checkpoints
+- Replication
+
+# 117. I/O Hardware
+
+I/O hardware includes:
+
+- Keyboard
+- Mouse
+- Disk
+- Network card
+- Display
+- Printer
+
+Important hardware concepts:
+
+- Device controller
+- Device registers
+- Interrupts
+- DMA
+
+# 118. Application I/O Interface
+
+Applications interact with I/O devices through OS abstractions.
+
+Examples:
+
+```text
+open()
+read()
+write()
+close()
+```
+
+# 119. Kernel I/O Subsystem
+
+The kernel I/O subsystem manages:
+
+- Device drivers
+- Buffering
+- Caching
+- Spooling
+- Error handling
+- Device-independent interfaces
+
+# 120. Interrupt-Driven I/O
+
+A device can interrupt the CPU when it requires attention or has completed an operation.
+
+```text
+CPU starts I/O
+      |
+      v
+CPU does other work
+      |
+      v
+Device completes
+      |
+      v
+Interrupt
+      |
+      v
+OS handles event
+```
+
+# 121. DMA
+
+DMA means **Direct Memory Access**.
+
+A DMA controller can transfer data between an I/O device and memory with limited CPU involvement.
+
+```text
+I/O Device
+    |
+    v
+DMA Controller
+    |
+    v
+Main Memory
+```
+
+Advantages:
+
+- Efficient large data transfers
+- Reduces CPU involvement
+
+# 122. Transforming I/O Requests to Hardware Operations
+
+Simplified process:
+
+```text
+Application
+    |
+    v
+System Call
+    |
+    v
+Kernel I/O Subsystem
+    |
+    v
+Device Driver
+    |
+    v
+Device Controller
+    |
+    v
+Hardware
+```
+
+# Part K – Security and Protection
+
+# 123. Protection
+
+Protection controls how processes and users access system resources.
+
+Security is broader and includes protection against external and internal threats.
+
+# 124. Access Matrix
+
+An access matrix represents which subjects can perform which operations on objects.
+
+```text
+             File A     File B     Printer
+User A       Read       Read       Use
+User B       Read/Write -         -
+```
+
+Rows represent subjects.
+
+Columns represent objects.
+
+Cells contain access rights.
+
+# 125. Access Rights
+
+Common rights:
+
+```text
+Read
+Write
+Execute
+Delete
+Create
+Append
+```
+
+# 126. Access Control
+
+Access control determines who can access what and which operations are allowed.
+
+Common approaches:
+
+- Access Control Lists
+- Capability lists
+- Role-based access control
+
+# 127. Revocation of Access Rights
+
+Revocation removes previously granted permissions.
+
+Important questions:
+
+- Immediate or delayed?
+- Selective or general?
+- Temporary or permanent?
+
+# 128. Program Threats
+
+Examples:
+
+- Trojan horse
+- Trap door/backdoor
+- Logic bomb
+- Virus
+- Worm
+- Buffer overflow
+- Code injection
+
+# 129. System and Network Threats
+
+Examples:
+
+- Denial of Service
+- Distributed Denial of Service
+- Spoofing
+- Sniffing
+- Phishing
+- Man-in-the-middle attacks
+- Port scanning
+
+# 130. Cryptography
+
+Cryptography protects information using mathematical techniques.
+
+Basic goals:
+
+```text
+Confidentiality
+Integrity
+Authentication
+Non-repudiation
+```
+
+## Symmetric Cryptography
+
+The same secret key is used for encryption and decryption.
+
+```text
+Plaintext
+   |
+Secret Key
+   |
+Encryption
+   |
+Ciphertext
+   |
+Secret Key
+   |
+Decryption
+   |
+Plaintext
+```
+
+Example:
+
+- AES
+
+## Asymmetric Cryptography
+
+Uses a key pair:
+
+```text
+Public key
+Private key
+```
+
+Examples:
+
+- RSA
+- ECC
+
+# 131. Hashing
+
+A cryptographic hash function produces a fixed-size digest from input data.
+
+Properties commonly desired:
+
+- One-way resistance
+- Collision resistance
+- Efficient computation
+
+Examples:
+
+- SHA-256
+- SHA-3
+
+# 132. User Authentication
+
+Authentication verifies identity.
+
+Methods:
+
+1. Something you know
+2. Something you have
+3. Something you are
+
+Examples:
+
+- Password
+- Security token
+- Fingerprint
+
+Multi-factor authentication combines multiple categories.
+
+# 133. Security Defenses
+
+Important defenses:
+
+- Strong authentication
+- Least privilege
+- Firewalls
+- Antivirus/endpoint protection
+- Secure configuration
+- Patching
+- Encryption
+- Backups
+- Monitoring
+- Intrusion detection
+- Network segmentation
+
+# Part L – Virtual Machines
+
+# 134. Virtual Machine
+
+A virtual machine provides an abstraction of a computer system.
+
+It can run an operating system or applications in an isolated virtual environment.
+
+# 135. System Virtual Machine
+
+Provides a complete virtual hardware environment.
+
+Example:
+
+```text
+Physical Hardware
+      |
+      v
+Hypervisor
+      |
+ +----+----+
+ |         |
+ VM1      VM2
+ |         |
+OS        OS
+```
+
+# 136. Process Virtual Machine
+
+Provides a runtime environment for a single program.
+
+Example:
+
+```text
+Java Virtual Machine
+```
+
+# 137. Hypervisor
+
+A hypervisor manages virtual machines.
+
+Two broad categories:
+
+### Type 1
+
+Runs directly on hardware.
+
+```text
+Hardware
+   |
+Hypervisor
+   |
+VMs
+```
+
+### Type 2
+
+Runs on top of a host operating system.
+
+```text
+Hardware
+   |
+Host OS
+   |
+Hypervisor
+   |
+VMs
+```
+
+# 138. Virtualization
+
+Virtualization abstracts physical resources into virtual resources.
+
+Resources can include:
+
+- CPU
+- Memory
+- Storage
+- Network
+
+Advantages:
+
+- Isolation
+- Server consolidation
+- Flexible resource allocation
+- Testing environments
+- Scalability
+
+# Part M – Linux Operating System
+
+# 139. Linux
+
+Linux is an open-source Unix-like operating-system kernel. Linux distributions combine the kernel with system software and applications.
+
+Examples of distributions:
+
+- Ubuntu
+- Fedora
+- Debian
+- Arch Linux
+
+# 140. Linux Design Principles
+
+Important concepts associated with Unix/Linux design:
+
+- Modularity
+- Multiuser operation
+- Multitasking
+- Portability
+- Strong command-line tools
+- Hierarchical file system
+- Process-oriented design
+
+# 141. Linux Kernel Modules
+
+Kernel modules are components that can be loaded into and removed from the kernel as needed.
+
+They can provide:
+
+- Device drivers
+- File systems
+- Other kernel functionality
+
+Advantages:
+
+- Modularity
+- Extensibility
+- Reduced need to rebuild the entire kernel for every component
+
+# 142. Linux Process Management
+
+Linux represents processes using kernel data structures.
+
+Common commands:
+
+```bash
+ps
+top
+kill
+nice
+renice
+```
+
+Process creation and execution concepts include:
+
+```text
+fork()
+exec()
+wait()
+```
+
+# 143. Linux Scheduling
+
+Linux uses sophisticated scheduling mechanisms.
+
+Modern Linux scheduling includes scheduling classes and policies appropriate for different workloads.
+
+Important concepts:
+
+- Scheduling priorities
+- Time sharing
+- Fairness
+- Real-time scheduling
+
+# 144. Linux Memory Management
+
+Linux memory management includes:
+
+- Virtual memory
+- Paging
+- Page cache
+- Memory allocation
+- Memory protection
+- Swapping where configured
+
+# 145. Linux File Systems
+
+Linux provides a hierarchical file system.
+
+Important directories often include:
+
+```text
+/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── proc
+├── root
+├── tmp
+├── usr
+└── var
+```
+
+The exact contents vary by distribution and configuration.
+
+# 146. Linux I/O
+
+Linux provides device abstraction and device drivers.
+
+Devices are commonly represented through entries under:
+
+```text
+/dev
+```
+
+Important mechanisms:
+
+- Device drivers
+- Interrupts
+- DMA
+- Buffering
+- Caching
+
+# 147. Linux IPC
+
+Linux supports IPC mechanisms such as:
+
+- Pipes
+- Named pipes
+- Signals
+- Shared memory
+- Message queues
+- Semaphores
+- Sockets
+
+# 148. Linux Network Structure
+
+Linux provides networking through the kernel networking stack.
+
+Important concepts:
+
+- Network interfaces
+- TCP/IP
+- Sockets
+- Routing
+- Firewalls
+
+# Part N – Windows Operating Systems
+
+# 149. Windows Design Principles
+
+Windows is a family of operating systems based on a modular architecture.
+
+Important concepts include:
+
+- Protected execution
+- Multitasking
+- Virtual memory
+- Security
+- Plug-and-play support
+- Networking
+
+# 150. Windows System Components
+
+Major concepts include:
+
+- User applications
+- System services
+- Windows subsystem
+- Executive services
+- Kernel
+- Hardware abstraction layer
+- Device drivers
+
+A simplified model:
+
+```text
+Applications
+     |
+System Services / APIs
+     |
+Windows Executive
+     |
+Kernel
+     |
+Hardware Abstraction / Drivers
+     |
+Hardware
+```
+
+# 151. Terminal Services
+
+Terminal Services is the historical Windows terminology associated with remote desktop/session services.
+
+It allows users to access applications or desktops remotely.
+
+Modern Windows terminology commonly refers to related technology as **Remote Desktop Services**.
+
+# 152. Fast User Switching
+
+Fast User Switching allows one user to leave a session active while another user logs in.
+
+```text
+User A session → remains active
+       |
+       v
+Switch user
+       |
+       v
+User B session
+```
+
+# 153. Windows File System
+
+Common Windows file systems include:
+
+- NTFS
+- FAT32
+- exFAT
+
+NTFS provides features such as:
+
+- File permissions
+- Journaling
+- Large-volume support
+- Metadata management
+
+# 154. Windows Networking
+
+Windows supports:
+
+- TCP/IP
+- DNS
+- DHCP
+- SMB
+- Network authentication
+- Remote access
+
+# Part O – Distributed Systems
+
+# 155. Distributed Operating System
+
+A distributed operating system manages resources and computation across multiple networked computers.
+
+```text
+Node A ---- Node B
+   |          |
+   |          |
+Node C ---- Node D
+```
+
+The system attempts to provide coordinated services across the nodes.
+
+# 156. Network-Based Operating Systems
+
+A network operating system allows computers to communicate and share resources over a network.
+
+Examples of services:
+
+- File sharing
+- Printer sharing
+- User authentication
+- Remote access
+
+A distributed operating system attempts to provide stronger integration of distributed resources.
+
+# 157. Network Structure
+
+A distributed system contains:
+
+- Nodes
+- Network links
+- Communication protocols
+- Distributed services
+
+Important network structures:
+
+- Client/server
+- Peer-to-peer
+- Multi-tier
+- Clustered systems
+
+# 158. Communication Structure
+
+Processes in distributed systems communicate using:
+
+- Message passing
+- Sockets
+- RPC
+- Remote method mechanisms
+- Middleware
+
+# 159. Communication Protocols
+
+Protocols define rules for communication.
+
+Important examples:
+
+```text
+TCP
+UDP
+IP
+HTTP
+DNS
+FTP
+SMTP
+```
+
+At different layers, different protocols perform different functions.
+
+# 160. Robustness
+
+A distributed system should continue operating despite some failures.
+
+Techniques:
+
+- Replication
+- Redundancy
+- Failure detection
+- Recovery
+- Checkpointing
+- Fault tolerance
+
+# 161. Design Issues in Distributed Systems
+
+Important issues:
+
+- Scalability
+- Transparency
+- Fault tolerance
+- Security
+- Synchronization
+- Naming
+- Communication
+- Consistency
+- Load balancing
+- Heterogeneity
+
+# 162. Distributed File Systems
+
+A distributed file system allows files to be stored and accessed across networked machines.
+
+Goals:
+
+- Location transparency
+- Availability
+- Fault tolerance
+- Scalability
+- Efficient access
+
+Examples/concepts:
+
+- NFS
+- SMB
+- HDFS
+- Distributed object/file storage systems
+
+# 163. Centralized vs Distributed Systems
+
+| Centralized | Distributed |
+|---|---|
+| Main processing/storage at central location | Resources distributed across nodes |
+| Easier centralized control | More complex coordination |
+| Central failure can be critical | Can provide fault tolerance through redundancy |
+| Limited scalability depending on design | Can scale across nodes |
+
+# 164. Important Operating System Comparison
+
+| Topic | Key point |
+|---|---|
+| Compiler | Translates program toward target code |
+| Interpreter | Executes through interpretation |
+| Linker | Combines object files/libraries |
+| Loader | Loads executable into memory |
+| Process | Program in execution |
+| PCB | Process information |
+| Thread | Unit of execution within process |
+| IPC | Process communication |
+| Semaphore | Synchronization mechanism |
+| Critical section | Shared-resource code section |
+| FCFS | Arrival order |
+| SJF | Shortest CPU burst |
+| SRTF | Shortest remaining burst |
+| Round Robin | Time quantum |
+| Deadlock | Permanent waiting cycle |
+| Paging | Pages and frames |
+| Segmentation | Logical variable-size segments |
+| TLB | Fast address-translation cache |
+| Thrashing | Excessive paging |
+| RAID | Disk redundancy/performance |
+| DMA | Direct memory access |
+| Access matrix | Subjects × objects × rights |
+| VM | Virtualized computer environment |
+| HDFS | Distributed file system |
+| Distributed OS | Coordinates distributed resources |
+
+# 165. Important CPU Scheduling Formulas
+
+## Turnaround Time
+
+```text
+Turnaround Time =
+Completion Time - Arrival Time
+```
+
+## Waiting Time
+
+For a process:
+
+```text
+Waiting Time =
+Turnaround Time - CPU Burst Time
+```
+
+## Response Time
+
+```text
+Response Time =
+First CPU Start Time - Arrival Time
+```
+
+# 166. Important Paging Formula
+
+If:
+
+```text
+Logical address size = m bits
+Page size = 2^n bytes
+```
+
+then:
+
+```text
+Offset bits = n
+Page-number bits = m - n
+```
+
+Number of pages:
+
+```text
+2^(page-number bits)
+```
+
+# 167. Important Deadlock Formula
+
+For Banker's algorithm:
+
+```text
+Need = Max - Allocation
+```
+
+A safe sequence exists when processes can be completed while respecting available resources.
+
+# 168. Important RAID Revision
+
+```text
+RAID 0 → Striping, no redundancy
+RAID 1 → Mirroring
+RAID 5 → Distributed parity, one-disk fault tolerance
+RAID 6 → Double distributed parity, two-disk fault tolerance
+```
+
+# 169. Important Linux Revision
+
+```text
+Linux
+ |
+ +-- Kernel
+ +-- Processes
+ +-- Virtual Memory
+ +-- File Systems
+ +-- Device Drivers
+ +-- IPC
+ +-- Networking
+ +-- Kernel Modules
+```
+
+# 170. Important Windows Revision
+
+```text
+Windows
+ |
+ +-- Applications
+ +-- System Services
+ +-- Executive
+ +-- Kernel
+ +-- Drivers
+ +-- File Systems
+ +-- Networking
+```
+
+# 171. Important Distributed-System Revision
+
+```text
+Distributed System
+       |
+       +-- Nodes
+       +-- Communication
+       +-- Synchronization
+       +-- Fault tolerance
+       +-- Security
+       +-- Scalability
+       +-- Distributed files
+```
+
+# 172. UGC NET High-Priority Areas
+
+Focus strongly on:
+
+## System Software
+
+- Machine language
+- Assembly language
+- High-level languages
+- Compiler
+- Interpreter
+- Linker
+- Loader
+- Relocation
+- Macro processor
+- Debugger
+
+## Operating-System Basics
+
+- OS services
+- System calls
+- OS structures
+- Kernel
+- Booting
+
+## Processes
+
+- Process states
+- PCB
+- Context switching
+- IPC
+- Shared memory
+- Message passing
+
+## Synchronization
+
+- Critical-section problem
+- Mutual exclusion
+- Progress
+- Bounded waiting
+- Peterson's solution
+- Semaphores
+
+## Threads
+
+- Multithreading
+- Many-to-one
+- One-to-one
+- Many-to-many
+- Thread libraries
+- Thread pools
+
+## CPU Scheduling
+
+- FCFS
+- SJF
+- SRTF
+- Priority
+- Round Robin
+- Multilevel Queue
+- MLFQ
+- Multiprocessor scheduling
+- Real-time scheduling
+
+## Deadlocks
+
+- Four necessary conditions
+- Resource allocation graph
+- Prevention
+- Avoidance
+- Banker's algorithm
+- Detection
+- Recovery
+
+## Memory
+
+- Contiguous allocation
+- Fragmentation
+- Swapping
+- Paging
+- Segmentation
+- TLB
+- Demand paging
+- Page replacement
+- Frame allocation
+- Thrashing
+
+## Storage
+
+- Disk scheduling
+- FCFS
+- SSTF
+- SCAN
+- C-SCAN
+- LOOK
+- C-LOOK
+- RAID
+
+## File Systems
+
+- File access
+- Directory structures
+- Mounting
+- File allocation
+- Free-space management
+- I/O
+- DMA
+- Interrupts
+
+## Security
+
+- Protection
+- Access matrix
+- ACL
+- Threats
+- Authentication
+- Cryptography
+- Security defenses
+
+## Virtual Machines
+
+- System VM
+- Process VM
+- Type 1 hypervisor
+- Type 2 hypervisor
+- Virtualization
+
+## Linux
+
+- Kernel modules
+- Processes
+- Scheduling
+- Memory
+- File systems
+- I/O
+- IPC
+- Networking
+
+## Windows
+
+- Architecture
+- System components
+- Terminal/remote services
+- Fast User Switching
+- File systems
+- Networking
+
+## Distributed Systems
+
+- Network OS
+- Communication
+- Protocols
+- Fault tolerance
+- Distributed file systems
+- Design issues
+
+# 173. Common Mistakes
+
+### Process vs Program
+
+```text
+Program  → Passive instructions
+Process  → Program in execution
+```
+
+### Process vs Thread
+
+```text
+Process → Independent execution environment
+Thread  → Execution unit within a process
+```
+
+### Paging vs Segmentation
+
+```text
+Paging      → Fixed-size pages
+Segmentation → Logical variable-size segments
+```
+
+### Internal vs External Fragmentation
+
+```text
+Internal → Wasted space inside allocated block
+External → Free space scattered outside allocated blocks
+```
+
+### Compiler vs Interpreter
+
+```text
+Compiler    → Translation toward target code
+Interpreter → Execution through interpretation
+```
+
+### Linker vs Loader
+
+```text
+Linker → Combines object files/libraries
+Loader → Loads executable into memory
+```
+
+### Deadlock Prevention vs Avoidance
+
+```text
+Prevention → Break a necessary condition
+Avoidance  → Grant requests only if state remains safe
+```
+
+### Starvation vs Deadlock
+
+```text
+Starvation → Process waits indefinitely because others keep getting service
+Deadlock   → Processes wait for one another in a cycle
+```
+
+### Semaphore vs Mutex
+
+A mutex is generally used as a mutual-exclusion lock associated with ownership semantics in many systems.
+
+A semaphore is a synchronization/counting mechanism and may represent multiple resource instances.
+
+### FCFS vs Round Robin
+
+```text
+FCFS → Arrival order
+RR   → Time quantum
+```
+
+# 174. One-Minute Revision
+
+```text
+System Software
+      ↓
+Compiler / Interpreter
+      ↓
+Linker / Loader
+      ↓
+Operating System
+      ↓
+Processes
+      ↓
+Threads
+      ↓
+CPU Scheduling
+      ↓
+Synchronization
+      ↓
+Deadlocks
+      ↓
+Memory Management
+      ↓
+Storage Management
+      ↓
+File Systems
+      ↓
+I/O
+      ↓
+Security
+      ↓
+Virtual Machines
+      ↓
+Linux / Windows
+      ↓
+Distributed Systems
+```
+
+# 175. Must Remember
+
+```text
+Compiler       → Translation
+Interpreter    → Interpretation
+Linker         → Linking
+Loader         → Loading
+PCB            → Process information
+IPC            → Process communication
+Semaphore      → Synchronization
+Peterson       → Two-process mutual exclusion
+FCFS           → Arrival order
+SJF            → Shortest burst
+SRTF           → Shortest remaining time
+RR             → Time quantum
+Banker's       → Deadlock avoidance
+Paging         → Pages + frames
+Segmentation   → Logical segments
+TLB            → Fast address translation
+FIFO           → Oldest page
+LRU            → Least recently used
+Thrashing      → Excessive paging
+RAID 0         → Striping
+RAID 1         → Mirroring
+RAID 5         → Distributed parity
+DMA            → Direct memory access
+Access Matrix  → Subjects + Objects + Rights
+VM             → Virtual machine
+HDFS           → Distributed file system
+```
+
+# 176. Final Exam Strategy
+
+Study Unit V in this order:
+
+1. System software
+2. OS basics and system calls
+3. Processes and PCB
+4. IPC
+5. Critical sections and synchronization
+6. Threads
+7. CPU scheduling
+8. Deadlocks
+9. Memory management
+10. Page replacement
+11. Disk scheduling
+12. File systems
+13. I/O
+14. Security
+15. Virtual machines
+16. Linux
+17. Windows
+18. Distributed systems
+
+For numerical questions, practice:
+
+- FCFS scheduling
+- SJF scheduling
+- SRTF scheduling
+- Priority scheduling
+- Round Robin
+- Waiting/turnaround/response time
+- Banker's algorithm
+- Page replacement
+- Paging address calculations
+- Disk scheduling
+- RAID concepts
+
+For theory questions, repeatedly revise:
+
+- System calls
+- Process states
+- PCB
+- IPC
+- Peterson's solution
+- Semaphores
+- Thread models
+- Deadlock conditions
+- Deadlock avoidance
+- Paging vs segmentation
+- TLB
+- Thrashing
+- File allocation
+- Disk scheduling
+- RAID
+- DMA
+- Access matrix
+- Cryptography
+- Virtualization
+- Linux architecture
+- Windows components
+- Distributed systems
+
+# 177. Final Summary
+
+Unit V covers the complete relationship between software, the operating system, hardware resources, and distributed computing.
+
+The major progression is:
+
+```text
+System Software
+      ↓
+Operating System
+      ↓
+Process Management
+      ↓
+Threads
+      ↓
+CPU Scheduling
+      ↓
+Synchronization
+      ↓
+Deadlocks
+      ↓
+Memory Management
+      ↓
+Storage Management
+      ↓
+File Systems and I/O
+      ↓
+Security
+      ↓
+Virtual Machines
+      ↓
+Linux
+      ↓
+Windows
+      ↓
+Distributed Systems
+```
+
+The highest-priority UGC NET topics are:
+
+```text
+System Calls
+Process States
+PCB
+IPC
+Critical Section
+Peterson's Solution
+Semaphores
+Thread Models
+CPU Scheduling
+Deadlocks
+Banker's Algorithm
+Paging
+Page Replacement
+TLB
+Thrashing
+Disk Scheduling
+RAID
+File Allocation
+DMA
+Access Matrix
+Cryptography
+Virtualization
+Linux
+Windows
+Distributed Systems
+```
+
+The best way to prepare this unit is to combine **conceptual understanding with numerical practice**, especially for CPU scheduling, deadlocks, page replacement, paging, and disk scheduling.

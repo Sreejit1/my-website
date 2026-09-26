@@ -1,0 +1,2599 @@
+---
+title: "Unit X – Artificial Intelligence (AI)"
+subtitle: "UGC NET Computer Science and Applications – Paper 2"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+
+## 1. Introduction
+
+**Artificial Intelligence (AI)** is the field of computer science concerned with building systems that can perform tasks requiring abilities such as:
+
+- Reasoning
+- Learning
+- Problem solving
+- Planning
+- Perception
+- Language understanding
+- Decision making
+
+This unit covers:
+
+1. Approaches to AI
+2. Problem solving and heuristic search
+3. Game playing
+4. Knowledge representation
+5. Expert systems and uncertainty
+6. Planning
+7. Natural Language Processing
+8. Multi-agent systems
+9. Fuzzy sets and fuzzy systems
+10. Genetic Algorithms
+11. Artificial Neural Networks
+
+---
+
+# 2. Approaches to Artificial Intelligence
+
+Different approaches to AI ask different questions about intelligent behaviour.
+
+Important approaches include:
+
+1. Thinking humanly
+2. Acting humanly
+3. Thinking rationally
+4. Acting rationally
+
+The syllabus particularly emphasizes:
+
+- Turing Test approach
+- Rational Agent approach
+
+---
+
+# 3. Turing Test
+
+The **Turing Test** was proposed by **Alan Turing**.
+
+The basic idea is to determine whether a machine can exhibit behaviour that is sufficiently similar to human conversation that an evaluator cannot reliably distinguish it from a human.
+
+A simplified setup contains:
+
+```text
+Human Judge
+    |
+    |--- communicates with Human
+    |
+    |--- communicates with Machine
+```
+
+The judge communicates without relying on physical appearance.
+
+### Important Point
+
+The Turing Test focuses on **observable intelligent behaviour**, particularly conversational behaviour.
+
+---
+
+# 4. Rational Agent Approach
+
+An **agent** is an entity that:
+
+- Perceives its environment
+- Acts on the environment
+
+A **rational agent** chooses actions that maximize its expected performance according to its performance measure and available information.
+
+### Basic Model
+
+```text
+Environment
+     ↓
+  Sensors
+     ↓
+   Agent
+     ↓
+  Actuators
+     ↓
+Environment
+```
+
+---
+
+# 5. Rationality
+
+Rationality does not mean that an agent always knows the perfect answer.
+
+A rational agent:
+
+- Uses available information
+- Considers possible actions
+- Predicts consequences
+- Selects an appropriate action according to its performance measure
+
+### Important
+
+**Rationality ≠ omniscience**
+
+A rational agent can make a wrong decision when information is incomplete or uncertain.
+
+---
+
+# 6. Agent Types
+
+Common AI agent classifications include:
+
+1. Simple reflex agent
+2. Model-based reflex agent
+3. Goal-based agent
+4. Utility-based agent
+5. Learning agent
+
+## Simple Reflex Agent
+
+Acts based on the current percept.
+
+## Model-Based Agent
+
+Maintains an internal model of the world.
+
+## Goal-Based Agent
+
+Chooses actions that help achieve goals.
+
+## Utility-Based Agent
+
+Chooses actions according to a utility measure.
+
+## Learning Agent
+
+Improves its behaviour using experience.
+
+---
+
+# 7. State Space Representation
+
+Many AI problems can be represented as a **state space**.
+
+A state describes the current situation of a problem.
+
+A state-space problem generally contains:
+
+- Initial state
+- Goal state
+- Operators/actions
+- State transitions
+- Path cost
+
+Example:
+
+```text
+Initial State
+     ↓
+  Action
+     ↓
+  State 1
+     ↓
+  Action
+     ↓
+  State 2
+     ↓
+ Goal State
+```
+
+---
+
+# 8. State
+
+A **state** represents one possible configuration of a problem.
+
+Example: In the 8-puzzle, a state represents the current arrangement of tiles.
+
+---
+
+# 9. Initial State
+
+The initial state is where problem solving starts.
+
+Example:
+
+```text
+Start
+ ↓
+Search
+ ↓
+Goal
+```
+
+---
+
+# 10. Goal State
+
+A goal state satisfies the required condition.
+
+Example:
+
+For route finding:
+
+**Initial state = Kochi**
+
+**Goal state = Bengaluru**
+
+The search tries to find a path connecting them.
+
+---
+
+# 11. Operators
+
+Operators describe actions that transform one state into another.
+
+Example:
+
+```text
+State A --Move Right--> State B
+```
+
+---
+
+# 12. State Space Graph
+
+A state space can be represented as a graph.
+
+- Nodes → States
+- Edges → Actions/transitions
+
+Example:
+
+```text
+      B
+     / \
+    A   D
+     \ /
+      C
+```
+
+---
+
+# 13. Problem Formulation
+
+A well-defined AI problem normally specifies:
+
+1. Initial state
+2. Actions/operators
+3. Transition model
+4. Goal test
+5. Path cost
+
+### Example: Route Finding
+
+- Initial state: Current city
+- Actions: Travel to connected city
+- Transition: Move to next city
+- Goal: Destination city
+- Cost: Distance/time
+
+---
+
+# 14. Search
+
+AI search explores possible states to find a solution.
+
+Search algorithms can be classified into:
+
+### Uninformed Search
+
+Uses no problem-specific heuristic information.
+
+Examples:
+
+- Breadth First Search
+- Depth First Search
+- Uniform Cost Search
+
+### Informed Search
+
+Uses heuristic information.
+
+Examples:
+
+- Greedy Best First Search
+- A* Search
+
+---
+
+# 15. Breadth First Search
+
+**BFS** explores the shallowest nodes first.
+
+It uses a queue.
+
+```text
+Level 0
+   A
+
+Level 1
+ B   C
+
+Level 2
+D E F G
+```
+
+### Properties
+
+For unit step costs:
+
+- Complete: Yes, under standard finite-branching assumptions
+- Optimal: Yes for equal step costs
+- Memory: High
+
+---
+
+# 16. Depth First Search
+
+**DFS** explores one branch deeply before backtracking.
+
+It uses a stack or recursion.
+
+### Advantages
+
+- Low memory compared with BFS in many cases
+- Simple implementation
+
+### Limitations
+
+- May get stuck in deep/infinite paths without suitable controls
+- Not generally optimal
+
+---
+
+# 17. Uniform Cost Search
+
+Uniform Cost Search expands the node with the lowest path cost.
+
+It is appropriate when step costs are not necessarily equal.
+
+### Important
+
+Uniform Cost Search is optimal when path costs are nonnegative under standard assumptions.
+
+---
+
+# 18. Heuristic Search
+
+A **heuristic** is a problem-specific estimate that helps guide search.
+
+A heuristic function is written as:
+
+**h(n)**
+
+It estimates the cost from node n to a goal.
+
+Example:
+
+In route finding:
+
+**h(n) = estimated distance from current city to destination**
+
+---
+
+# 19. Greedy Best First Search
+
+Greedy Best First Search chooses the node with the smallest:
+
+**h(n)**
+
+It focuses on estimated distance to the goal.
+
+### Advantage
+
+Can be fast in some problems.
+
+### Limitation
+
+It is not generally optimal.
+
+---
+
+# 20. A* Search
+
+A* uses both actual path cost and estimated remaining cost.
+
+The evaluation function is:
+
+**f(n) = g(n) + h(n)**
+
+where:
+
+- g(n) = cost from start to n
+- h(n) = estimated cost from n to goal
+- f(n) = estimated total solution cost through n
+
+---
+
+# 21. Admissible Heuristic
+
+A heuristic is **admissible** if it never overestimates the true remaining cost.
+
+Therefore:
+
+**h(n) ≤ actual cost from n to goal**
+
+For appropriate conditions, A* with an admissible heuristic is optimal.
+
+---
+
+# 22. Consistent Heuristic
+
+A heuristic is consistent if for every node n and successor n':
+
+**h(n) ≤ c(n,n') + h(n')**
+
+where c(n,n') is the step cost.
+
+Consistency implies admissibility under standard conditions.
+
+---
+
+# 23. Search Comparison
+
+| Algorithm | Main Idea |
+|---|---|
+| BFS | Shallowest first |
+| DFS | Deepest first |
+| Uniform Cost | Lowest path cost |
+| Greedy Best First | Lowest h(n) |
+| A* | Lowest g(n)+h(n) |
+
+---
+
+# 24. Game Playing
+
+Game playing is a classical AI problem.
+
+A game can be represented using:
+
+- Initial state
+- Players
+- Legal moves
+- Result of each move
+- Terminal states
+- Utility/payoff
+
+Examples:
+
+- Chess
+- Tic-tac-toe
+- Checkers
+
+---
+
+# 25. Game Tree
+
+A game tree represents possible moves.
+
+```text
+              MAX
+           /   |   \
+          A    B    C
+        / \       / \
+       ... ...   ... ...
+```
+
+Each level can represent a player's turn.
+
+---
+
+# 26. Min-Max Search
+
+**Minimax** is used for two-player, zero-sum, deterministic games with perfect information in its classical form.
+
+There are two roles:
+
+- MAX tries to maximize utility.
+- MIN tries to minimize utility.
+
+---
+
+# 27. Minimax Example
+
+Suppose MAX has two possible moves:
+
+```text
+          MAX
+         /   \
+        A     B
+       / \   / \
+      3   5 2   9
+```
+
+For A:
+
+**MIN chooses min(3,5) = 3**
+
+For B:
+
+**MIN chooses min(2,9) = 2**
+
+Therefore MAX chooses:
+
+**max(3,2) = 3**
+
+---
+
+# 28. Alpha-Beta Cutoff
+
+Alpha-beta pruning improves minimax by eliminating branches that cannot affect the final decision.
+
+Two values are maintained:
+
+- Alpha
+- Beta
+
+## Alpha
+
+Best value that MAX can guarantee so far.
+
+## Beta
+
+Best value that MIN can guarantee so far.
+
+A branch can be pruned when:
+
+**alpha ≥ beta**
+
+---
+
+# 29. Benefit of Alpha-Beta Pruning
+
+Alpha-beta pruning:
+
+- Does not change the final minimax answer
+- Reduces the number of nodes evaluated
+- Allows deeper game-tree search
+
+The effectiveness depends strongly on move ordering.
+
+---
+
+# 30. Knowledge Representation
+
+**Knowledge Representation (KR)** is the process of representing information about the world so that an AI system can reason with it.
+
+Important methods:
+
+- Logic
+- Semantic networks
+- Frames
+- Rules
+- Scripts
+- Conceptual dependency
+- Ontologies
+
+---
+
+# 31. Logic
+
+Logic provides formal structures for representing facts and reasoning.
+
+Important forms:
+
+- Propositional logic
+- Predicate logic
+
+Example:
+
+```text
+Human(Socrates)
+Human(x) → Mortal(x)
+```
+
+From these, we can infer:
+
+```text
+Mortal(Socrates)
+```
+
+---
+
+# 32. Propositional Logic
+
+A proposition is a statement that is either true or false.
+
+Examples:
+
+```text
+P = It is raining.
+Q = The road is wet.
+```
+
+Operators include:
+
+- NOT
+- AND
+- OR
+- Implication
+- Biconditional
+
+---
+
+# 33. Predicate Logic
+
+Predicate logic represents objects, properties and relationships.
+
+Example:
+
+```text
+Student(Ravi)
+Likes(Ravi, AI)
+```
+
+Quantifiers:
+
+- Universal: ∀
+- Existential: ∃
+
+Example:
+
+**∀x Student(x) → Learner(x)**
+
+Meaning:
+
+All students are learners.
+
+---
+
+# 34. Semantic Networks
+
+A semantic network represents knowledge as a graph.
+
+- Nodes → Concepts/entities
+- Links → Relationships
+
+Example:
+
+```text
+Dog
+ |
+is-a
+ |
+Animal
+```
+
+Another example:
+
+```text
+Bird
+ |
+has
+ |
+Wings
+```
+
+---
+
+# 35. Frames
+
+A **frame** represents knowledge about an object or concept using slots and values.
+
+Example:
+
+```text
+FRAME: Student
+
+Name: Ravi
+Age: 20
+Course: AI
+Department: Computer Science
+```
+
+Frames are useful for structured knowledge.
+
+---
+
+# 36. Rules
+
+Rule-based knowledge is represented using:
+
+**IF condition THEN conclusion**
+
+Example:
+
+```text
+IF temperature is high
+THEN fan is ON
+```
+
+Rules are common in expert systems.
+
+---
+
+# 37. Scripts
+
+A script represents a typical sequence of events.
+
+Example: Restaurant script
+
+```text
+Enter restaurant
+↓
+Get table
+↓
+Read menu
+↓
+Order food
+↓
+Eat
+↓
+Pay
+↓
+Leave
+```
+
+Scripts are useful for representing stereotypical event sequences.
+
+---
+
+# 38. Conceptual Dependency
+
+Conceptual Dependency is a representation approach intended to represent the underlying meaning of natural-language sentences.
+
+It attempts to represent actions using primitive conceptual structures.
+
+The goal is to reduce dependence on the exact wording of a sentence.
+
+---
+
+# 39. Ontologies
+
+An **ontology** defines concepts and relationships within a domain.
+
+It may describe:
+
+- Classes
+- Properties
+- Relationships
+- Constraints
+
+Example:
+
+```text
+Animal
+ ├── Mammal
+ │    └── Dog
+ └── Bird
+      └── Eagle
+```
+
+Ontologies are important in:
+
+- Knowledge sharing
+- Semantic Web
+- Multi-agent systems
+- Information integration
+
+---
+
+# 40. Expert Systems
+
+An **expert system** attempts to solve problems in a specialized domain using encoded expert knowledge.
+
+Major components:
+
+1. Knowledge base
+2. Inference engine
+3. User interface
+4. Explanation facility
+5. Knowledge acquisition component
+
+---
+
+# 41. Knowledge Base
+
+The knowledge base stores domain knowledge.
+
+It may contain:
+
+- Facts
+- Rules
+- Relationships
+- Heuristics
+
+---
+
+# 42. Inference Engine
+
+The inference engine applies reasoning mechanisms to the knowledge base.
+
+It derives conclusions from available facts and rules.
+
+---
+
+# 43. Forward Chaining
+
+Forward chaining is **data-driven**.
+
+It starts with known facts and repeatedly applies rules.
+
+```text
+Facts
+ ↓
+Rules
+ ↓
+New facts
+ ↓
+More rules
+ ↓
+Conclusion
+```
+
+---
+
+# 44. Backward Chaining
+
+Backward chaining is **goal-driven**.
+
+It starts with a goal and works backward to find supporting facts.
+
+```text
+Goal
+ ↓
+Required conditions
+ ↓
+Facts
+```
+
+### Comparison
+
+| Forward Chaining | Backward Chaining |
+|---|---|
+| Data-driven | Goal-driven |
+| Starts with facts | Starts with goal |
+| Derives consequences | Searches for supporting facts |
+
+---
+
+# 45. Handling Uncertainty
+
+Real-world knowledge is often incomplete or uncertain.
+
+AI can handle uncertainty using methods such as:
+
+- Probability
+- Bayesian reasoning
+- Certainty factors
+- Fuzzy logic
+
+### Important
+
+**Probability** represents uncertainty about events.
+
+**Fuzzy logic** represents degrees of membership or truth.
+
+These concepts are related but not identical.
+
+---
+
+# 46. Planning
+
+Planning is the process of determining a sequence or structure of actions to achieve goals.
+
+A planning problem generally includes:
+
+- Initial state
+- Goal state
+- Actions
+- Preconditions
+- Effects
+
+---
+
+# 47. Components of a Planning System
+
+Important components include:
+
+1. Initial state
+2. Goal description
+3. Operators/actions
+4. Preconditions
+5. Effects
+6. Planner
+7. Plan
+
+Example:
+
+```text
+Initial State
+     ↓
+Action 1
+     ↓
+Action 2
+     ↓
+Action 3
+     ↓
+Goal
+```
+
+---
+
+# 48. Linear Planning
+
+In **linear planning**, actions are arranged in a sequence.
+
+Example:
+
+```text
+A1 → A2 → A3 → Goal
+```
+
+Each action has a fixed position in the plan.
+
+---
+
+# 49. Non-Linear Planning
+
+Non-linear planning allows actions to be partially ordered.
+
+Some actions may occur in different orders if their dependencies permit.
+
+Example:
+
+```text
+      A
+     / \
+    B   C
+     \ /
+      D
+```
+
+B and C may be performed in either order when independent.
+
+---
+
+# 50. Goal Stack Planning
+
+Goal Stack Planning uses a stack to manage goals and subgoals.
+
+Basic idea:
+
+1. Put the main goal on the stack.
+2. If it is not satisfied, select an action.
+3. Put required preconditions onto the stack.
+4. Satisfy them.
+5. Execute the action.
+6. Continue until the goal is achieved.
+
+---
+
+# 51. STRIPS
+
+**STRIPS = Stanford Research Institute Planning System**
+
+STRIPS represents actions using:
+
+- Preconditions
+- Add effects
+- Delete effects
+
+An action can be represented as:
+
+```text
+Action:
+Preconditions: P
+Add list: Q
+Delete list: R
+```
+
+---
+
+# 52. Example of STRIPS Action
+
+Consider:
+
+```text
+Action: Move(A, B)
+
+Preconditions:
+At(A)
+Path(A,B)
+
+Add:
+At(B)
+
+Delete:
+At(A)
+```
+
+The action is possible only if the preconditions are satisfied.
+
+---
+
+# 53. Hierarchical Planning
+
+Hierarchical planning decomposes a high-level task into smaller tasks.
+
+Example:
+
+```text
+Travel to college
+       ↓
+   ┌───┴────┐
+Book ticket  Travel
+              ↓
+          Reach college
+```
+
+This reduces complexity by planning at different levels of abstraction.
+
+---
+
+# 54. Partial Order Planning
+
+Partial Order Planning does not require all actions to be placed in a single complete sequence immediately.
+
+Only necessary ordering constraints are specified.
+
+Example:
+
+```text
+A before C
+B before D
+```
+
+A and B may otherwise be independent.
+
+---
+
+# 55. Natural Language Processing
+
+**NLP = Natural Language Processing**
+
+NLP enables computers to process human language.
+
+Applications:
+
+- Machine translation
+- Chatbots
+- Speech systems
+- Sentiment analysis
+- Information extraction
+- Question answering
+
+---
+
+# 56. Grammar and Language
+
+A grammar defines how valid sentences can be constructed.
+
+A formal grammar commonly contains:
+
+- Terminals
+- Non-terminals
+- Production rules
+- Start symbol
+
+Example:
+
+```text
+Sentence → NounPhrase VerbPhrase
+```
+
+---
+
+# 57. Parsing
+
+Parsing determines the syntactic structure of a sentence according to a grammar.
+
+It may produce a parse tree.
+
+Example:
+
+```text
+Sentence
+ ├── Noun Phrase
+ └── Verb Phrase
+```
+
+---
+
+# 58. Parsing Techniques
+
+Important parsing approaches include:
+
+- Top-down parsing
+- Bottom-up parsing
+- Recursive descent
+- Chart parsing
+- Shift-reduce parsing
+
+---
+
+# 59. Top-Down Parsing
+
+Top-down parsing begins with the start symbol and attempts to derive the input.
+
+```text
+Start Symbol
+     ↓
+Grammar rules
+     ↓
+Input sentence
+```
+
+---
+
+# 60. Bottom-Up Parsing
+
+Bottom-up parsing begins with input symbols and combines them until the start symbol is obtained.
+
+```text
+Input
+ ↓
+Reduce
+ ↓
+Non-terminals
+ ↓
+Start Symbol
+```
+
+---
+
+# 61. Semantic Analysis
+
+Semantic analysis determines the meaning or interpretation of linguistic structures.
+
+It can address:
+
+- Word meaning
+- Sentence meaning
+- Semantic relationships
+- Ambiguity
+- Consistency
+
+Example:
+
+```text
+The boy eats food.
+```
+
+The semantic analysis identifies relationships between the boy, eating and food.
+
+---
+
+# 62. Pragmatics
+
+**Pragmatics** studies how context affects meaning.
+
+Example:
+
+```text
+Can you open the window?
+```
+
+Literally, it is a question about ability.
+
+In context, it is usually a request to open the window.
+
+### Syntax vs Semantics vs Pragmatics
+
+| Level | Main Question |
+|---|---|
+| Syntax | Is the structure grammatically valid? |
+| Semantics | What does it mean? |
+| Pragmatics | What does it mean in context? |
+
+---
+
+# 63. Multi-Agent Systems
+
+A **Multi-Agent System (MAS)** contains multiple interacting agents.
+
+An agent can:
+
+- Perceive
+- Reason
+- Communicate
+- Act
+- Cooperate
+- Compete
+
+---
+
+# 64. Agents and Objects
+
+An object generally responds to method calls according to its programmed interface.
+
+An agent is more autonomous.
+
+### Comparison
+
+| Object | Agent |
+|---|---|
+| Passive until invoked | Autonomous |
+| Responds to methods | Acts proactively |
+| Usually controlled by calling code | Can pursue goals |
+| Object-oriented abstraction | Intelligent/autonomous abstraction |
+
+---
+
+# 65. Agents and Expert Systems
+
+Both can use knowledge and reasoning.
+
+An expert system is usually designed to provide expert-level problem solving in a specific domain.
+
+An agent additionally:
+
+- Interacts with environment
+- Perceives
+- Acts
+- May communicate with other agents
+- May operate autonomously
+
+---
+
+# 66. Generic Structure of a Multi-Agent System
+
+A simplified MAS is:
+
+```text
+Agent A ←→ Agent B
+   ↕          ↕
+Environment ←→ Agent C
+```
+
+Components may include:
+
+- Agents
+- Environment
+- Communication mechanism
+- Knowledge
+- Goals
+- Coordination mechanisms
+
+---
+
+# 67. Agent Communication
+
+Agents communicate information, requests or proposals.
+
+Communication may support:
+
+- Cooperation
+- Negotiation
+- Coordination
+- Knowledge sharing
+
+---
+
+# 68. Knowledge Sharing Using Ontologies
+
+Ontologies provide a shared vocabulary.
+
+Example:
+
+If two agents use the term:
+
+**Student**
+
+the ontology can define what Student means and how it relates to:
+
+- Person
+- Course
+- Department
+- Enrollment
+
+This reduces ambiguity between agents.
+
+---
+
+# 69. Semantic Web
+
+The **Semantic Web** aims to make web information more machine-understandable by representing meaning and relationships.
+
+Important concepts include:
+
+- Ontologies
+- RDF
+- OWL
+- Linked data
+
+### Important
+
+The Semantic Web is not simply a visually different Web.
+
+It adds machine-readable semantics and relationships to information.
+
+---
+
+# 70. Agent Development Tools
+
+Agent development platforms/tools support building multi-agent systems.
+
+Examples commonly discussed in AI education include:
+
+- JADE
+- Jason
+- SPADE
+- Agent-oriented frameworks
+
+The exact tool depends on the programming language and application requirements.
+
+---
+
+# 71. Fuzzy Sets
+
+Classical sets use crisp membership.
+
+An object either belongs or does not belong.
+
+Example:
+
+```text
+Tall = Yes or No
+```
+
+Fuzzy sets allow partial membership.
+
+Example:
+
+```text
+Tall = 0.7
+```
+
+This represents the degree of membership.
+
+---
+
+# 72. Fuzziness
+
+**Fuzziness** represents gradual or vague concepts.
+
+Examples:
+
+- Hot
+- Cold
+- Tall
+- Short
+- Fast
+- Slow
+
+The boundary is not necessarily sharp.
+
+---
+
+# 73. Membership Function
+
+A membership function maps an input to a membership value.
+
+Usually:
+
+**μA(x) ∈ [0,1]**
+
+where:
+
+- 0 = no membership
+- 1 = full membership
+- Between 0 and 1 = partial membership
+
+---
+
+# 74. Types of Membership Functions
+
+Common membership functions include:
+
+- Triangular
+- Trapezoidal
+- Gaussian
+- Bell-shaped
+- Sigmoid
+
+---
+
+# 75. Triangular Membership Function
+
+A triangular membership function has:
+
+- Left endpoint
+- Peak
+- Right endpoint
+
+Conceptually:
+
+```text
+Membership
+   1       /\
+          /  \
+         /    \
+        /      \
+   0 ___/________\___
+        Input
+```
+
+---
+
+# 76. Fuzzification
+
+**Fuzzification** converts a crisp input into fuzzy membership values.
+
+Example:
+
+Input:
+
+**Temperature = 30°C**
+
+Fuzzification may produce:
+
+```text
+Warm = 0.6
+Hot  = 0.4
+```
+
+The exact values depend on the membership functions.
+
+---
+
+# 77. Defuzzification
+
+**Defuzzification** converts fuzzy output into a crisp value.
+
+Example:
+
+```text
+Fuzzy output
+     ↓
+Defuzzification
+     ↓
+Fan speed = 75%
+```
+
+Common method:
+
+**Centroid / Center of Area**
+
+---
+
+# 78. Operations on Fuzzy Sets
+
+For standard fuzzy sets:
+
+## Union
+
+Often defined as:
+
+**μA∪B(x) = max(μA(x), μB(x))**
+
+## Intersection
+
+Often defined as:
+
+**μA∩B(x) = min(μA(x), μB(x))**
+
+## Complement
+
+Often defined as:
+
+**μA̅(x) = 1 − μA(x)**
+
+These are standard operations; other fuzzy operators can also be defined.
+
+---
+
+# 79. Linguistic Variables
+
+A linguistic variable takes linguistic values rather than only numerical values.
+
+Example:
+
+```text
+Temperature:
+{Cold, Warm, Hot}
+```
+
+Each linguistic value has a membership function.
+
+---
+
+# 80. Fuzzy Functions
+
+A fuzzy function maps inputs using fuzzy relationships or membership structures.
+
+Fuzzy functions are useful when precise mathematical relationships are difficult to specify.
+
+---
+
+# 81. Fuzzy Relations
+
+A fuzzy relation represents the degree of relationship between elements.
+
+A relation may have membership values between:
+
+**0 and 1**
+
+Example:
+
+```text
+Similarity(A,B) = 0.8
+```
+
+---
+
+# 82. Fuzzy Rules
+
+Fuzzy systems commonly use rules of the form:
+
+```text
+IF temperature is HIGH
+AND humidity is HIGH
+THEN fan speed is FAST
+```
+
+Rules use linguistic variables.
+
+---
+
+# 83. Fuzzy Inference
+
+Fuzzy inference applies fuzzy rules to fuzzy inputs.
+
+A simplified process:
+
+```text
+Crisp Input
+     ↓
+Fuzzification
+     ↓
+Rule Evaluation
+     ↓
+Aggregation
+     ↓
+Defuzzification
+     ↓
+Crisp Output
+```
+
+---
+
+# 84. Fuzzy Control System
+
+A fuzzy controller uses fuzzy rules to control a system.
+
+Example:
+
+```text
+Temperature
+     ↓
+Fuzzy Controller
+     ↓
+Fan Speed
+```
+
+Possible rules:
+
+```text
+IF temperature is LOW
+THEN fan speed is SLOW
+
+IF temperature is HIGH
+THEN fan speed is FAST
+```
+
+---
+
+# 85. Fuzzy Rule-Based System
+
+A fuzzy rule-based system contains:
+
+- Fuzzy variables
+- Membership functions
+- Rule base
+- Inference mechanism
+- Defuzzification mechanism
+
+Applications:
+
+- Washing machines
+- Air conditioners
+- Vehicle control
+- Industrial control
+
+---
+
+# 86. Genetic Algorithms
+
+A **Genetic Algorithm (GA)** is a population-based optimization/search technique inspired by biological evolution.
+
+Basic concepts:
+
+- Population
+- Chromosome
+- Gene
+- Fitness
+- Selection
+- Crossover
+- Mutation
+- Replacement
+
+---
+
+# 87. Chromosome
+
+A chromosome represents a candidate solution.
+
+Example:
+
+```text
+10110101
+```
+
+Each position can represent a gene.
+
+---
+
+# 88. Encoding Strategies
+
+A problem must be represented using an appropriate encoding.
+
+Common approaches:
+
+- Binary encoding
+- Integer encoding
+- Real-valued encoding
+- Permutation encoding
+
+### Examples
+
+Binary:
+
+```text
+101010
+```
+
+Permutation:
+
+```text
+3 1 4 2 5
+```
+
+Permutation encoding is useful for ordering problems such as routing.
+
+---
+
+# 89. Fitness Function
+
+The fitness function measures how good a candidate solution is.
+
+Example:
+
+If the objective is to maximize profit:
+
+**Fitness = Profit**
+
+For minimization problems, the fitness function may need to transform or rank the objective appropriately.
+
+---
+
+# 90. Selection
+
+Selection chooses individuals for reproduction.
+
+Common methods:
+
+- Roulette wheel selection
+- Tournament selection
+- Rank selection
+
+The objective is usually to give better solutions a greater chance of contributing to the next generation.
+
+---
+
+# 91. Crossover
+
+Crossover combines genetic material from parent solutions.
+
+Example:
+
+```text
+Parent 1: 11110000
+Parent 2: 00001111
+
+Child:    11111111
+```
+
+The exact result depends on the crossover point/operator.
+
+---
+
+# 92. Mutation
+
+Mutation randomly changes part of a chromosome.
+
+Example:
+
+```text
+Before: 101101
+After:  101001
+```
+
+Mutation helps maintain diversity and can help avoid premature convergence.
+
+---
+
+# 93. GA Cycle
+
+A basic Genetic Algorithm cycle is:
+
+```text
+Initialize Population
+        ↓
+Evaluate Fitness
+        ↓
+Select Parents
+        ↓
+Crossover
+        ↓
+Mutation
+        ↓
+Create New Population
+        ↓
+Stopping Test
+        ↓
+Repeat if necessary
+```
+
+---
+
+# 94. Problem Solving Using Genetic Algorithms
+
+A typical procedure:
+
+1. Define the problem.
+2. Select representation.
+3. Generate initial population.
+4. Define fitness function.
+5. Evaluate population.
+6. Select parents.
+7. Apply crossover.
+8. Apply mutation.
+9. Create next generation.
+10. Check stopping condition.
+11. Return the best candidate.
+
+---
+
+# 95. Genetic Algorithm Example
+
+Suppose the problem is:
+
+**Maximize f(x)**
+
+A binary chromosome represents x.
+
+Example population:
+
+```text
+1010
+1100
+0111
+1001
+```
+
+Each chromosome is decoded into a candidate x value.
+
+The fitness function evaluates each candidate.
+
+The best individuals are more likely to participate in reproduction.
+
+---
+
+# 96. Advantages of Genetic Algorithms
+
+- Useful for large search spaces
+- Does not always require derivatives
+- Can search complex solution spaces
+- Population-based
+- Useful for optimization
+
+### Limitations
+
+- Computationally expensive in some problems
+- Parameter selection matters
+- No guarantee of global optimum in general
+- Can converge prematurely
+
+---
+
+# 97. Artificial Neural Networks
+
+An **Artificial Neural Network (ANN)** is a computational model inspired by interconnected biological neurons.
+
+A basic artificial neuron receives inputs, applies weights and bias, and produces an output.
+
+---
+
+# 98. Artificial Neuron
+
+A simple neuron computes:
+
+**z = w1x1 + w2x2 + ... + wnxn + b**
+
+Then an activation function is applied:
+
+**y = f(z)**
+
+where:
+
+- x = inputs
+- w = weights
+- b = bias
+- f = activation function
+- y = output
+
+---
+
+# 99. Learning in ANN
+
+ANNs learn by adjusting parameters such as weights.
+
+Three broad learning categories are:
+
+1. Supervised learning
+2. Unsupervised learning
+3. Reinforcement learning
+
+---
+
+# 100. Supervised Learning
+
+The training data contains input-output examples.
+
+```text
+Input → Model → Predicted Output
+                 ↓
+              Compare
+                 ↓
+             True Output
+```
+
+The model learns from errors.
+
+Examples:
+
+- Classification
+- Regression
+
+---
+
+# 101. Unsupervised Learning
+
+Training data does not contain explicit target labels.
+
+The model discovers patterns or structures.
+
+Examples:
+
+- Clustering
+- Dimensionality reduction
+- Representation learning
+
+---
+
+# 102. Reinforcement Learning
+
+An agent learns through interaction with an environment.
+
+It receives:
+
+- States
+- Actions
+- Rewards
+
+Basic cycle:
+
+```text
+State
+  ↓
+Action
+  ↓
+Environment
+  ↓
+Reward
+  ↓
+New State
+```
+
+The objective is to learn behaviour that maximizes expected cumulative reward.
+
+---
+
+# 103. Single Perceptron
+
+The perceptron is a simple neural classifier.
+
+It computes:
+
+**y = activation(w·x + b)**
+
+The classical perceptron uses a threshold-like activation.
+
+It can learn linearly separable binary classification problems.
+
+---
+
+# 104. Perceptron Limitation
+
+A single perceptron cannot represent all Boolean functions.
+
+A classic example is:
+
+**XOR**
+
+XOR is not linearly separable.
+
+Therefore, a single-layer perceptron cannot solve XOR.
+
+---
+
+# 105. Multi-Layer Perceptron
+
+**MLP = Multi-Layer Perceptron**
+
+An MLP contains:
+
+- Input layer
+- One or more hidden layers
+- Output layer
+
+Example:
+
+```text
+Input
+  ↓
+Hidden Layer
+  ↓
+Hidden Layer
+  ↓
+Output
+```
+
+With suitable nonlinear activation functions, MLPs can represent complex nonlinear relationships.
+
+---
+
+# 106. Backpropagation
+
+Backpropagation is a common algorithm for training multilayer neural networks.
+
+Basic steps:
+
+1. Forward pass
+2. Calculate error/loss
+3. Propagate error backward
+4. Calculate gradients
+5. Update weights
+
+A generic gradient-descent update is:
+
+**w_new = w_old − η × gradient**
+
+where η is the learning rate.
+
+---
+
+# 107. Activation Functions
+
+Common activation functions include:
+
+- Step
+- Sigmoid
+- Tanh
+- ReLU
+- Softmax
+
+## Sigmoid
+
+Output is between:
+
+**0 and 1**
+
+## Tanh
+
+Output is between:
+
+**−1 and +1**
+
+## ReLU
+
+**ReLU(x) = max(0,x)**
+
+---
+
+# 108. Self-Organizing Map
+
+**SOM = Self-Organizing Map**
+
+A SOM is an unsupervised neural network used for:
+
+- Clustering
+- Visualization
+- Dimensionality reduction
+
+It maps high-dimensional input data onto a usually low-dimensional grid.
+
+---
+
+# 109. SOM Learning
+
+A simplified SOM process:
+
+1. Present input.
+2. Find the Best Matching Unit (BMU).
+3. Update the BMU and nearby neurons.
+4. Reduce learning rate/neighborhood over time.
+5. Repeat.
+
+---
+
+# 110. Hopfield Network
+
+A **Hopfield network** is a recurrent neural network associated with associative memory.
+
+Characteristics:
+
+- Recurrent connections
+- Usually symmetric weights in the classical form
+- Stores patterns
+- Can retrieve patterns from incomplete/noisy input
+
+---
+
+# 111. Associative Memory
+
+Hopfield networks can store patterns as stable states.
+
+If a noisy version of a stored pattern is presented, the network can converge toward the stored pattern under appropriate conditions.
+
+---
+
+# 112. ANN Comparison
+
+| Model | Learning/Use |
+|---|---|
+| Perceptron | Supervised linear classification |
+| MLP | Supervised nonlinear learning |
+| SOM | Unsupervised clustering/visualization |
+| Hopfield | Associative/recurrent memory |
+
+---
+
+# 113. Supervised vs Unsupervised vs Reinforcement
+
+| Supervised | Unsupervised | Reinforcement |
+|---|---|---|
+| Uses labeled examples | No target labels | Uses rewards |
+| Learns input-output mapping | Finds structure | Learns actions |
+| Classification/regression | Clustering | Sequential decision making |
+
+---
+
+# 114. AI Topic Comparison
+
+## Turing Test vs Rational Agent
+
+| Turing Test | Rational Agent |
+|---|---|
+| Focuses on observable human-like behaviour | Focuses on rational action |
+| Associated with Alan Turing | Agent-based approach |
+| Often emphasizes conversation | Emphasizes performance and decision making |
+
+## Forward vs Backward Chaining
+
+| Forward | Backward |
+|---|---|
+| Data-driven | Goal-driven |
+| Starts with facts | Starts with goal |
+
+## Linear vs Non-Linear Planning
+
+| Linear | Non-linear |
+|---|---|
+| Fixed sequence | Partial ordering |
+| One action sequence | Independent actions may be reordered |
+
+## Crisp vs Fuzzy Set
+
+| Crisp | Fuzzy |
+|---|---|
+| Membership is 0 or 1 | Membership can be 0 to 1 |
+| Sharp boundary | Gradual boundary |
+
+## Genetic Algorithm vs ANN
+
+| GA | ANN |
+|---|---|
+| Evolution-inspired optimization | Neural computation |
+| Population of solutions | Network of neurons |
+| Selection/crossover/mutation | Weights/activations/learning |
+
+---
+
+# 115. Important AI Terms
+
+| Term | Meaning |
+|---|---|
+| Agent | Entity that perceives and acts |
+| Rational agent | Chooses actions according to performance objective |
+| State space | Set of possible states |
+| Heuristic | Estimate used to guide search |
+| h(n) | Estimated remaining cost |
+| g(n) | Cost from start to n |
+| A* | Uses g(n)+h(n) |
+| Minimax | Adversarial game search |
+| Alpha-beta | Prunes minimax branches |
+| Knowledge base | Stored facts/rules |
+| Inference engine | Applies reasoning |
+| Ontology | Formal domain concepts and relationships |
+| Planning | Finding actions to achieve goals |
+| Parsing | Finding syntactic structure |
+| Pragmatics | Meaning in context |
+| Fuzzification | Crisp input → fuzzy values |
+| Defuzzification | Fuzzy output → crisp value |
+| Fitness | Quality of GA candidate |
+| Perceptron | Basic neural classifier |
+| SOM | Unsupervised mapping/clustering |
+| Hopfield | Associative memory |
+
+---
+
+# 116. Important Formulas
+
+## A* Search
+
+**f(n) = g(n) + h(n)**
+
+## Admissibility
+
+**h(n) ≤ true remaining cost**
+
+## Fuzzy Union
+
+**μA∪B(x) = max(μA(x), μB(x))**
+
+## Fuzzy Intersection
+
+**μA∩B(x) = min(μA(x), μB(x))**
+
+## Fuzzy Complement
+
+**μA̅(x) = 1 − μA(x)**
+
+## Artificial Neuron
+
+**z = Σ(wixi) + b**
+
+**y = f(z)**
+
+## ReLU
+
+**ReLU(x) = max(0,x)**
+
+## Gradient Descent
+
+**w_new = w_old − η × gradient**
+
+---
+
+# 117. UGC NET High-Priority Topics
+
+Focus strongly on:
+
+1. Turing Test
+2. Rational agents
+3. Agent types
+4. State-space representation
+5. Problem formulation
+6. BFS
+7. DFS
+8. Uniform Cost Search
+9. Heuristic search
+10. Greedy Best First Search
+11. A*
+12. Admissible heuristic
+13. Minimax
+14. Alpha-beta pruning
+15. Knowledge representation
+16. Propositional logic
+17. Predicate logic
+18. Semantic networks
+19. Frames
+20. Rules
+21. Scripts
+22. Conceptual dependency
+23. Ontologies
+24. Expert systems
+25. Forward chaining
+26. Backward chaining
+27. Uncertainty handling
+28. Planning
+29. Goal Stack Planning
+30. STRIPS
+31. Hierarchical planning
+32. Partial Order Planning
+33. NLP grammar
+34. Parsing
+35. Semantic analysis
+36. Pragmatics
+37. Multi-agent systems
+38. Semantic Web
+39. Agent communication
+40. Ontology-based knowledge sharing
+41. Fuzzy sets
+42. Membership functions
+43. Fuzzification
+44. Defuzzification
+45. Fuzzy operations
+46. Linguistic variables
+47. Fuzzy relations
+48. Fuzzy inference
+49. Fuzzy control
+50. Genetic Algorithms
+51. Encoding
+52. Fitness function
+53. Selection
+54. Crossover
+55. Mutation
+56. GA cycle
+57. ANN learning types
+58. Perceptron
+59. MLP
+60. SOM
+61. Hopfield network
+
+---
+
+# 118. Common UGC NET Mistakes
+
+### Mistake 1: Turing Test vs Rational Agent
+
+The Turing Test is associated with evaluating human-like observable behaviour.
+
+The rational-agent approach focuses on selecting actions that maximize expected performance.
+
+### Mistake 2: BFS vs DFS
+
+**BFS → shallowest first**
+
+**DFS → deepest first**
+
+### Mistake 3: Greedy vs A*
+
+**Greedy → h(n)**
+
+**A* → g(n) + h(n)**
+
+### Mistake 4: Minimax vs Alpha-Beta
+
+Alpha-beta pruning is an optimization of minimax.
+
+It does **not** change the final minimax decision.
+
+### Mistake 5: Forward vs Backward Chaining
+
+**Forward → facts to conclusion**
+
+**Backward → goal to supporting facts**
+
+### Mistake 6: Fuzzification vs Defuzzification
+
+**Fuzzification → crisp input to fuzzy values**
+
+**Defuzzification → fuzzy output to crisp value**
+
+### Mistake 7: Probability vs Fuzzy Membership
+
+Probability describes uncertainty about an event.
+
+Fuzzy membership describes degree of membership in a fuzzy concept.
+
+### Mistake 8: GA Crossover vs Mutation
+
+**Crossover → combines parents**
+
+**Mutation → randomly changes genetic material**
+
+### Mistake 9: Perceptron vs MLP
+
+A single perceptron represents a linear decision boundary.
+
+An MLP with nonlinear hidden layers can represent nonlinear relationships.
+
+### Mistake 10: SOM vs Hopfield
+
+**SOM → unsupervised mapping/clustering**
+
+**Hopfield → associative memory**
+
+---
+
+# 119. One-Minute Revision
+
+## AI Approaches
+
+**Turing Test → Human-like observable behaviour**
+
+**Rational Agent → Rational action**
+
+## Search
+
+**BFS → Queue → Shallowest**
+
+**DFS → Stack → Deepest**
+
+**Uniform Cost → Lowest g(n)**
+
+**Greedy → Lowest h(n)**
+
+**A* → Lowest g(n)+h(n)**
+
+## Games
+
+**Minimax → MAX vs MIN**
+
+**Alpha-beta → Pruning**
+
+## Knowledge
+
+**Logic → Formal reasoning**
+
+**Semantic Network → Graph**
+
+**Frame → Slots and values**
+
+**Rule → IF-THEN**
+
+**Script → Event sequence**
+
+**Ontology → Concepts + relationships**
+
+## Expert Systems
+
+**Knowledge Base + Inference Engine**
+
+**Forward → Data-driven**
+
+**Backward → Goal-driven**
+
+## Planning
+
+**STRIPS → Preconditions + Add + Delete**
+
+**Goal Stack → Stack of goals/subgoals**
+
+**Hierarchical → High-level task → Subtasks**
+
+**Partial Order → Necessary ordering only**
+
+## NLP
+
+**Syntax → Structure**
+
+**Semantics → Meaning**
+
+**Pragmatics → Context**
+
+**Parsing → Syntactic structure**
+
+## Multi-Agent
+
+**Agent → Perceive + Act**
+
+**MAS → Multiple interacting agents**
+
+**Ontology → Shared vocabulary/knowledge**
+
+**Semantic Web → Machine-readable meaning**
+
+## Fuzzy Logic
+
+**Membership → 0 to 1**
+
+**Fuzzification → Crisp → Fuzzy**
+
+**Inference → Rules**
+
+**Defuzzification → Fuzzy → Crisp**
+
+## GA
+
+**Population → Fitness → Selection → Crossover → Mutation**
+
+## ANN
+
+**Perceptron → Linear classifier**
+
+**MLP → Nonlinear learning**
+
+**SOM → Unsupervised mapping**
+
+**Hopfield → Associative memory**
+
+---
+
+# 120. Final Exam Strategy
+
+Divide Unit X into seven study blocks.
+
+## Block 1: AI and Search
+
+Study:
+
+- Turing Test
+- Rational agents
+- State-space representation
+- BFS
+- DFS
+- Uniform Cost
+- Heuristics
+- Greedy search
+- A*
+
+## Block 2: Game Playing
+
+Study:
+
+- Game trees
+- Minimax
+- Alpha-beta pruning
+- MAX and MIN
+- Alpha and beta
+
+## Block 3: Knowledge Representation
+
+Study:
+
+- Logic
+- Semantic networks
+- Frames
+- Rules
+- Scripts
+- Conceptual dependency
+- Ontologies
+- Expert systems
+- Forward/backward chaining
+- Uncertainty
+
+## Block 4: Planning and NLP
+
+Study:
+
+- Planning components
+- Linear/non-linear planning
+- Goal Stack Planning
+- STRIPS
+- Hierarchical planning
+- Partial Order Planning
+- Grammar
+- Parsing
+- Semantics
+- Pragmatics
+
+## Block 5: Multi-Agent Systems
+
+Study:
+
+- Agents
+- Objects
+- Expert systems
+- MAS structure
+- Semantic Web
+- Agent communication
+- Ontologies
+- Agent development tools
+
+## Block 6: Fuzzy Systems and GA
+
+Study:
+
+- Fuzzy sets
+- Membership functions
+- Fuzzification
+- Defuzzification
+- Fuzzy operations
+- Fuzzy rules
+- Fuzzy inference
+- Fuzzy control
+- GA encoding
+- Fitness
+- Selection
+- Crossover
+- Mutation
+- GA cycle
+
+## Block 7: ANN
+
+Study:
+
+- Supervised learning
+- Unsupervised learning
+- Reinforcement learning
+- Perceptron
+- MLP
+- Backpropagation
+- SOM
+- Hopfield network
+
+---
+
+# 121. Final Summary
+
+Artificial Intelligence can be remembered as a sequence:
+
+**Perceive → Represent → Reason → Search → Plan → Learn → Act**
+
+Important relationships:
+
+**Turing Test → Human-like behaviour**
+
+**Rational Agent → Rational action**
+
+**State Space → States + Actions + Goal**
+
+**BFS → Shallowest first**
+
+**DFS → Deepest first**
+
+**A* → g(n) + h(n)**
+
+**Minimax → Adversarial game search**
+
+**Alpha-Beta → Minimax pruning**
+
+**Logic → Formal knowledge**
+
+**Semantic Network → Graph representation**
+
+**Frame → Slots and values**
+
+**Rule → IF-THEN**
+
+**Script → Event sequence**
+
+**Ontology → Concepts and relationships**
+
+**Expert System → Knowledge Base + Inference Engine**
+
+**Forward Chaining → Data-driven**
+
+**Backward Chaining → Goal-driven**
+
+**STRIPS → Preconditions + Add + Delete**
+
+**Parsing → Syntax**
+
+**Semantic Analysis → Meaning**
+
+**Pragmatics → Context**
+
+**MAS → Multiple interacting agents**
+
+**Fuzzy Membership → 0 to 1**
+
+**Fuzzification → Crisp to fuzzy**
+
+**Defuzzification → Fuzzy to crisp**
+
+**GA → Selection + Crossover + Mutation**
+
+**Perceptron → Linear classification**
+
+**MLP → Nonlinear neural learning**
+
+**SOM → Unsupervised mapping**
+
+**Hopfield → Associative memory**
+
+For UGC NET preparation, pay special attention to **A* search, admissible heuristics, minimax/alpha-beta, knowledge representation, expert-system inference, STRIPS, parsing, fuzzy operations, GA operators and ANN architectures**.

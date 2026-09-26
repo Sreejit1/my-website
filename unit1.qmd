@@ -1,0 +1,80 @@
+---
+title: "Unit 1 – Discrete Structures and Optimization"
+---
+
+# Unit 1
+
+## 1. Mathematical Logic
+
+- Propositional Logic
+- Predicate Logic
+- Propositional Equivalences
+- Normal Forms
+- Predicates and Quantifiers
+- Nested Quantifiers
+- Rules of Inference
+
+## 2. Sets and Relations
+
+- Set Operations
+- Representation and Properties of Relations
+- Equivalence Relations
+- Partially Ordering
+
+## 3. Counting, Mathematical Induction and Discrete Probability
+
+- Basics of Counting
+- Pigeonhole Principle
+- Permutations and Combinations
+- Inclusion-Exclusion Principle
+- Mathematical Induction
+- Probability
+- Bayes' Theorem
+
+## 4. Group Theory
+
+- Groups
+- Subgroups
+- Semi Groups
+- Product and Quotients of Algebraic Structures
+- Isomorphism
+- Homomorphism
+- Automorphism
+- Rings
+- Integral Domains
+- Fields
+- Applications of Group Theory
+
+## 5. Graph Theory
+
+- Simple Graph
+- Multigraph
+- Weighted Graph
+- Paths and Circuits
+- Shortest Paths
+- Eulerian Paths and Circuits
+- Hamiltonian Paths and Circuits
+- Planar Graph
+- Graph Coloring
+- Bipartite Graphs
+- Trees and Rooted Trees
+- Prefix Codes
+- Tree Traversals
+- Spanning Trees and Cut-Sets
+
+## 6. Boolean Algebra
+
+- Boolean Functions
+- Representation of Boolean Functions
+- Simplification of Boolean Functions
+
+## 7. Optimization
+
+- Linear Programming
+- Simplex Method
+- Dual Simplex Method
+- Sensitivity Analysis
+- Integer Programming
+- Transportation Model
+- Assignment Model
+- PERT-CPM

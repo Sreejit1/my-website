@@ -1,0 +1,2640 @@
+---
+title: "Unit VIII – Theory of Computation and Compilers"
+subtitle: "UGC NET Computer Science and Applications – Paper 2"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+
+## 1. Introduction
+
+This unit combines two major areas of Computer Science:
+
+1. **Theory of Computation**
+2. **Compiler Design**
+
+Theory of Computation studies what can be computed, what cannot be computed, and how computational problems can be represented using mathematical models.
+
+Compiler Design studies how a program written in a high-level programming language is translated into a form that a computer can execute.
+
+A useful overall picture is:
+
+```text
+Theory of Computation
+        ↓
+Formal Languages
+        ↓
+Automata
+        ↓
+Grammars
+        ↓
+Turing Machines
+        ↓
+Computability and Complexity
+
+Compiler
+        ↓
+Lexical Analysis
+        ↓
+Syntax Analysis
+        ↓
+Semantic Analysis
+        ↓
+Intermediate Code
+        ↓
+Optimization
+        ↓
+Code Generation
+```
+
+---
+
+# 2. Formal Language
+
+A **formal language** is a set of strings formed according to precisely defined rules over an alphabet.
+
+## 2.1 Alphabet
+
+An alphabet is a finite, non-empty set of symbols.
+
+It is usually represented by:
+
+**Σ**
+
+Example:
+
+```text
+Σ = {0, 1}
+```
+
+Another example:
+
+```text
+Σ = {a, b, c}
+```
+
+## 2.2 String
+
+A string is a finite sequence of symbols from an alphabet.
+
+For:
+
+```text
+Σ = {0, 1}
+```
+
+Examples:
+
+```text
+0
+1
+01
+101
+1100
+```
+
+## 2.3 Empty String
+
+The empty string contains no symbols.
+
+It is represented by:
+
+**ε**
+
+Its length is:
+
+**|ε| = 0**
+
+## 2.4 Language
+
+A language is a set of strings over an alphabet.
+
+Example:
+
+```text
+L = {0, 1, 00, 11, 010, 101}
+```
+
+A language can be finite or infinite.
+
+---
+
+# 3. Non-Computational Problems
+
+A computational problem is one for which we ask whether an algorithm can solve it.
+
+Some problems are not solvable by any algorithm under a particular formal model.
+
+Such problems are called **non-computable** or **undecidable** problems.
+
+Examples include:
+
+- Halting Problem
+- Certain instances related to Post Correspondence Problem
+
+The study of such problems is part of computability theory.
+
+---
+
+# 4. Diagonal Argument
+
+The **diagonal argument** is a mathematical technique used to show that some collections cannot be listed or that certain computational tasks cannot be performed by an algorithm.
+
+It is strongly associated with Cantor's work and later computability arguments.
+
+The basic idea is:
+
+1. Assume all objects can be listed.
+2. Construct a new object that differs from each listed object at a selected diagonal position.
+3. The new object is not on the list.
+4. Therefore, the original assumption is false.
+
+Diagonalization is important in understanding:
+
+- Uncountability
+- Limits of computation
+- Undecidability
+
+---
+
+# 5. Russell's Paradox
+
+Russell's Paradox arises from considering the set of all sets that do not contain themselves.
+
+Suppose:
+
+**R = {x | x is a set and x is not a member of x}**
+
+Now ask:
+
+**Is R a member of itself?**
+
+If R belongs to R, then by definition R should not belong to R.
+
+If R does not belong to R, then by definition R should belong to R.
+
+This creates a contradiction.
+
+### Importance
+
+Russell's Paradox demonstrates problems that can arise from unrestricted set formation and influenced the development of more rigorous foundations of mathematics.
+
+---
+
+# 6. Regular Language Models
+
+Regular languages can be represented using several equivalent models:
+
+- DFA
+- NFA
+- Regular expressions
+- Regular grammars
+
+These models have the same expressive power.
+
+---
+
+# 7. Deterministic Finite Automaton
+
+A **DFA** is a finite automaton in which, for every state and input symbol, exactly one next state is specified.
+
+A DFA can be represented as:
+
+**M = (Q, Σ, δ, q₀, F)**
+
+where:
+
+- Q = finite set of states
+- Σ = input alphabet
+- δ = transition function
+- q₀ = initial state
+- F = set of final/accepting states
+
+For a DFA:
+
+**δ: Q × Σ → Q**
+
+---
+
+# 8. Example of DFA
+
+Consider a DFA that accepts binary strings ending in `1`.
+
+We can use:
+
+```text
+q0 --0--> q0
+q0 --1--> q1
+q1 --0--> q0
+q1 --1--> q1
+```
+
+Here:
+
+- q0 = start state
+- q1 = accepting state
+
+Examples accepted:
+
+```text
+1
+01
+101
+111
+```
+
+Examples rejected:
+
+```text
+0
+10
+100
+```
+
+---
+
+# 9. Nondeterministic Finite Automaton
+
+A **NFA** or **NDFA** is a finite automaton in which a state and input symbol may have:
+
+- zero transitions
+- one transition
+- multiple transitions
+
+The transition function is generally:
+
+**δ: Q × Σ → 2^Q**
+
+For ε-NFA, transitions may also occur without consuming an input symbol.
+
+---
+
+# 10. DFA vs NFA
+
+| DFA | NFA |
+|---|---|
+| Exactly one transition for each state-symbol pair | Zero, one, or multiple transitions |
+| No choice of next state | Multiple possible paths |
+| No ε-transitions in standard DFA | ε-transitions may be allowed in ε-NFA |
+| Easier direct execution | Often easier to construct |
+| Same expressive power as NFA | Same expressive power as DFA |
+
+### Important UGC NET Point
+
+**DFA and NFA recognize exactly the regular languages.**
+
+---
+
+# 11. Equivalence of DFA and NFA
+
+Every NFA has an equivalent DFA.
+
+The usual construction is called **subset construction**.
+
+A DFA state represents a set of NFA states.
+
+Therefore:
+
+**NFA → DFA**
+
+is always possible.
+
+The equivalent DFA may have up to:
+
+**2^n**
+
+states for an NFA with n states, although the actual number can be smaller.
+
+---
+
+# 12. Regular Languages
+
+A language is regular if it can be recognized by a finite automaton.
+
+Equivalent descriptions include:
+
+```text
+Regular Language
+    ↕
+DFA
+    ↕
+NFA
+    ↕
+Regular Expression
+    ↕
+Regular Grammar
+```
+
+This equivalence is fundamental in automata theory.
+
+---
+
+# 13. Regular Grammar
+
+A regular grammar is a grammar that generates a regular language.
+
+A right-linear grammar may contain productions such as:
+
+**A → aB**
+
+or:
+
+**A → a**
+
+A left-linear grammar may contain productions such as:
+
+**A → Ba**
+
+Regular grammars cannot generally express arbitrary nested structures such as balanced parentheses.
+
+---
+
+# 14. Regular Expressions
+
+A **regular expression** is a notation used to describe regular languages.
+
+Basic operators include:
+
+### Union
+
+```text
+R + S
+```
+
+means either R or S.
+
+### Concatenation
+
+```text
+RS
+```
+
+means R followed by S.
+
+### Kleene Star
+
+```text
+R*
+```
+
+means zero or more repetitions of R.
+
+Example:
+
+```text
+(0 + 1)*
+```
+
+represents all binary strings.
+
+---
+
+# 15. Properties of Regular Languages
+
+Regular languages are closed under many operations.
+
+Important closure properties include:
+
+- Union
+- Intersection
+- Complement
+- Difference
+- Concatenation
+- Kleene star
+- Reversal
+- Homomorphism
+- Inverse homomorphism
+
+### Important Point
+
+If L1 and L2 are regular, then:
+
+**L1 ∪ L2**
+
+is also regular.
+
+Similarly:
+
+**L1 ∩ L2**
+
+is regular.
+
+---
+
+# 16. Pumping Lemma for Regular Languages
+
+The pumping lemma is used mainly to prove that certain languages are **not regular**.
+
+If L is regular, there exists a pumping length p such that every sufficiently long string `w` in L can be written as:
+
+**w = xyz**
+
+with conditions such as:
+
+1. **|xy| ≤ p**
+2. **|y| > 0**
+3. **xy^i z ∈ L for every i ≥ 0**
+
+The notation:
+
+**y^i**
+
+means repeating y i times.
+
+---
+
+# 17. Using the Pumping Lemma
+
+Consider:
+
+**L = {0^n 1^n | n ≥ 0}**
+
+This language requires equal numbers of 0s and 1s.
+
+Assume L is regular.
+
+Choose:
+
+**w = 0^p 1^p**
+
+The pumping lemma says:
+
+**w = xyz**
+
+where:
+
+**|xy| ≤ p**
+
+Therefore x and y contain only 0s.
+
+Since:
+
+**|y| > 0**
+
+y contains one or more 0s.
+
+Pump y out by taking:
+
+**i = 0**
+
+The resulting string has fewer 0s but the same number of 1s.
+
+Therefore the resulting string is not in L.
+
+This is a contradiction.
+
+Hence:
+
+**L is not regular.**
+
+### Important
+
+The pumping lemma can prove non-regularity, but failure to find a pumping-lemma contradiction does not prove regularity.
+
+---
+
+# 18. Non-Regular Languages
+
+Examples include:
+
+**L = {0^n1^n | n ≥ 0}**
+
+**L = {ww | w ∈ {0,1}*}**
+
+Balanced-parentheses languages are also generally non-regular.
+
+These languages require more memory than a finite automaton provides.
+
+---
+
+# 19. Lexical Analysis
+
+Lexical analysis is the first major phase of a compiler.
+
+It converts the input character stream into tokens.
+
+Example:
+
+```text
+int total = a + 10;
+```
+
+Possible tokens:
+
+```text
+int
+total
+=
+a
++
+10
+;
+```
+
+## 19.1 Lexer
+
+The lexical analyzer is also called a:
+
+**Lexer**
+
+It identifies:
+
+- Keywords
+- Identifiers
+- Operators
+- Constants
+- Delimiters
+- Literals
+
+## 19.2 Regular Languages and Lexical Analysis
+
+Regular expressions and finite automata are commonly used to describe and recognize lexical patterns.
+
+---
+
+# 20. Context-Free Language
+
+A **context-free language (CFL)** is a language generated by a context-free grammar.
+
+CFLs are more powerful than regular languages.
+
+They can describe structures such as:
+
+- Balanced parentheses
+- Nested blocks
+- Arithmetic expression syntax
+
+---
+
+# 21. Context-Free Grammar
+
+A Context-Free Grammar is represented as:
+
+**G = (V, Σ, P, S)**
+
+where:
+
+- V = variables/non-terminals
+- Σ = terminals
+- P = productions
+- S = start symbol
+
+A production has the form:
+
+**A → α**
+
+where A is a single non-terminal and α is a string of terminals and non-terminals.
+
+---
+
+# 22. Example of Context-Free Grammar
+
+Consider:
+
+```text
+S → 0S1
+S → ε
+```
+
+This grammar generates:
+
+```text
+ε
+01
+0011
+000111
+...
+```
+
+Therefore it generates:
+
+**{0^n1^n | n ≥ 0}**
+
+This language is context-free but not regular.
+
+---
+
+# 23. Pushdown Automaton
+
+A **Pushdown Automaton (PDA)** is a finite automaton equipped with a stack.
+
+The stack provides additional memory.
+
+This allows a PDA to recognize context-free languages.
+
+### Main Components
+
+- Input
+- Finite control
+- Stack
+
+---
+
+# 24. Nondeterministic PDA
+
+An **NPDA** can have multiple possible transitions for the same situation.
+
+A fundamental result is:
+
+**Context-Free Languages = Languages accepted by NPDAs**
+
+Thus:
+
+**CFG ↔ NPDA**
+
+---
+
+# 25. PDA vs Finite Automaton
+
+| Finite Automaton | PDA |
+|---|---|
+| Finite control only | Finite control + stack |
+| Recognizes regular languages | Recognizes CFLs |
+| Cannot generally count arbitrary nested structures | Can handle nesting |
+| DFA/NFA | PDA/NPDA |
+
+---
+
+# 26. Parse Tree
+
+A parse tree represents how a string is derived from a grammar.
+
+Example grammar:
+
+```text
+S → 0S1
+S → ε
+```
+
+For `0011`:
+
+```text
+       S
+      /|\
+     0 S 1
+       /|\
+      0 S 1
+        |
+        ε
+```
+
+A parse tree shows the hierarchical structure of the derivation.
+
+---
+
+# 27. Derivation
+
+A derivation starts from the start symbol and repeatedly applies grammar productions.
+
+Two important forms:
+
+### Leftmost Derivation
+
+Always replace the leftmost non-terminal first.
+
+### Rightmost Derivation
+
+Always replace the rightmost non-terminal first.
+
+---
+
+# 28. Ambiguous Grammar
+
+A grammar is **ambiguous** if there exists at least one string having more than one distinct parse tree or, equivalently, more than one leftmost/rightmost derivation.
+
+Example:
+
+```text
+E → E + E
+E → E * E
+E → id
+```
+
+For:
+
+```text
+id + id * id
+```
+
+different parse structures may result unless precedence and associativity are specified.
+
+### Important
+
+Ambiguity is a property of a grammar.
+
+---
+
+# 29. Chomsky Normal Form
+
+A context-free grammar is in **Chomsky Normal Form (CNF)** when productions are generally of the form:
+
+**A → BC**
+
+or:
+
+**A → a**
+
+where:
+
+- A, B, C are variables
+- a is a terminal
+
+Some formulations allow a special exception:
+
+**S → ε**
+
+when the language contains the empty string.
+
+CNF is important in algorithms such as CYK parsing.
+
+---
+
+# 30. Greibach Normal Form
+
+A context-free grammar is in **Greibach Normal Form (GNF)** when productions generally have the form:
+
+**A → aα**
+
+where:
+
+- a is a terminal
+- α is a string of zero or more variables
+
+Thus each production begins with a terminal.
+
+---
+
+# 31. Equivalence of PDA and CFG
+
+A fundamental result is:
+
+**A language is context-free if and only if some NPDA accepts it.**
+
+Therefore:
+
+**CFG ↔ NPDA**
+
+This equivalence is one of the most important facts in automata theory.
+
+---
+
+# 32. Properties of Context-Free Languages
+
+CFLs are closed under:
+
+- Union
+- Concatenation
+- Kleene star
+
+CFLs are **not closed under intersection** in general.
+
+They are also **not closed under complement** in general.
+
+However, CFLs are closed under intersection with a regular language.
+
+### Important UGC NET Point
+
+Do not confuse regular-language closure properties with CFL closure properties.
+
+---
+
+# 33. Turing Machine
+
+A **Turing Machine (TM)** is a mathematical model of computation.
+
+A standard TM contains:
+
+- Finite set of states
+- Input alphabet
+- Tape alphabet
+- Transition function
+- Initial state
+- Blank symbol
+- Accepting/rejecting states
+
+A common representation is:
+
+**M = (Q, Σ, Γ, δ, q₀, B, F)**
+
+where:
+
+- Q = states
+- Σ = input alphabet
+- Γ = tape alphabet
+- δ = transition function
+- q₀ = initial state
+- B = blank symbol
+- F = accepting states
+
+---
+
+# 34. Turing Machine Tape
+
+The tape acts as an unbounded memory model in the standard theoretical formulation.
+
+A TM head can:
+
+- Read a symbol
+- Write a symbol
+- Move Left
+- Move Right
+
+This makes Turing Machines much more powerful than finite automata and ordinary pushdown automata.
+
+---
+
+# 35. Variations of Turing Machines
+
+Common variations include:
+
+- Multi-tape Turing machine
+- Multi-track Turing machine
+- Nondeterministic Turing machine
+- Two-way infinite tape machine
+
+Many standard variations have the same computational power as the ordinary single-tape deterministic TM, although they may differ in efficiency.
+
+---
+
+# 36. Universal Turing Machine
+
+A **Universal Turing Machine (UTM)** can simulate another Turing machine when given an encoding of that machine and its input.
+
+Conceptually:
+
+```text
+Description of TM + Input
+            ↓
+Universal TM
+            ↓
+Simulation
+```
+
+This idea is important for understanding general-purpose computation.
+
+---
+
+# 37. Models of Computation
+
+Models of computation provide formal descriptions of computational processes.
+
+Examples:
+
+- Finite automata
+- Pushdown automata
+- Turing machines
+- Lambda calculus
+- Recursive functions
+
+These models help define the limits and capabilities of computation.
+
+---
+
+# 38. Church-Turing Thesis
+
+The **Church-Turing Thesis** informally states that any function that is effectively computable can be computed by a Turing machine.
+
+It connects the intuitive concept of an algorithm with a formal computational model.
+
+### Important
+
+The Church-Turing Thesis is a thesis, not a theorem proved from a universally accepted formal definition of "effective computation."
+
+---
+
+# 39. Recursive Languages
+
+A language is **recursive** or **decidable** if there exists a Turing machine that:
+
+- Accepts every string in the language.
+- Rejects every string not in the language.
+- Halts on every input.
+
+Therefore:
+
+**Recursive language = decidable language**
+
+---
+
+# 40. Recursively Enumerable Languages
+
+A language is **recursively enumerable (RE)** if there exists a Turing machine that:
+
+- Accepts every string in the language.
+- May not halt when the input is not in the language.
+
+Thus:
+
+**Recursive ⊆ Recursively Enumerable**
+
+Every recursive language is RE, but not every RE language is recursive.
+
+---
+
+# 41. Context-Sensitive Languages
+
+Context-sensitive languages are associated with **linear bounded automata (LBA)**.
+
+They are more powerful than context-free languages.
+
+They are generated by context-sensitive grammars under standard definitions.
+
+---
+
+# 42. Unrestricted Grammars
+
+An unrestricted grammar has productions with very few restrictions compared with regular and context-free grammars.
+
+They generate the class of recursively enumerable languages.
+
+Relationship:
+
+**Unrestricted Grammar ↔ Turing Machine ↔ Recursively Enumerable Language**
+
+---
+
+# 43. Chomsky Hierarchy
+
+The Chomsky hierarchy classifies formal languages.
+
+| Type | Language | Grammar | Machine |
+|---|---|---|---|
+| Type 3 | Regular | Regular Grammar | Finite Automaton |
+| Type 2 | Context-Free | CFG | PDA |
+| Type 1 | Context-Sensitive | CSG | LBA |
+| Type 0 | Recursively Enumerable | Unrestricted Grammar | Turing Machine |
+
+The containment relationship is:
+
+**Regular ⊂ Context-Free ⊂ Context-Sensitive ⊂ Recursively Enumerable**
+
+---
+
+# 44. Constructing a Turing Machine
+
+A Turing Machine can be constructed for simple problems such as:
+
+- Checking whether a string contains a particular symbol
+- Adding unary numbers
+- Recognizing `0^n1^n`
+- Checking simple patterns
+- Incrementing a binary number
+
+A common design strategy is:
+
+1. Define states.
+2. Define tape symbols.
+3. Decide what each state means.
+4. Define transitions.
+5. Define accepting and rejecting conditions.
+6. Test the machine on sample inputs.
+
+---
+
+# 45. Unsolvable Problems
+
+An **undecidable problem** is a problem for which no algorithm can correctly produce the required answer for every valid input.
+
+Important examples:
+
+- Halting Problem
+- Post Correspondence Problem
+- Certain questions about context-free languages
+
+---
+
+# 46. Halting Problem
+
+The Halting Problem asks:
+
+> Given a program/machine M and input w, will M eventually halt on w?
+
+There is no general algorithm that correctly answers this question for every possible program and input.
+
+Therefore:
+
+**Halting Problem is undecidable.**
+
+---
+
+# 47. Post Correspondence Problem
+
+The **Post Correspondence Problem (PCP)** asks whether, given two lists of strings, there exists a sequence of corresponding tiles whose top and bottom concatenations are equal.
+
+A typical tile looks like:
+
+```text
+Top:    ab
+Bottom: a
+```
+
+The question is whether some sequence of tiles produces equal strings on both sides.
+
+PCP is undecidable.
+
+---
+
+# 48. Unsolvable Problems for Context-Free Languages
+
+Some properties of context-free languages are undecidable.
+
+Examples include general questions about:
+
+- Whether a CFG generates all possible strings
+- Whether two CFGs generate exactly the same language
+- Whether a CFG generates a particular universal language
+
+However, several important CFG problems are decidable.
+
+For example:
+
+**Membership of a string in a CFL is decidable.**
+
+---
+
+# 49. Complexity
+
+Computability asks:
+
+**Can a problem be solved at all?**
+
+Complexity asks:
+
+**How many resources are required to solve it?**
+
+Important resources:
+
+- Time
+- Space
+
+---
+
+# 50. Tractable and Intractable Problems
+
+A problem is generally called **tractable** when it can be solved efficiently, often meaning in polynomial time.
+
+Examples:
+
+- Sorting
+- Shortest paths
+- Minimum spanning tree
+
+Problems that require exponential time under known algorithms are often described as **intractable**, especially for large inputs.
+
+Many NP-complete problems are believed not to have polynomial-time algorithms, although the P vs NP question remains unresolved.
+
+---
+
+# 51. Syntax Analysis
+
+Syntax analysis is the compiler phase that checks whether the token sequence follows the grammar of the programming language.
+
+It is also called:
+
+**Parsing**
+
+Input:
+
+**Tokens**
+
+Output:
+
+**Parse tree / syntax tree**
+
+---
+
+# 52. Associativity
+
+Associativity determines the order in which operators of the same precedence are evaluated.
+
+Example:
+
+```text
+a - b - c
+```
+
+If `-` is left-associative:
+
+```text
+(a - b) - c
+```
+
+Assignment operators are commonly right-associative in many programming languages:
+
+```text
+a = b = c
+```
+
+may be interpreted as:
+
+```text
+a = (b = c)
+```
+
+---
+
+# 53. Operator Precedence
+
+Precedence determines which operator is evaluated first.
+
+Example:
+
+```text
+a + b * c
+```
+
+If multiplication has higher precedence:
+
+```text
+a + (b * c)
+```
+
+rather than:
+
+```text
+(a + b) * c
+```
+
+Precedence and associativity help remove ambiguity from expression parsing.
+
+---
+
+# 54. Grammar Transformations
+
+Grammar transformations may be used to make a grammar suitable for parsing.
+
+Important transformations include:
+
+- Removing left recursion
+- Left factoring
+- Eliminating unnecessary productions
+- Simplifying grammar
+
+---
+
+# 55. Left Recursion
+
+A grammar has immediate left recursion if a production has the form:
+
+**A → Aα | β**
+
+This can cause problems for top-down parsers such as recursive descent.
+
+It can be transformed into:
+
+**A → βA'**
+
+**A' → αA' | ε**
+
+---
+
+# 56. Left Factoring
+
+Left factoring is used when two productions begin with the same sequence.
+
+Example:
+
+```text
+A → αβ1 | αβ2
+```
+
+Can be transformed into:
+
+```text
+A → αA'
+A' → β1 | β2
+```
+
+This helps predictive parsers choose the appropriate production.
+
+---
+
+# 57. Top-Down Parsing
+
+Top-down parsing starts with the start symbol and attempts to derive the input string.
+
+It constructs the parse tree from:
+
+**Root → Leaves**
+
+Examples:
+
+- Recursive descent
+- Predictive parsing
+- LL(1)
+
+---
+
+# 58. Recursive Descent Parsing
+
+Recursive descent is a top-down parsing technique in which procedures are associated with grammar non-terminals.
+
+Example:
+
+```text
+parseExpression()
+parseTerm()
+parseFactor()
+```
+
+Each procedure recognizes a part of the grammar.
+
+### Problem
+
+Left-recursive grammars are unsuitable for straightforward recursive descent because they can cause infinite recursion.
+
+---
+
+# 59. Predictive Parsing
+
+A predictive parser chooses a production without backtracking using available input information.
+
+An LL(1) parser is a predictive parser that uses:
+
+- Left-to-right input scanning
+- Leftmost derivation
+- One lookahead symbol
+
+---
+
+# 60. LL(1) Parsing
+
+**LL(1)** means:
+
+- First L → scan input from Left to right
+- Second L → produce a Leftmost derivation
+- 1 → use one lookahead symbol
+
+An LL(1) grammar should generally be free from problematic ambiguity and left recursion.
+
+---
+
+# 61. FIRST and FOLLOW
+
+FIRST and FOLLOW sets are important in LL(1) parsing.
+
+## FIRST
+
+FIRST(X) contains terminals that can begin strings derived from X.
+
+## FOLLOW
+
+FOLLOW(A) contains terminals that can appear immediately to the right of A in some sentential form.
+
+The end-of-input marker `$` is included in FOLLOW(S) for the start symbol S.
+
+---
+
+# 62. LL(1) Parsing Table
+
+A predictive parsing table is constructed using FIRST and FOLLOW sets.
+
+For a production:
+
+**A → α**
+
+If a terminal `a` is in FIRST(α), place the production in:
+
+**M[A, a]**
+
+If α can derive ε, use FOLLOW(A) for the relevant entries.
+
+A grammar is LL(1) when the table can be constructed without conflicting entries.
+
+---
+
+# 63. Bottom-Up Parsing
+
+Bottom-up parsing starts from the input and attempts to construct the start symbol.
+
+It effectively performs:
+
+**Leaves → Root**
+
+It is associated with:
+
+**Rightmost derivation in reverse**
+
+Important bottom-up parsers:
+
+- Shift-reduce parser
+- LR parser
+- SLR parser
+- Canonical LR
+- LALR parser
+
+---
+
+# 64. Shift-Reduce Parsing
+
+A shift-reduce parser uses a stack and performs actions such as:
+
+- Shift
+- Reduce
+- Accept
+- Error
+
+### Shift
+
+Move input symbol onto the stack.
+
+### Reduce
+
+Replace a handle by the corresponding non-terminal.
+
+---
+
+# 65. LR Parser
+
+LR parsing is a powerful bottom-up parsing technique.
+
+**L** means scan input from Left to right.
+
+**R** means construct a Rightmost derivation in reverse.
+
+LR parsers can handle a large class of grammars.
+
+---
+
+# 66. SLR, LR(1), and LALR
+
+### SLR(1)
+
+Simple LR parser.
+
+### Canonical LR(1)
+
+Uses LR(1) items with explicit lookahead information.
+
+It is powerful but may require a large parsing table.
+
+### LALR(1)
+
+**Look-Ahead LR**
+
+It merges compatible LR(1) states to reduce the parsing table size.
+
+LALR(1) provides a practical compromise between parsing power and table size.
+
+---
+
+# 67. Top-Down vs Bottom-Up Parsing
+
+| Top-Down | Bottom-Up |
+|---|---|
+| Start symbol toward input | Input toward start symbol |
+| Leftmost derivation | Rightmost derivation in reverse |
+| Recursive descent, LL | LR, LALR |
+| Easier for simple grammars | Handles broader grammar classes |
+
+---
+
+# 68. Semantic Analysis
+
+Semantic analysis checks whether a syntactically correct program has a meaningful interpretation according to the language rules.
+
+Examples:
+
+```text
+int x;
+x = "hello";
+```
+
+The syntax may be valid, but assigning a string to an integer variable is a type error in a statically typed language.
+
+Semantic analysis may check:
+
+- Types
+- Declarations
+- Scope
+- Compatibility
+- Function arguments
+- Return types
+
+---
+
+# 69. Attribute Grammar
+
+An **attribute grammar** extends a context-free grammar with attributes and semantic rules.
+
+Attributes carry information associated with grammar symbols.
+
+Two important types:
+
+- Synthesized attributes
+- Inherited attributes
+
+---
+
+# 70. Synthesized Attributes
+
+A synthesized attribute is calculated from the attributes of child nodes.
+
+Information generally flows:
+
+**Children → Parent**
+
+Example:
+
+The value of an arithmetic expression can be synthesized from the values of its subexpressions.
+
+---
+
+# 71. Inherited Attributes
+
+An inherited attribute is obtained from:
+
+- Parent
+- Siblings
+
+Information generally flows:
+
+**Parent/Siblings → Child**
+
+Inherited attributes are useful for passing contextual information.
+
+---
+
+# 72. Syntax-Directed Definition
+
+A **Syntax-Directed Definition (SDD)** associates semantic rules with grammar productions.
+
+Example:
+
+```text
+E → E1 + T
+```
+
+A semantic rule may be:
+
+```text
+E.val = E1.val + T.val
+```
+
+This computes the value of the expression.
+
+---
+
+# 73. Dependency Graph
+
+A dependency graph represents dependencies between attributes.
+
+If the value of attribute A is needed to calculate attribute B, the graph contains:
+
+**A → B**
+
+A valid evaluation order is a topological ordering of the dependency graph when the graph is acyclic.
+
+---
+
+# 74. Evaluation Order
+
+Attributes must be evaluated in an order that respects dependencies.
+
+For an acyclic dependency graph, a topological order can be used.
+
+If the dependency graph contains a cycle, the attribute evaluation may not have a valid simple ordering.
+
+---
+
+# 75. S-Attributed Definition
+
+An S-attributed definition uses only:
+
+**Synthesized attributes**
+
+It is particularly suitable for bottom-up parsing.
+
+### Easy Memory
+
+**S-attributed → Synthesized only**
+
+---
+
+# 76. L-Attributed Definition
+
+An L-attributed definition permits inherited attributes subject to restrictions that allow evaluation in a left-to-right traversal.
+
+It is useful with top-down parsing.
+
+### Easy Memory
+
+**L-attributed → Limited inherited attributes + synthesized attributes**
+
+---
+
+# 77. Type Checking
+
+Type checking ensures that operations are applied to compatible data types.
+
+Example:
+
+```text
+int x;
+float y;
+
+x = y;
+```
+
+Depending on the language, this may require:
+
+- Conversion
+- Warning
+- Error
+
+Type checking can be:
+
+### Static
+
+Performed at compile time.
+
+### Dynamic
+
+Performed during program execution.
+
+---
+
+# 78. Run-Time System
+
+The run-time system provides support required while a program executes.
+
+It manages:
+
+- Memory
+- Procedure calls
+- Parameters
+- Local variables
+- Return addresses
+- Dynamic data
+- Runtime information
+
+---
+
+# 79. Storage Organization
+
+A typical run-time memory organization contains:
+
+```text
+High Address
++------------------+
+| Stack            |
++------------------+
+|                  |
+| Free space       |
+|                  |
++------------------+
+| Heap             |
++------------------+
+| Static/Data      |
++------------------+
+| Code/Text        |
++------------------+
+Low Address
+```
+
+The exact arrangement can depend on the implementation and platform.
+
+---
+
+# 80. Activation Tree
+
+An **activation tree** represents procedure/function calls during execution.
+
+Suppose:
+
+```text
+main()
+  ↓
+A()
+  ↓
+B()
+```
+
+The call structure can be represented as:
+
+```text
+main
+ └── A
+      └── B
+```
+
+Each node represents an activation of a procedure.
+
+---
+
+# 81. Activation Record
+
+An **activation record**, also called a stack frame, stores information required for a procedure call.
+
+It may contain:
+
+- Parameters
+- Return address
+- Local variables
+- Temporaries
+- Saved registers
+- Control link
+- Access link
+- Return value
+
+The exact organization varies by compiler and machine architecture.
+
+---
+
+# 82. Stack Allocation of Activation Records
+
+For procedures whose activation records have suitable lifetimes, stack allocation can be used.
+
+Typical behavior:
+
+```text
+Call function
+     ↓
+Create activation record
+     ↓
+Execute function
+     ↓
+Return
+     ↓
+Remove activation record
+```
+
+Recursion naturally creates multiple activation records.
+
+---
+
+# 83. Parameter Passing Mechanisms
+
+Common parameter passing mechanisms include:
+
+- Call by value
+- Call by reference
+- Call by result
+- Call by value-result
+- Call by name
+
+## Call by Value
+
+A copy of the actual value is passed.
+
+Changes to the parameter do not normally change the caller's variable.
+
+## Call by Reference
+
+A reference/address to the actual variable is passed.
+
+Changes can affect the caller's variable.
+
+## Call by Result
+
+The formal parameter receives a result that is copied back to the actual parameter when the procedure returns.
+
+## Call by Value-Result
+
+The parameter is copied in at the beginning and copied out at the end.
+
+## Call by Name
+
+The argument is conceptually substituted/evaluated according to the calling mechanism when used; this is mainly of historical/theoretical importance.
+
+---
+
+# 84. Symbol Table
+
+A **symbol table** stores information about identifiers used in a program.
+
+It may contain:
+
+| Identifier | Type | Scope | Address |
+|---|---|---|---|
+| x | int | local | ... |
+| total | float | global | ... |
+
+The compiler uses the symbol table during:
+
+- Lexical analysis
+- Syntax/semantic analysis
+- Type checking
+- Code generation
+
+---
+
+# 85. Intermediate Code Generation
+
+After semantic analysis, the compiler may generate an intermediate representation (IR).
+
+IR is positioned between:
+
+**Source Program → IR → Target Code**
+
+Benefits:
+
+- Machine independence
+- Easier optimization
+- Easier retargeting
+- Separation of front end and back end
+
+---
+
+# 86. Intermediate Representations
+
+Common IR forms include:
+
+- Syntax trees
+- Abstract syntax trees
+- Postfix notation
+- Three-address code
+
+---
+
+# 87. Three-Address Code
+
+Three-address code uses statements with at most three addresses/operands.
+
+Example:
+
+```text
+a = b + c * d
+```
+
+Can be represented as:
+
+```text
+t1 = c * d
+t2 = b + t1
+a = t2
+```
+
+Temporary variables such as `t1` and `t2` are used.
+
+---
+
+# 88. Quadruples
+
+A quadruple can represent an instruction using:
+
+```text
+(operator, arg1, arg2, result)
+```
+
+For:
+
+```text
+t1 = c * d
+```
+
+quadruple:
+
+```text
+(*, c, d, t1)
+```
+
+---
+
+# 89. Triples
+
+Triples store:
+
+```text
+(operator, arg1, arg2)
+```
+
+The result is identified by the position of the triple.
+
+---
+
+# 90. Translation of Declarations
+
+Consider:
+
+```text
+int x;
+float y;
+```
+
+The compiler records:
+
+- Names
+- Types
+- Scope
+- Storage requirements
+
+The symbol table is updated during declaration processing.
+
+---
+
+# 91. Translation of Assignments
+
+For:
+
+```text
+x = a + b * c
+```
+
+Intermediate code can be:
+
+```text
+t1 = b * c
+t2 = a + t1
+x = t2
+```
+
+The compiler respects operator precedence while generating the intermediate representation.
+
+---
+
+# 92. Translation of Control Flow
+
+Statements such as:
+
+```text
+if
+while
+for
+switch
+```
+
+are translated using:
+
+- Labels
+- Conditional jumps
+- Unconditional jumps
+
+Example:
+
+```text
+if (a < b)
+    x = 1;
+else
+    x = 2;
+```
+
+Possible intermediate form:
+
+```text
+if a < b goto L1
+goto L2
+
+L1:
+x = 1
+goto L3
+
+L2:
+x = 2
+
+L3:
+```
+
+---
+
+# 93. Boolean Expressions
+
+Boolean expressions can be represented using:
+
+- Boolean values
+- Conditional jumps
+- Short-circuit evaluation
+
+For:
+
+```text
+A && B
+```
+
+B does not need to be evaluated if A is false.
+
+For:
+
+```text
+A || B
+```
+
+B does not need to be evaluated if A is true.
+
+---
+
+# 94. Procedure Calls
+
+Intermediate code for procedure calls may represent:
+
+- Parameter passing
+- Call
+- Return value
+- Return
+
+Example:
+
+```text
+param x
+param y
+call sum, 2
+```
+
+The exact representation depends on the compiler's IR.
+
+---
+
+# 95. Code Generation
+
+Code generation converts an intermediate representation into target-machine code.
+
+Typical tasks include:
+
+- Instruction selection
+- Register allocation
+- Address calculation
+- Instruction ordering
+- Target code emission
+
+---
+
+# 96. Control Flow
+
+A **control-flow graph (CFG)** represents possible execution flow through a program.
+
+Nodes commonly represent:
+
+- Basic blocks
+
+Edges represent:
+
+- Possible control transfers
+
+A **basic block** is a sequence of instructions with:
+
+- One entry point
+- One exit point
+- No internal branching except at the end
+
+---
+
+# 97. Data-Flow Analysis
+
+Data-flow analysis gathers information about how values and variables move through a program.
+
+Examples:
+
+- Reaching definitions
+- Live variable analysis
+- Available expressions
+- Very busy expressions
+
+These analyses support optimization.
+
+---
+
+# 98. Local Optimization
+
+Local optimization operates within a single basic block.
+
+Examples:
+
+### Constant Folding
+
+```text
+x = 5 * 4
+```
+
+becomes:
+
+```text
+x = 20
+```
+
+### Algebraic Simplification
+
+```text
+x = y + 0
+```
+
+becomes:
+
+```text
+x = y
+```
+
+### Common Subexpression Elimination
+
+If the same expression is computed repeatedly and remains valid, the compiler may reuse the previous result.
+
+---
+
+# 99. Global Optimization
+
+Global optimization considers code across multiple basic blocks or a larger control-flow region.
+
+Examples:
+
+- Global common subexpression elimination
+- Code motion
+- Global data-flow optimizations
+- Dead-code elimination
+
+---
+
+# 100. Loop Optimization
+
+Loops are important because a small improvement inside a frequently executed loop can produce a large performance improvement.
+
+Important techniques include:
+
+- Loop invariant code motion
+- Strength reduction
+- Induction-variable optimization
+- Loop unrolling
+
+---
+
+# 101. Loop Invariant Code Motion
+
+If an expression produces the same result on every iteration, it can sometimes be moved outside the loop.
+
+Example:
+
+```text
+for i = 1 to n
+    x = a * b
+    use(x)
+```
+
+If `a` and `b` do not change, compute:
+
+```text
+x = a * b
+
+for i = 1 to n
+    use(x)
+```
+
+This reduces repeated computation.
+
+---
+
+# 102. Strength Reduction
+
+Strength reduction replaces an expensive operation with a cheaper equivalent operation.
+
+Example:
+
+Instead of repeatedly calculating:
+
+```text
+i * 2
+```
+
+a compiler may maintain a value using addition in suitable circumstances.
+
+---
+
+# 103. Loop Unrolling
+
+Loop unrolling reduces loop-control overhead by performing multiple iterations in one loop body.
+
+Original:
+
+```text
+for i = 1 to 4
+    A[i] = A[i] + 1
+```
+
+Conceptually unrolled:
+
+```text
+A[1] = A[1] + 1
+A[2] = A[2] + 1
+A[3] = A[3] + 1
+A[4] = A[4] + 1
+```
+
+The actual transformation must consider code size and target architecture.
+
+---
+
+# 104. Peephole Optimization
+
+Peephole optimization examines a small sequence of target instructions and replaces it with a better sequence.
+
+Possible goals:
+
+- Remove redundant instructions
+- Reduce instruction count
+- Simplify operations
+- Improve execution speed
+
+Example:
+
+```text
+LOAD R1, x
+STORE x, R1
+```
+
+If redundant under the target machine's semantics, such sequences may be eliminated.
+
+---
+
+# 105. Instruction Scheduling
+
+Instruction scheduling rearranges instructions to improve processor performance while preserving program behavior.
+
+It can be important for:
+
+- Pipelines
+- Superscalar processors
+- Instruction-level parallelism
+
+The compiler tries to reduce:
+
+- Pipeline stalls
+- Data hazards
+- Resource conflicts
+
+---
+
+# 106. Compiler Phases
+
+A simplified compiler pipeline is:
+
+```text
+Source Program
+      ↓
+Lexical Analysis
+      ↓
+Syntax Analysis
+      ↓
+Semantic Analysis
+      ↓
+Intermediate Code Generation
+      ↓
+Code Optimization
+      ↓
+Code Generation
+      ↓
+Target Program
+```
+
+Supporting structures include:
+
+- Symbol table
+- Error handler
+
+---
+
+# 107. Front End and Back End
+
+## Front End
+
+The front end generally handles source-language dependent tasks:
+
+- Lexical analysis
+- Syntax analysis
+- Semantic analysis
+- Intermediate representation
+
+## Back End
+
+The back end generally handles:
+
+- Optimization
+- Instruction selection
+- Register allocation
+- Target code generation
+
+---
+
+# 108. Important Comparisons
+
+## DFA vs NFA
+
+| DFA | NFA |
+|---|---|
+| One transition per state/input | Multiple or zero possible transitions |
+| No ε-transition | ε-transition possible in ε-NFA |
+| Regular languages | Regular languages |
+
+## Regular Language vs Context-Free Language
+
+| Regular | Context-Free |
+|---|---|
+| DFA/NFA | PDA |
+| Regular grammar | CFG |
+| Less expressive | More expressive |
+| Cannot generally represent arbitrary nesting | Can represent nesting |
+
+## DFA vs PDA vs TM
+
+| Model | Memory | Language Class |
+|---|---|---|
+| DFA/NFA | Finite control | Regular |
+| PDA | Stack | Context-Free |
+| TM | Unbounded tape model | Recursively Enumerable |
+
+## Recursive vs Recursively Enumerable
+
+| Recursive | RE |
+|---|---|
+| Machine halts on every input | May not halt on non-members |
+| Decidable | Semi-decidable/recognizable |
+| Every recursive language is RE | Not every RE language is recursive |
+
+---
+
+# 109. Important Parsing Comparison
+
+| Parser | Direction | Important Feature |
+|---|---|---|
+| Recursive Descent | Top-down | Procedure per non-terminal |
+| LL(1) | Top-down | One-symbol lookahead |
+| Shift-Reduce | Bottom-up | Shift/reduce actions |
+| LR | Bottom-up | Powerful general parsing family |
+| LALR(1) | Bottom-up | Smaller practical tables than canonical LR(1) |
+
+---
+
+# 110. Important Attribute Comparison
+
+| Attribute | Information Flow |
+|---|---|
+| Synthesized | Child → Parent |
+| Inherited | Parent/Sibling → Child |
+| S-attributed | Synthesized only |
+| L-attributed | Restricted inherited + synthesized |
+
+---
+
+# 111. Important Compiler Phase Comparison
+
+| Phase | Main Work |
+|---|---|
+| Lexical | Characters → Tokens |
+| Syntax | Tokens → Parse structure |
+| Semantic | Meaning/type checking |
+| IR Generation | Source meaning → IR |
+| Optimization | Improve IR/code |
+| Code Generation | IR → Target code |
+
+---
+
+# 112. Common UGC NET Mistakes
+
+### Mistake 1
+
+Thinking NFA is more powerful than DFA.
+
+**Correction:** DFA and NFA have the same expressive power.
+
+### Mistake 2
+
+Thinking every CFG is regular.
+
+**Correction:** Every regular language is context-free, but not every CFL is regular.
+
+### Mistake 3
+
+Thinking the pumping lemma proves regularity.
+
+**Correction:** It is primarily used to prove that a language is not regular.
+
+### Mistake 4
+
+Confusing CFG and PDA.
+
+**Correction:**
+
+**CFG ↔ NPDA**
+
+### Mistake 5
+
+Thinking recursive and recursively enumerable are the same.
+
+**Correction:**
+
+**Recursive ⊂ RE**
+
+### Mistake 6
+
+Thinking NP means "not polynomial."
+
+**Correction:** NP concerns polynomial-time verification of certificates for decision problems.
+
+### Mistake 7
+
+Confusing top-down and bottom-up parsing.
+
+**Top-down → start symbol toward input**
+
+**Bottom-up → input toward start symbol**
+
+### Mistake 8
+
+Forgetting that left recursion causes problems for ordinary recursive-descent parsing.
+
+### Mistake 9
+
+Confusing synthesized and inherited attributes.
+
+**Synthesized → upward**
+
+**Inherited → downward/across from context**
+
+### Mistake 10
+
+Confusing lexical and syntax analysis.
+
+**Lexical analysis → tokens**
+
+**Syntax analysis → grammar structure**
+
+---
+
+# 113. UGC NET High-Priority Topics
+
+Focus especially on:
+
+1. Alphabet, strings and languages
+2. DFA
+3. NFA
+4. DFA-NFA equivalence
+5. Regular expressions
+6. Regular grammars
+7. Closure properties
+8. Pumping lemma
+9. Proving non-regularity
+10. Lexical analysis
+11. CFG
+12. PDA
+13. NPDA
+14. Parse trees
+15. Ambiguity
+16. CNF
+17. GNF
+18. CFG-PDA equivalence
+19. CFL properties
+20. Turing Machines
+21. Universal Turing Machine
+22. Church-Turing Thesis
+23. Recursive and RE languages
+24. Context-sensitive languages
+25. Chomsky hierarchy
+26. Halting Problem
+27. PCP
+28. P and NP concepts
+29. Top-down parsing
+30. LL(1)
+31. FIRST and FOLLOW
+32. Bottom-up parsing
+33. LR and LALR
+34. Attribute grammars
+35. S-attributed and L-attributed definitions
+36. Type checking
+37. Activation records
+38. Parameter passing
+39. Symbol tables
+40. Three-address code
+41. Control-flow graphs
+42. Data-flow analysis
+43. Local/global/loop optimization
+44. Peephole optimization
+45. Instruction scheduling
+
+---
+
+# 114. Quick Revision: Theory of Computation
+
+Remember:
+
+**DFA = deterministic finite automaton**
+
+**NFA = nondeterministic finite automaton**
+
+**DFA ≡ NFA in expressive power**
+
+**DFA/NFA → Regular languages**
+
+**PDA → Context-free languages**
+
+**NPDA ↔ CFG**
+
+**TM → General model of computation**
+
+**Recursive → Decidable**
+
+**RE → Recognizable**
+
+**Regular ⊂ CFL ⊂ CSL ⊂ RE**
+
+**Halting Problem → Undecidable**
+
+**PCP → Undecidable**
+
+---
+
+# 115. Quick Revision: Compiler Design
+
+Remember:
+
+**Characters → Tokens → Parse Tree → Meaning → IR → Optimized Code → Target Code**
+
+Or:
+
+**Lexical → Syntax → Semantic → IR → Optimization → Code Generation**
+
+Important associations:
+
+```text
+Lexical Analysis → Regular Expressions + Finite Automata
+
+Syntax Analysis → CFG + Parsing
+
+Semantic Analysis → Attributes + Type Checking
+
+Runtime System → Activation Records + Symbol Table
+
+IR Generation → Three-Address Code
+
+Optimization → Data Flow + Loops + Peephole
+
+Code Generation → Target Instructions
+```
+
+---
+
+# 116. Important Facts to Memorize
+
+| Topic | Key Fact |
+|---|---|
+| DFA | Exactly one transition for each state/input symbol |
+| NFA | May have multiple possible transitions |
+| DFA/NFA | Same expressive power |
+| Regular language | Recognized by finite automaton |
+| Pumping lemma | Used to prove non-regularity |
+| CFG | Generates context-free languages |
+| PDA | Recognizes CFLs with nondeterminism |
+| CNF | A → BC or A → a, with standard ε exception |
+| GNF | Production begins with terminal |
+| Ambiguity | More than one parse tree for some string |
+| TM | General model of computation |
+| UTM | Simulates encoded Turing machines |
+| Recursive language | Decidable |
+| RE language | Recognizable |
+| Halting problem | Undecidable |
+| Type 3 | Regular |
+| Type 2 | Context-free |
+| Type 1 | Context-sensitive |
+| Type 0 | Recursively enumerable |
+| LL(1) | Left-to-right, leftmost derivation, one lookahead |
+| LR | Left-to-right, rightmost derivation in reverse |
+| S-attributed | Synthesized attributes only |
+| L-attributed | Restricted inherited + synthesized |
+| Lexer | Produces tokens |
+| Parser | Checks syntax |
+| Symbol table | Stores identifier information |
+| IR | Intermediate representation |
+| Peephole | Local target-code optimization |
+
+---
+
+# 117. Final Exam Strategy
+
+For this unit, prepare in four blocks.
+
+## Block 1: Automata
+
+Practice:
+
+- DFA construction
+- NFA construction
+- NFA to DFA
+- Regular expressions
+- Regular grammars
+- Pumping lemma
+
+## Block 2: Context-Free Languages
+
+Practice:
+
+- CFG construction
+- Derivations
+- Parse trees
+- Ambiguity
+- PDA
+- CNF
+- GNF
+- Closure properties
+
+## Block 3: Turing Machines and Computability
+
+Practice:
+
+- TM construction
+- TM variants
+- UTM
+- Church-Turing Thesis
+- Recursive vs RE
+- Chomsky hierarchy
+- Halting Problem
+- PCP
+- Undecidability
+
+## Block 4: Compiler Design
+
+Practice:
+
+- FIRST and FOLLOW
+- LL(1) parsing
+- Recursive descent
+- LR/LALR
+- Attribute grammars
+- Type checking
+- Activation records
+- Parameter passing
+- Symbol tables
+- Three-address code
+- Control-flow graphs
+- Data-flow analysis
+- Code optimization
+
+---
+
+# 118. Final Summary
+
+Theory of Computation studies the mathematical limits and models of computation.
+
+The major progression is:
+
+**Finite Automata → Pushdown Automata → Turing Machines**
+
+Corresponding language classes are:
+
+**Regular → Context-Free → Context-Sensitive → Recursively Enumerable**
+
+Compiler design uses many of these ideas:
+
+**Regular expressions and finite automata → lexical analysis**
+
+**Context-free grammars → syntax analysis**
+
+**Attribute grammars → semantic analysis**
+
+The compiler pipeline can be remembered as:
+
+**Source Code**
+
+↓  
+
+**Lexical Analysis**
+
+↓  
+
+**Syntax Analysis**
+
+↓  
+
+**Semantic Analysis**
+
+↓  
+
+**Intermediate Code Generation**
+
+↓  
+
+**Code Optimization**
+
+↓  
+
+**Code Generation**
+
+For UGC NET, the highest-value relationships to remember are:
+
+**DFA ≡ NFA**
+
+**Regular languages ↔ finite automata**
+
+**CFG ↔ NPDA**
+
+**Regular ⊂ CFL ⊂ CSL ⊂ RE**
+
+**Recursive ⊂ RE**
+
+**Halting Problem → Undecidable**
+
+**LL(1) → Top-down**
+
+**LR/LALR → Bottom-up**
+
+**S-attributed → Synthesized attributes**
+
+**L-attributed → Restricted inherited attributes**
+
+**Lexical analysis → Tokens**
+
+**Syntax analysis → Grammar**
+
+**Semantic analysis → Meaning and types**
+
+**IR → Intermediate representation**
+
+**Optimization → Improve code without changing its meaning**

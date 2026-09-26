@@ -1,0 +1,1832 @@
+---
+title: "Unit VIII – Information and Communication Technology (ICT)"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+---
+
+
+## 1. Introduction
+
+Information and Communication Technology, commonly called **ICT**, refers to technologies used to create, store, process, communicate and share information.
+
+ICT has become an important part of:
+
+- Education
+- Business
+- Banking
+- Healthcare
+- Government
+- Research
+- Communication
+- Entertainment
+
+In UGC NET, this unit mainly covers:
+
+1. ICT abbreviations and terminology
+2. Internet
+3. Intranet
+4. E-mail
+5. Audio-conferencing
+6. Video-conferencing
+7. Digital initiatives in higher education
+8. ICT and governance
+
+---
+
+# 2. What is ICT?
+
+ICT stands for:
+
+> **Information and Communication Technology**
+
+ICT combines:
+
+- Information technology
+- Communication technology
+- Computer technology
+- Networking
+- Internet technologies
+
+### Simple example
+
+When a teacher conducts an online class using a computer and the internet, ICT is being used.
+
+```text
+Teacher
+   ↓
+Computer
+   ↓
+Internet
+   ↓
+Online Platform
+   ↓
+Students
+```
+
+---
+
+# 3. Components of ICT
+
+Important components include:
+
+- Computers
+- Smartphones
+- Internet
+- Communication networks
+- Software
+- Databases
+- Cloud services
+- E-mail
+- Audio-conferencing
+- Video-conferencing
+
+---
+
+# 4. ICT in Education
+
+ICT has changed the way teaching and learning are carried out.
+
+### Traditional classroom
+
+```text
+Teacher
+   ↓
+Blackboard
+   ↓
+Students
+```
+
+### ICT-enabled classroom
+
+```text
+Teacher
+   ↓
+Computer / Smart Board
+   ↓
+Internet
+   ↓
+Digital Content
+   ↓
+Students
+```
+
+ICT can support:
+
+- Online classes
+- Digital textbooks
+- Video lectures
+- Online examinations
+- Learning management systems
+- Digital libraries
+- Virtual laboratories
+
+---
+
+# 5. Important ICT Abbreviations
+
+UGC NET frequently tests abbreviations.
+
+| Abbreviation | Full Form |
+|---|---|
+| ICT | Information and Communication Technology |
+| IT | Information Technology |
+| WWW | World Wide Web |
+| URL | Uniform Resource Locator |
+| HTTP | Hypertext Transfer Protocol |
+| HTTPS | Hypertext Transfer Protocol Secure |
+| HTML | HyperText Markup Language |
+| CSS | Cascading Style Sheets |
+| XML | Extensible Markup Language |
+| IP | Internet Protocol |
+| ISP | Internet Service Provider |
+| DNS | Domain Name System |
+| LAN | Local Area Network |
+| MAN | Metropolitan Area Network |
+| WAN | Wide Area Network |
+| Wi-Fi | Wireless Fidelity |
+| VPN | Virtual Private Network |
+| E-mail | Electronic Mail |
+| FTP | File Transfer Protocol |
+| PDF | Portable Document Format |
+| USB | Universal Serial Bus |
+| CPU | Central Processing Unit |
+| RAM | Random Access Memory |
+| ROM | Read Only Memory |
+| GUI | Graphical User Interface |
+| OS | Operating System |
+| AI | Artificial Intelligence |
+| IoT | Internet of Things |
+| LMS | Learning Management System |
+| MOOC | Massive Open Online Course |
+
+---
+
+# 6. Computer Network
+
+A computer network is a collection of connected computers and devices that can communicate and share resources.
+
+### Example
+
+```text
+Computer A
+     ↓
+ Network
+     ↓
+Computer B
+     ↓
+Computer C
+```
+
+Networks can be used to share:
+
+- Files
+- Printers
+- Internet connections
+- Applications
+- Data
+
+---
+
+# 7. LAN
+
+LAN stands for:
+
+> **Local Area Network**
+
+It covers a relatively small geographical area.
+
+### Examples
+
+- Computer laboratory
+- Office
+- School
+- College building
+
+Example:
+
+```text
+College Computer Lab
+        ↓
+      LAN
+        ↓
+20–50 computers
+```
+
+---
+
+# 8. MAN
+
+MAN stands for:
+
+> **Metropolitan Area Network**
+
+It covers a larger area than a LAN, generally a city or metropolitan region.
+
+### Example
+
+A network connecting several offices of an organization across a city.
+
+```text
+Building A ──┐
+Building B ──┼── MAN
+Building C ──┘
+```
+
+---
+
+# 9. WAN
+
+WAN stands for:
+
+> **Wide Area Network**
+
+It covers a large geographical area.
+
+It may connect networks across:
+
+- Cities
+- States
+- Countries
+- Continents
+
+The Internet is the most well-known example of a very large interconnected network.
+
+---
+
+# 10. LAN vs MAN vs WAN
+
+| LAN | MAN | WAN |
+|---|---|---|
+| Small area | City/metropolitan area | Large geographical area |
+| Building/campus | City | Country/world |
+| Usually faster | Medium | Can have greater latency |
+| Example: college lab | City-wide organization network | Internet |
+
+### Easy memory
+
+```text
+LAN → Local
+MAN → Metropolitan
+WAN → Wide
+```
+
+---
+
+# 11. Internet
+
+The Internet is a global network of interconnected computer networks.
+
+It allows devices around the world to communicate and exchange information.
+
+### Uses of Internet
+
+- Web browsing
+- E-mail
+- Online education
+- Online banking
+- E-commerce
+- Video conferencing
+- Social media
+- Cloud services
+- Research
+
+---
+
+# 12. World Wide Web
+
+WWW stands for:
+
+> **World Wide Web**
+
+The Web is a service that operates over the Internet.
+
+It consists of interconnected web pages and resources that can be accessed using web browsers.
+
+### Important difference
+
+```text
+Internet
+→ Global network infrastructure
+
+WWW
+→ Web pages and web resources accessed through the Internet
+```
+
+The Internet and the World Wide Web are therefore not exactly the same thing.
+
+---
+
+# 13. Web Browser
+
+A web browser is software used to access and display web pages.
+
+Examples include:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Safari
+
+A browser can be used to open websites using URLs.
+
+---
+
+# 14. URL
+
+URL stands for:
+
+> **Uniform Resource Locator**
+
+A URL identifies the location of a resource on the Web.
+
+Example:
+
+```text
+https://www.example.com
+```
+
+A URL may contain:
+
+- Protocol
+- Domain name
+- Path
+
+---
+
+# 15. HTTP
+
+HTTP stands for:
+
+> **Hypertext Transfer Protocol**
+
+It is a protocol used for communication between web browsers and web servers.
+
+Example:
+
+```text
+Browser
+   ↓
+HTTP Request
+   ↓
+Web Server
+   ↓
+HTTP Response
+   ↓
+Browser
+```
+
+---
+
+# 16. HTTPS
+
+HTTPS stands for:
+
+> **Hypertext Transfer Protocol Secure**
+
+It is the secure version of HTTP.
+
+HTTPS uses encryption to help protect information exchanged between a browser and a website.
+
+### Easy difference
+
+```text
+HTTP
+→ Standard web communication
+
+HTTPS
+→ Secure web communication
+```
+
+---
+
+# 17. IP Address
+
+IP stands for:
+
+> **Internet Protocol**
+
+An IP address identifies a device or network interface for communication on an IP network.
+
+Examples of IPv4 addresses look like:
+
+```text
+192.168.1.10
+```
+
+The Internet uses IP-based addressing for communication.
+
+---
+
+# 18. IPv4 and IPv6
+
+Two important versions are:
+
+- IPv4
+- IPv6
+
+### IPv4
+
+IPv4 uses 32-bit addresses.
+
+Example:
+
+```text
+192.168.1.10
+```
+
+### IPv6
+
+IPv6 uses 128-bit addresses.
+
+Example:
+
+```text
+2001:db8::1
+```
+
+### Important point
+
+```text
+IPv4 → 32-bit
+
+IPv6 → 128-bit
+```
+
+---
+
+# 19. ISP
+
+ISP stands for:
+
+> **Internet Service Provider**
+
+An ISP provides users with access to the Internet.
+
+Examples include internet service providers that offer:
+
+- Broadband
+- Fiber internet
+- Mobile internet
+
+---
+
+# 20. DNS
+
+DNS stands for:
+
+> **Domain Name System**
+
+DNS converts domain names into IP addresses used by computers.
+
+### Example
+
+A user enters:
+
+```text
+www.example.com
+```
+
+DNS helps locate the corresponding IP address.
+
+### Simple idea
+
+```text
+Domain Name
+      ↓
+     DNS
+      ↓
+IP Address
+```
+
+---
+
+# 21. Domain Name
+
+A domain name is a human-readable name used to identify a website.
+
+Example:
+
+```text
+example.com
+```
+
+Humans find domain names easier to remember than numerical IP addresses.
+
+---
+
+# 22. Intranet
+
+An intranet is a private network used within an organization.
+
+It uses Internet-related technologies but is restricted to authorized users.
+
+### Examples
+
+- College internal portal
+- Employee portal
+- Internal document system
+- University staff network
+
+### Simple diagram
+
+```text
+Organization
+     ↓
+ Private Network
+     ↓
+ Authorized Users
+```
+
+---
+
+# 23. Internet vs Intranet
+
+| Internet | Intranet |
+|---|---|
+| Global/public network | Private organizational network |
+| Used by many users | Restricted to authorized users |
+| Publicly accessible services | Internal services |
+| Example: public websites | Example: college staff portal |
+
+### Easy memory
+
+```text
+Internet → Public/global
+
+Intranet → Internal/private
+```
+
+---
+
+# 24. E-mail
+
+E-mail means:
+
+> **Electronic Mail**
+
+It is a method of sending and receiving electronic messages through computer networks.
+
+An e-mail can contain:
+
+- Text
+- Images
+- Documents
+- Links
+- Attachments
+
+---
+
+# 25. Structure of an E-mail Address
+
+Example:
+
+```text
+student@example.com
+```
+
+It has:
+
+```text
+student
+   ↓
+User name
+
+@
+   ↓
+At symbol
+
+example.com
+   ↓
+Domain
+```
+
+---
+
+# 26. Components of an E-mail
+
+Common fields include:
+
+- To
+- Cc
+- Bcc
+- Subject
+- Body
+- Attachment
+
+### To
+
+The main recipient.
+
+### Cc
+
+Carbon copy.
+
+Other recipients can see the Cc recipients.
+
+### Bcc
+
+Blind carbon copy.
+
+Recipients in Bcc are generally hidden from other recipients.
+
+---
+
+# 27. E-mail Attachment
+
+An attachment is a file sent along with an e-mail.
+
+Examples:
+
+- PDF
+- Word document
+- Excel file
+- Image
+- Presentation
+
+Example:
+
+```text
+E-mail
+  +
+PDF attachment
+```
+
+---
+
+# 28. E-mail Protocols
+
+Important e-mail-related protocols include:
+
+### SMTP
+
+Simple Mail Transfer Protocol.
+
+Used mainly for sending e-mail.
+
+### POP
+
+Post Office Protocol.
+
+Used for retrieving e-mail from a mail server.
+
+### IMAP
+
+Internet Message Access Protocol.
+
+Used for accessing and managing e-mail on a mail server.
+
+### Easy memory
+
+```text
+SMTP → Sending
+
+POP → Receiving/downloading
+
+IMAP → Access and synchronization
+```
+
+---
+
+# 29. Audio-Conferencing
+
+Audio-conferencing allows people in different locations to communicate using audio.
+
+Participants can hear one another but may not necessarily see one another.
+
+### Example
+
+```text
+Teacher
+   ↕
+Audio conference
+   ↕
+Students
+```
+
+### Uses
+
+- Meetings
+- Lectures
+- Discussions
+- Interviews
+- Training
+
+---
+
+# 30. Video-Conferencing
+
+Video-conferencing allows people in different locations to communicate using both audio and video.
+
+Examples of uses:
+
+- Online classes
+- Faculty meetings
+- Interviews
+- Research discussions
+- Web-based seminars
+- Remote consultations
+
+---
+
+# 31. Audio vs Video-Conferencing
+
+| Audio-Conferencing | Video-Conferencing |
+|---|---|
+| Audio communication | Audio + video |
+| Participants hear each other | Participants can hear and see each other |
+| Requires audio equipment | Requires audio and video equipment |
+| Lower bandwidth requirements generally | Usually requires more bandwidth |
+
+---
+
+# 32. Requirements for Video-Conferencing
+
+Common requirements include:
+
+- Computer or smartphone
+- Camera
+- Microphone
+- Speakers/headphones
+- Internet connection
+- Video-conferencing software
+
+### Basic process
+
+```text
+Camera + Microphone
+        ↓
+Internet
+        ↓
+Video-conferencing platform
+        ↓
+Remote participants
+```
+
+---
+
+# 33. Advantages of Video-Conferencing
+
+- Saves travel time
+- Enables remote meetings
+- Supports online education
+- Enables collaboration
+- Connects geographically separated people
+- Supports interviews and presentations
+
+---
+
+# 34. Limitations of Video-Conferencing
+
+- Requires reliable internet
+- Technical problems may occur
+- Audio/video delay may occur
+- Privacy and security must be considered
+- Requires suitable devices
+
+---
+
+# 35. Digital Education
+
+Digital education uses digital technologies to support teaching and learning.
+
+Examples include:
+
+- Online courses
+- Digital textbooks
+- Learning management systems
+- Online examinations
+- Educational videos
+- Digital libraries
+- Virtual laboratories
+
+---
+
+# 36. Digital Initiatives in Higher Education
+
+India has developed several digital initiatives to support higher education.
+
+Important initiatives commonly associated with UGC NET preparation include:
+
+- SWAYAM
+- SWAYAM Prabha
+- National Digital Library of India
+- e-PG Pathshala
+- NPTEL
+- Virtual Labs
+- DIKSHA
+- VIDWAN
+- Shodhganga
+
+---
+
+# 37. SWAYAM
+
+SWAYAM stands for:
+
+> **Study Webs of Active Learning for Young Aspiring Minds**
+
+It is an online learning platform that provides access to courses.
+
+It supports learners through:
+
+- Online courses
+- Video lectures
+- Reading materials
+- Assessments
+- Course-related learning resources
+
+### Important point
+
+```text
+SWAYAM
+→ Online learning platform
+```
+
+---
+
+# 38. SWAYAM Prabha
+
+SWAYAM Prabha provides educational content through a group of DTH channels.
+
+It is designed to provide educational programmes through television-based delivery.
+
+### Key idea
+
+```text
+SWAYAM
+→ Online courses
+
+SWAYAM Prabha
+→ Educational content through DTH channels
+```
+
+---
+
+# 39. National Digital Library of India
+
+The National Digital Library of India provides access to a large collection of learning resources through a digital platform.
+
+Resources may include:
+
+- Books
+- Articles
+- Learning materials
+- Educational resources
+
+### Purpose
+
+To improve access to digital learning resources.
+
+---
+
+# 40. e-PG Pathshala
+
+e-PG Pathshala is a digital initiative providing postgraduate-level educational content.
+
+It supports students and teachers through subject-specific learning resources.
+
+### Key idea
+
+```text
+e-PG Pathshala
+→ Postgraduate educational resources
+```
+
+---
+
+# 41. NPTEL
+
+NPTEL stands for:
+
+> **National Programme on Technology Enhanced Learning**
+
+It provides online learning resources and courses, particularly in science and engineering and related areas.
+
+It is a major digital learning initiative associated with higher education.
+
+---
+
+# 42. Virtual Labs
+
+Virtual Labs provide remote access to laboratory-related learning experiences through online platforms.
+
+They can help students:
+
+- Perform simulations
+- Understand experiments
+- Learn laboratory concepts
+- Practice without being physically present in a laboratory
+
+### Key idea
+
+```text
+Virtual Lab
+→ Online / remote laboratory learning
+```
+
+---
+
+# 43. VIDWAN
+
+VIDWAN is an expert database and national research network intended to provide information about experts and researchers.
+
+It can help identify:
+
+- Researchers
+- Experts
+- Academic profiles
+- Research expertise
+
+### Key idea
+
+```text
+VIDWAN
+→ Experts / researchers information
+```
+
+---
+
+# 44. Shodhganga
+
+Shodhganga is a repository of Indian theses and dissertations.
+
+It helps researchers and students access doctoral research produced in Indian universities and institutions.
+
+### Key idea
+
+```text
+Shodhganga
+→ Theses and dissertations
+```
+
+---
+
+# 45. Digital Initiatives – Quick Revision
+
+| Initiative | Main purpose |
+|---|---|
+| SWAYAM | Online courses |
+| SWAYAM Prabha | Educational DTH channels |
+| National Digital Library of India | Digital learning resources |
+| e-PG Pathshala | Postgraduate learning resources |
+| NPTEL | Online courses and learning resources |
+| Virtual Labs | Online/remote laboratory learning |
+| VIDWAN | Expert/researcher information |
+| Shodhganga | Theses and dissertations |
+
+---
+
+# 46. ICT in Higher Education
+
+ICT supports higher education in many ways.
+
+### Teaching
+
+- Smart classrooms
+- Online lectures
+- Digital content
+- Learning management systems
+
+### Learning
+
+- Online courses
+- Recorded lectures
+- Digital books
+- Virtual laboratories
+
+### Research
+
+- Online databases
+- Digital libraries
+- Research repositories
+- Online collaboration
+
+### Administration
+
+- Online admission
+- Online fee payment
+- Student information systems
+- Examination management
+
+---
+
+# 47. Learning Management System
+
+LMS stands for:
+
+> **Learning Management System**
+
+An LMS is software used to manage teaching and learning activities.
+
+It may provide:
+
+- Course materials
+- Assignments
+- Quizzes
+- Attendance
+- Discussions
+- Grades
+- Announcements
+
+### Simple structure
+
+```text
+Teacher
+   ↓
+LMS
+   ↓
+Course Content
+   ↓
+Students
+   ↓
+Assignments / Tests
+```
+
+---
+
+# 48. ICT and Governance
+
+ICT can be used by governments to provide services and information electronically.
+
+This is commonly associated with:
+
+> **E-Governance**
+
+---
+
+# 49. E-Governance
+
+E-Governance means using information and communication technologies in government processes and public services.
+
+### Examples
+
+- Online government services
+- Digital certificates
+- Online applications
+- Online tax services
+- Digital payments
+- Public information portals
+
+---
+
+# 50. Objectives of E-Governance
+
+Important objectives include:
+
+- Improve efficiency
+- Increase transparency
+- Improve accessibility
+- Reduce paperwork
+- Provide faster services
+- Improve communication
+- Increase citizen participation
+
+---
+
+# 51. ICT in Government Services
+
+ICT can help governments provide:
+
+### Education services
+
+- Online applications
+- Digital learning resources
+
+### Healthcare
+
+- Digital health records
+- Online appointments
+
+### Transport
+
+- Online ticketing
+- Digital information systems
+
+### Revenue
+
+- Online tax services
+- Digital payment systems
+
+### Public administration
+
+- Online forms
+- Digital records
+- Online grievance systems
+
+---
+
+# 52. Types of E-Governance
+
+Common classifications include:
+
+### G2C
+
+Government to Citizen
+
+Government provides services directly to citizens.
+
+Example:
+
+> Online certificate application.
+
+### G2B
+
+Government to Business
+
+Government interacts with businesses.
+
+Example:
+
+> Online business registration.
+
+### G2G
+
+Government to Government
+
+Communication and information exchange between government departments.
+
+### G2E
+
+Government to Employee
+
+Government services and systems for employees.
+
+---
+
+# 53. G2C
+
+G2C stands for:
+
+> **Government to Citizen**
+
+Example:
+
+```text
+Government
+    ↓
+Online service
+    ↓
+Citizen
+```
+
+Examples include:
+
+- Certificates
+- Applications
+- Public information
+- Online services
+
+---
+
+# 54. G2B
+
+G2B stands for:
+
+> **Government to Business**
+
+It refers to digital interactions between government and businesses.
+
+Examples:
+
+- Business registration
+- Licences
+- Regulatory filings
+- Government tenders
+
+---
+
+# 55. G2G
+
+G2G stands for:
+
+> **Government to Government**
+
+It involves information sharing and communication between government departments or agencies.
+
+Example:
+
+```text
+Department A
+      ↕
+Digital system
+      ↕
+Department B
+```
+
+---
+
+# 56. G2E
+
+G2E stands for:
+
+> **Government to Employee**
+
+It refers to digital services provided by government organizations for their employees.
+
+Examples:
+
+- Employee portals
+- Leave systems
+- Payroll systems
+- Internal communication
+
+---
+
+# 57. Advantages of ICT in Governance
+
+ICT can:
+
+- Reduce paperwork
+- Save time
+- Improve accessibility
+- Increase transparency
+- Improve service delivery
+- Support data-based decisions
+- Improve communication
+- Reduce physical visits to offices
+
+---
+
+# 58. Challenges of ICT in Governance
+
+Important challenges include:
+
+- Digital divide
+- Cybersecurity
+- Privacy
+- Lack of digital literacy
+- Infrastructure limitations
+- Internet connectivity
+- Technical problems
+- Data protection concerns
+
+---
+
+# 59. Digital Divide
+
+The digital divide refers to the gap between people who have access to digital technologies and those who do not.
+
+The gap may result from differences in:
+
+- Income
+- Location
+- Education
+- Digital skills
+- Infrastructure
+- Availability of devices
+
+### Example
+
+```text
+Urban area
+→ Good internet access
+
+Remote area
+→ Limited internet access
+```
+
+This can create unequal access to digital services.
+
+---
+
+# 60. ICT and Transparency
+
+Digital systems can make government information and processes more accessible.
+
+For example:
+
+```text
+Traditional process
+→ Physical office
+→ Paper application
+→ Manual processing
+
+Digital process
+→ Online portal
+→ Digital application
+→ Electronic processing
+```
+
+ICT can therefore support transparency and accountability when systems are properly designed and managed.
+
+---
+
+# 61. ICT and Accessibility
+
+ICT can make services available beyond normal physical locations.
+
+Examples:
+
+- Online classes
+- Online government services
+- Digital libraries
+- Remote meetings
+- Online applications
+
+This can be particularly useful for people who cannot easily travel.
+
+---
+
+# 62. Cybersecurity
+
+Cybersecurity refers to protecting:
+
+- Computers
+- Networks
+- Applications
+- Data
+- Digital systems
+
+against unauthorized access, attacks and other threats.
+
+### Common threats
+
+- Malware
+- Phishing
+- Password attacks
+- Unauthorized access
+- Data theft
+
+---
+
+# 63. Data Privacy
+
+Digital systems often process personal information.
+
+Therefore, organizations should consider:
+
+- Privacy
+- Security
+- Access control
+- Responsible data use
+- Protection against unauthorized disclosure
+
+---
+
+# 64. Cloud Computing
+
+Cloud computing provides computing resources and services over a network, commonly the Internet.
+
+Examples of cloud-based services include:
+
+- Online storage
+- Web applications
+- Cloud databases
+- Online collaboration tools
+
+### Simple idea
+
+```text
+Your device
+     ↓
+Internet
+     ↓
+Cloud service
+     ↓
+Data / Application
+```
+
+---
+
+# 65. Advantages of Cloud Computing
+
+- Access from different locations
+- Scalable resources
+- Data sharing
+- Collaboration
+- Reduced need for local infrastructure in some cases
+
+---
+
+# 66. ICT and Research
+
+ICT has transformed research.
+
+Researchers can use ICT for:
+
+### Literature search
+
+- Digital libraries
+- Online journals
+- Research databases
+
+### Data collection
+
+- Online questionnaires
+- Sensors
+- Digital records
+
+### Data analysis
+
+- Statistical software
+- Programming
+- Visualization tools
+
+### Communication
+
+- E-mail
+- Video conferencing
+- Online collaboration
+
+---
+
+# 67. ICT and Online Learning
+
+ICT enables several forms of online learning:
+
+- Synchronous learning
+- Asynchronous learning
+- Blended learning
+- MOOCs
+- Recorded lectures
+
+### Synchronous learning
+
+Teacher and students interact at the same time.
+
+Example:
+
+> Live online class.
+
+### Asynchronous learning
+
+Teacher and students do not have to interact at the same time.
+
+Example:
+
+> Recorded lecture watched later.
+
+---
+
+# 68. Synchronous vs Asynchronous Learning
+
+| Synchronous | Asynchronous |
+|---|---|
+| Real-time | Not necessarily real-time |
+| Live class | Recorded lecture |
+| Immediate interaction | Interaction may be delayed |
+| Requires participants to be available together | More flexible timing |
+
+---
+
+# 69. Important ICT Terms
+
+### Bandwidth
+
+The capacity of a communication channel to carry data.
+
+### Upload
+
+Sending data from your device to another system.
+
+### Download
+
+Receiving data from another system to your device.
+
+### Server
+
+A computer or system that provides services or resources to other computers.
+
+### Client
+
+A device or software that requests services from a server.
+
+---
+
+# 70. Client and Server
+
+```text
+Client
+  ↓ Request
+Server
+  ↓ Response
+Client
+```
+
+Example:
+
+When you open a website:
+
+```text
+Browser → Request → Web Server
+
+Web Server → Response → Browser
+```
+
+---
+
+# 71. Important Protocols
+
+| Protocol | Main use |
+|---|---|
+| HTTP | Web communication |
+| HTTPS | Secure web communication |
+| FTP | File transfer |
+| SMTP | Sending e-mail |
+| POP | E-mail retrieval |
+| IMAP | E-mail access/synchronization |
+| DNS | Domain name resolution |
+| IP | Network addressing and communication |
+
+---
+
+# 72. Important Comparisons
+
+## Internet vs Intranet
+
+```text
+Internet
+→ Global
+→ Public
+
+Intranet
+→ Organizational
+→ Private
+```
+
+## HTTP vs HTTPS
+
+```text
+HTTP
+→ Standard web protocol
+
+HTTPS
+→ Secure web protocol
+```
+
+## Audio vs Video Conference
+
+```text
+Audio
+→ Sound
+
+Video
+→ Sound + Image
+```
+
+## Synchronous vs Asynchronous
+
+```text
+Synchronous
+→ Same time
+
+Asynchronous
+→ Different times
+```
+
+---
+
+# 73. UGC NET Focus Areas
+
+Pay particular attention to:
+
+- ICT meaning
+- ICT terminology
+- Common abbreviations
+- Internet
+- World Wide Web
+- URL
+- HTTP
+- HTTPS
+- IP address
+- DNS
+- ISP
+- LAN
+- MAN
+- WAN
+- Intranet
+- E-mail
+- SMTP
+- POP
+- IMAP
+- Audio-conferencing
+- Video-conferencing
+- SWAYAM
+- SWAYAM Prabha
+- National Digital Library of India
+- e-PG Pathshala
+- NPTEL
+- Virtual Labs
+- VIDWAN
+- Shodhganga
+- LMS
+- E-Governance
+- G2C
+- G2B
+- G2G
+- G2E
+- Digital divide
+- Cybersecurity
+- Data privacy
+
+---
+
+# 74. Common Mistakes
+
+### Mistake 1 – Internet and WWW are the same
+
+They are related but not identical.
+
+```text
+Internet → Network infrastructure
+
+WWW → Web service using the Internet
+```
+
+### Mistake 2 – Internet and Intranet
+
+```text
+Internet → Global/public
+
+Intranet → Private/internal
+```
+
+### Mistake 3 – SMTP and IMAP
+
+```text
+SMTP → Sending e-mail
+
+IMAP → Accessing/synchronizing e-mail
+```
+
+### Mistake 4 – SWAYAM and SWAYAM Prabha
+
+```text
+SWAYAM
+→ Online courses
+
+SWAYAM Prabha
+→ Educational DTH channels
+```
+
+### Mistake 5 – Audio and Video Conferencing
+
+```text
+Audio
+→ Sound
+
+Video
+→ Sound + Video
+```
+
+---
+
+# 75. One-Minute Revision
+
+```text
+ICT
+→ Information and Communication Technology
+
+INTERNET
+→ Global network
+
+WWW
+→ Web resources on the Internet
+
+INTRANET
+→ Private organizational network
+
+URL
+→ Location of a web resource
+
+HTTP
+→ Web communication
+
+HTTPS
+→ Secure web communication
+
+DNS
+→ Domain name → IP address
+
+ISP
+→ Internet access provider
+
+LAN
+→ Local network
+
+MAN
+→ Metropolitan network
+
+WAN
+→ Wide network
+
+E-MAIL
+→ Electronic mail
+
+SMTP
+→ Send e-mail
+
+POP
+→ Retrieve e-mail
+
+IMAP
+→ Access/synchronize e-mail
+
+AUDIO CONFERENCE
+→ Audio communication
+
+VIDEO CONFERENCE
+→ Audio + video
+
+SWAYAM
+→ Online courses
+
+SWAYAM PRABHA
+→ Educational DTH channels
+
+SHODHGANGA
+→ Theses and dissertations
+
+VIDWAN
+→ Researchers / experts
+
+E-GOVERNANCE
+→ ICT in government services
+```
+
+---
+
+# 76. Final Exam Tip
+
+For ICT questions, do not try to memorize everything randomly.
+
+Group the concepts.
+
+```text
+NETWORKING
+→ LAN
+→ MAN
+→ WAN
+→ Internet
+→ Intranet
+
+WEB
+→ WWW
+→ URL
+→ HTTP
+→ HTTPS
+→ DNS
+→ IP
+
+E-MAIL
+→ SMTP
+→ POP
+→ IMAP
+→ To
+→ Cc
+→ Bcc
+
+ONLINE COMMUNICATION
+→ Audio conference
+→ Video conference
+
+HIGHER EDUCATION
+→ SWAYAM
+→ SWAYAM Prabha
+→ NDL
+→ e-PG Pathshala
+→ NPTEL
+→ Virtual Labs
+→ VIDWAN
+→ Shodhganga
+
+GOVERNANCE
+→ E-Governance
+→ G2C
+→ G2B
+→ G2G
+→ G2E
+```
+
+---
+
+# 77. Final Quick Revision
+
+```text
+                    ICT
+                     │
+       ┌─────────────┼─────────────┐
+       │             │             │
+   INTERNET       EDUCATION     GOVERNANCE
+       │             │             │
+  ┌────┼────┐    ┌───┼────┐    ┌───┼────┐
+  │    │    │    │   │    │    │   │    │
+ WWW  URL  DNS SWAYAM NDL LMS  G2C G2B G2G
+  │
+ HTTP
+ HTTPS
+
+       E-MAIL
+          │
+     ┌────┼────┐
+     │    │    │
+   SMTP  POP  IMAP
+```
+
+The central idea of Unit VIII is:
+
+> **ICT provides technologies for creating, processing, communicating, storing and sharing information, and these technologies increasingly support education, research and governance.**
+--- 

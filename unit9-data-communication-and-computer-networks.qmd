@@ -1,0 +1,3225 @@
+---
+title: "Unit IX – Data Communication and Computer Networks"
+subtitle: "UGC NET Computer Science and Applications – Paper 2"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+
+## 1. Introduction
+
+**Data communication** is the exchange of data between two or more devices through a communication medium.
+
+A **computer network** is a collection of interconnected devices that communicate and share resources.
+
+This unit covers:
+
+- Data communication fundamentals
+- Signals, bandwidth, throughput and latency
+- Transmission, encoding and modulation
+- Multiplexing and transmission media
+- Errors and error handling
+- LAN, MAN, WAN and wireless networks
+- OSI and TCP/IP models
+- Addressing and switching
+- Framing, flow/error control and multiple access
+- IPv4 and IPv6
+- ARP and routing
+- TCP, UDP and SCTP
+- WWW, DNS and email
+- Network security
+- Mobile technology
+- Cloud computing
+- Internet of Things
+
+---
+
+# 2. Components of a Data Communication System
+
+A basic data communication system has five components:
+
+1. Sender
+2. Receiver
+3. Message
+4. Transmission medium
+5. Protocol
+
+### Sender
+
+The device that sends information.
+
+### Receiver
+
+The device that receives information.
+
+### Message
+
+The information being transmitted.
+
+Examples:
+
+- Text
+- Image
+- Audio
+- Video
+- File
+
+### Transmission Medium
+
+The path through which data travels.
+
+Examples:
+
+- Twisted-pair cable
+- Coaxial cable
+- Optical fiber
+- Radio waves
+
+### Protocol
+
+A set of rules governing communication.
+
+Examples:
+
+- TCP
+- IP
+- HTTP
+- FTP
+- SMTP
+
+---
+
+# 3. Modes of Communication
+
+## 3.1 Simplex
+
+Communication takes place in only one direction.
+
+```text
+Sender ─────────→ Receiver
+```
+
+Example:
+
+- Traditional television broadcasting
+
+## 3.2 Half-Duplex
+
+Communication occurs in both directions, but not simultaneously.
+
+```text
+A ─────────→ B
+A ←───────── B
+```
+
+Example:
+
+- Walkie-talkie
+
+## 3.3 Full-Duplex
+
+Communication occurs in both directions simultaneously.
+
+Example:
+
+- Telephone conversation
+
+### Comparison
+
+| Mode | Direction | Simultaneous? |
+|---|---|---|
+| Simplex | One direction | No |
+| Half-duplex | Both directions | No |
+| Full-duplex | Both directions | Yes |
+
+---
+
+# 4. Analog and Digital Signals
+
+A signal carries information through a communication system.
+
+## Analog Signal
+
+An analog signal varies continuously.
+
+Examples:
+
+- Traditional voice signal
+- Analog radio
+
+## Digital Signal
+
+A digital signal uses discrete values.
+
+A common digital representation uses:
+
+```text
+0 and 1
+```
+
+### Comparison
+
+| Analog | Digital |
+|---|---|
+| Continuous | Discrete |
+| More directly affected by accumulated noise | Can often be regenerated |
+| Common in traditional analog systems | Common in computer communication |
+
+---
+
+# 5. Periodic Signal
+
+A periodic signal repeats after a fixed interval.
+
+Important characteristics:
+
+- Amplitude
+- Frequency
+- Period
+- Phase
+
+## Amplitude
+
+The maximum magnitude of the signal.
+
+## Frequency
+
+Number of cycles per second.
+
+Unit:
+
+**Hertz (Hz)**
+
+## Period
+
+Time for one complete cycle.
+
+**f = 1/T**
+
+where:
+
+- f = frequency
+- T = period
+
+## Phase
+
+Describes the position of a waveform relative to a reference.
+
+---
+
+# 6. Wavelength
+
+Wavelength is the distance travelled by a wave during one cycle.
+
+**λ = v/f**
+
+where:
+
+- λ = wavelength
+- v = propagation speed
+- f = frequency
+
+---
+
+# 7. Noiseless and Noisy Channels
+
+## Noiseless Channel
+
+A theoretical channel in which transmission does not introduce noise errors.
+
+For a noiseless channel, the Nyquist formula gives the maximum theoretical bit rate:
+
+**Bit Rate = 2 × Bandwidth × log₂(L)**
+
+where L is the number of signal levels.
+
+## Noisy Channel
+
+Real channels may contain noise.
+
+The Shannon channel capacity is:
+
+**Capacity = Bandwidth × log₂(1 + S/N)**
+
+where:
+
+- S = signal power
+- N = noise power
+
+If S/N is expressed in decibels:
+
+**SNR(dB) = 10 × log₁₀(S/N)**
+
+### UGC NET Point
+
+**Nyquist → noiseless channel**
+
+**Shannon → noisy channel**
+
+---
+
+# 8. Bandwidth
+
+Bandwidth can refer to the range of frequencies occupied by a signal or supported by a channel.
+
+For a frequency range:
+
+**Bandwidth = Highest frequency − Lowest frequency**
+
+Example:
+
+If the frequency range is 3 MHz to 5 MHz:
+
+**Bandwidth = 2 MHz**
+
+---
+
+# 9. Throughput
+
+**Throughput** is the actual rate at which data is successfully transferred.
+
+Example:
+
+A link may have a nominal capacity of 100 Mbps but achieve only 80 Mbps of actual throughput.
+
+Therefore:
+
+**Bandwidth/capacity is not necessarily equal to actual throughput.**
+
+---
+
+# 10. Latency
+
+**Latency** is the time taken for data to travel through a communication system.
+
+Important components:
+
+- Processing delay
+- Queuing delay
+- Transmission delay
+- Propagation delay
+
+## Transmission Delay
+
+Time needed to put all packet bits onto the link.
+
+**Transmission delay = Packet size ÷ Data rate**
+
+## Propagation Delay
+
+Time required for the signal to travel through the medium.
+
+**Propagation delay = Distance ÷ Propagation speed**
+
+---
+
+# 11. Digital Transmission
+
+Digital transmission communicates information using digital signals.
+
+Important concepts:
+
+- Line coding
+- Digital-to-digital encoding
+- Pulse-based transmission
+
+Examples of line coding:
+
+- NRZ
+- Manchester
+- Differential Manchester
+
+---
+
+# 12. Analog Transmission
+
+Analog transmission uses an analog carrier signal.
+
+Digital data can be converted to an analog signal using modulation.
+
+Important methods:
+
+- ASK
+- FSK
+- PSK
+- QAM
+
+---
+
+# 13. Data Encoding
+
+Encoding converts data into an appropriate signal representation.
+
+## NRZ
+
+**NRZ = Non-Return-to-Zero**
+
+The signal level remains at a particular level during a bit interval.
+
+## Manchester Encoding
+
+There is a transition in the middle of each bit period.
+
+A major advantage is synchronization.
+
+## Differential Manchester
+
+Information is represented using transitions and is less dependent on the absolute signal level.
+
+---
+
+# 14. Modulation Techniques
+
+## ASK
+
+**Amplitude Shift Keying**
+
+Amplitude of the carrier is changed.
+
+## FSK
+
+**Frequency Shift Keying**
+
+Frequency of the carrier is changed.
+
+## PSK
+
+**Phase Shift Keying**
+
+Phase of the carrier is changed.
+
+## QAM
+
+**Quadrature Amplitude Modulation**
+
+Both amplitude and phase are varied.
+
+### Comparison
+
+| Technique | Main Property Changed |
+|---|---|
+| ASK | Amplitude |
+| FSK | Frequency |
+| PSK | Phase |
+| QAM | Amplitude + Phase |
+
+---
+
+# 15. Broadband and Baseband Transmission
+
+## Baseband
+
+The signal is transmitted directly over the communication channel without shifting it to a separate carrier frequency.
+
+Baseband is common in many LAN technologies.
+
+## Broadband
+
+The available frequency range can support multiple channels or carrier-modulated signals.
+
+### Comparison
+
+| Baseband | Broadband |
+|---|---|
+| Direct/baseband signaling | Often carrier/modulation based |
+| Common in LANs | Common in many wideband systems |
+
+---
+
+# 16. Multiplexing
+
+**Multiplexing** allows multiple signals to share a communication medium.
+
+A multiplexer combines signals.
+
+A demultiplexer separates them.
+
+Important techniques:
+
+- FDM
+- TDM
+- WDM
+- CDM
+
+---
+
+# 17. Frequency Division Multiplexing
+
+**FDM = Frequency Division Multiplexing**
+
+Different users/signals use different frequency bands.
+
+```text
+Frequency
+|---A---|---B---|---C---|
+```
+
+---
+
+# 18. Time Division Multiplexing
+
+**TDM = Time Division Multiplexing**
+
+Different users/signals use different time slots.
+
+```text
+Time
+| A | B | C | A | B | C |
+```
+
+---
+
+# 19. Wavelength Division Multiplexing
+
+**WDM = Wavelength Division Multiplexing**
+
+WDM is mainly associated with optical fiber.
+
+Different optical wavelengths carry different signals.
+
+---
+
+# 20. Transmission Media
+
+Transmission media are classified into:
+
+## Guided Media
+
+Signals travel through a physical path.
+
+Examples:
+
+- Twisted pair
+- Coaxial cable
+- Optical fiber
+
+## Unguided Media
+
+Signals travel through free space.
+
+Examples:
+
+- Radio
+- Microwave
+- Infrared
+- Satellite
+
+---
+
+# 21. Twisted-Pair Cable
+
+Twisted-pair cable contains pairs of insulated copper wires twisted together.
+
+Types:
+
+- UTP
+- STP
+
+### Advantages
+
+- Low cost
+- Easy installation
+- Widely used
+
+### Limitations
+
+- More susceptible to interference than optical fiber
+- Limited range compared with some fiber systems
+
+---
+
+# 22. Coaxial Cable
+
+A coaxial cable contains:
+
+- Central conductor
+- Insulating layer
+- Shield
+- Outer protective layer
+
+It provides better shielding than ordinary twisted pair.
+
+Applications include:
+
+- Cable television
+- Broadband systems
+- Older network technologies
+
+---
+
+# 23. Optical Fiber
+
+Optical fiber carries information using light.
+
+Main parts:
+
+- Core
+- Cladding
+- Protective coating
+
+### Advantages
+
+- High bandwidth
+- Low attenuation
+- Resistant to electromagnetic interference
+- Long-distance transmission
+
+### Limitations
+
+- More difficult installation
+- Specialized equipment
+- Can be physically fragile
+
+---
+
+# 24. Wireless Media
+
+Examples:
+
+- Radio
+- Microwave
+- Infrared
+- Satellite
+
+Wireless communication supports mobility and reduces cabling.
+
+---
+
+# 25. Transmission Errors
+
+A transmission error occurs when received data differs from transmitted data.
+
+## Single-Bit Error
+
+One bit is changed.
+
+## Burst Error
+
+Multiple bits in a sequence are affected.
+
+---
+
+# 26. Error Detection
+
+Important methods:
+
+- Parity
+- Checksum
+- CRC
+
+---
+
+# 27. Parity
+
+A parity bit is added to a data unit.
+
+### Even Parity
+
+The total number of 1s is made even.
+
+### Odd Parity
+
+The total number of 1s is made odd.
+
+Parity is simple but cannot detect every possible error pattern.
+
+---
+
+# 28. Checksum
+
+A checksum is calculated from a block of data and sent with the data.
+
+The receiver performs a corresponding calculation to detect errors.
+
+---
+
+# 29. CRC
+
+**CRC = Cyclic Redundancy Check**
+
+CRC uses polynomial-style binary division with a generator polynomial.
+
+The remainder becomes the CRC value.
+
+CRC is particularly effective for detecting burst errors.
+
+---
+
+# 30. Error Handling
+
+Error handling can use:
+
+- Error detection
+- Acknowledgements
+- Sequence numbers
+- Timers
+- Retransmissions
+
+Important ARQ methods:
+
+- Stop-and-Wait ARQ
+- Go-Back-N
+- Selective Repeat
+
+---
+
+# 31. Computer Networks
+
+A computer network connects devices so that they can communicate and share resources.
+
+Benefits include:
+
+- Resource sharing
+- File sharing
+- Communication
+- Centralized services
+- Internet access
+- Distributed applications
+
+---
+
+# 32. Network Topologies
+
+Important network topologies:
+
+- Bus
+- Star
+- Ring
+- Mesh
+- Tree
+- Hybrid
+
+---
+
+# 33. Bus Topology
+
+All devices share a common backbone.
+
+```text
+A ── B ── C ── D
+      Backbone
+```
+
+### Advantage
+
+Simple structure.
+
+### Limitation
+
+A backbone failure can affect communication for the network.
+
+---
+
+# 34. Star Topology
+
+All devices connect to a central device.
+
+```text
+       A
+       |
+B ---- Switch ---- C
+       |
+       D
+```
+
+### Advantages
+
+- Easy management
+- Easy expansion
+- Failure of one access link generally affects one device
+
+### Limitation
+
+Failure of the central device can affect connected devices.
+
+---
+
+# 35. Ring Topology
+
+Each node connects to neighboring nodes.
+
+```text
+A → B → C → D
+↑           ↓
+└───────────┘
+```
+
+---
+
+# 36. Mesh Topology
+
+Devices have multiple interconnections.
+
+For a full mesh with n devices:
+
+**Number of links = n(n − 1) ÷ 2**
+
+### Advantage
+
+High redundancy.
+
+### Disadvantage
+
+Large number of links.
+
+---
+
+# 37. LAN, MAN and WAN
+
+## LAN
+
+**Local Area Network**
+
+Covers a limited area.
+
+Examples:
+
+- Lab
+- Office
+- Building
+- Campus
+
+## MAN
+
+**Metropolitan Area Network**
+
+Covers a city or metropolitan area.
+
+## WAN
+
+**Wide Area Network**
+
+Covers large geographical areas.
+
+Example:
+
+- Internet
+
+### Comparison
+
+| Type | Typical Area |
+|---|---|
+| LAN | Local building/campus |
+| MAN | City/metropolitan area |
+| WAN | Large geographical area |
+
+---
+
+# 38. Wireless Networks
+
+Wireless networks use electromagnetic signals.
+
+Examples:
+
+- Wi-Fi
+- Bluetooth
+- Cellular networks
+- Wireless sensor networks
+
+Advantages:
+
+- Mobility
+- Easy deployment
+- Reduced cabling
+
+Challenges:
+
+- Interference
+- Security
+- Signal attenuation
+- Spectrum limitations
+
+---
+
+# 39. Internet
+
+The Internet is a global interconnection of networks using the Internet protocol suite.
+
+Services include:
+
+- Web
+- Email
+- File transfer
+- Remote access
+- Streaming
+- Cloud services
+
+---
+
+# 40. Layered Network Architecture
+
+Layering divides communication functions into separate levels.
+
+Benefits:
+
+- Modularity
+- Easier troubleshooting
+- Interoperability
+- Easier protocol development
+- Separation of responsibilities
+
+Two major models:
+
+- OSI
+- TCP/IP
+
+---
+
+# 41. OSI Reference Model
+
+The OSI model has seven layers:
+
+1. Application
+2. Presentation
+3. Session
+4. Transport
+5. Network
+6. Data Link
+7. Physical
+
+### Memory Aid
+
+**All People Seem To Need Data Processing**
+
+---
+
+# 42. Physical Layer
+
+Responsible for transmission of raw bits.
+
+Functions include:
+
+- Signal representation
+- Data rate
+- Physical interfaces
+- Connectors
+- Transmission medium
+
+---
+
+# 43. Data Link Layer
+
+Provides node-to-node delivery.
+
+Functions:
+
+- Framing
+- Physical addressing
+- Error detection
+- Error control
+- Media access control
+- Flow control in appropriate protocols
+
+Examples:
+
+- Ethernet
+- HDLC
+
+---
+
+# 44. Network Layer
+
+Provides network-to-network delivery.
+
+Functions:
+
+- Logical addressing
+- Routing
+- Packet forwarding
+- IPv4 fragmentation
+
+Main protocol:
+
+**IP**
+
+---
+
+# 45. Transport Layer
+
+Provides process-to-process communication.
+
+Protocols:
+
+- TCP
+- UDP
+- SCTP
+
+Functions may include:
+
+- Segmentation
+- Reassembly
+- Flow control
+- Error control
+- Congestion control
+
+---
+
+# 46. Session Layer
+
+Manages communication sessions.
+
+Functions may include:
+
+- Session establishment
+- Session management
+- Session termination
+- Synchronization
+
+---
+
+# 47. Presentation Layer
+
+Deals with data representation.
+
+Functions can include:
+
+- Translation
+- Encryption/decryption
+- Compression/decompression
+
+---
+
+# 48. Application Layer
+
+Provides network services to applications.
+
+Examples:
+
+- HTTP
+- FTP
+- SMTP
+- DNS
+- Telnet
+
+---
+
+# 49. TCP/IP Protocol Suite
+
+A commonly used four-layer representation is:
+
+1. Application
+2. Transport
+3. Internet
+4. Link/Network Access
+
+The exact naming of the lower layer varies among textbooks.
+
+### OSI and TCP/IP
+
+| OSI | TCP/IP |
+|---|---|
+| 7 layers | Commonly 4 layers |
+| Reference model | Protocol architecture/suite |
+| Separate Session and Presentation | Usually handled within Application |
+
+---
+
+# 50. Network Addresses
+
+Different layers use different forms of addressing.
+
+## Physical Address
+
+Usually a link-layer address.
+
+Example:
+
+**MAC address**
+
+## Logical Address
+
+Network-layer address.
+
+Example:
+
+**IP address**
+
+## Port Address
+
+Identifies a process/service.
+
+Example:
+
+**TCP port 80**
+
+## Specific Address
+
+Application-level identifier.
+
+Examples:
+
+- URL
+- Email address
+
+### Sequence
+
+**Physical → Logical → Port → Specific**
+
+---
+
+# 51. Switching Techniques
+
+Important switching techniques:
+
+- Circuit switching
+- Packet switching
+- Message switching
+
+---
+
+# 52. Circuit Switching
+
+A dedicated communication path is established before data transfer.
+
+Phases:
+
+1. Connection setup
+2. Data transfer
+3. Connection release
+
+Traditional telephone systems are associated with circuit switching.
+
+---
+
+# 53. Packet Switching
+
+Data is divided into packets.
+
+Two important approaches:
+
+- Datagram
+- Virtual circuit
+
+The Internet is based primarily on packet switching.
+
+---
+
+# 54. Message Switching
+
+The entire message is stored and forwarded between nodes.
+
+A dedicated end-to-end circuit is not required.
+
+---
+
+# 55. Framing
+
+Framing divides a bit stream into frames.
+
+It allows the Data Link layer to identify boundaries between units of transmitted data.
+
+Framing can support:
+
+- Error detection
+- Addressing
+- Flow control
+- Media access
+
+---
+
+# 56. Flow Control
+
+Flow control prevents a sender from overwhelming a receiver.
+
+Important methods:
+
+- Stop-and-Wait
+- Sliding Window
+
+---
+
+# 57. Error Control
+
+Error control provides mechanisms for reliable transmission.
+
+It can use:
+
+- Acknowledgements
+- Sequence numbers
+- Retransmissions
+- Timers
+- Error detection
+
+---
+
+# 58. Sliding Window Protocol
+
+A sender can transmit multiple frames/segments before waiting for acknowledgements, subject to a window.
+
+Advantages:
+
+- Better channel utilization
+- Higher throughput
+- Less waiting
+
+Important protocols:
+
+- Go-Back-N
+- Selective Repeat
+
+---
+
+# 59. Go-Back-N
+
+If frame 3 is lost:
+
+```text
+1 2 3 4 5
+    X
+```
+
+The sender may retransmit:
+
+```text
+3 4 5
+```
+
+The receiver generally maintains a cumulative acknowledgement scheme.
+
+---
+
+# 60. Selective Repeat
+
+If frame 3 is lost:
+
+```text
+1 2 3 4 5
+    X
+```
+
+Only frame 3 may be retransmitted:
+
+```text
+3
+```
+
+It requires more receiver buffering and bookkeeping.
+
+---
+
+# 61. HDLC
+
+**HDLC = High-Level Data Link Control**
+
+HDLC is a bit-oriented Data Link protocol.
+
+A common frame structure is:
+
+```text
+Flag | Address | Control | Information | FCS | Flag
+```
+
+FCS means:
+
+**Frame Check Sequence**
+
+---
+
+# 62. Multiple Access
+
+Multiple access protocols control how multiple devices share a common medium.
+
+Important methods:
+
+- CSMA/CD
+- CSMA/CA
+- Reservation
+- Polling
+- Token passing
+- FDMA
+- TDMA
+- CDMA
+
+---
+
+# 63. CSMA/CD
+
+**Carrier Sense Multiple Access with Collision Detection**
+
+Historically associated with shared-medium half-duplex Ethernet.
+
+Basic idea:
+
+1. Sense the channel.
+2. Transmit if idle.
+3. Detect collision.
+4. Stop transmission if collision occurs.
+5. Wait using a backoff algorithm.
+6. Retransmit.
+
+Modern switched full-duplex Ethernet normally does not use CSMA/CD.
+
+---
+
+# 64. CSMA/CA
+
+**Carrier Sense Multiple Access with Collision Avoidance**
+
+Commonly associated with wireless LANs.
+
+It attempts to reduce the probability of collisions before transmission.
+
+Associated technology:
+
+**IEEE 802.11 Wi-Fi**
+
+---
+
+# 65. Reservation
+
+Stations reserve transmission opportunities before transmitting.
+
+This can reduce collisions when many devices share a channel.
+
+---
+
+# 66. Polling
+
+A central controller gives devices opportunities to transmit.
+
+### Advantage
+
+Controlled access.
+
+### Limitation
+
+The central controller can become a bottleneck or point of failure.
+
+---
+
+# 67. Token Passing
+
+A special control frame called a token circulates among stations.
+
+Only the station holding the token can transmit.
+
+### Advantage
+
+Predictable and collision-free medium access.
+
+---
+
+# 68. FDMA, TDMA and CDMA
+
+## FDMA
+
+**Frequency Division Multiple Access**
+
+Users receive separate frequency bands.
+
+## TDMA
+
+**Time Division Multiple Access**
+
+Users receive separate time slots.
+
+## CDMA
+
+**Code Division Multiple Access**
+
+Users share frequency/time resources using different codes.
+
+### Easy Memory
+
+**FDMA → Frequency**
+
+**TDMA → Time**
+
+**CDMA → Code**
+
+---
+
+# 69. Network Devices
+
+## Repeater
+
+Regenerates or repeats signals.
+
+## Hub
+
+A multiport repeater.
+
+## Bridge
+
+Connects network segments at the Data Link layer.
+
+## Switch
+
+Usually a multiport bridge that forwards frames using MAC addresses.
+
+## Router
+
+Forwards packets between networks.
+
+## Gateway
+
+Connects networks or systems and may translate between protocols.
+
+## Access Point
+
+Provides wireless network connectivity to stations.
+
+## Modem
+
+Performs modulation/demodulation functions for suitable communication links.
+
+---
+
+# 70. Backbone Networks
+
+A backbone is a high-capacity network segment connecting smaller networks.
+
+Examples:
+
+- Campus backbone
+- Enterprise backbone
+- Internet backbone
+
+---
+
+# 71. Virtual LAN
+
+**VLAN = Virtual Local Area Network**
+
+A VLAN logically divides a switched network into separate broadcast domains.
+
+Benefits:
+
+- Segmentation
+- Easier management
+- Reduced broadcast scope
+- Potential security improvement
+
+---
+
+# 72. IPv4 Structure
+
+IPv4 uses:
+
+**32-bit addresses**
+
+Example:
+
+```text
+192.168.1.10
+```
+
+IPv4 addresses are commonly written as four decimal octets.
+
+Each octet ranges from:
+
+**0 to 255**
+
+---
+
+# 73. IPv4 Address Space
+
+IPv4 has:
+
+**2^32**
+
+possible 32-bit address combinations.
+
+This is approximately:
+
+**4.29 billion**
+
+addresses, although many are reserved or unavailable for general host assignment.
+
+---
+
+# 74. Classful Addressing
+
+Traditional classful addressing used:
+
+| Class | First Octet | Default Prefix |
+|---|---|---|
+| A | 1–126 | /8 |
+| B | 128–191 | /16 |
+| C | 192–223 | /24 |
+| D | 224–239 | Multicast |
+| E | 240–255 | Experimental/reserved |
+
+Special ranges such as 0.x.x.x and 127.x.x.x have special purposes.
+
+---
+
+# 75. Classless Addressing
+
+**CIDR = Classless Inter-Domain Routing**
+
+Example:
+
+```text
+192.168.1.0/24
+```
+
+The `/24` means:
+
+**24 bits are the network prefix.**
+
+CIDR allows flexible address allocation and route aggregation.
+
+---
+
+# 76. IPv4 Datagram
+
+Important IPv4 header fields include:
+
+- Version
+- IHL
+- Total Length
+- Identification
+- Flags
+- Fragment Offset
+- TTL
+- Protocol
+- Header Checksum
+- Source Address
+- Destination Address
+
+---
+
+# 77. IPv4 Fragmentation
+
+Fragmentation can occur when an IPv4 packet is larger than the MTU of the outgoing link.
+
+Important fields:
+
+- Identification
+- Flags
+- Fragment Offset
+
+The destination can reassemble fragments.
+
+### Important
+
+IPv4 routers may fragment packets when allowed.
+
+IPv6 routers do not fragment transit packets; fragmentation is handled by the source using an extension header.
+
+---
+
+# 78. IPv4 Checksum
+
+IPv4 has a checksum in its base header.
+
+It protects the IPv4 header.
+
+The checksum must be recalculated when relevant header fields change during forwarding.
+
+---
+
+# 79. IPv6
+
+IPv6 uses:
+
+**128-bit addresses**
+
+Example:
+
+```text
+2001:db8::1
+```
+
+IPv6 provides a much larger address space.
+
+---
+
+# 80. IPv6 Packet Format
+
+Important base-header fields:
+
+- Version
+- Traffic Class
+- Flow Label
+- Payload Length
+- Next Header
+- Hop Limit
+- Source Address
+- Destination Address
+
+IPv6 has:
+
+- 128-bit addresses
+- Extension headers
+- No checksum in the base header
+
+---
+
+# 81. ARP
+
+**ARP = Address Resolution Protocol**
+
+ARP maps an IPv4 address to a MAC address on a local network.
+
+Example:
+
+```text
+IPv4 address → MAC address
+```
+
+A host can broadcast an ARP request asking which device owns a particular IPv4 address.
+
+### Important
+
+ARP is used with IPv4.
+
+IPv6 uses **Neighbor Discovery Protocol (NDP)** instead of ARP.
+
+---
+
+# 82. Direct and Indirect Delivery
+
+## Direct Delivery
+
+Source and destination are on the same local network.
+
+## Indirect Delivery
+
+Source and destination are on different networks.
+
+The packet is sent to a router/default gateway for forwarding.
+
+---
+
+# 83. Routing Algorithms
+
+Routing determines appropriate paths through a network.
+
+Routing metrics may include:
+
+- Hop count
+- Delay
+- Cost
+- Bandwidth
+- Reliability
+
+Important approaches:
+
+- Distance vector
+- Link state
+- Path vector
+
+---
+
+# 84. Distance Vector Routing
+
+Routers exchange distance information with neighbors.
+
+A router maintains information about reachable destinations and their costs.
+
+Example:
+
+**RIP**
+
+---
+
+# 85. Link State Routing
+
+Routers build a view of network topology.
+
+Typical steps:
+
+1. Discover neighbors.
+2. Determine link costs.
+3. Advertise link-state information.
+4. Build topology database.
+5. Calculate shortest paths.
+
+Example:
+
+**OSPF**
+
+---
+
+# 86. Path Vector Routing
+
+Path-vector protocols advertise paths between networks.
+
+Example:
+
+**BGP**
+
+BGP is used for routing between autonomous systems on the Internet.
+
+---
+
+# 87. TCP
+
+**TCP = Transmission Control Protocol**
+
+TCP is:
+
+- Connection-oriented
+- Reliable
+- Byte-stream oriented
+- Full-duplex
+- Flow-controlled
+- Congestion-controlled
+
+TCP uses:
+
+- Sequence numbers
+- Acknowledgements
+- Retransmissions
+- Sliding windows
+
+---
+
+# 88. UDP
+
+**UDP = User Datagram Protocol**
+
+UDP is:
+
+- Connectionless
+- Datagram-oriented
+- Low overhead
+- Best-effort
+- Without TCP-style built-in reliable delivery
+
+Examples of applications that may use UDP include:
+
+- DNS
+- Real-time applications
+- Streaming/control applications
+
+---
+
+# 89. SCTP
+
+**SCTP = Stream Control Transmission Protocol**
+
+SCTP provides:
+
+- Reliable delivery
+- Message orientation
+- Multi-streaming
+- Multi-homing
+- Congestion control
+
+### Comparison
+
+| TCP | UDP | SCTP |
+|---|---|---|
+| Reliable | Best-effort | Reliable |
+| Byte stream | Datagram | Message-oriented |
+| Connection-oriented | Connectionless | Association-oriented |
+| Flow/congestion control | Minimal | Flow/congestion control |
+| Single byte-stream abstraction | No stream sequencing | Multiple streams |
+
+---
+
+# 90. TCP Flow Control
+
+TCP uses a receive window to prevent the sender from overwhelming the receiver.
+
+The receiver advertises the amount of additional data it can accept.
+
+---
+
+# 91. TCP Error Control
+
+TCP uses:
+
+- Sequence numbers
+- Acknowledgements
+- Checksum
+- Retransmission
+- Timers
+
+These mechanisms support reliable delivery.
+
+---
+
+# 92. TCP Congestion Control
+
+Congestion control attempts to prevent excessive network traffic.
+
+Important concepts:
+
+- Congestion window
+- Slow start
+- Congestion avoidance
+- Fast retransmit
+- Fast recovery
+
+---
+
+# 93. SCTP Flow, Error and Congestion Control
+
+SCTP also provides:
+
+- Reliable transmission
+- Acknowledgements
+- Retransmission
+- Flow control
+- Congestion control
+
+SCTP supports multiple independent streams within an association.
+
+---
+
+# 94. World Wide Web
+
+The **World Wide Web** is a distributed system of linked resources accessed through the Internet.
+
+Important components:
+
+- Web browser
+- Web server
+- URL
+- HTTP/HTTPS
+- DNS
+- HTML
+
+### Internet vs WWW
+
+**Internet = global network infrastructure**
+
+**WWW = web service operating over the Internet**
+
+---
+
+# 95. URL
+
+**URL = Uniform Resource Locator**
+
+Example:
+
+```text
+https://www.example.com/index.html
+```
+
+Parts may include:
+
+- Scheme: `https`
+- Host: `www.example.com`
+- Path: `/index.html`
+
+---
+
+# 96. DNS
+
+**DNS = Domain Name System**
+
+DNS provides name resolution.
+
+Example:
+
+```text
+www.example.com
+       ↓
+IP address
+```
+
+DNS also supports reverse name resolution.
+
+---
+
+# 97. DNS Resolution
+
+A simplified process is:
+
+```text
+Application
+    ↓
+Local DNS Resolver
+    ↓
+DNS hierarchy
+    ↓
+Authoritative server
+    ↓
+Answer
+```
+
+Forward lookup commonly maps:
+
+**Name → IP address**
+
+Reverse DNS can map:
+
+**IP address → Name**
+
+---
+
+# 98. Electronic Mail Architecture
+
+Important components include:
+
+- Mail User Agent
+- Mail Transfer Agent
+- Mail Delivery Agent
+- Mail server
+
+A simplified flow:
+
+```text
+Sender
+  ↓
+SMTP
+  ↓
+Mail Server
+  ↓
+SMTP
+  ↓
+Receiver Mail Server
+  ↓
+POP/IMAP
+  ↓
+Receiver
+```
+
+---
+
+# 99. SMTP
+
+**SMTP = Simple Mail Transfer Protocol**
+
+SMTP is mainly used for:
+
+- Sending email from client to server
+- Transferring email between mail servers
+
+---
+
+# 100. POP
+
+**POP = Post Office Protocol**
+
+POP3 is used to retrieve email.
+
+It is traditionally download-oriented.
+
+---
+
+# 101. IMAP
+
+**IMAP = Internet Message Access Protocol**
+
+IMAP allows clients to manage mailboxes stored on the server.
+
+It is useful when the same mailbox is accessed from multiple devices.
+
+### POP vs IMAP
+
+| POP | IMAP |
+|---|---|
+| Download-oriented | Server-based mailbox management |
+| Often simpler | Better multi-device synchronization |
+| Local retrieval | Remote mailbox access |
+
+---
+
+# 102. TELNET
+
+Telnet provides remote terminal access.
+
+Traditional Telnet is insecure because it does not provide strong encryption.
+
+Modern secure remote access commonly uses:
+
+**SSH**
+
+---
+
+# 103. FTP
+
+**FTP = File Transfer Protocol**
+
+FTP is used to transfer files.
+
+Traditional FTP uses separate control and data connections.
+
+FTP itself does not provide encryption.
+
+Secure alternatives include:
+
+- SFTP
+- FTPS
+
+---
+
+# 104. Network Security
+
+Network security protects:
+
+- Confidentiality
+- Integrity
+- Availability
+- Authentication
+
+Threats include:
+
+- Malware
+- Eavesdropping
+- Spoofing
+- Phishing
+- Denial-of-service
+- Unauthorized access
+
+---
+
+# 105. Malware
+
+**Malware = Malicious Software**
+
+Examples:
+
+- Virus
+- Worm
+- Trojan
+- Ransomware
+- Spyware
+- Rootkit
+
+### Virus
+
+Usually depends on a host or user execution mechanism for propagation.
+
+### Worm
+
+Can self-propagate through networks.
+
+### Trojan
+
+Malicious software disguised as legitimate software.
+
+### Ransomware
+
+Attempts to deny access to data or systems, often by encryption, and demands payment.
+
+---
+
+# 106. Cryptography
+
+Cryptography uses mathematical techniques to protect information.
+
+Goals include:
+
+- Confidentiality
+- Integrity
+- Authentication
+- Non-repudiation
+
+Two major categories:
+
+- Symmetric-key cryptography
+- Public-key cryptography
+
+---
+
+# 107. Secret-Key Algorithms
+
+In symmetric cryptography, a shared secret key is used for encryption and decryption.
+
+Examples:
+
+- AES
+- DES
+- 3DES
+
+### Advantage
+
+Fast.
+
+### Challenge
+
+Secure key distribution.
+
+---
+
+# 108. Public-Key Algorithms
+
+Public-key cryptography uses:
+
+- Public key
+- Private key
+
+Examples:
+
+- RSA
+- ECC
+
+The public key can be shared; the private key must remain secret.
+
+---
+
+# 109. Digital Signature
+
+A digital signature supports:
+
+- Authentication
+- Integrity
+- Non-repudiation properties
+
+A simplified process:
+
+```text
+Message
+   ↓
+Hash
+   ↓
+Private-key signing
+   ↓
+Signature
+```
+
+The receiver uses the corresponding public key to verify the signature.
+
+### Important
+
+Digital signatures are primarily for authenticity and integrity, not message secrecy.
+
+---
+
+# 110. Steganography
+
+Steganography hides the existence of information inside another medium.
+
+Examples:
+
+- Image
+- Audio
+- Video
+
+### Cryptography vs Steganography
+
+| Cryptography | Steganography |
+|---|---|
+| Hides meaning | Hides existence |
+| Produces ciphertext | Embeds data |
+| Message is transformed | Message may appear ordinary |
+
+---
+
+# 111. Virtual Private Network
+
+**VPN = Virtual Private Network**
+
+A VPN creates a protected communication channel over another network.
+
+Uses:
+
+- Secure remote access
+- Encryption
+- Authentication
+- Private network connectivity
+
+---
+
+# 112. Firewalls
+
+A firewall controls network traffic according to security rules.
+
+Types:
+
+- Packet filtering
+- Stateful firewall
+- Proxy/application firewall
+- Next-generation firewall
+
+Functions:
+
+- Allow
+- Block
+- Log
+- Filter traffic
+
+---
+
+# 113. Mobile Technology
+
+Mobile communication allows users and devices to communicate while moving.
+
+Important topics:
+
+- GSM
+- CDMA
+- Mobile computing
+- Mobile IP
+- GPRS
+- SMS
+- MANET
+- Wireless LAN
+- Cellular networks
+
+---
+
+# 114. GSM
+
+**GSM = Global System for Mobile Communications**
+
+GSM is a cellular communication standard.
+
+A simplified GSM architecture includes:
+
+- Mobile Station
+- Base Station Subsystem
+- Network and Switching Subsystem
+- Operations and Support Subsystem
+
+---
+
+# 115. GSM Services
+
+GSM supports:
+
+- Voice
+- SMS
+- Data services
+- Supplementary services
+
+---
+
+# 116. CDMA
+
+**CDMA = Code Division Multiple Access**
+
+Users share the same frequency resources using different spreading codes.
+
+CDMA is an important multiple-access technique in cellular communication.
+
+---
+
+# 117. Mobile Computing
+
+Mobile computing combines:
+
+- Mobile devices
+- Wireless communication
+- Mobile applications
+- Distributed services
+
+Challenges:
+
+- Limited battery
+- Variable bandwidth
+- Mobility
+- Intermittent connectivity
+- Security
+- Device limitations
+
+---
+
+# 118. Middleware
+
+Middleware provides services between applications and underlying systems.
+
+It can support:
+
+- Communication
+- Data management
+- Security
+- Service discovery
+- Adaptation
+
+---
+
+# 119. Gateway for Mobile Computing
+
+A gateway connects different networks or protocols.
+
+It may connect:
+
+- Mobile networks
+- Internet
+- Application services
+- Different communication technologies
+
+---
+
+# 120. Mobile IP
+
+Mobile IP allows a mobile node to maintain a stable logical identity while changing its point of attachment.
+
+Important concepts:
+
+- Home network
+- Home address
+- Visited/foreign network
+- Care-of address
+- Home agent
+
+---
+
+# 121. Communication Satellites
+
+Communication satellites provide communication across large geographic areas.
+
+Important concepts:
+
+- Uplink
+- Downlink
+- Satellite transponder
+- Earth station
+
+### Advantages
+
+- Wide coverage
+- Useful for remote locations
+
+### Limitations
+
+- Propagation delay
+- Cost
+- Environmental effects at some frequencies
+
+---
+
+# 122. Wireless Networks and Topologies
+
+Wireless networks may use:
+
+- Infrastructure topology
+- Ad hoc topology
+- Mesh topology
+- Cellular topology
+
+---
+
+# 123. Cellular Topology
+
+A geographical region is divided into cells.
+
+Each cell has a base station.
+
+Frequency reuse allows frequencies to be reused in sufficiently separated cells.
+
+---
+
+# 124. Mobile Ad Hoc Network
+
+**MANET = Mobile Ad Hoc Network**
+
+A MANET is a self-organizing wireless network without fixed infrastructure.
+
+Characteristics:
+
+- Dynamic topology
+- Multi-hop communication
+- No fixed central infrastructure
+- Limited resources
+
+Challenges:
+
+- Routing
+- Security
+- Bandwidth
+- Battery power
+- Changing topology
+
+---
+
+# 125. Wireless LAN
+
+A Wireless LAN provides local-area connectivity using radio communication.
+
+The most common WLAN technology is:
+
+**Wi-Fi / IEEE 802.11**
+
+---
+
+# 126. Wireless Geolocation
+
+Wireless geolocation determines the location of a device.
+
+Methods include:
+
+- GPS
+- Cell tower information
+- Wi-Fi positioning
+- Signal strength
+- Time-based measurements
+
+Applications:
+
+- Navigation
+- Emergency services
+- Asset tracking
+- Location-based services
+
+---
+
+# 127. GPRS
+
+**GPRS = General Packet Radio Service**
+
+GPRS provides packet-oriented data services over GSM networks.
+
+It supported mobile Internet-style data communication.
+
+---
+
+# 128. SMS
+
+**SMS = Short Message Service**
+
+SMS is a mobile text messaging service.
+
+It is commonly described as a store-and-forward service.
+
+---
+
+# 129. Cloud Computing
+
+Cloud computing provides computing resources and services through a network.
+
+Resources may include:
+
+- Computing
+- Storage
+- Databases
+- Networking
+- Applications
+
+Important characteristics:
+
+- On-demand access
+- Resource pooling
+- Elasticity
+- Measured service
+- Broad network access
+
+---
+
+# 130. SaaS
+
+**SaaS = Software as a Service**
+
+The user consumes a software application as a service.
+
+Examples:
+
+- Web email
+- Online office software
+- Cloud business applications
+
+---
+
+# 131. PaaS
+
+**PaaS = Platform as a Service**
+
+Provides an application development/deployment platform.
+
+Developers can focus on:
+
+- Application code
+- Data
+- Configuration
+
+---
+
+# 132. IaaS
+
+**IaaS = Infrastructure as a Service**
+
+Provides infrastructure resources such as:
+
+- Virtual machines
+- Storage
+- Networks
+
+The customer commonly manages the operating system and applications.
+
+---
+
+# 133. Cloud Service Model Comparison
+
+| Model | Main Service |
+|---|---|
+| SaaS | Software |
+| PaaS | Platform |
+| IaaS | Infrastructure |
+
+### Memory
+
+**SaaS → Use software**
+
+**PaaS → Build/deploy software**
+
+**IaaS → Rent infrastructure**
+
+---
+
+# 134. Public and Private Cloud
+
+## Public Cloud
+
+Cloud services are offered to multiple customers by a provider.
+
+## Private Cloud
+
+Cloud infrastructure is dedicated to a particular organization.
+
+### Comparison
+
+| Public Cloud | Private Cloud |
+|---|---|
+| Provider-operated shared environment | Dedicated organizational environment |
+| High scalability | Greater organizational control |
+| Pay-as-you-use common | Organization manages dedicated resources |
+
+---
+
+# 135. Virtualization
+
+Virtualization creates logical versions of computing resources.
+
+Examples:
+
+- Virtual machines
+- Virtual networks
+- Virtual storage
+
+A **hypervisor** manages virtual machines.
+
+---
+
+# 136. Virtual Server
+
+A virtual server is a software-defined server running on virtualized infrastructure.
+
+Multiple virtual servers can run on one physical machine.
+
+Benefits:
+
+- Resource utilization
+- Isolation
+- Flexible deployment
+- Easier provisioning
+
+---
+
+# 137. Cloud Storage
+
+Cloud storage provides network-accessible storage.
+
+Types include:
+
+- Object storage
+- Block storage
+- File storage
+
+Advantages:
+
+- Scalability
+- Remote access
+- Backup
+- Availability
+
+---
+
+# 138. Database Storage in Cloud
+
+Cloud database services can provide:
+
+- Relational databases
+- NoSQL databases
+- Managed database services
+
+Advantages:
+
+- Scalability
+- Managed backup
+- High availability options
+- Reduced infrastructure administration
+
+---
+
+# 139. Resource Management
+
+Cloud resource management allocates:
+
+- CPU
+- Memory
+- Storage
+- Network
+- Virtual machines
+
+Goals:
+
+- Efficient utilization
+- Performance
+- Availability
+- Cost control
+
+---
+
+# 140. Service Level Agreement
+
+**SLA = Service Level Agreement**
+
+An SLA defines agreed service expectations between provider and customer.
+
+It may specify:
+
+- Availability
+- Response time
+- Performance
+- Support
+- Responsibilities
+- Remedies for service-level violations
+
+---
+
+# 141. Internet of Things
+
+**IoT = Internet of Things**
+
+IoT connects physical objects to networks so that they can collect, exchange, process and act on data.
+
+Examples:
+
+- Smart homes
+- Smart agriculture
+- Wearables
+- Industrial sensors
+- Smart cities
+
+---
+
+# 142. Basic IoT Architecture
+
+A simplified architecture is:
+
+```text
+Sensors / Devices
+       ↓
+Connectivity
+       ↓
+Gateway / Edge
+       ↓
+Cloud / Server
+       ↓
+Data Processing
+       ↓
+Application
+```
+
+Important components:
+
+- Sensors
+- Actuators
+- Embedded processors
+- Communication modules
+- Gateways
+- Cloud platforms
+- Applications
+
+---
+
+# 143. Sensors and Actuators
+
+## Sensor
+
+A sensor measures a physical condition.
+
+Examples:
+
+- Temperature
+- Humidity
+- Motion
+- Light
+
+## Actuator
+
+An actuator performs an action.
+
+Examples:
+
+- Motor
+- Relay
+- Smart lock
+
+### Memory
+
+**Sensor → Sense**
+
+**Actuator → Act**
+
+---
+
+# 144. IoT Communication Technologies
+
+IoT devices may use:
+
+- Wi-Fi
+- Bluetooth
+- Zigbee
+- Cellular
+- LPWAN
+- Ethernet
+
+Selection depends on:
+
+- Range
+- Power consumption
+- Data rate
+- Cost
+- Environment
+
+---
+
+# 145. Important Protocol Associations
+
+| Protocol/Technology | Main Purpose |
+|---|---|
+| HTTP/HTTPS | Web communication |
+| DNS | Name resolution |
+| SMTP | Email transfer |
+| POP3 | Email retrieval |
+| IMAP | Mailbox access |
+| FTP | File transfer |
+| Telnet | Remote terminal |
+| TCP | Reliable transport |
+| UDP | Connectionless datagrams |
+| SCTP | Reliable message-oriented transport |
+| IP | Network-layer delivery |
+| ARP | IPv4-to-MAC mapping |
+| Ethernet | LAN |
+| Wi-Fi | Wireless LAN |
+| GSM | Cellular communication |
+| GPRS | Packet data over GSM |
+| SMS | Mobile text messaging |
+
+---
+
+# 146. Common Port Numbers
+
+| Service | Common Port |
+|---|---:|
+| FTP control | 21 |
+| SSH | 22 |
+| Telnet | 23 |
+| SMTP | 25 |
+| DNS | 53 |
+| HTTP | 80 |
+| POP3 | 110 |
+| IMAP | 143 |
+| HTTPS | 443 |
+
+These are common examination facts.
+
+---
+
+# 147. Important Comparisons
+
+## Simplex vs Half-Duplex vs Full-Duplex
+
+| Simplex | Half-Duplex | Full-Duplex |
+|---|---|---|
+| One direction | Both directions | Both directions |
+| No reverse communication | One direction at a time | Simultaneous |
+
+## Bandwidth vs Throughput vs Latency
+
+| Term | Meaning |
+|---|---|
+| Bandwidth | Frequency range/capacity measure depending on context |
+| Throughput | Actual successful transfer rate |
+| Latency | Delay |
+
+## TCP vs UDP
+
+| TCP | UDP |
+|---|---|
+| Connection-oriented | Connectionless |
+| Reliable | Best-effort |
+| Ordered byte stream | Datagram |
+| More overhead | Lower overhead |
+
+## IPv4 vs IPv6
+
+| IPv4 | IPv6 |
+|---|---|
+| 32-bit | 128-bit |
+| Dotted decimal | Hexadecimal |
+| Header checksum | No base-header checksum |
+| ARP | NDP |
+
+---
+
+# 148. Important Numerical Formulas
+
+## Bandwidth
+
+**Bandwidth = Highest frequency − Lowest frequency**
+
+## Frequency
+
+**f = 1/T**
+
+## Wavelength
+
+**λ = v/f**
+
+## Transmission Delay
+
+**Transmission delay = Packet size ÷ Data rate**
+
+## Propagation Delay
+
+**Propagation delay = Distance ÷ Propagation speed**
+
+## Nyquist
+
+**Bit Rate = 2 × Bandwidth × log₂(L)**
+
+## Shannon
+
+**Capacity = Bandwidth × log₂(1 + S/N)**
+
+## SNR
+
+**SNR(dB) = 10 × log₁₀(S/N)**
+
+## Full Mesh
+
+**Number of links = n(n − 1) ÷ 2**
+
+## IPv4
+
+**Address combinations = 2^32**
+
+## IPv6
+
+**Address combinations = 2^128**
+
+---
+
+# 149. UGC NET High-Priority Topics
+
+Focus strongly on:
+
+1. Simplex, half-duplex and full-duplex
+2. Analog and digital signals
+3. Bandwidth
+4. Throughput
+5. Latency
+6. Nyquist theorem
+7. Shannon capacity
+8. Transmission and propagation delay
+9. Encoding
+10. ASK, FSK, PSK and QAM
+11. Baseband and broadband
+12. FDM, TDM, WDM and CDM
+13. Transmission media
+14. Transmission errors
+15. CRC
+16. Network topologies
+17. LAN, MAN and WAN
+18. OSI model
+19. TCP/IP
+20. Network addresses
+21. Circuit and packet switching
+22. Framing
+23. Flow and error control
+24. Sliding window
+25. HDLC
+26. CSMA/CD
+27. CSMA/CA
+28. FDMA, TDMA and CDMA
+29. Network devices
+30. VLAN
+31. IPv4
+32. Classful addressing
+33. CIDR
+34. IPv4 fragmentation
+35. IPv4 checksum
+36. IPv6
+37. ARP
+38. Routing
+39. TCP
+40. UDP
+41. SCTP
+42. TCP congestion control
+43. DNS
+44. SMTP, POP and IMAP
+45. FTP
+46. Telnet
+47. Cryptography
+48. Digital signature
+49. Steganography
+50. VPN
+51. Firewalls
+52. GSM
+53. CDMA
+54. Mobile IP
+55. MANET
+56. GPRS
+57. SMS
+58. SaaS
+59. PaaS
+60. IaaS
+61. Virtualization
+62. SLA
+63. IoT
+
+---
+
+# 150. Common UGC NET Mistakes
+
+### Mistake 1: Bandwidth vs Throughput
+
+**Bandwidth/capacity ≠ actual throughput**
+
+### Mistake 2: Transmission vs Propagation Delay
+
+**Transmission delay = Packet size ÷ Data rate**
+
+**Propagation delay = Distance ÷ Propagation speed**
+
+### Mistake 3: Nyquist vs Shannon
+
+**Nyquist → noiseless**
+
+**Shannon → noisy**
+
+### Mistake 4: MAC vs IP
+
+**MAC → link-layer address**
+
+**IP → logical/network-layer address**
+
+### Mistake 5: ARP vs DNS
+
+**ARP → IPv4 address to MAC address**
+
+**DNS → domain name resolution**
+
+### Mistake 6: TCP vs UDP
+
+**TCP → reliable, connection-oriented**
+
+**UDP → connectionless, best-effort**
+
+### Mistake 7: CSMA/CD vs CSMA/CA
+
+**CSMA/CD → collision detection, shared Ethernet**
+
+**CSMA/CA → collision avoidance, Wi-Fi**
+
+### Mistake 8: FDM vs TDM vs CDM
+
+**FDM → Frequency**
+
+**TDM → Time**
+
+**CDM → Code**
+
+### Mistake 9: SMTP vs POP vs IMAP
+
+**SMTP → sending/transfer**
+
+**POP3 → retrieval**
+
+**IMAP → server-based mailbox access**
+
+### Mistake 10: SaaS vs PaaS vs IaaS
+
+**SaaS → Software**
+
+**PaaS → Platform**
+
+**IaaS → Infrastructure**
+
+---
+
+# 151. One-Minute Revision
+
+## Data Communication
+
+**Sender + Receiver + Message + Medium + Protocol**
+
+**Simplex → one-way**
+
+**Half-duplex → two-way, one at a time**
+
+**Full-duplex → two-way simultaneously**
+
+## Signals
+
+**Analog → continuous**
+
+**Digital → discrete**
+
+## Channel
+
+**Nyquist → noiseless**
+
+**Shannon → noisy**
+
+## Multiplexing
+
+**FDM → Frequency**
+
+**TDM → Time**
+
+**WDM → Wavelength**
+
+**CDM → Code**
+
+## OSI
+
+**Application**
+
+**Presentation**
+
+**Session**
+
+**Transport**
+
+**Network**
+
+**Data Link**
+
+**Physical**
+
+## Addressing
+
+**MAC → Physical/link address**
+
+**IP → Logical address**
+
+**Port → Process/service**
+
+**URL/Email → Application-level identifier**
+
+## Transport
+
+**TCP → Reliable**
+
+**UDP → Connectionless**
+
+**SCTP → Reliable message-oriented transport**
+
+## Network
+
+**IPv4 → 32-bit**
+
+**IPv6 → 128-bit**
+
+**ARP → IPv4-to-MAC**
+
+**Routing → Path selection**
+
+## Internet
+
+**DNS → Name resolution**
+
+**SMTP → Email transfer**
+
+**POP3 → Email retrieval**
+
+**IMAP → Mailbox access**
+
+**FTP → File transfer**
+
+**Telnet → Remote terminal**
+
+## Security
+
+**Symmetric → Shared secret**
+
+**Public-key → Public/private pair**
+
+**Digital signature → Authentication/integrity**
+
+**Steganography → Hide existence**
+
+**VPN → Protected communication**
+
+**Firewall → Traffic control**
+
+## Cloud
+
+**SaaS → Software**
+
+**PaaS → Platform**
+
+**IaaS → Infrastructure**
+
+## IoT
+
+**Sensor → Sense**
+
+**Actuator → Act**
+
+---
+
+# 152. Final Exam Strategy
+
+Study this unit in six blocks.
+
+## Block 1: Data Communication
+
+Practice:
+
+- Signals
+- Bandwidth
+- Throughput
+- Latency
+- Nyquist
+- Shannon
+- Encoding
+- Modulation
+- Multiplexing
+- Transmission media
+- Error detection
+
+## Block 2: Network Models
+
+Practice:
+
+- OSI
+- TCP/IP
+- Protocol mapping
+- Addressing
+- Switching
+- Network devices
+
+## Block 3: Data Link
+
+Practice:
+
+- Framing
+- Flow control
+- Error control
+- Sliding window
+- HDLC
+- CSMA/CD
+- CSMA/CA
+- FDMA
+- TDMA
+- CDMA
+
+## Block 4: Network and Transport
+
+Practice:
+
+- IPv4
+- Classful/classless addressing
+- CIDR
+- Fragmentation
+- IPv6
+- ARP
+- Routing
+- TCP
+- UDP
+- SCTP
+- Congestion control
+
+## Block 5: Internet and Security
+
+Practice:
+
+- URL
+- DNS
+- SMTP
+- POP
+- IMAP
+- FTP
+- Telnet
+- Malware
+- Cryptography
+- Digital signatures
+- Steganography
+- VPN
+- Firewalls
+
+## Block 6: Mobile, Cloud and IoT
+
+Practice:
+
+- GSM
+- CDMA
+- Mobile IP
+- MANET
+- GPRS
+- SMS
+- SaaS
+- PaaS
+- IaaS
+- Virtualization
+- SLA
+- IoT
+
+---
+
+# 153. Final Summary
+
+Data Communication and Computer Networks explains how information moves between computing devices.
+
+Remember the overall flow:
+
+**Data → Signal → Medium → Network → Protocol → Application**
+
+Important relationships:
+
+**Simplex → One-way**
+
+**Half-duplex → Two-way, one at a time**
+
+**Full-duplex → Two-way simultaneously**
+
+**Nyquist → Noiseless channel**
+
+**Shannon → Noisy channel**
+
+**FDM → Frequency**
+
+**TDM → Time**
+
+**WDM → Wavelength**
+
+**CDM → Code**
+
+**OSI → 7 layers**
+
+**TCP/IP → Practical protocol suite**
+
+**MAC → Link-layer addressing**
+
+**IP → Logical addressing**
+
+**Port → Process/service**
+
+**TCP → Reliable transport**
+
+**UDP → Connectionless datagrams**
+
+**SCTP → Reliable message-oriented transport**
+
+**IPv4 → 32-bit**
+
+**IPv6 → 128-bit**
+
+**ARP → IPv4 address to MAC**
+
+**DNS → Name resolution**
+
+**SMTP → Mail transfer**
+
+**POP3 → Mail retrieval**
+
+**IMAP → Mailbox access**
+
+**SaaS → Software**
+
+**PaaS → Platform**
+
+**IaaS → Infrastructure**
+
+**IoT → Connected physical objects**
+
+For numerical UGC NET questions, especially practice:
+
+**Nyquist → Shannon → transmission delay → propagation delay → IPv4/CIDR calculations → sliding-window calculations.**

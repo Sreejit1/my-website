@@ -1,0 +1,52 @@
+/* Main page heading */
+h1 {
+  color: #4B0082;
+  font-weight: bold;
+}
+
+/* Unit headings */
+h2 {
+  color: #1565C0;
+  border-left: 6px solid #FF9800;
+  padding-left: 10px;
+}
+
+/* Sub headings */
+h3 {
+  color: #00897B;
+}
+
+/* Bold syllabus terms */
+strong {
+  color: #D81B60;
+}
+
+/* Tables */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #4B0082;
+  color: white;
+}
+
+/* Code blocks */
+pre {
+  border-left: 5px solid #FF9800;
+}
+
+/* Sidebar */
+.sidebar-title {
+  font-weight: bold;
+}
+
+/* Links */
+a {
+  color: #1565C0;
+}
+
+a:hover {
+  color: #D81B60;
+}

@@ -1,0 +1,2258 @@
+---
+title: "Unit I – Discrete Structures and Optimization"
+subtitle: "UGC NET Computer Science and Applications – Paper 2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    code-fold: true
+---
+
+
+## 1. Introduction
+
+Discrete Structures is a mathematical foundation of Computer Science. It deals mainly with objects that are separate, countable, and finite or countably infinite.
+
+The major areas in this unit are:
+
+- Mathematical Logic
+- Sets and Relations
+- Counting
+- Mathematical Induction
+- Discrete Probability
+- Group Theory
+- Graph Theory
+- Boolean Algebra
+- Optimization
+
+These concepts are used in algorithms, data structures, databases, computer networks, artificial intelligence, cryptography, digital circuits, and operations research.
+
+---
+
+# 2. Mathematical Logic
+
+## 2.1 What is Logic?
+
+Logic is the systematic study of valid reasoning.
+
+In Computer Science, logic is used in:
+
+- Program verification
+- Artificial intelligence
+- Database queries
+- Digital circuits
+- Automated reasoning
+- Knowledge representation
+
+---
+
+## 2.2 Proposition
+
+A proposition is a declarative sentence that is either **True (T)** or **False (F)**, but not both.
+
+### Examples
+
+- "5 is greater than 3." → True
+- "10 is an odd number." → False
+- "India is in Asia." → True
+
+### Not propositions
+
+- "Close the door." → Command
+- "What is your name?" → Question
+- "x + 2 = 5" → Depends on x
+
+---
+
+## 2.3 Simple and Compound Propositions
+
+A **simple proposition** cannot be divided into smaller propositions.
+
+Example:
+
+> p: It is raining.
+
+A **compound proposition** is formed by combining propositions.
+
+Example:
+
+> p: It is raining.  
+> q: The road is wet.
+
+Then:
+
+**p ∧ q**
+
+means:
+
+> It is raining AND the road is wet.
+
+---
+
+# 3. Logical Connectives
+
+| Symbol | Name | Meaning |
+|---|---|---|
+| ¬p | NOT | Negation |
+| p ∧ q | AND | Both are true |
+| p ∨ q | OR | At least one is true |
+| p → q | Implication | If p, then q |
+| p ↔ q | Biconditional | p if and only if q |
+
+## 3.1 NOT
+
+| p | ¬p |
+|---|---|
+| T | F |
+| F | T |
+
+---
+
+## 3.2 AND
+
+p ∧ q is true only when both are true.
+
+| p | q | p ∧ q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | F |
+
+**Memory:** AND means **both**.
+
+---
+
+## 3.3 OR
+
+p ∨ q is false only when both are false.
+
+| p | q | p ∨ q |
+|---|---|---|
+| T | T | T |
+| T | F | T |
+| F | T | T |
+| F | F | F |
+
+**Memory:** OR means **at least one**.
+
+---
+
+## 3.4 Implication
+
+p → q means "If p, then q."
+
+It is false only when p is true and q is false.
+
+| p | q | p → q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | T |
+| F | F | T |
+
+Important equivalence:
+
+**p → q ≡ ¬p ∨ q**
+
+---
+
+## 3.5 Biconditional
+
+p ↔ q means "p if and only if q."
+
+It is true when p and q have the same truth value.
+
+| p | q | p ↔ q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | T |
+
+---
+
+# 4. Truth Tables
+
+A truth table lists all possible truth-value combinations.
+
+For n propositions:
+
+**Number of rows = 2^n**
+
+Examples:
+
+- 1 proposition → 2 rows
+- 2 propositions → 4 rows
+- 3 propositions → 8 rows
+- 4 propositions → 16 rows
+
+---
+
+# 5. Tautology, Contradiction and Contingency
+
+## Tautology
+
+A proposition that is always true.
+
+Example:
+
+**p ∨ ¬p**
+
+## Contradiction
+
+A proposition that is always false.
+
+Example:
+
+**p ∧ ¬p**
+
+## Contingency
+
+A proposition that is sometimes true and sometimes false.
+
+Example:
+
+**p ∧ q**
+
+---
+
+# 6. Propositional Equivalences
+
+Two propositions are logically equivalent if they have the same truth value for every possible assignment.
+
+Notation:
+
+**p ≡ q**
+
+## Important laws
+
+### Double Negation
+
+**¬(¬p) ≡ p**
+
+### Identity
+
+**p ∧ T ≡ p**
+
+**p ∨ F ≡ p**
+
+### Domination
+
+**p ∨ T ≡ T**
+
+**p ∧ F ≡ F**
+
+### Idempotent
+
+**p ∨ p ≡ p**
+
+**p ∧ p ≡ p**
+
+### Complement
+
+**p ∨ ¬p ≡ T**
+
+**p ∧ ¬p ≡ F**
+
+### Commutative
+
+**p ∨ q ≡ q ∨ p**
+
+**p ∧ q ≡ q ∧ p**
+
+### Associative
+
+**(p ∨ q) ∨ r ≡ p ∨ (q ∨ r)**
+
+**(p ∧ q) ∧ r ≡ p ∧ (q ∧ r)**
+
+### Distributive
+
+**p ∨ (q ∧ r) ≡ (p ∨ q) ∧ (p ∨ r)**
+
+**p ∧ (q ∨ r) ≡ (p ∧ q) ∨ (p ∧ r)**
+
+### Absorption
+
+**p ∨ (p ∧ q) ≡ p**
+
+**p ∧ (p ∨ q) ≡ p**
+
+---
+
+# 7. De Morgan's Laws
+
+The two important laws are:
+
+**¬(p ∧ q) ≡ ¬p ∨ ¬q**
+
+**¬(p ∨ q) ≡ ¬p ∧ ¬q**
+
+### Easy memory
+
+When NOT enters brackets:
+
+- AND becomes OR
+- OR becomes AND
+- Every proposition is negated
+
+---
+
+# 8. Normal Forms
+
+Normal forms provide standard representations of logical expressions.
+
+Important forms:
+
+- DNF
+- CNF
+- Principal DNF
+- Principal CNF
+
+## 8.1 Literal
+
+A literal is a variable or its complement.
+
+Examples:
+
+- p
+- ¬p
+- q
+- ¬q
+
+## 8.2 DNF
+
+DNF = **Disjunctive Normal Form**
+
+It is an OR of AND terms.
+
+Example:
+
+**(p ∧ q) ∨ (¬p ∧ r)**
+
+## 8.3 CNF
+
+CNF = **Conjunctive Normal Form**
+
+It is an AND of OR terms.
+
+Example:
+
+**(p ∨ q) ∧ (¬p ∨ r)**
+
+### Memory
+
+**DNF → OR of ANDs**
+
+**CNF → AND of ORs**
+
+---
+
+# 9. Predicates and Quantifiers
+
+## 9.1 Predicate
+
+A predicate contains variables and becomes a proposition when values are assigned.
+
+Example:
+
+**P(x): x > 5**
+
+If x = 7, P(7) is true.
+
+If x = 3, P(3) is false.
+
+---
+
+## 9.2 Universal Quantifier
+
+Symbol:
+
+**∀**
+
+Meaning:
+
+**For all**
+
+Example:
+
+**∀x P(x)**
+
+means P(x) is true for every x in the domain.
+
+---
+
+## 9.3 Existential Quantifier
+
+Symbol:
+
+**∃**
+
+Meaning:
+
+**There exists**
+
+Example:
+
+**∃x P(x)**
+
+means there is at least one x for which P(x) is true.
+
+---
+
+# 10. Negation of Quantifiers
+
+Important rules:
+
+**¬(∀x P(x)) ≡ ∃x ¬P(x)**
+
+**¬(∃x P(x)) ≡ ∀x ¬P(x)**
+
+### Memory
+
+When NOT crosses a quantifier:
+
+**∀ changes to ∃**
+
+**∃ changes to ∀**
+
+and the predicate is negated.
+
+---
+
+# 11. Nested Quantifiers
+
+A statement containing more than one quantifier has nested quantifiers.
+
+Compare:
+
+**∀x ∃y P(x,y)**
+
+with:
+
+**∃y ∀x P(x,y)**
+
+The first means:
+
+> For every x, there can be a suitable y.
+
+The second means:
+
+> There is one particular y that works for every x.
+
+They are generally not equivalent.
+
+### UGC NET Point
+
+**The order of quantifiers matters.**
+
+---
+
+# 12. Rules of Inference
+
+Rules of inference are valid patterns of reasoning.
+
+## Modus Ponens
+
+p → q
+
+p
+
+Therefore:
+
+q
+
+## Modus Tollens
+
+p → q
+
+¬q
+
+Therefore:
+
+¬p
+
+## Hypothetical Syllogism
+
+p → q
+
+q → r
+
+Therefore:
+
+p → r
+
+## Disjunctive Syllogism
+
+p ∨ q
+
+¬p
+
+Therefore:
+
+q
+
+---
+
+# 13. Sets
+
+A set is a well-defined collection of distinct objects.
+
+Example:
+
+**A = {1, 2, 3, 4}**
+
+The objects are called elements.
+
+---
+
+# 14. Representation of Sets
+
+## Roster Form
+
+Elements are explicitly listed.
+
+**A = {2, 4, 6, 8}**
+
+## Set-builder Form
+
+A property is specified.
+
+**A = {x | x is an even positive integer less than 10}**
+
+---
+
+# 15. Types of Sets
+
+### Empty Set
+
+Contains no elements.
+
+**∅**
+
+### Singleton Set
+
+Contains exactly one element.
+
+Example:
+
+**{5}**
+
+### Finite Set
+
+Contains a finite number of elements.
+
+### Infinite Set
+
+Contains infinitely many elements.
+
+### Universal Set
+
+Contains all objects under consideration.
+
+---
+
+# 16. Subsets
+
+A is a subset of B if every element of A is also an element of B.
+
+Notation:
+
+**A ⊆ B**
+
+Example:
+
+A = {1,2}
+
+B = {1,2,3}
+
+Therefore:
+
+**A ⊆ B**
+
+---
+
+# 17. Power Set
+
+The power set is the set of all subsets.
+
+If:
+
+**A = {a,b}**
+
+then:
+
+**P(A) = {∅, {a}, {b}, {a,b}}**
+
+For a set containing n elements:
+
+**Number of subsets = 2^n**
+
+---
+
+# 18. Set Operations
+
+## Union
+
+**A ∪ B**
+
+Elements in A or B or both.
+
+## Intersection
+
+**A ∩ B**
+
+Elements common to A and B.
+
+## Difference
+
+**A − B**
+
+Elements in A but not B.
+
+## Complement
+
+**A'**
+
+Elements in the universal set but not in A.
+
+---
+
+# 19. Inclusion-Exclusion for Two Sets
+
+**|A ∪ B| = |A| + |B| − |A ∩ B|**
+
+The intersection is subtracted because it was counted twice.
+
+---
+
+# 20. Relations
+
+A relation R from A to B is a subset of the Cartesian product:
+
+**A × B**
+
+The Cartesian product contains ordered pairs.
+
+If:
+
+A = {1,2}
+
+B = {a,b}
+
+then:
+
+**A × B = {(1,a),(1,b),(2,a),(2,b)}**
+
+---
+
+# 21. Properties of Relations
+
+## Reflexive
+
+For every a:
+
+**aRa**
+
+## Symmetric
+
+If:
+
+**aRb**
+
+then:
+
+**bRa**
+
+## Antisymmetric
+
+If:
+
+**aRb and bRa**
+
+then:
+
+**a = b**
+
+## Transitive
+
+If:
+
+**aRb and bRc**
+
+then:
+
+**aRc**
+
+---
+
+# 22. Equivalence Relations
+
+A relation is an equivalence relation if it is:
+
+1. Reflexive
+2. Symmetric
+3. Transitive
+
+**Memory: RST**
+
+Equivalence relations divide a set into equivalence classes.
+
+---
+
+# 23. Partial Ordering
+
+A partial order is:
+
+1. Reflexive
+2. Antisymmetric
+3. Transitive
+
+**Memory: RAT**
+
+A set together with a partial order is called a:
+
+**Partially Ordered Set (Poset)**
+
+---
+
+# 24. Counting
+
+Counting is fundamental to discrete mathematics.
+
+## Addition Principle
+
+If one choice can be made in m ways and another mutually exclusive choice in n ways:
+
+**Total = m + n**
+
+## Multiplication Principle
+
+If one step can be performed in m ways and the next in n ways:
+
+**Total = m × n**
+
+---
+
+# 25. Pigeonhole Principle
+
+If more than n objects are placed into n boxes, at least one box contains at least two objects.
+
+### Example
+
+13 people and 12 months:
+
+At least two people have birthdays in the same month.
+
+---
+
+# 26. Generalized Pigeonhole Principle
+
+If N objects are placed into k boxes, at least one box contains at least:
+
+**ceil(N/k)**
+
+objects.
+
+Example:
+
+100 objects in 9 boxes:
+
+**ceil(100/9) = 12**
+
+So at least one box contains 12 objects.
+
+---
+
+# 27. Factorial
+
+**n! = n × (n−1) × ... × 2 × 1**
+
+Also:
+
+**0! = 1**
+
+Example:
+
+**5! = 120**
+
+---
+
+# 28. Permutations
+
+Permutation means arrangement where order matters.
+
+Formula:
+
+**nPr = n! / (n−r)!**
+
+Example:
+
+Arrange 3 students from 5:
+
+**5P3 = 5! / 2! = 60**
+
+### Memory
+
+**Permutation → Position matters**
+
+---
+
+# 29. Combinations
+
+Combination means selection where order does not matter.
+
+Formula:
+
+**nCr = n! / [r!(n−r)!]**
+
+Example:
+
+Select 3 students from 5:
+
+**5C3 = 10**
+
+### Memory
+
+**Combination → Choose**
+
+---
+
+# 30. Inclusion-Exclusion Principle
+
+For three sets:
+
+**|A ∪ B ∪ C| = |A| + |B| + |C| − |A∩B| − |B∩C| − |A∩C| + |A∩B∩C|**
+
+Pattern:
+
+**Add singles → subtract pairs → add triple**
+
+---
+
+# 31. Mathematical Induction
+
+Mathematical induction proves statements for positive integers.
+
+## Step 1: Base Case
+
+Prove P(1).
+
+## Step 2: Induction Hypothesis
+
+Assume P(k) is true.
+
+## Step 3: Inductive Step
+
+Use P(k) to prove P(k+1).
+
+Therefore P(n) is true for all relevant positive integers.
+
+---
+
+# 32. Strong Induction
+
+Strong induction assumes:
+
+**P(1), P(2), ..., P(k)**
+
+and then proves:
+
+**P(k+1)**
+
+Ordinary induction normally assumes only P(k).
+
+---
+
+# 33. Discrete Probability
+
+For equally likely outcomes:
+
+**P(A) = Favorable outcomes / Total outcomes**
+
+Probability is between:
+
+**0 and 1**
+
+---
+
+# 34. Probability Rules
+
+## Complement
+
+**P(A') = 1 − P(A)**
+
+## Addition
+
+**P(A ∪ B) = P(A) + P(B) − P(A ∩ B)**
+
+For mutually exclusive events:
+
+**P(A ∪ B) = P(A) + P(B)**
+
+## Conditional Probability
+
+**P(A|B) = P(A ∩ B) / P(B)**
+
+---
+
+# 35. Independent Events
+
+A and B are independent when:
+
+**P(A ∩ B) = P(A)P(B)**
+
+Equivalently, when defined:
+
+**P(A|B) = P(A)**
+
+Do not confuse independence with mutual exclusivity.
+
+---
+
+# 36. Bayes' Theorem
+
+Bayes' theorem updates the probability of a hypothesis after evidence is observed.
+
+**P(A|B) = P(B|A)P(A) / P(B)**
+
+Terms:
+
+- P(A) = Prior
+- P(B|A) = Likelihood
+- P(A|B) = Posterior
+- P(B) = Evidence
+
+---
+
+# 37. Group Theory
+
+Group theory studies algebraic structures.
+
+Applications include:
+
+- Cryptography
+- Coding theory
+- Symmetry
+- Error correction
+- Computer graphics
+- Algebraic algorithms
+
+---
+
+# 38. Binary Operation
+
+A binary operation combines two elements of a set and produces an element of the same set.
+
+This gives the property of closure.
+
+Example:
+
+Integers are closed under addition.
+
+---
+
+# 39. Group
+
+A set G with operation * is a group if it satisfies:
+
+1. Closure
+2. Associativity
+3. Identity
+4. Inverse
+
+### Closure
+
+**a*b ∈ G**
+
+### Associativity
+
+**(a*b)*c = a*(b*c)**
+
+### Identity
+
+There exists e such that:
+
+**a*e = e*a = a**
+
+### Inverse
+
+For each a, there exists a⁻¹ such that:
+
+**a*a⁻¹ = a⁻¹*a = e**
+
+---
+
+# 40. Abelian Group
+
+A group is Abelian if:
+
+**a*b = b*a**
+
+So:
+
+**Group + Commutativity = Abelian Group**
+
+---
+
+# 41. Subgroup
+
+A subset H of G is a subgroup if H forms a group under the same operation.
+
+Notation:
+
+**H ≤ G**
+
+---
+
+# 42. Semigroup and Monoid
+
+A semigroup has:
+
+**Closure + Associativity**
+
+A monoid has:
+
+**Closure + Associativity + Identity**
+
+A group has:
+
+**Closure + Associativity + Identity + Inverse**
+
+| Structure | Closure | Associative | Identity | Inverse |
+|---|---|---|---|---|
+| Semigroup | Yes | Yes | Not required | Not required |
+| Monoid | Yes | Yes | Yes | Not required |
+| Group | Yes | Yes | Yes | Yes |
+
+---
+
+# 43. Homomorphism
+
+A homomorphism preserves the operation.
+
+For groups:
+
+**f(a*b) = f(a)*f(b)**
+
+It need not be one-to-one or onto.
+
+---
+
+# 44. Isomorphism
+
+An isomorphism is a bijective homomorphism.
+
+It preserves the complete algebraic structure.
+
+**Isomorphism = Bijective + Homomorphism**
+
+---
+
+# 45. Automorphism
+
+An automorphism is an isomorphism from a structure to itself.
+
+**G → G**
+
+---
+
+# 46. Product and Quotient Structures
+
+The product of structures can be represented using ordered pairs.
+
+Example:
+
+**A × B**
+
+A quotient structure groups elements using an appropriate equivalence relation.
+
+For groups, a quotient group can be written:
+
+**G/N**
+
+where N is a normal subgroup.
+
+---
+
+# 47. Rings
+
+A ring has two operations, usually addition and multiplication.
+
+Typical properties include:
+
+- Addition forms an Abelian group
+- Multiplication is associative
+- Distributive laws hold
+
+Integers under ordinary addition and multiplication form a ring.
+
+---
+
+# 48. Integral Domain
+
+An integral domain is a commutative ring with identity and no zero divisors.
+
+A zero divisor is a non-zero element that multiplies with another non-zero element to give zero.
+
+---
+
+# 49. Field
+
+A field is a commutative ring with identity where every non-zero element has a multiplicative inverse.
+
+Examples:
+
+- Rational numbers
+- Real numbers
+- Complex numbers
+- Integers modulo p when p is prime
+
+Important relationship:
+
+**Field → Integral Domain**
+
+The reverse is not generally true.
+
+---
+
+# 50. Graph Theory
+
+A graph is represented as:
+
+**G = (V,E)**
+
+where:
+
+- V = vertices
+- E = edges
+
+Applications:
+
+- Networks
+- Routing
+- Social networks
+- Scheduling
+- Maps
+- Web pages
+
+---
+
+# 51. Simple Graph
+
+A simple graph has:
+
+- No loops
+- No multiple edges between the same pair of vertices
+
+---
+
+# 52. Multigraph
+
+A multigraph may contain multiple edges between the same pair of vertices.
+
+---
+
+# 53. Weighted Graph
+
+A weighted graph assigns values to edges.
+
+Weights can represent:
+
+- Distance
+- Cost
+- Time
+- Capacity
+
+---
+
+# 54. Degree and Handshaking Theorem
+
+The degree of a vertex is the number of incident edges.
+
+For an undirected graph:
+
+**Sum of degrees = 2 × number of edges**
+
+Therefore, the number of odd-degree vertices is always even.
+
+---
+
+# 55. Paths and Circuits
+
+A path is a sequence of connected vertices.
+
+Example:
+
+**A → B → C → D**
+
+A circuit is a closed path that starts and ends at the same vertex.
+
+---
+
+# 56. Eulerian Paths and Circuits
+
+An Eulerian path uses every edge exactly once.
+
+An Eulerian circuit uses every edge exactly once and returns to the starting vertex.
+
+For a connected undirected graph:
+
+### Eulerian circuit
+
+Every vertex has even degree.
+
+### Eulerian path but not circuit
+
+Exactly two vertices have odd degree.
+
+### Memory
+
+**Euler → Edges**
+
+---
+
+# 57. Hamiltonian Paths and Circuits
+
+A Hamiltonian path visits every vertex exactly once.
+
+A Hamiltonian circuit visits every vertex exactly once and returns to the starting vertex.
+
+### Memory
+
+**Hamiltonian → Vertices**
+
+---
+
+# 58. Shortest Path Algorithms
+
+## Dijkstra
+
+Used for shortest paths from one source when edge weights are non-negative.
+
+## Bellman-Ford
+
+Can handle negative edge weights and can detect reachable negative-weight cycles.
+
+## Floyd-Warshall
+
+Computes shortest paths between all pairs of vertices.
+
+---
+
+# 59. Planar Graphs
+
+A graph is planar if it can be drawn in a plane without edge crossings except at vertices.
+
+For a connected planar graph:
+
+**V − E + F = 2**
+
+where:
+
+- V = vertices
+- E = edges
+- F = faces
+
+---
+
+# 60. Graph Coloring
+
+Graph coloring assigns colors to vertices so adjacent vertices have different colors.
+
+The minimum number of colors required is the:
+
+**Chromatic number**
+
+Applications:
+
+- Timetabling
+- Frequency assignment
+- Register allocation
+- Map coloring
+
+---
+
+# 61. Bipartite Graphs
+
+A bipartite graph can be divided into two sets such that every edge joins a vertex in one set to a vertex in the other.
+
+Important theorem:
+
+> A graph is bipartite if and only if it has no odd cycle.
+
+---
+
+# 62. Trees
+
+A tree is a connected undirected graph with no cycles.
+
+For a tree with n vertices:
+
+**Edges = n − 1**
+
+Important properties:
+
+- Connected
+- Acyclic
+- Exactly one simple path between every pair of vertices
+
+---
+
+# 63. Rooted Trees
+
+A rooted tree has one designated vertex called the root.
+
+Terms:
+
+- Root
+- Parent
+- Child
+- Sibling
+- Leaf
+- Internal node
+- Ancestor
+- Descendant
+- Level
+- Height
+
+---
+
+# 64. Tree Traversals
+
+## Preorder
+
+**Root → Left → Right**
+
+## Inorder
+
+**Left → Root → Right**
+
+## Postorder
+
+**Left → Right → Root**
+
+Memory:
+
+- Pre = root first
+- In = root middle
+- Post = root last
+
+---
+
+# 65. Prefix Codes
+
+A prefix code is a code in which no complete codeword is the prefix of another codeword.
+
+Example:
+
+A = 0
+
+B = 10
+
+C = 11
+
+No codeword is the prefix of another.
+
+Prefix codes support unambiguous decoding.
+
+Huffman coding is a well-known application.
+
+---
+
+# 66. Spanning Trees
+
+A spanning tree:
+
+- Contains all vertices
+- Is connected
+- Contains no cycle
+
+For n vertices:
+
+**Edges = n − 1**
+
+---
+
+# 67. Minimum Spanning Tree
+
+A minimum spanning tree has the minimum possible total edge weight.
+
+Important algorithms:
+
+### Kruskal
+
+- Sort edges by increasing weight.
+- Select an edge if it does not create a cycle.
+- Continue until the tree has n−1 edges.
+
+### Prim
+
+- Start from a vertex.
+- Repeatedly add the minimum-weight edge connecting the current tree to a new vertex.
+
+---
+
+# 68. Cut-Sets
+
+A cut separates a graph into parts.
+
+A cut-set is a set of edges whose removal disconnects a connected graph under the relevant definition.
+
+Applications:
+
+- Network reliability
+- Network design
+- Spanning trees
+
+---
+
+# 69. Boolean Algebra
+
+Boolean algebra uses variables with two values:
+
+**0 and 1**
+
+It is fundamental in digital electronics and computer architecture.
+
+---
+
+# 70. Boolean Operations
+
+### AND
+
+**A · B**
+
+### OR
+
+**A + B**
+
+### NOT
+
+**A'**
+
+---
+
+# 71. Boolean Laws
+
+## Identity
+
+**A + 0 = A**
+
+**A · 1 = A**
+
+## Null
+
+**A + 1 = 1**
+
+**A · 0 = 0**
+
+## Idempotent
+
+**A + A = A**
+
+**A · A = A**
+
+## Complement
+
+**A + A' = 1**
+
+**A · A' = 0**
+
+## Involution
+
+**(A')' = A**
+
+## Absorption
+
+**A + A·B = A**
+
+**A(A+B) = A**
+
+## De Morgan
+
+**(A+B)' = A'·B'**
+
+**(A·B)' = A'+B'**
+
+---
+
+# 72. Boolean Functions
+
+A Boolean function maps Boolean inputs to a Boolean output.
+
+Example:
+
+**F(A,B) = A + B**
+
+A Boolean function can be represented using:
+
+- Truth table
+- Boolean expression
+- Logic circuit
+- Minterms
+- Maxterms
+- Karnaugh map
+
+---
+
+# 73. SOP and POS
+
+## Sum of Products (SOP)
+
+OR of AND terms.
+
+Example:
+
+**AB + A'C**
+
+## Product of Sums (POS)
+
+AND of OR terms.
+
+Example:
+
+**(A+B)(A'+C)**
+
+---
+
+# 74. Simplification of Boolean Functions
+
+Boolean expressions can be simplified using:
+
+- Boolean identities
+- Algebraic manipulation
+- Truth tables
+- Karnaugh maps
+
+Simplification can reduce:
+
+- Number of gates
+- Circuit cost
+- Propagation delay
+- Hardware complexity
+
+---
+
+# 75. Optimization
+
+Optimization means finding the best solution according to an objective.
+
+Examples:
+
+- Maximum profit
+- Minimum cost
+- Minimum time
+- Minimum resource usage
+
+---
+
+# 76. Linear Programming
+
+Linear programming optimizes a linear objective function subject to linear constraints.
+
+General form:
+
+**Maximize or Minimize Z = c1x1 + c2x2 + ... + cnxn**
+
+subject to linear constraints.
+
+Components:
+
+1. Decision variables
+2. Objective function
+3. Constraints
+4. Non-negativity restrictions
+
+---
+
+# 77. Graphical Solution of LPP
+
+The graphical method is mainly used when there are two decision variables.
+
+Steps:
+
+1. Define variables.
+2. Form objective function.
+3. Write constraints.
+4. Convert constraints into boundary lines.
+5. Plot the lines.
+6. Identify feasible region.
+7. Find corner points.
+8. Evaluate the objective function.
+9. Select the optimum point.
+
+---
+
+# 78. Feasible and Optimal Solutions
+
+A **feasible solution** satisfies all constraints.
+
+The **feasible region** contains all feasible solutions.
+
+An **optimal solution** is a feasible solution giving the best objective value.
+
+For a bounded LP, an optimum occurs at an extreme point under the standard assumptions.
+
+---
+
+# 79. Simplex Method
+
+The simplex method is an iterative method for solving linear programming problems.
+
+Important terms:
+
+- Basic variable
+- Non-basic variable
+- Basic feasible solution
+- Pivot
+- Entering variable
+- Leaving variable
+- Slack variable
+
+It moves from one basic feasible solution to another while improving the objective value until an optimum is reached, when one exists.
+
+---
+
+# 80. Slack, Surplus and Artificial Variables
+
+For:
+
+**x + y ≤ 10**
+
+add slack:
+
+**x + y + s = 10**
+
+For:
+
+**x + y ≥ 10**
+
+subtract surplus:
+
+**x + y − s = 10**
+
+Artificial variables may be required to obtain an initial basic feasible solution in certain LP forms.
+
+They are used in:
+
+- Big-M method
+- Two-phase method
+
+---
+
+# 81. Duality
+
+An LP problem has an associated dual problem.
+
+The original is called the:
+
+**Primal**
+
+and the associated problem is the:
+
+**Dual**
+
+Important relationship:
+
+**Primal ↔ Dual**
+
+Duality can provide useful information about optimal values and resource valuation.
+
+---
+
+# 82. Dual Simplex Method
+
+The dual simplex method is an LP procedure that maintains dual feasibility while moving toward primal feasibility and optimality.
+
+It is useful for particular tableau conditions and re-optimization situations.
+
+---
+
+# 83. Sensitivity Analysis
+
+Sensitivity analysis studies how changes in model parameters affect the optimal solution.
+
+Parameters include:
+
+- Objective coefficients
+- Resource availability
+- Constraint coefficients
+
+### Shadow price
+
+The shadow price indicates the marginal value of relaxing a resource constraint within its applicable allowable range.
+
+---
+
+# 84. Integer Programming
+
+Integer programming requires some or all decision variables to be integers.
+
+Example:
+
+**x, y ∈ {0,1,2,...}**
+
+Applications:
+
+- Scheduling
+- Facility location
+- Selection
+- Assignment
+- Production planning
+
+---
+
+# 85. Transportation Problem
+
+The transportation problem determines how to ship goods from sources to destinations at minimum cost while satisfying supply and demand.
+
+Components:
+
+- Sources
+- Destinations
+- Supply
+- Demand
+- Unit transportation costs
+
+Initial solutions may be found using:
+
+- North-West Corner
+- Least Cost Method
+- Vogel's Approximation Method
+
+Optimality can be tested using:
+
+- MODI
+- Stepping-stone method
+
+---
+
+# 86. Balanced Transportation Problem
+
+A transportation problem is balanced when:
+
+**Total supply = Total demand**
+
+If not balanced, a dummy source or destination may be added as appropriate.
+
+---
+
+# 87. Assignment Problem
+
+The assignment problem is a special allocation problem in which jobs are assigned to persons, machines, etc., generally on a one-to-one basis.
+
+Examples:
+
+- Worker → Job
+- Machine → Task
+- Teacher → Subject
+
+A common solution method is:
+
+**Hungarian Method**
+
+### Difference
+
+Transportation:
+
+**Quantity can be distributed.**
+
+Assignment:
+
+**One-to-one allocation.**
+
+---
+
+# 88. PERT
+
+PERT means:
+
+**Program Evaluation and Review Technique**
+
+It is useful when activity durations are uncertain.
+
+Three estimates:
+
+- Optimistic time = a
+- Most likely time = m
+- Pessimistic time = b
+
+Expected time:
+
+**te = (a + 4m + b) / 6**
+
+Variance:
+
+**Variance = [(b − a) / 6]^2**
+
+---
+
+# 89. CPM
+
+CPM means:
+
+**Critical Path Method**
+
+It is generally used when activity durations are treated as deterministic.
+
+CPM helps determine:
+
+- Project duration
+- Critical activities
+- Float
+- Scheduling
+- Time-cost trade-offs
+
+---
+
+# 90. PERT vs CPM
+
+| PERT | CPM |
+|---|---|
+| Probabilistic | Generally deterministic |
+| Three time estimates | Usually one time estimate |
+| Emphasizes uncertainty | Emphasizes scheduling and time-cost trade-off |
+| Useful for uncertain/new projects | Useful where activity times are relatively known |
+
+---
+
+# 91. Critical Path
+
+The critical path is the longest-duration path through the project network in terms of total activity duration and determines project completion time.
+
+Critical activities generally have:
+
+**Zero total float**
+
+Delay in a critical activity can delay the project unless corrective action is taken.
+
+---
+
+# 92. CPM Calculations
+
+## Earliest Start
+
+ES = earliest time an activity can start.
+
+## Earliest Finish
+
+**EF = ES + Duration**
+
+## Latest Finish
+
+LF = latest time an activity can finish without delaying the project.
+
+## Latest Start
+
+**LS = LF − Duration**
+
+## Total Float
+
+**Float = LS − ES**
+
+or:
+
+**Float = LF − EF**
+
+Critical activity:
+
+**Float = 0**
+
+---
+
+# 93. Resource Levelling
+
+Resource levelling adjusts the schedule to deal with limited or unevenly used resources.
+
+Resources may include:
+
+- Labour
+- Machines
+- Equipment
+- Materials
+- Money
+
+Objectives:
+
+- Avoid resource overload
+- Reduce fluctuations
+- Use resources efficiently
+
+---
+
+# 94. Project Cost and Scheduling
+
+Project scheduling involves trade-offs among:
+
+- Time
+- Direct cost
+- Indirect cost
+
+## Crashing
+
+Crashing reduces project duration by spending additional resources.
+
+Usually:
+
+**Shorter time → Higher direct cost**
+
+---
+
+# 95. Normal and Crash Time
+
+### Normal time
+
+Usual completion time.
+
+### Crash time
+
+Shortest practical completion time.
+
+### Normal cost
+
+Cost at normal duration.
+
+### Crash cost
+
+Cost at crash duration.
+
+## Cost slope
+
+**Cost slope = (Crash Cost − Normal Cost) / (Normal Time − Crash Time)**
+
+It represents additional cost per unit reduction in activity time.
+
+---
+
+# 96. Important Comparison Tables
+
+## Logic
+
+| Term | Meaning |
+|---|---|
+| Proposition | True or false statement |
+| Tautology | Always true |
+| Contradiction | Always false |
+| Contingency | Sometimes true |
+| Predicate | Statement involving variables |
+
+## Relations
+
+| Relation | Required properties |
+|---|---|
+| Equivalence | Reflexive + Symmetric + Transitive |
+| Partial order | Reflexive + Antisymmetric + Transitive |
+
+## Counting
+
+| Term | Key idea |
+|---|---|
+| Permutation | Order matters |
+| Combination | Order does not matter |
+| Pigeonhole | More objects than boxes |
+| Inclusion-exclusion | Correct overlapping counts |
+
+## Algebraic Structures
+
+| Structure | Main properties |
+|---|---|
+| Semigroup | Closure + Associativity |
+| Monoid | Semigroup + Identity |
+| Group | Monoid + Inverses |
+| Abelian Group | Group + Commutativity |
+| Ring | Two operations with ring properties |
+| Integral Domain | Commutative ring with identity + no zero divisors |
+| Field | Every non-zero element has multiplicative inverse |
+
+## Graph Theory
+
+| Concept | Key point |
+|---|---|
+| Euler | Edges |
+| Hamiltonian | Vertices |
+| Tree | Connected + Acyclic |
+| Tree with n vertices | n−1 edges |
+| Bipartite | No odd cycle |
+| Planar | Can be drawn without crossings |
+| MST | Minimum total spanning weight |
+
+---
+
+# 97. Important Formula Sheet
+
+## Logic
+
+**Truth-table rows = 2^n**
+
+## Sets
+
+**Subsets of n-element set = 2^n**
+
+## Inclusion-exclusion
+
+**|A ∪ B| = |A| + |B| − |A ∩ B|**
+
+## Permutation
+
+**nPr = n! / (n−r)!**
+
+## Combination
+
+**nCr = n! / [r!(n−r)!]**
+
+## Probability
+
+**P(A) = Favorable outcomes / Total outcomes**
+
+## Conditional probability
+
+**P(A|B) = P(A ∩ B) / P(B)**
+
+## Bayes
+
+**P(A|B) = P(B|A)P(A) / P(B)**
+
+## Tree
+
+**Edges = Vertices − 1**
+
+## Planar graph
+
+**V − E + F = 2**
+
+## PERT
+
+**te = (a + 4m + b) / 6**
+
+**Variance = [(b − a) / 6]^2**
+
+## CPM
+
+**EF = ES + Duration**
+
+**LS = LF − Duration**
+
+**Float = LS − ES**
+
+## Crashing
+
+**Cost slope = (Crash Cost − Normal Cost) / (Normal Time − Crash Time)**
+
+---
+
+# 98. Common UGC NET Mistakes
+
+## Mistake 1: Implication
+
+Do not assume p → q is false whenever p is false.
+
+It is false only for:
+
+**p = T, q = F**
+
+## Mistake 2: Permutation vs Combination
+
+**Arrangement → Permutation**
+
+**Selection → Combination**
+
+## Mistake 3: Equivalence vs Partial Order
+
+**Equivalence → RST**
+
+**Partial order → RAT**
+
+## Mistake 4: Euler vs Hamiltonian
+
+**Euler → Edges**
+
+**Hamiltonian → Vertices**
+
+## Mistake 5: Tree
+
+A connected graph is not automatically a tree.
+
+A tree must be:
+
+**Connected + Acyclic**
+
+## Mistake 6: Homomorphism vs Isomorphism
+
+Homomorphism preserves structure.
+
+Isomorphism is a bijective structure-preserving mapping.
+
+## Mistake 7: PERT vs CPM
+
+**PERT → Three estimates**
+
+**CPM → Generally deterministic times**
+
+## Mistake 8: Transportation vs Assignment
+
+**Transportation → Distribution**
+
+**Assignment → One-to-one allocation**
+
+---
+
+# 99. UGC NET High-Priority Topics
+
+### Mathematical Logic
+
+- Truth tables
+- Logical equivalence
+- Implication
+- De Morgan's laws
+- CNF and DNF
+- Quantifiers
+- Nested quantifiers
+- Rules of inference
+
+### Sets and Relations
+
+- Set operations
+- Power sets
+- Cartesian products
+- Relation properties
+- Equivalence relations
+- Partial orders
+
+### Counting and Probability
+
+- Pigeonhole principle
+- Permutations
+- Combinations
+- Inclusion-exclusion
+- Mathematical induction
+- Conditional probability
+- Bayes theorem
+
+### Group Theory
+
+- Group axioms
+- Subgroups
+- Semigroups
+- Homomorphism
+- Isomorphism
+- Automorphism
+- Rings
+- Integral domains
+- Fields
+
+### Graph Theory
+
+- Degree
+- Euler
+- Hamiltonian
+- Shortest path
+- Planarity
+- Coloring
+- Bipartite graphs
+- Trees
+- Traversals
+- Spanning trees
+- Minimum spanning trees
+
+### Boolean Algebra
+
+- Boolean laws
+- De Morgan's laws
+- SOP
+- POS
+- Minterms
+- Maxterms
+- Simplification
+
+### Optimization
+
+- LPP formulation
+- Graphical method
+- Simplex
+- Duality
+- Sensitivity analysis
+- Integer programming
+- Transportation
+- Assignment
+- PERT
+- CPM
+- Critical path
+- Resource levelling
+- Crashing
+
+---
+
+# 100. Final Revision Map
+
+## Mathematical Logic
+
+**Proposition → Connectives → Truth Tables → Equivalence → Normal Forms → Quantifiers → Inference**
+
+## Sets and Relations
+
+**Sets → Operations → Relations → Properties → Equivalence → Partial Order**
+
+## Counting and Probability
+
+**Counting → Pigeonhole → Permutation → Combination → Inclusion-Exclusion → Induction → Probability → Bayes**
+
+## Group Theory
+
+**Binary Operation → Semigroup → Monoid → Group → Abelian Group → Subgroup → Homomorphism → Isomorphism → Automorphism → Ring → Integral Domain → Field**
+
+## Graph Theory
+
+**Graph → Path → Circuit → Euler → Hamiltonian → Planar → Coloring → Bipartite → Tree → Traversal → Spanning Tree → MST**
+
+## Boolean Algebra
+
+**Boolean Variables → Operations → Laws → Functions → SOP/POS → Simplification**
+
+## Optimization
+
+**LPP → Graphical → Simplex → Duality → Sensitivity → Integer Programming → Transportation → Assignment → PERT → CPM → Resources → Cost**
+
+---
+
+# 101. Final Exam Strategy
+
+Do not study this unit only by memorizing definitions.
+
+Use three levels:
+
+### Level 1 – Understand
+
+Know what each concept means.
+
+### Level 2 – Memorize
+
+Learn:
+
+- Formulas
+- Conditions
+- Properties
+- Algorithms
+- Differences
+
+### Level 3 – Practice
+
+Solve:
+
+- Truth-table problems
+- Quantifier problems
+- Counting problems
+- Probability problems
+- Group-theory questions
+- Graph problems
+- Boolean simplification
+- LPP problems
+- Transportation and assignment problems
+- PERT/CPM problems
+
+The best sequence is:
+
+**Understand → Memorize → Solve → Revise**
+

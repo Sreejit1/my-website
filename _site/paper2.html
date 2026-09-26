@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>UGC NET Paper 2 – Computer Science &amp; Applications – UGC NET Computer Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-7bafb279d5a926c0766e5c3e4e4c1c07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">UGC NET Computer Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">🏠 Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./paper1.html"> 
+<span class="menu-text">📘 Paper 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./paper2.html" aria-current="page"> 
+<span class="menu-text">💻 Paper 2</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./paper2.html">UGC NET Paper 2 – Computer Science &amp; Applications</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./paper2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">UGC NET Paper 2 – Computer Science &amp; Applications</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit1-discrete-structures-and-optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit I – Discrete Structures and Optimization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit2-computer-system-architecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit II – Computer System Architecture</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit3-programming-languages-and-computer-graphics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit III – Programming Languages and Computer Graphics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit4-database-management-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit IV – Database Management Systems</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit5-system-software-and-operating-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit V – System Software and Operating System</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit6-software-engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit VI – Software Engineering</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit7-data-structures-and-algorithms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit VII – Data Structures and Algorithms</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit8-theory-of-computation-and-compilers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit VIII – Theory of Computation and Compilers</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit9-data-communication-and-computer-networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit IX – Data Communication and Computer Networks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./unit10-artificial-intelligence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unit X – Artificial Intelligence (AI)</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unit---1-discrete-structures-and-optimization" id="toc-unit---1-discrete-structures-and-optimization" class="nav-link active" data-scroll-target="#unit---1-discrete-structures-and-optimization">Unit - 1 : Discrete Structures and Optimization</a></li>
+  <li><a href="#unit---2-computer-system-architecture" id="toc-unit---2-computer-system-architecture" class="nav-link" data-scroll-target="#unit---2-computer-system-architecture">Unit - 2 : Computer System Architecture</a></li>
+  <li><a href="#unit---3-programming-languages-and-computer-graphics" id="toc-unit---3-programming-languages-and-computer-graphics" class="nav-link" data-scroll-target="#unit---3-programming-languages-and-computer-graphics">Unit - 3 : Programming Languages and Computer Graphics</a></li>
+  <li><a href="#unit-4-database-management-systems" id="toc-unit-4-database-management-systems" class="nav-link" data-scroll-target="#unit-4-database-management-systems">Unit – 4 : Database Management Systems</a></li>
+  <li><a href="#unit-5-system-software-and-operating-system" id="toc-unit-5-system-software-and-operating-system" class="nav-link" data-scroll-target="#unit-5-system-software-and-operating-system">Unit – 5 : System Software and Operating System</a></li>
+  <li><a href="#unit-6-software-engineering" id="toc-unit-6-software-engineering" class="nav-link" data-scroll-target="#unit-6-software-engineering">Unit – 6 : Software Engineering</a></li>
+  <li><a href="#unit-7-data-structures-and-algorithms" id="toc-unit-7-data-structures-and-algorithms" class="nav-link" data-scroll-target="#unit-7-data-structures-and-algorithms">Unit – 7 : Data Structures and Algorithms</a></li>
+  <li><a href="#unit-8-theory-of-computation-and-compilers" id="toc-unit-8-theory-of-computation-and-compilers" class="nav-link" data-scroll-target="#unit-8-theory-of-computation-and-compilers">Unit – 8 : Theory of Computation and Compilers</a>
+  <ul class="collapse">
+  <li><a href="#theory-of-computation" id="toc-theory-of-computation" class="nav-link" data-scroll-target="#theory-of-computation">Theory of Computation</a></li>
+  <li><a href="#compilers" id="toc-compilers" class="nav-link" data-scroll-target="#compilers">Compilers</a></li>
+  </ul></li>
+  <li><a href="#unit-9-data-communication-and-computer-networks" id="toc-unit-9-data-communication-and-computer-networks" class="nav-link" data-scroll-target="#unit-9-data-communication-and-computer-networks">Unit – 9 : Data Communication and Computer Networks</a></li>
+  <li><a href="#unit-10-artificial-intelligence-ai" id="toc-unit-10-artificial-intelligence-ai" class="nav-link" data-scroll-target="#unit-10-artificial-intelligence-ai">Unit – 10 : Artificial Intelligence (AI)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">UGC NET Paper 2 – Computer Science &amp; Applications</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="unit---1-discrete-structures-and-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="unit---1-discrete-structures-and-optimization">Unit - 1 : Discrete Structures and Optimization</h2>
+<p><strong>Mathematical Logic:</strong> Propositional and Predicate Logic, Propositional Equivalences, Normal Forms, Predicates and Quantifiers, Nested Quantifiers, Rules of Inference.</p>
+<p><strong>Sets and Relations:</strong> Set Operations, Representation and Properties of Relations, Equivalence Relations, Partially Ordering.</p>
+<p><strong>Counting, Mathematical Induction and Discrete Probability:</strong> Basics of Counting, Pigeonhole Principle, Permutations and Combinations, Inclusion-Exclusion Principle, Mathematical Induction, Probability, Bayes’ Theorem.</p>
+<p><strong>Group Theory:</strong> Groups, Subgroups, Semi Groups, Product and Quotients of Algebraic Structures, Isomorphism, Homomorphism, Automorphism, Rings, Integral Domains, Fields, Applications of Group Theory.</p>
+<p><strong>Graph Theory:</strong> Simple Graph, Multigraph, Weighted Graph, Paths and Circuits, Shortest Paths in Weighted Graphs, Eulerian Paths and Circuits, Hamiltonian Paths and Circuits, Planner graph, Graph Coloring, Bipartite Graphs, Trees and Rooted Trees, Prefix Codes, Tree Traversals, Spanning Trees and Cut-Sets.</p>
+<p><strong>Boolean Algebra:</strong> Boolean Functions and its Representation, Simplifications of Boolean Functions.</p>
+<p><strong>Optimization:</strong> Linear Programming - Mathematical Model, Graphical Solution, Simplex and Dual Simplex Method, Sensitive Analysis; Integer Programming, Transportation and Assignment Models, PERT-CPM: Diagram Representation, Critical Path Calculations, Resource Levelling, Cost Consideration in Project Scheduling.</p>
+<hr>
+</section>
+<section id="unit---2-computer-system-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="unit---2-computer-system-architecture">Unit - 2 : Computer System Architecture</h2>
+<p><strong>Digital Logic Circuits and Components:</strong> Digital Computers, Logic Gates, Boolean Algebra, Map Simplifications, Combinational Circuits, Flip-Flops, Sequential Circuits, Integrated Circuits, Decoders, Multiplexers, Registers and Counters, Memory Unit.</p>
+<p><strong>Data Representation:</strong> Data Types, Number Systems and Conversion, Complements, Fixed Point Representation, Floating Point Representation, Error Detection Codes, Computer Arithmetic - Addition, Subtraction, Multiplication and Division Algorithms.</p>
+<p><strong>Register Transfer and Microoperations:</strong> Register Transfer Language, Bus and Memory Transfers, Arithmetic, Logic and Shift Microoperations.</p>
+<p><strong>Basic Computer Organization and Design:</strong> Stored Program Organization and Instruction Codes, Computer Registers, Computer Instructions, Timing and Control, Instruction Cycle, Memory-Reference Instructions, Input-Output, Interrupt.</p>
+<p><strong>Programming the Basic Computer:</strong> Machine Language, Assembly Language, Assembler, Program Loops, Subroutines, Input-Output Programming.</p>
+<p><strong>Microprogrammed Control:</strong> Control Memory, Address Sequencing, Design of Control Unit.</p>
+<p><strong>Central Processing Unit:</strong> General Register Organization, Stack Organization, Instruction Formats, Addressing Modes, RISC Computer, CISC Computer.</p>
+<p><strong>Pipeline and Vector Processing:</strong> Parallel Processing, Pipelining, Arithmetic Pipeline, Instruction Pipeline, Vector Processing Array Processors.</p>
+<p><strong>Input-Output Organization:</strong> Peripheral Devices, Input-Output Interface, Asynchronous Data Transfer, Modes of Transfer, Priority Interrupt, DMA, Serial Communication.</p>
+<p><strong>Memory Hierarchy:</strong> Main Memory, Auxillary Memory, Associative Memory, Cache Memory, Virtual Memory, Memory Management Hardware.</p>
+<p><strong>Multiprocessors:</strong> Characteristics of Multiprocessors, Interconnection Structures, Interprocessor Arbitration, Interprocessor Communication and Synchronization, Cache Coherence, Multicore Processors.</p>
+<hr>
+</section>
+<section id="unit---3-programming-languages-and-computer-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="unit---3-programming-languages-and-computer-graphics">Unit - 3 : Programming Languages and Computer Graphics</h2>
+<p><strong>Language Design and Translation Issues:</strong> Programming Language Concepts, Paradigms and Models, Programming Environments, Virtual Computers and Binding Times, Programming Language Syntax, Stages in Translation, Formal Transition Models.</p>
+<p><strong>Elementary Data Types:</strong> Properties of Types and Objects; Scalar and Composite Data Types.</p>
+<p><strong>Programming in C:</strong> Tokens, Identifiers, Data Types, Sequence Control, Subprogram Control, Arrays, Structures, Union, String, Pointers, Functions, File Handling, Command Line Arguments, Preprocessors.</p>
+<p><strong>Object Oriented Programming:</strong> Class, Object, Instantiation, Inheritance, Encapsulation, Abstract Class, Polymorphism.</p>
+<p><strong>Programming in C++:</strong> Tokens, Identifiers, Variables and Constants; Data types, Operators, Control statements, Functions Parameter Passing, Virtual Functions, Class and Objects; Constructors and Destructors; Overloading, Inheritance, Templates, Exception and Event Handling; Streams and Files; Multifile Programs.</p>
+<p><strong>Web Programming:</strong> HTML, DHTML, XML, Scripting, Java, Servlets, Applets.</p>
+<p><strong>Computer Graphics:</strong> Video-Display Devices, Raster-Scan and Random-Scan Systems; Graphics Monitors, Input Devices, Points and Lines; Line Drawing Algorithms, Mid-Point Circle and Ellipse Algorithms; Scan Line Polygon Fill Algorithm, Boundary-Fill and Flood-Fill.</p>
+<p><strong>2-D Geometrical Transforms and Viewing:</strong> Translation, Scaling, Rotation, Reflection and Shear Transformations; Matrix Representations and Homogeneous Coordinates; Composite Transforms, Transformations Between Coordinate Systems, Viewing Pipeline, Viewing Coordinate Reference Frame, Window to View-Port Coordinate Transformation, Viewing Functions, Line and Polygon Clipping Algorithms.</p>
+<p><strong>3-D Object Representation, Geometric Transformations and Viewing:</strong> Polygon Surfaces, Quadric Surfaces, Spline Representation, Bezier and B-Spline Curves; Bezier and B-Spline Surfaces; Illumination Models, Polygon Rendering Methods, Viewing Pipeline and Coordinates; General Projection Transforms and Clipping.</p>
+<hr>
+</section>
+<section id="unit-4-database-management-systems" class="level2">
+<h2 class="anchored" data-anchor-id="unit-4-database-management-systems">Unit – 4 : Database Management Systems</h2>
+<p><strong>Database System Concepts and Architecture:</strong> Data Models, Schemas, and Instances; Three-Schema Architecture and Data Independence; Database Languages and Interfaces; Centralized and Client/Server Architectures for DBMS.</p>
+<p><strong>Data Modeling:</strong> Entity-Relationship Diagram, Relational Model - Constraints, Languages, Design, and Programming, Relational Database Schemas, Update Operations and Dealing with Constraint Violations; Relational Algebra and Relational Calculus; Codd Rules.</p>
+<p><strong>SQL:</strong> Data Definition and Data Types; Constraints, Queries, Insert, Delete, and Update Statements; Views, Stored Procedures and Functions; Database Triggers, SQL Injection.</p>
+<p><strong>Normalization for Relational Databases:</strong> Functional Dependencies and Normalization; Algorithms for Query Processing and Optimization; Transaction Processing, Concurrency Control Techniques, Database Recovery Techniques, Object and Object-Relational Databases; Database Security and Authorization.</p>
+<p><strong>Enhanced Data Models:</strong> Temporal Database Concepts, Multimedia Databases, Deductive Databases, XML and Internet Databases; Mobile Databases, Geographic Information Systems, Genome Data Management, Distributed Databases and Client-Server Architectures.</p>
+<p><strong>Data Warehousing and Data Mining:</strong> Data Modeling for Data Warehouses, Concept Hierarchy, OLAP and OLTP; Association Rules, Classification, Clustering, Regression.</p>
+<p><strong>Machine Learning and Related Topics:</strong> Support Vector Machine, K-Nearest Neighbour, Hidden Markov Model, Summarization, Dependency Modeling, Link Analysis, Sequencing Analysis, Social Network Analysis.</p>
+<p><strong>Big Data Systems:</strong> Big Data Characteristics, Types of Big Data, Big Data Architecture, Introduction to Map-Reduce and Hadoop; Distributed File System, HDFS.</p>
+<p><strong>NOSQL:</strong> NOSQL and Query Optimization; Different NOSQL Products, Querying and Managing NOSQL; Indexing and Ordering Data Sets; NOSQL in Cloud.</p>
+<hr>
+</section>
+<section id="unit-5-system-software-and-operating-system" class="level2">
+<h2 class="anchored" data-anchor-id="unit-5-system-software-and-operating-system">Unit – 5 : System Software and Operating System</h2>
+<p><strong>System Software:</strong> Machine, Assembly and High-Level Languages; Compilers and Interpreters; Loading, Linking and Relocation; Macros, Debuggers.</p>
+<p><strong>Basics of Operating Systems:</strong> Operating System Structure, Operations and Services; System Calls, Operating-System Design and Implementation; System Boot.</p>
+<p><strong>Process Management:</strong> Process Scheduling and Operations; Interprocess Communication, Communication in Client–Server Systems, Process Synchronization, Critical-Section Problem, Peterson’s Solution, Semaphores, Synchronization.</p>
+<p><strong>Threads:</strong> Multicore Programming, Multithreading Models, Thread Libraries, Implicit Threading, Threading Issues.</p>
+<p><strong>CPU Scheduling:</strong> Scheduling Criteria and Algorithms; Thread Scheduling, Multiple-Processor Scheduling, Real-Time CPU Scheduling.</p>
+<p><strong>Deadlocks:</strong> Deadlock Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Avoidance and Detection; Recovery from Deadlock.</p>
+<p><strong>Memory Management:</strong> Contiguous Memory Allocation, Swapping, Paging, Segmentation, Demand Paging, Page Replacement, Allocation of Frames, Thrashing, Memory-Mapped Files.</p>
+<p><strong>Storage Management:</strong> Mass-Storage Structure, Disk Structure, Scheduling and Management, RAID Structure.</p>
+<p><strong>File and Input/Output Systems:</strong> Access Methods, Directory and Disk Structure; File-System Mounting, File Sharing, File-System Structure and Implementation; Directory Implementation, Allocation Methods, Free-Space Management, Efficiency and Performance; Recovery, I/O Hardware, Application I/O Interface, Kernel I/O Subsystem, Transforming I/O Requests to Hardware Operations.</p>
+<p><strong>Security:</strong> Protection, Access Matrix, Access Control, Revocation of Access Rights, Program Threats, System and Network Threats; Cryptography as a Security Tool, User Authentication, Implementing Security Defenses.</p>
+<p><strong>Virtual Machines:</strong> Types of Virtual Machines and Implementations; Virtualization.</p>
+<p><strong>Linux Operating Systems:</strong> Design Principles, Kernel Modules, Process Management, Scheduling, Memory Management, File Systems, Input and Output; Interprocess Communication, Network Structure.</p>
+<p><strong>Windows Operating Systems:</strong> Design Principles, System Components, Terminal Services and Fast User Switching; File System, Networking.</p>
+<p><strong>Distributed Systems:</strong> Types of Network based Operating Systems, Network Structure, Communication Structure and Protocols; Robustness, Design Issues, Distributed File Systems.</p>
+<hr>
+</section>
+<section id="unit-6-software-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="unit-6-software-engineering">Unit – 6 : Software Engineering</h2>
+<p><strong>Software Process Models:</strong> Software Process, Generic Process Model – Framework Activity, Task Set and Process Patterns; Process Lifecycle, Prescriptive Process Models, Project Management, Component Based Development, Aspect-Oriented Software Development, Formal Methods, Agile Process Models – Extreme Programming (XP), Adaptive Software Development, Scrum, Dynamic System Development Model, Feature Driven Development, Crystal, Web Engineering.</p>
+<p><strong>Software Requirements:</strong> Functional and Non-Functional Requirements; Eliciting Requirements, Developing Use Cases, Requirement Analysis and Modelling; Requirements Review, Software Requirement and Specification (SRS) Document.</p>
+<p><strong>Software Design:</strong> Abstraction, Architecture, Patterns, Separation of Concerns, Modularity, Information Hiding, Functional Independence, Cohesion and Coupling; Object-Oriented Design, Data Design, Architectural Design, User Interface Design, Component Level Design.</p>
+<p><strong>Software Quality:</strong> McCall’s Quality Factors, ISO 9126 Quality Factors, Quality Control, Quality Assurance, Risk Management, Risk Mitigation, Monitoring and Management (RMMM); Software Reliability.</p>
+<p><strong>Estimation and Scheduling of Software Projects:</strong> Software Sizing, LOC and FP based Estimations; Estimating Cost and Effort; Estimation Models, Constructive Cost Model (COCOMO), Project Scheduling and Staffing; Time-line Charts.</p>
+<p><strong>Software Testing:</strong> Verification and Validation; Error, Fault, Bug and Failure; Unit and Integration Testing; White-box and Black-box Testing; Basis Path Testing, Control Structure Testing, Deriving Test Cases, Alpha and Beta Testing; Regression Testing, Performance Testing, Stress Testing.</p>
+<p><strong>Software Configuration Management:</strong> Change Control and Version Control; Software Reuse, Software Re-engineering, Reverse Engineering.</p>
+<hr>
+</section>
+<section id="unit-7-data-structures-and-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="unit-7-data-structures-and-algorithms">Unit – 7 : Data Structures and Algorithms</h2>
+<p><strong>Data Structures:</strong> Arrays and their Applications; Sparse Matrix, Stacks, Queues, Priority Queues, Linked Lists, Trees, Forest, Binary Tree, Threaded Binary Tree, Binary Search Tree, AVL Tree, B Tree, B+ Tree, B* Tree, Data Structure for Sets, Graphs, Sorting and Searching Algorithms; Hashing.</p>
+<p><strong>Performance Analysis of Algorithms and Recurrences:</strong> Time and Space Complexities; Asymptotic Notation, Recurrence Relations.</p>
+<p><strong>Design Techniques:</strong> Divide and Conquer; Dynamic Programming, Greedy Algorithms, Backtracking, Branch and Bound.</p>
+<p><strong>Lower Bound Theory:</strong> Comparison Trees, Lower Bounds through Reductions.</p>
+<p><strong>Graph Algorithms:</strong> Breadth-First Search, Depth-First Search, Shortest Paths, Maximum Flow, Minimum Spanning Trees.</p>
+<p><strong>Complexity Theory:</strong> P and NP Class Problems; NP-completeness and Reducibility.</p>
+<p><strong>Selected Topics:</strong> Number Theoretic Algorithms, Polynomial Arithmetic, Fast Fourier Transform, String Matching Algorithms.</p>
+<p><strong>Advanced Algorithms:</strong> Parallel Algorithms for Sorting, Searching and Merging, Approximation Algorithms, Randomized Algorithms.</p>
+<hr>
+</section>
+<section id="unit-8-theory-of-computation-and-compilers" class="level2">
+<h2 class="anchored" data-anchor-id="unit-8-theory-of-computation-and-compilers">Unit – 8 : Theory of Computation and Compilers</h2>
+<section id="theory-of-computation" class="level3">
+<h3 class="anchored" data-anchor-id="theory-of-computation">Theory of Computation</h3>
+<p><strong>Theory of Computation:</strong> Formal Language, Non-Computational Problems, Diagonal Argument, Russels’s Paradox.</p>
+<p><strong>Regular Language Models:</strong> Deterministic Finite Automaton (DFA), Non-Deterministic Finite Automaton (NDFA), Equivalence of DFA and NDFA, Regular Languages, Regular Grammars, Regular Expressions, Properties of Regular Language, Pumping Lemma, Non-Regular Languages, Lexical Analysis.</p>
+<p><strong>Context Free Language:</strong> Pushdown Automaton (PDA), Non-Deterministic Pushdown Automaton (NPDA), Context Free Grammar, Chomsky Normal Form, Greibach Normal Form, Ambiguity, Parse Tree Representation of Derivation Trees, Equivalence of PDA’s and Context Free Grammars; Properties of Context Free Language.</p>
+<p><strong>Turing Machines (TM):</strong> Standard Turing Machine and its Variations; Universal Turing Machines, Models of Computation and Church-Turing Thesis; Recursive and Recursively-Enumerable Languages; Context-Sensitive Languages, Unrestricted Grammars, Chomsky Hierarchy of Languages, Construction of TM for Simple Problems.</p>
+<p><strong>Unsolvable Problems and Computational Complexity:</strong> Unsolvable Problem, Halting Problem, Post Correspondence Problem, Unsolvable Problems for Context-Free Languages, Measuring and Classifying Complexity, Tractable and Intractable Problems.</p>
+</section>
+<section id="compilers" class="level3">
+<h3 class="anchored" data-anchor-id="compilers">Compilers</h3>
+<p><strong>Syntax Analysis:</strong> Associativity, Precedence, Grammar Transformations, Top Down Parsing, Recursive Descent Predictive Parsing, LL(1) Parsing, Bottom up Parsing, LR Parser, LALR(1) Parser.</p>
+<p><strong>Semantic Analysis:</strong> Attribute Grammar, Syntax Directed Definitions, Inherited and Synthesized Attributes; Dependency Graph, Evaluation Order, S-attributed and L-attributed Definitions; Type-Checking.</p>
+<p><strong>Run Time System:</strong> Storage Organization, Activation Tree, Activation Record, Stack Allocation of Activation Records, Parameter Passing Mechanisms, Symbol Table.</p>
+<p><strong>Intermediate Code Generation:</strong> Intermediate Representations, Translation of Declarations, Assignments, Control Flow, Boolean Expressions and Procedure Calls.</p>
+<p><strong>Code Generation and Code Optimization:</strong> Control-flow, Data-flow Analysis, Local Optimization, Global Optimization, Loop Optimization, Peep-Hole Optimization, Instruction Scheduling.</p>
+<hr>
+</section>
+</section>
+<section id="unit-9-data-communication-and-computer-networks" class="level2">
+<h2 class="anchored" data-anchor-id="unit-9-data-communication-and-computer-networks">Unit – 9 : Data Communication and Computer Networks</h2>
+<p><strong>Data Communication:</strong> Components of a Data Communication System, Simplex, Half-Duplex and Duplex Modes of Communication; Analog and Digital Signals; Noiseless and Noisy Channels; Bandwidth, Throughput and Latency; Digital and Analog Transmission; Data Encoding and Modulation Techniques; Broadband and Baseband Transmission; Multiplexing, Transmission Media, Transmission Errors, Error Handling Mechanisms.</p>
+<p><strong>Computer Networks:</strong> Network Topologies, Local Area Networks, Metropolitan Area Networks, Wide Area Network, Wireless Networks, Internet.</p>
+<p><strong>Network Models:</strong> Layered Architecture, OSI Reference Model and its Protocols; TCP/IP Protocol Suite, Physical, Logical, Port and Specific Addresses; Switching Techniques.</p>
+<p><strong>Functions of OSI and TCP/IP Layers:</strong> Framing, Error Detection and Correction; Flow and Error Control; Sliding Window Protocol, HDLC, Multiple Access – CSMA/CD, CSMA/CA, Reservation, Polling, Token Passing, FDMA, CDMA, TDMA, Network Devices, Backbone Networks, Virtual LANs.</p>
+<p><strong>Internet Protocols:</strong> IPv4 Structure and Address Space; Classful and Classless Addressing; Datagram, Fragmentation and Checksum; IPv6 Packet Format, Mapping Logical to Physical Address (ARP), Direct and Indirect Network Layer Delivery; Routing Algorithms, TCP, UDP and SCTP Protocols; Flow Control, Error Control and Congestion Control in TCP and SCTP.</p>
+<p><strong>World Wide Web (WWW):</strong> Uniform Resource Locator (URL), Domain Name Service (DNS), Resolution - Mapping Names to Addresses and Addresses to Names; Electronic Mail Architecture, SMTP, POP and IMAP; TELNET and FTP.</p>
+<p><strong>Network Security:</strong> Malwares, Cryptography and Steganography; Secret-Key Algorithms, Public-Key Algorithms, Digital Signature, Virtual Private Networks, Firewalls.</p>
+<p><strong>Mobile Technology:</strong> GSM and CDMA; Services and Architecture of GSM and Mobile Computing; Middleware and Gateway for Mobile Computing; Mobile IP and Mobile Communication Protocol; Communication Satellites, Wireless Networks and Topologies; Cellular Topology, Mobile Adhoc Networks, Wireless Transmission and Wireless LANs; Wireless Geolocation Systems, GPRS and SMS.</p>
+<p><strong>Cloud Computing and IoT:</strong> SaaS, PaaS, IaaS, Public and Private Cloud; Virtualization, Virtual Server, Cloud Storage, Database Storage, Resource Management, Service Level Agreement, Basics of IoT.</p>
+<hr>
+</section>
+<section id="unit-10-artificial-intelligence-ai" class="level2">
+<h2 class="anchored" data-anchor-id="unit-10-artificial-intelligence-ai">Unit – 10 : Artificial Intelligence (AI)</h2>
+<p><strong>Approaches to AI:</strong> Turing Test and Rational Agent Approaches; State Space Representation of Problems, Heuristic Search Techniques, Game Playing, Min-Max Search, Alpha Beta Cutoff Procedures.</p>
+<p><strong>Knowledge Representation:</strong> Logic, Semantic Networks, Frames, Rules, Scripts, Conceptual Dependency and Ontologies; Expert Systems, Handling Uncertainty in Knowledge.</p>
+<p><strong>Planning:</strong> Components of a Planning System, Linear and Non Linear Planning; Goal Stack Planning, Hierarchical Planning, STRIPS, Partial Order Planning.</p>
+<p><strong>Natural Language Processing:</strong> Grammar and Language; Parsing Techniques, Semantic Analysis and Pragmatics.</p>
+<p><strong>Multi Agent Systems:</strong> Agents and Objects; Agents and Expert Systems; Generic Structure of Multiagent System, Semantic Web, Agent Communication, Knowledge Sharing using Ontologies, Agent Development Tools.</p>
+<p><strong>Fuzzy Sets:</strong> Notion of Fuzziness, Membership Functions, Fuzzification and Defuzzification; Operations on Fuzzy Sets, Fuzzy Functions and Linguistic Variables; Fuzzy Relations, Fuzzy Rules and Fuzzy Inference; Fuzzy Control System and Fuzzy Rule Based Systems.</p>
+<p><strong>Genetic Algorithms (GA):</strong> Encoding Strategies, Genetic Operators, Fitness Functions and GA Cycle; Problem Solving using GA.</p>
+<p><strong>Artificial Neural Networks (ANN):</strong> Supervised, Unsupervised and Reinforcement Learning; Single Perceptron, Multi Layer Perceptron, Self Organizing Maps, Hopfield Network.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

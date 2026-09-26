@@ -1,0 +1,59 @@
+project:
+  type: website
+
+website:
+  title: "UGC NET Computer Science"
+
+  navbar:
+    background: "#4B0082"
+    foreground: "#FFFFFF"
+
+    left:
+      - href: index.qmd
+        text: 🏠 Home
+
+      - href: paper1.qmd
+        text: 📘 Paper 1
+
+      - href: paper2.qmd
+        text: 💻 Paper 2
+
+  sidebar:
+    - title: "📘 Paper 1"
+      style: "docked"
+      background: "#F3E5F5"
+      contents:
+        - paper1.qmd
+        - unit1-teaching-aptitude.qmd
+        - unit2-research-aptitude.qmd
+        - unit3-comprehension.qmd
+        - unit4-communication.qmd
+        - unit5-mathematical-reasoning.qmd
+        - unit6-logical-reasoning.qmd
+        - unit7-data-interpretation.qmd
+        - unit8-information-and-communication-technology.qmd
+        - unit9-people-development-environment.qmd
+        - unit10-higher-education-system.qmd
+
+    - title: "💻 Paper 2"
+      style: "docked"
+      background: "#E3F2FD"
+      contents:
+        - paper2.qmd
+        - unit1-discrete-structures-and-optimization.qmd
+        - unit2-computer-system-architecture.qmd
+        - unit3-programming-languages-and-computer-graphics.qmd
+        - unit4-database-management-systems.qmd
+        - unit5-system-software-and-operating-system.qmd
+        - unit6-software-engineering.qmd
+        - unit7-data-structures-and-algorithms.qmd
+        - unit8-theory-of-computation-and-compilers.qmd
+        - unit9-data-communication-and-computer-networks.qmd
+        - unit10-artificial-intelligence.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    number-sections: true

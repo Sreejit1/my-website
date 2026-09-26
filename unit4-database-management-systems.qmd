@@ -1,0 +1,2995 @@
+---
+title: "Unit IV – Database Management Systems"
+subtitle: "UGC NET Computer Science and Applications – Paper II"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+
+This unit covers database concepts, architecture, data modeling, SQL, normalization, transactions, database security, advanced databases, data warehousing, data mining, Big Data, Hadoop, HDFS, and NoSQL.
+
+# Part A – Database System Concepts and Architecture
+
+## 1. Database and DBMS
+
+A **database** is an organized collection of related data.
+
+A **Database Management System (DBMS)** is software used to:
+
+- Create databases
+- Store data
+- Retrieve data
+- Update data
+- Delete data
+- Control access
+- Maintain consistency
+
+Examples:
+
+- MySQL
+- PostgreSQL
+- Oracle Database
+- Microsoft SQL Server
+- SQLite
+
+## 2. Advantages of DBMS
+
+Important advantages:
+
+- Reduced data redundancy
+- Better data consistency
+- Data sharing
+- Security
+- Backup and recovery
+- Integrity enforcement
+- Concurrent access
+- Data independence
+
+## 3. Data Models
+
+A **data model** describes how data is represented and related.
+
+Important data models:
+
+- Hierarchical model
+- Network model
+- Relational model
+- Object-oriented model
+- Object-relational model
+- NoSQL models
+
+### Hierarchical Model
+
+Data is organized as a tree.
+
+```text
+          Root
+           |
+      ------------
+      |          |
+    Node        Node
+    /  \
+ Node  Node
+```
+
+It mainly represents one-to-many relationships.
+
+### Network Model
+
+Data is represented using records connected by links.
+
+It can represent many-to-many relationships.
+
+### Relational Model
+
+Data is represented using tables.
+
+Example:
+
+| Student_ID | Name | Department |
+|---|---|---|
+| 101 | Arun | BCA |
+| 102 | Anu | BBA |
+
+The relational model is based on relations, tuples, and attributes.
+
+## 4. Schema and Instance
+
+### Schema
+
+A **schema** is the structure or design of a database.
+
+Example:
+
+```text
+STUDENT(Student_ID, Name, Department, Mark)
+```
+
+### Instance
+
+An **instance** is the actual data stored in the database at a particular time.
+
+| Student_ID | Name | Department | Mark |
+|---|---|---|---:|
+| 101 | Arun | BCA | 85 |
+| 102 | Anu | BBA | 90 |
+
+### Schema vs Instance
+
+| Schema | Instance |
+|---|---|
+| Database structure | Actual data |
+| Changes relatively rarely | Changes frequently |
+| Describes design | Represents current state |
+
+# 5. Three-Schema Architecture
+
+The three-schema architecture separates the database into three levels.
+
+```text
+External Level
+      |
+      v
+Conceptual Level
+      |
+      v
+Internal Level
+      |
+      v
+Physical Storage
+```
+
+## 5.1 External Level
+
+Also called the **view level**.
+
+It describes how individual users see the database.
+
+Example:
+
+A student may see only:
+
+```text
+Name
+Roll Number
+Marks
+```
+
+## 5.2 Conceptual Level
+
+Describes the complete logical structure of the database.
+
+It contains:
+
+- Entities
+- Relationships
+- Constraints
+- Attributes
+
+## 5.3 Internal Level
+
+Describes how data is physically stored.
+
+It deals with:
+
+- Files
+- Indexes
+- Storage blocks
+- Physical organization
+
+# 6. Data Independence
+
+Data independence means changing one level without requiring unnecessary changes at higher levels.
+
+Two types:
+
+1. Physical data independence
+2. Logical data independence
+
+## Physical Data Independence
+
+Changes in the internal/physical level do not require changes to the conceptual level.
+
+Example:
+
+Changing the storage method or adding an index.
+
+## Logical Data Independence
+
+Changes in the conceptual schema do not require changes to external views.
+
+Example:
+
+Adding a new attribute while preserving existing user views.
+
+### Important Point
+
+```text
+Physical data independence
+→ Internal level changes
+→ Conceptual level remains unaffected
+```
+
+```text
+Logical data independence
+→ Conceptual level changes
+→ External views remain unaffected as far as possible
+```
+
+# 7. Database Languages
+
+Important database languages include:
+
+### DDL
+
+**Data Definition Language**
+
+Used to define database structures.
+
+Examples:
+
+```sql
+CREATE
+ALTER
+DROP
+TRUNCATE
+```
+
+### DML
+
+**Data Manipulation Language**
+
+Used to retrieve and modify data.
+
+Examples:
+
+```sql
+SELECT
+INSERT
+UPDATE
+DELETE
+```
+
+### DCL
+
+**Data Control Language**
+
+Used for authorization and access control.
+
+Examples:
+
+```sql
+GRANT
+REVOKE
+```
+
+### TCL
+
+**Transaction Control Language**
+
+Examples:
+
+```sql
+COMMIT
+ROLLBACK
+SAVEPOINT
+```
+
+### Comparison
+
+| Language | Purpose |
+|---|---|
+| DDL | Define database structure |
+| DML | Manipulate data |
+| DCL | Control permissions |
+| TCL | Control transactions |
+
+# 8. Database Interfaces
+
+Users can interact with a DBMS through:
+
+- Command-line interfaces
+- Graphical interfaces
+- Forms
+- Web applications
+- Application programming interfaces
+- Administrative tools
+
+# 9. Centralized DBMS
+
+In a centralized database system, the database and major processing are concentrated at a central location.
+
+```text
+Users
+  |
+  v
+Central DBMS
+  |
+  v
+Central Database
+```
+
+Advantages:
+
+- Centralized control
+- Easier administration
+
+Limitations:
+
+- Single major point of failure
+- Network dependency for remote users
+
+# 10. Client/Server Architecture
+
+In client/server architecture:
+
+```text
+Client
+   |
+   | Request
+   v
+Database Server
+   |
+   v
+Database
+```
+
+The client requests services and the server provides database services.
+
+Advantages:
+
+- Resource sharing
+- Centralized database management
+- Multiple clients can access the database
+
+# Part B – Data Modeling
+
+# 11. Entity-Relationship Model
+
+The **Entity-Relationship (ER) model** represents entities, attributes, and relationships.
+
+## Entity
+
+An entity is a real-world object.
+
+Examples:
+
+- Student
+- Teacher
+- Course
+- Department
+
+## Attribute
+
+An attribute describes an entity.
+
+For Student:
+
+```text
+Student_ID
+Name
+Age
+Department
+```
+
+## Relationship
+
+A relationship represents an association between entities.
+
+Example:
+
+```text
+Student ---- enrolls in ---- Course
+```
+
+# 12. Types of Attributes
+
+Important types:
+
+- Simple
+- Composite
+- Single-valued
+- Multi-valued
+- Derived
+- Key attribute
+
+### Simple Attribute
+
+Cannot normally be divided further.
+
+Example:
+
+```text
+Age
+```
+
+### Composite Attribute
+
+Can be divided into smaller components.
+
+Example:
+
+```text
+Name
+  |
+  +-- First Name
+  +-- Last Name
+```
+
+### Multivalued Attribute
+
+Can have multiple values.
+
+Example:
+
+```text
+Phone Numbers
+```
+
+### Derived Attribute
+
+Calculated from another attribute.
+
+Example:
+
+```text
+Age
+```
+
+can be derived from:
+
+```text
+Date of Birth
+```
+
+# 13. Cardinality
+
+Cardinality describes how many entities participate in a relationship.
+
+Common types:
+
+- One-to-one
+- One-to-many
+- Many-to-one
+- Many-to-many
+
+Examples:
+
+```text
+Person ---- has ---- Passport
+1                 1
+```
+
+```text
+Department ---- employs ---- Employee
+1                         N
+```
+
+```text
+Student ---- enrolls ---- Course
+N                       M
+```
+
+# 14. Relational Model
+
+The relational model represents data using relations or tables.
+
+Important terms:
+
+```text
+Relation → Table
+Tuple → Row
+Attribute → Column
+Domain → Set of allowed values
+```
+
+Example:
+
+| Roll | Name | Mark |
+|---|---|---:|
+| 1 | Arun | 80 |
+| 2 | Anu | 90 |
+
+Here:
+
+- Relation = Student
+- Tuples = rows
+- Attributes = Roll, Name, Mark
+
+# 15. Relational Constraints
+
+Important constraints:
+
+1. Domain constraint
+2. Key constraint
+3. Entity integrity
+4. Referential integrity
+
+## Domain Constraint
+
+An attribute must contain values from its valid domain.
+
+Example:
+
+```text
+Age should be numeric.
+```
+
+## Key Constraint
+
+A key identifies tuples uniquely.
+
+## Entity Integrity
+
+A primary key cannot contain NULL.
+
+## Referential Integrity
+
+A foreign key must refer to a valid referenced key value, or be NULL where permitted.
+
+Example:
+
+```text
+DEPARTMENT
+Department_ID
+
+STUDENT
+Student_ID
+Department_ID
+```
+
+The student's `Department_ID` should correspond to an existing department.
+
+# 16. Relational Database Schema
+
+A relational schema describes the structure of relations.
+
+Example:
+
+```text
+STUDENT(Student_ID, Name, Department_ID, Mark)
+
+DEPARTMENT(Department_ID, Department_Name)
+```
+
+Primary keys can be represented as:
+
+```text
+STUDENT(Student_ID, Name, Department_ID, Mark)
+         ^ primary key
+```
+
+# 17. Update Operations
+
+Main relational database operations:
+
+1. Insert
+2. Delete
+3. Update
+
+## Insert
+
+Adds a new tuple.
+
+## Delete
+
+Removes a tuple.
+
+## Update
+
+Changes existing values.
+
+Constraint violations can occur when an operation breaks:
+
+- Domain constraints
+- Key constraints
+- Entity integrity
+- Referential integrity
+
+# Part C – Relational Algebra and Relational Calculus
+
+# 18. Relational Algebra
+
+Relational algebra is a procedural query language.
+
+Important operations:
+
+- Selection
+- Projection
+- Union
+- Set difference
+- Cartesian product
+- Rename
+- Join
+- Intersection
+
+## Selection
+
+Selects rows satisfying a condition.
+
+Notation:
+
+```text
+σ condition (R)
+```
+
+Example:
+
+```text
+σ Mark > 80 (STUDENT)
+```
+
+means select students whose mark is greater than 80.
+
+## Projection
+
+Selects columns.
+
+Notation:
+
+```text
+π attributes (R)
+```
+
+Example:
+
+```text
+π Name, Mark (STUDENT)
+```
+
+## Union
+
+Combines tuples from two union-compatible relations.
+
+```text
+R ∪ S
+```
+
+## Set Difference
+
+```text
+R - S
+```
+
+Returns tuples in R but not in S.
+
+## Cartesian Product
+
+```text
+R × S
+```
+
+Combines every tuple of R with every tuple of S.
+
+## Rename
+
+Rename operation is represented using:
+
+```text
+ρ
+```
+
+## Join
+
+Join combines related tuples.
+
+Common joins:
+
+- Theta join
+- Equi-join
+- Natural join
+- Outer join
+
+# 19. Relational Calculus
+
+Relational calculus is a **non-procedural** query language.
+
+It describes **what data is required**, rather than how to obtain it.
+
+Two forms:
+
+1. Tuple relational calculus
+2. Domain relational calculus
+
+### Relational Algebra vs Relational Calculus
+
+| Relational Algebra | Relational Calculus |
+|---|---|
+| Procedural | Non-procedural/declarative |
+| Specifies operations | Specifies desired result |
+| Describes how | Describes what |
+
+# 20. Codd's Rules
+
+E. F. Codd proposed rules for relational database systems.
+
+Frequently examined rules include:
+
+### Rule 0
+
+The system must manage the database entirely through relational capabilities.
+
+### Rule 1 – Information Rule
+
+All information is represented as values in tables.
+
+### Rule 2 – Guaranteed Access
+
+Every atomic value should be accessible through table name, primary key, and attribute name.
+
+### Rule 3 – Systematic Treatment of NULL
+
+NULL values must be supported systematically.
+
+### Rule 4 – Dynamic Online Catalog
+
+The database description should be represented relationally and accessible using the same language.
+
+### Rule 5 – Comprehensive Data Sublanguage
+
+At least one relational language should support data definition, manipulation, integrity, and transaction control.
+
+### Rule 6 – View Updating
+
+Updatable views should be updatable where theoretically possible.
+
+### Rule 7 – High-Level Insert, Update, Delete
+
+Set-level operations should be supported.
+
+### Rule 8 – Physical Data Independence
+
+Changes in physical storage should not affect applications.
+
+### Rule 9 – Logical Data Independence
+
+Changes in logical schema should not unnecessarily affect applications.
+
+### Rule 10 – Integrity Independence
+
+Integrity constraints should be definable independently of applications.
+
+### Rule 11 – Distribution Independence
+
+Users should not need to know where data is physically located.
+
+### Rule 12 – Nonsubversion
+
+Lower-level access should not bypass relational integrity rules.
+
+# Part D – SQL
+
+# 21. SQL
+
+SQL means **Structured Query Language**.
+
+It is widely used for relational database management.
+
+# 22. CREATE
+
+Create a table:
+
+```sql
+CREATE TABLE Student
+(
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Mark INT
+);
+```
+
+# 23. SQL Data Types
+
+Common data types:
+
+```text
+INT
+CHAR
+VARCHAR
+DATE
+TIME
+DECIMAL
+FLOAT
+BOOLEAN
+```
+
+Exact types vary between DBMS products.
+
+# 24. SQL Constraints
+
+Common constraints:
+
+```text
+PRIMARY KEY
+FOREIGN KEY
+UNIQUE
+NOT NULL
+CHECK
+DEFAULT
+```
+
+Example:
+
+```sql
+CREATE TABLE Student
+(
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE,
+    Mark INT CHECK (Mark >= 0),
+    Department_ID INT
+);
+```
+
+# 25. INSERT
+
+```sql
+INSERT INTO Student
+VALUES (101, 'Arun', 85);
+```
+
+It can also specify columns:
+
+```sql
+INSERT INTO Student(Student_ID, Name, Mark)
+VALUES (101, 'Arun', 85);
+```
+
+# 26. SELECT
+
+```sql
+SELECT * FROM Student;
+```
+
+Specific columns:
+
+```sql
+SELECT Name, Mark
+FROM Student;
+```
+
+# 27. WHERE
+
+```sql
+SELECT *
+FROM Student
+WHERE Mark >= 80;
+```
+
+# 28. ORDER BY
+
+```sql
+SELECT *
+FROM Student
+ORDER BY Mark DESC;
+```
+
+# 29. GROUP BY
+
+```sql
+SELECT Department_ID, COUNT(*)
+FROM Student
+GROUP BY Department_ID;
+```
+
+# 30. HAVING
+
+HAVING filters groups.
+
+```sql
+SELECT Department_ID, AVG(Mark)
+FROM Student
+GROUP BY Department_ID
+HAVING AVG(Mark) > 70;
+```
+
+### WHERE vs HAVING
+
+| WHERE | HAVING |
+|---|---|
+| Filters rows | Filters groups |
+| Applied before grouping | Applied after grouping |
+| Often used without GROUP BY | Commonly used with GROUP BY |
+
+# 31. UPDATE
+
+```sql
+UPDATE Student
+SET Mark = 90
+WHERE Student_ID = 101;
+```
+
+# 32. DELETE
+
+```sql
+DELETE FROM Student
+WHERE Student_ID = 101;
+```
+
+Important:
+
+```sql
+DELETE FROM Student;
+```
+
+can delete all rows if no WHERE clause is supplied.
+
+# 33. SQL Joins
+
+## Inner Join
+
+Returns matching rows.
+
+```sql
+SELECT Student.Name, Department.Department_Name
+FROM Student
+INNER JOIN Department
+ON Student.Department_ID = Department.Department_ID;
+```
+
+## Left Join
+
+Returns all rows from the left table and matching rows from the right.
+
+## Right Join
+
+Returns all rows from the right table and matching rows from the left.
+
+## Full Outer Join
+
+Returns matching rows plus nonmatching rows from both sides, where supported.
+
+# 34. Views
+
+A view is a virtual table based on a query.
+
+```sql
+CREATE VIEW HighMarks AS
+SELECT Student_ID, Name, Mark
+FROM Student
+WHERE Mark >= 80;
+```
+
+Advantages:
+
+- Security
+- Simpler queries
+- Abstraction
+- Reusable queries
+
+# 35. Stored Procedures
+
+A stored procedure is a stored program executed by the DBMS.
+
+It can contain:
+
+- SQL statements
+- Variables
+- Conditions
+- Loops
+- Parameters
+
+Syntax varies among DBMS products.
+
+# 36. Stored Functions
+
+A stored function normally returns a value.
+
+Procedures and functions differ in syntax and capabilities depending on the DBMS.
+
+# 37. Database Triggers
+
+A trigger is automatically executed when a specified database event occurs.
+
+Typical events:
+
+```text
+INSERT
+UPDATE
+DELETE
+```
+
+Example use:
+
+```text
+When an employee salary changes
+        |
+        v
+Trigger executes
+        |
+        v
+Record change in audit table
+```
+
+# 38. SQL Injection
+
+SQL injection is a security attack in which malicious input changes the intended SQL statement.
+
+Unsafe pattern:
+
+```text
+Application input
+      |
+      v
+String concatenation
+      |
+      v
+SQL query
+```
+
+Safer approach:
+
+- Prepared statements
+- Parameterized queries
+- Input validation
+- Least-privilege database accounts
+
+# Part E – Normalization
+
+# 39. Functional Dependency
+
+A functional dependency describes a relationship between attributes.
+
+Written as:
+
+```text
+X → Y
+```
+
+It means:
+
+If two rows have the same value of X, they must have the same value of Y.
+
+Example:
+
+```text
+Student_ID → Student_Name
+```
+
+because a Student_ID identifies one student.
+
+# 40. Types of Functional Dependency
+
+Important concepts:
+
+- Trivial dependency
+- Non-trivial dependency
+- Full functional dependency
+- Partial dependency
+- Transitive dependency
+
+## Trivial Functional Dependency
+
+If:
+
+```text
+Y is a subset of X
+```
+
+then:
+
+```text
+X → Y
+```
+
+is trivial.
+
+## Partial Dependency
+
+A non-key attribute depends on only part of a composite key.
+
+## Transitive Dependency
+
+If:
+
+```text
+A → B
+B → C
+```
+
+then:
+
+```text
+A → C
+```
+
+may represent a transitive dependency.
+
+# 41. Normalization
+
+Normalization organizes tables to reduce redundancy and update anomalies.
+
+Main normal forms:
+
+- 1NF
+- 2NF
+- 3NF
+- BCNF
+- 4NF
+- 5NF
+
+# 42. First Normal Form – 1NF
+
+A relation is in 1NF when attributes contain atomic values and repeating groups are removed.
+
+Bad:
+
+| Student | Phone |
+|---|---|
+| Arun | 9876, 8765 |
+
+Better:
+
+| Student | Phone |
+|---|---|
+| Arun | 9876 |
+| Arun | 8765 |
+
+# 43. Second Normal Form – 2NF
+
+A relation must:
+
+1. Be in 1NF.
+2. Have no partial dependency of a non-key attribute on part of a candidate key.
+
+2NF is especially important when the key is composite.
+
+# 44. Third Normal Form – 3NF
+
+A relation must:
+
+1. Be in 2NF.
+2. Have no problematic transitive dependency of non-key attributes on a candidate key.
+
+A common simplified rule:
+
+```text
+Non-key attributes should depend on the key,
+the whole key,
+and nothing but the key.
+```
+
+# 45. BCNF
+
+A relation is in BCNF if every determinant is a candidate key.
+
+BCNF is generally stronger than 3NF.
+
+# 46. 4NF
+
+4NF deals mainly with **multivalued dependencies**.
+
+# 47. 5NF
+
+5NF deals with **join dependencies** and decomposition that cannot be further improved without introducing problems.
+
+# 48. Normalization Summary
+
+| Normal Form | Main idea |
+|---|---|
+| 1NF | Atomic values |
+| 2NF | Remove partial dependency |
+| 3NF | Remove transitive dependency |
+| BCNF | Every determinant is a candidate key |
+| 4NF | Remove problematic multivalued dependencies |
+| 5NF | Deal with join dependencies |
+
+# Part F – Query Processing and Optimization
+
+# 49. Query Processing
+
+Query processing converts a user query into an efficient execution plan.
+
+General process:
+
+```text
+SQL Query
+   |
+   v
+Parsing
+   |
+   v
+Translation
+   |
+   v
+Optimization
+   |
+   v
+Execution Plan
+   |
+   v
+Execution
+```
+
+# 50. Query Optimization
+
+Query optimization attempts to find an efficient way to execute a query.
+
+Possible techniques:
+
+- Selection pushdown
+- Projection pushdown
+- Join ordering
+- Index usage
+- Cost estimation
+- Choosing efficient access paths
+
+## Selection Pushdown
+
+Apply filters as early as possible to reduce intermediate data.
+
+Example:
+
+Instead of joining all rows and then filtering:
+
+```text
+Join → Filter
+```
+
+try:
+
+```text
+Filter → Join
+```
+
+when logically valid.
+
+# Part G – Transaction Processing
+
+# 51. Transaction
+
+A transaction is a logical unit of database work.
+
+Example:
+
+Bank transfer:
+
+```text
+Debit Account A
+       +
+Credit Account B
+```
+
+Both operations should be treated as one logical transaction.
+
+# 52. ACID Properties
+
+A transaction should satisfy:
+
+```text
+A → Atomicity
+C → Consistency
+I → Isolation
+D → Durability
+```
+
+## Atomicity
+
+All operations occur or none occur.
+
+## Consistency
+
+A transaction takes the database from one valid state to another valid state.
+
+## Isolation
+
+Concurrent transactions should not improperly interfere with each other.
+
+## Durability
+
+Committed changes should survive failures.
+
+# 53. Transaction States
+
+Common states:
+
+```text
+Active
+  |
+  v
+Partially Committed
+  |
+  v
+Committed
+```
+
+A transaction can also enter:
+
+```text
+Failed
+  |
+  v
+Aborted
+```
+
+# 54. Concurrency Control
+
+Concurrency control manages simultaneous transactions.
+
+Problems without proper control include:
+
+- Lost update
+- Dirty read
+- Non-repeatable read
+- Incorrect summary
+- Phantom read
+
+# 55. Locking
+
+A common technique is lock-based concurrency control.
+
+Two basic locks:
+
+### Shared Lock
+
+Used for reading.
+
+```text
+S-lock
+```
+
+### Exclusive Lock
+
+Used for writing.
+
+```text
+X-lock
+```
+
+Compatibility:
+
+| Existing / Requested | S | X |
+|---|---:|---:|
+| S | Yes | No |
+| X | No | No |
+
+# 56. Two-Phase Locking
+
+Two-phase locking (2PL) has two phases:
+
+1. Growing phase
+2. Shrinking phase
+
+### Growing Phase
+
+Locks can be acquired.
+
+### Shrinking Phase
+
+Locks can be released.
+
+Basic idea:
+
+```text
+Growing
+Acquire locks
+     |
+     v
+Shrinking
+Release locks
+```
+
+# 57. Timestamp Ordering
+
+Transactions are assigned timestamps.
+
+Operations are ordered according to timestamps to maintain serializability.
+
+# 58. Deadlock
+
+Deadlock occurs when transactions wait for each other indefinitely.
+
+Example:
+
+```text
+T1 holds A → waits for B
+T2 holds B → waits for A
+```
+
+This creates a cycle.
+
+Solutions include:
+
+- Deadlock prevention
+- Deadlock avoidance
+- Deadlock detection
+- Recovery
+
+# Part H – Database Recovery
+
+# 59. Database Recovery
+
+Recovery restores the database to a consistent state after failure.
+
+Failure types:
+
+- Transaction failure
+- System crash
+- Disk failure
+
+# 60. Log-Based Recovery
+
+A log records database operations.
+
+Typical information includes:
+
+```text
+Transaction
+Old value
+New value
+Operation
+```
+
+Two important concepts:
+
+- UNDO
+- REDO
+
+## UNDO
+
+Reverse changes made by incomplete transactions.
+
+## REDO
+
+Reapply changes made by committed transactions when required.
+
+# 61. Checkpoint
+
+A checkpoint periodically records a known recovery point.
+
+It reduces the amount of log processing needed during recovery.
+
+# 62. Shadow Paging
+
+Shadow paging maintains alternative page tables so recovery can avoid some forms of log-based processing.
+
+# Part I – Object and Object-Relational Databases
+
+# 63. Object Database
+
+An object-oriented database stores data as objects.
+
+It supports concepts such as:
+
+- Objects
+- Classes
+- Inheritance
+- Encapsulation
+- Methods
+
+# 64. Object-Relational Database
+
+An object-relational DBMS combines relational database features with object-oriented features.
+
+Possible features:
+
+- User-defined types
+- Complex data
+- Object-like structures
+- Methods
+
+# Part J – Database Security and Authorization
+
+# 65. Database Security
+
+Database security protects data from:
+
+- Unauthorized access
+- Modification
+- Disclosure
+- Destruction
+
+Security mechanisms include:
+
+- Authentication
+- Authorization
+- Encryption
+- Auditing
+- Backup
+
+# 66. Authentication vs Authorization
+
+| Authentication | Authorization |
+|---|---|
+| Who are you? | What are you allowed to do? |
+| Verifies identity | Determines permissions |
+| Login/password | Privileges/roles |
+
+# 67. GRANT
+
+```sql
+GRANT SELECT
+ON Student
+TO user1;
+```
+
+# 68. REVOKE
+
+```sql
+REVOKE SELECT
+ON Student
+FROM user1;
+```
+
+# 69. Roles
+
+A role is a collection of privileges.
+
+Example:
+
+```text
+Teacher
+   |
+   +-- SELECT
+   +-- UPDATE
+```
+
+# Part K – Enhanced Data Models
+
+# 70. Temporal Databases
+
+A temporal database stores information associated with time.
+
+Important concepts:
+
+- Valid time
+- Transaction time
+
+## Valid Time
+
+When a fact is true in the real world.
+
+## Transaction Time
+
+When the database records the fact.
+
+# 71. Multimedia Databases
+
+Store multimedia information such as:
+
+- Images
+- Audio
+- Video
+- Animation
+- Text
+
+Challenges:
+
+- Large storage
+- Complex retrieval
+- Multimedia indexing
+- Quality of service
+
+# 72. Deductive Databases
+
+A deductive database combines stored facts with rules to derive additional information.
+
+Example:
+
+```text
+Fact:
+Student(A)
+
+Rule:
+If Student(x), then Person(x)
+
+Derived:
+Person(A)
+```
+
+# 73. XML Databases
+
+XML databases store and retrieve XML data.
+
+XML is useful for:
+
+- Semi-structured data
+- Data exchange
+- Web applications
+
+# 74. Internet Databases
+
+Internet databases allow database services to be accessed through web technologies.
+
+Typical architecture:
+
+```text
+Browser
+   |
+   v
+Web Server
+   |
+   v
+Application Server
+   |
+   v
+Database Server
+```
+
+# 75. Mobile Databases
+
+Mobile databases support data access from mobile devices.
+
+Challenges:
+
+- Limited bandwidth
+- Intermittent connectivity
+- Limited battery
+- Limited storage
+- Synchronization
+
+# 76. Geographic Information Systems
+
+GIS means **Geographic Information System**.
+
+It stores and analyzes geographically referenced data.
+
+Examples:
+
+- Maps
+- Roads
+- Locations
+- Land use
+- Population distribution
+
+GIS data can include:
+
+```text
+Spatial data
++
+Attribute data
+```
+
+# 77. Genome Data Management
+
+Genome databases manage biological and genetic information.
+
+Examples of data:
+
+- DNA sequences
+- RNA sequences
+- Gene information
+- Protein information
+
+Challenges:
+
+- Huge data volume
+- Complex relationships
+- High-speed analysis
+- Data integration
+
+# 78. Distributed Databases
+
+A distributed database stores data across multiple networked sites.
+
+```text
+             Network
+          /     |      \
+         /      |       \
+      Site A  Site B   Site C
+```
+
+Advantages:
+
+- Local availability
+- Scalability
+- Resource sharing
+
+Challenges:
+
+- Network failures
+- Distributed transactions
+- Synchronization
+- Security
+- Data consistency
+
+# Part L – Data Warehousing
+
+# 79. Data Warehouse
+
+A data warehouse is a repository designed mainly for analysis and decision support.
+
+Characteristics commonly associated with data warehouses:
+
+- Subject-oriented
+- Integrated
+- Time-variant
+- Non-volatile
+
+# 80. OLTP
+
+OLTP means **Online Transaction Processing**.
+
+Used for day-to-day transactions.
+
+Examples:
+
+- ATM transactions
+- Order processing
+- Student registration
+
+Characteristics:
+
+- Many short transactions
+- Current operational data
+- Frequent insert/update/delete
+
+# 81. OLAP
+
+OLAP means **Online Analytical Processing**.
+
+Used for analysis and decision support.
+
+Examples:
+
+- Sales analysis
+- Trend analysis
+- Business reports
+
+Characteristics:
+
+- Complex queries
+- Aggregation
+- Historical data
+- Multidimensional analysis
+
+### OLTP vs OLAP
+
+| OLTP | OLAP |
+|---|---|
+| Transaction processing | Analytical processing |
+| Current data | Historical/analytical data |
+| Many short transactions | Complex analytical queries |
+| Frequent updates | Mainly read/analysis |
+| Operational systems | Data warehouses |
+
+# 82. Data Warehouse Modeling
+
+Common approaches:
+
+- Star schema
+- Snowflake schema
+- Fact constellation
+
+## Star Schema
+
+A central fact table is connected to dimension tables.
+
+```text
+        Dimension
+            |
+Dimension -- Fact -- Dimension
+            |
+        Dimension
+```
+
+## Fact Table
+
+Contains measurable facts.
+
+Examples:
+
+```text
+Sales Amount
+Quantity
+Profit
+```
+
+## Dimension Table
+
+Contains descriptive information.
+
+Examples:
+
+```text
+Time
+Product
+Customer
+Location
+```
+
+# 83. Concept Hierarchy
+
+A concept hierarchy organizes data at different levels.
+
+Example:
+
+```text
+Country
+   |
+State
+   |
+District
+   |
+City
+```
+
+Another example:
+
+```text
+Year
+ |
+Month
+ |
+Day
+```
+
+Concept hierarchies support OLAP operations.
+
+# Part M – Data Mining
+
+# 84. Data Mining
+
+Data mining is the process of discovering useful patterns from large datasets.
+
+Common tasks:
+
+- Association
+- Classification
+- Clustering
+- Regression
+- Summarization
+- Link analysis
+- Sequence analysis
+
+# 85. Association Rules
+
+Association mining finds relationships between items.
+
+Example:
+
+```text
+Bread → Butter
+```
+
+Important measures:
+
+### Support
+
+Support measures how frequently an itemset occurs.
+
+```text
+Support(X) =
+Number of transactions containing X
+------------------------------------
+Total number of transactions
+```
+
+### Confidence
+
+```text
+Confidence(X → Y) =
+Support(X ∪ Y)
+----------------
+Support(X)
+```
+
+### Lift
+
+```text
+Lift(X → Y) =
+Confidence(X → Y)
+------------------
+Support(Y)
+```
+
+Interpretation:
+
+```text
+Lift > 1 → positive association
+Lift = 1 → approximately independent
+Lift < 1 → negative association
+```
+
+# 86. Classification
+
+Classification predicts a class label.
+
+Example:
+
+```text
+Email → Spam / Not Spam
+```
+
+Training data contains known class labels.
+
+Examples of classification algorithms:
+
+- Decision Tree
+- Naive Bayes
+- KNN
+- SVM
+
+# 87. Clustering
+
+Clustering groups similar objects without predefined class labels.
+
+Example:
+
+```text
+Customers
+   |
+   +-- Group 1
+   +-- Group 2
+   +-- Group 3
+```
+
+K-means is a common clustering algorithm.
+
+# 88. Regression
+
+Regression predicts a numerical value.
+
+Example:
+
+```text
+House features → House price
+```
+
+A simple linear model:
+
+```text
+y = b0 + b1x
+```
+
+where:
+
+```text
+y  = predicted value
+b0 = intercept
+b1 = coefficient
+x  = input
+```
+
+# 89. Support Vector Machine
+
+SVM means **Support Vector Machine**.
+
+It attempts to find a decision boundary that separates classes.
+
+Important concepts:
+
+- Hyperplane
+- Margin
+- Support vectors
+- Kernel
+
+Support vectors are training observations that strongly influence the separating boundary.
+
+# 90. K-Nearest Neighbour
+
+KNN classifies a new observation based on nearby training observations.
+
+Basic process:
+
+1. Select K.
+2. Calculate distance.
+3. Find K nearest points.
+4. Determine the majority class.
+5. Assign the class.
+
+Important point:
+
+The choice of K affects the result.
+
+# 91. Hidden Markov Model
+
+HMM means **Hidden Markov Model**.
+
+It represents systems where:
+
+- The true state is hidden.
+- Observations are visible.
+
+Example:
+
+```text
+Hidden weather state
+       |
+       v
+Observed activity
+```
+
+Important concepts:
+
+- Hidden states
+- Observations
+- Initial probabilities
+- Transition probabilities
+- Emission probabilities
+
+# 92. Summarization
+
+Summarization produces a compact representation of data.
+
+Examples:
+
+- Mean
+- Median
+- Count
+- Minimum
+- Maximum
+- Aggregated reports
+
+# 93. Dependency Modeling
+
+Dependency modeling identifies relationships or dependencies among variables or events.
+
+It can be used to discover:
+
+- Conditional relationships
+- Probabilistic dependencies
+- Causal structures in appropriate models
+
+# 94. Link Analysis
+
+Link analysis studies relationships between connected objects.
+
+Examples:
+
+- Web pages
+- Social networks
+- Citation networks
+
+A graph can represent:
+
+```text
+Nodes → entities
+Edges → relationships
+```
+
+# 95. Sequencing Analysis
+
+Sequence analysis studies ordered events.
+
+Examples:
+
+```text
+Customer actions:
+Search → Product View → Cart → Purchase
+```
+
+Applications:
+
+- Web usage analysis
+- DNA sequence analysis
+- Customer behavior analysis
+
+# 96. Social Network Analysis
+
+Social Network Analysis studies relationships among people or organizations.
+
+Important concepts:
+
+- Nodes
+- Edges
+- Degree
+- Centrality
+- Communities
+- Paths
+
+# Part N – Big Data Systems
+
+# 97. Big Data
+
+Big Data refers to datasets whose size, speed, complexity, or diversity creates challenges for traditional processing systems.
+
+# 98. Characteristics of Big Data
+
+The commonly discussed 5 Vs are:
+
+```text
+Volume
+Velocity
+Variety
+Veracity
+Value
+```
+
+## Volume
+
+Huge quantity of data.
+
+## Velocity
+
+High speed of data generation and processing.
+
+## Variety
+
+Different data formats.
+
+Examples:
+
+- Text
+- Images
+- Video
+- Sensor data
+- Logs
+
+## Veracity
+
+Reliability and quality of data.
+
+## Value
+
+Useful information that can be obtained from data.
+
+# 99. Types of Big Data
+
+### Structured Data
+
+Organized in fixed schemas.
+
+Example:
+
+```text
+Relational table
+```
+
+### Semi-Structured Data
+
+Has some organization but not a rigid relational schema.
+
+Examples:
+
+```text
+XML
+JSON
+```
+
+### Unstructured Data
+
+Does not follow a fixed tabular structure.
+
+Examples:
+
+- Video
+- Audio
+- Images
+- Free text
+
+# 100. Big Data Architecture
+
+A simplified architecture:
+
+```text
+Data Sources
+     |
+     v
+Data Ingestion
+     |
+     v
+Distributed Storage
+     |
+     v
+Processing
+     |
+     v
+Analytics
+     |
+     v
+Visualization / Applications
+```
+
+# 101. MapReduce
+
+MapReduce is a distributed processing model.
+
+It has two main conceptual stages:
+
+```text
+Input
+  |
+  v
+Map
+  |
+  v
+Shuffle / Sort
+  |
+  v
+Reduce
+  |
+  v
+Output
+```
+
+## Map
+
+Processes input records and produces intermediate key-value pairs.
+
+## Shuffle and Sort
+
+Groups intermediate values by key.
+
+## Reduce
+
+Processes values belonging to each key and produces final results.
+
+# 102. Example of MapReduce
+
+Suppose we want to count words.
+
+Input:
+
+```text
+cat dog cat
+```
+
+Map:
+
+```text
+(cat, 1)
+(dog, 1)
+(cat, 1)
+```
+
+Shuffle:
+
+```text
+cat → [1, 1]
+dog → [1]
+```
+
+Reduce:
+
+```text
+cat → 2
+dog → 1
+```
+
+# 103. Hadoop
+
+Hadoop is an ecosystem/framework associated with distributed storage and processing of large datasets.
+
+Major components historically include:
+
+- HDFS
+- MapReduce
+- YARN
+- Hadoop Common
+
+# 104. HDFS
+
+HDFS means **Hadoop Distributed File System**.
+
+It stores large files across multiple machines.
+
+Important components:
+
+```text
+NameNode
+DataNodes
+```
+
+## NameNode
+
+Maintains filesystem metadata.
+
+Examples of metadata:
+
+- File names
+- Directory structure
+- Block information
+- Locations of blocks
+
+## DataNode
+
+Stores actual data blocks.
+
+```text
+             NameNode
+                |
+        ----------------
+        |       |      |
+        v       v      v
+    DataNode DataNode DataNode
+```
+
+# 105. HDFS Blocks
+
+Large files are divided into blocks.
+
+Blocks are distributed across DataNodes.
+
+Replication provides fault tolerance.
+
+Important idea:
+
+```text
+Large File
+   |
+   +-- Block 1
+   +-- Block 2
+   +-- Block 3
+   |
+   v
+Distributed Storage
+```
+
+# Part O – NoSQL
+
+# 106. NoSQL
+
+NoSQL means databases designed for data models and workloads that do not rely solely on the traditional relational model.
+
+NoSQL systems are often associated with:
+
+- Flexible schemas
+- Horizontal scaling
+- Distributed storage
+- Large-scale data processing
+
+NoSQL does not simply mean "no SQL"; it is commonly interpreted as "Not Only SQL."
+
+# 107. Types of NoSQL Databases
+
+Four common categories:
+
+1. Key-value
+2. Document
+3. Column-family
+4. Graph
+
+## Key-Value
+
+Stores:
+
+```text
+Key → Value
+```
+
+Example:
+
+```text
+101 → "Arun"
+```
+
+## Document Database
+
+Stores documents, often in JSON-like formats.
+
+Example:
+
+```json
+{
+  "name": "Arun",
+  "mark": 85
+}
+```
+
+## Column-Family Database
+
+Stores data in column families.
+
+Useful for large distributed datasets.
+
+## Graph Database
+
+Represents:
+
+```text
+Nodes + Edges + Properties
+```
+
+Useful for:
+
+- Social networks
+- Recommendation systems
+- Relationship analysis
+
+# 108. NoSQL Products
+
+Examples include:
+
+- MongoDB
+- Apache Cassandra
+- Redis
+- Neo4j
+- CouchDB
+
+Different products use different data models and query languages.
+
+# 109. NoSQL Querying and Management
+
+NoSQL querying depends on the product.
+
+Examples:
+
+- Document queries
+- Key-value operations
+- Graph queries
+- Column-family queries
+
+Common management operations include:
+
+- Insert
+- Read
+- Update
+- Delete
+- Indexing
+- Replication
+- Backup
+
+# 110. Query Optimization in NoSQL
+
+Important techniques:
+
+- Proper indexing
+- Choosing appropriate data models
+- Limiting unnecessary fields
+- Filtering early
+- Avoiding unnecessary network transfers
+- Choosing suitable partition keys
+
+# 111. Indexing
+
+An index improves data retrieval by providing an additional access structure.
+
+Example:
+
+```text
+Student_ID → Index
+```
+
+Instead of scanning every row, the DBMS can use the index to locate matching data.
+
+Indexes can improve reads but may increase:
+
+- Storage requirements
+- Insert cost
+- Update cost
+- Delete cost
+
+# 112. Ordering Data Sets
+
+Ordering means arranging data according to one or more fields.
+
+Example:
+
+```text
+Mark ascending
+Mark descending
+Name alphabetical
+```
+
+Efficient ordering depends on:
+
+- Indexes
+- Query design
+- Data distribution
+- Database engine
+
+# 113. NoSQL in Cloud
+
+NoSQL databases are widely used in cloud environments because cloud systems can provide:
+
+- Horizontal scaling
+- Distributed storage
+- High availability
+- Replication
+- Elastic resources
+
+Challenges include:
+
+- Security
+- Cost
+- Data consistency
+- Vendor dependence
+- Network latency
+
+# 114. Relational vs NoSQL
+
+| Relational DBMS | NoSQL |
+|---|---|
+| Tables | Multiple possible data models |
+| Fixed/structured schema is common | Flexible schema is common |
+| SQL | Product-specific APIs/query languages |
+| Strong relational constraints | Varies by product |
+| Vertical and horizontal scaling possible | Often emphasizes horizontal scaling |
+| Joins commonly supported | Often avoids expensive joins through data modeling |
+| Examples: MySQL, PostgreSQL | MongoDB, Cassandra, Redis |
+
+# 115. SQL vs NoSQL
+
+| SQL | NoSQL |
+|---|---|
+| Structured relational data | Flexible/semi-structured or other models |
+| Tables | Documents, key-value, graphs, columns |
+| Standardized SQL | Product-specific query mechanisms |
+| Strong relational model | Various models |
+| Often ACID-oriented | Consistency models vary by product |
+
+# 116. Important DBMS Comparison Table
+
+| Concept | Meaning |
+|---|---|
+| Database | Organized collection of data |
+| DBMS | Software that manages databases |
+| Schema | Database structure |
+| Instance | Current database contents |
+| Entity | Real-world object |
+| Attribute | Property of an entity |
+| Tuple | Row |
+| Relation | Table |
+| Attribute | Column |
+| Primary key | Unique identifier |
+| Foreign key | Reference to another relation |
+| DDL | Defines structures |
+| DML | Manipulates data |
+| DCL | Controls permissions |
+| TCL | Controls transactions |
+| View | Virtual table |
+| Trigger | Automatically executed database action |
+| Normalization | Reduces redundancy/anomalies |
+| Transaction | Logical unit of work |
+| ACID | Transaction properties |
+| OLTP | Transaction processing |
+| OLAP | Analytical processing |
+| Data warehouse | Analytical data repository |
+| Data mining | Pattern discovery |
+| HDFS | Distributed file system |
+| MapReduce | Distributed processing model |
+| NoSQL | Non-relational/multiple scalable data models |
+
+# 117. Important Normalization Revision
+
+```text
+1NF
+ ↓
+Atomic values
+
+2NF
+ ↓
+1NF + No partial dependency
+
+3NF
+ ↓
+2NF + No transitive dependency
+
+BCNF
+ ↓
+Every determinant is a candidate key
+
+4NF
+ ↓
+Multivalued dependencies
+
+5NF
+ ↓
+Join dependencies
+```
+
+# 118. Important Transaction Revision
+
+```text
+Transaction
+    |
+    +-- Atomicity
+    +-- Consistency
+    +-- Isolation
+    +-- Durability
+```
+
+Remember:
+
+```text
+A → All or nothing
+C → Valid state
+I → Transactions do not improperly interfere
+D → Committed data survives failure
+```
+
+# 119. Important Data Mining Revision
+
+```text
+Association   → Relationships among items
+Classification → Predict class
+Clustering    → Group similar data
+Regression     → Predict numerical value
+SVM            → Maximum-margin classification
+KNN            → Nearest observations
+HMM            → Hidden states + observations
+Summarization  → Compact representation
+Link analysis  → Connected entities
+Sequence       → Ordered events
+Social network → Relationships among entities
+```
+
+# 120. Important Big Data Revision
+
+```text
+5 Vs
+
+Volume
+Velocity
+Variety
+Veracity
+Value
+```
+
+MapReduce:
+
+```text
+Input
+  ↓
+Map
+  ↓
+Shuffle / Sort
+  ↓
+Reduce
+  ↓
+Output
+```
+
+HDFS:
+
+```text
+NameNode → Metadata
+DataNode → Data blocks
+```
+
+# 121. Important NoSQL Revision
+
+```text
+Key-Value
+Document
+Column-Family
+Graph
+```
+
+Remember:
+
+```text
+MongoDB    → Document
+Redis      → Key-Value
+Cassandra  → Column-family
+Neo4j      → Graph
+```
+
+# 122. UGC NET High-Priority Areas
+
+Focus strongly on:
+
+## DBMS Fundamentals
+
+- Data models
+- Schema vs instance
+- Three-schema architecture
+- Data independence
+- DBMS languages
+- Client/server architecture
+
+## ER and Relational Model
+
+- Entities
+- Attributes
+- Relationships
+- Cardinality
+- Keys
+- Integrity constraints
+- Referential integrity
+- Relational algebra
+- Relational calculus
+- Codd's rules
+
+## SQL
+
+- DDL
+- DML
+- DCL
+- TCL
+- CREATE
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+- GROUP BY
+- HAVING
+- JOIN
+- Views
+- Procedures
+- Functions
+- Triggers
+- SQL injection
+
+## Normalization
+
+- Functional dependencies
+- Candidate keys
+- Partial dependency
+- Transitive dependency
+- 1NF
+- 2NF
+- 3NF
+- BCNF
+- 4NF
+- 5NF
+
+## Transactions
+
+- ACID
+- Transaction states
+- Serializability
+- Locks
+- Two-phase locking
+- Timestamp ordering
+- Deadlocks
+- Recovery
+- Logs
+- Checkpoints
+
+## Data Warehousing and Mining
+
+- OLTP vs OLAP
+- Star schema
+- Snowflake schema
+- Fact and dimension tables
+- Concept hierarchy
+- Association rules
+- Support
+- Confidence
+- Lift
+- Classification
+- Clustering
+- Regression
+- SVM
+- KNN
+- HMM
+- Link analysis
+- Social networks
+
+## Big Data
+
+- 5 Vs
+- Structured/semi-structured/unstructured data
+- Big Data architecture
+- MapReduce
+- Hadoop
+- HDFS
+- NameNode
+- DataNode
+- Replication
+
+## NoSQL
+
+- Key-value
+- Document
+- Column-family
+- Graph
+- Products
+- Indexing
+- Query optimization
+- Cloud NoSQL
+
+# 123. Common Mistakes
+
+### Schema vs Instance
+
+```text
+Schema   → Structure
+Instance → Current data
+```
+
+### Primary Key vs Foreign Key
+
+```text
+Primary key → Identifies a row
+Foreign key → References another table
+```
+
+### WHERE vs HAVING
+
+```text
+WHERE  → Rows
+HAVING → Groups
+```
+
+### DELETE vs DROP
+
+```text
+DELETE → Removes rows
+DROP   → Removes database object such as a table
+```
+
+### 2NF vs 3NF
+
+```text
+2NF → Partial dependency
+3NF → Transitive dependency
+```
+
+### OLTP vs OLAP
+
+```text
+OLTP → Daily transactions
+OLAP → Analysis
+```
+
+### Classification vs Clustering
+
+```text
+Classification → Known classes
+Clustering     → Classes/groups discovered from data
+```
+
+### NameNode vs DataNode
+
+```text
+NameNode → Metadata
+DataNode → Actual blocks
+```
+
+### Map vs Reduce
+
+```text
+Map    → Intermediate key-value pairs
+Reduce → Aggregates/processes grouped values
+```
+
+# 124. One-Minute Revision
+
+```text
+DBMS
+ |
+ +-- Architecture
+ |     +-- Three-schema
+ |     +-- Data independence
+ |
+ +-- Data Modeling
+ |     +-- ER
+ |     +-- Relational model
+ |
+ +-- Relational Operations
+ |     +-- Algebra
+ |     +-- Calculus
+ |
+ +-- SQL
+ |     +-- DDL
+ |     +-- DML
+ |     +-- DCL
+ |     +-- TCL
+ |
+ +-- Normalization
+ |     +-- 1NF
+ |     +-- 2NF
+ |     +-- 3NF
+ |     +-- BCNF
+ |
+ +-- Transactions
+ |     +-- ACID
+ |     +-- Concurrency
+ |     +-- Recovery
+ |
+ +-- Security
+ |
+ +-- Data Warehouse
+ |     +-- OLTP
+ |     +-- OLAP
+ |
+ +-- Data Mining
+ |
+ +-- Big Data
+ |     +-- Hadoop
+ |     +-- HDFS
+ |     +-- MapReduce
+ |
+ +-- NoSQL
+```
+
+# 125. Final Exam Strategy
+
+Study this unit in the following order:
+
+1. DBMS concepts
+2. Three-schema architecture
+3. Data independence
+4. ER model
+5. Relational model
+6. Relational algebra
+7. Relational calculus
+8. SQL
+9. Functional dependencies
+10. Normalization
+11. Query processing
+12. Transactions and concurrency
+13. Recovery
+14. Security
+15. Data warehouses
+16. Data mining
+17. Big Data and Hadoop
+18. HDFS and MapReduce
+19. NoSQL
+
+For numerical/problem-based questions, practice:
+
+- Relational algebra
+- Functional dependencies
+- Candidate keys
+- Normalization
+- SQL queries
+- Transaction schedules
+- Lock compatibility
+- Serializability
+- Association-rule measures
+- MapReduce word-count problems
+
+For theory questions, revise:
+
+- Three-schema architecture
+- Data independence
+- Codd's rules
+- SQL commands
+- ACID
+- Two-phase locking
+- Recovery
+- OLTP vs OLAP
+- Star vs snowflake schema
+- Classification vs clustering
+- Hadoop/HDFS
+- NoSQL types
+
+# 126. Final Summary
+
+Unit IV is one of the broadest units in Computer Science.
+
+The most important progression is:
+
+```text
+Database Concepts
+      ↓
+Data Modeling
+      ↓
+Relational Model
+      ↓
+SQL
+      ↓
+Normalization
+      ↓
+Query Processing
+      ↓
+Transactions
+      ↓
+Recovery
+      ↓
+Security
+      ↓
+Data Warehousing
+      ↓
+Data Mining
+      ↓
+Big Data
+      ↓
+Hadoop / HDFS
+      ↓
+NoSQL
+```
+
+The highest-value concepts for examination preparation are:
+
+```text
+Three-Schema Architecture
+Data Independence
+ER Model
+Relational Algebra
+Relational Calculus
+Codd Rules
+SQL
+Functional Dependencies
+Normalization
+ACID
+Concurrency Control
+Recovery
+OLTP / OLAP
+Data Mining
+Association Rules
+Big Data
+MapReduce
+HDFS
+NoSQL
+```
+
+Revise the **comparison tables, SQL examples, normalization rules, transaction concepts, data-mining measures, MapReduce flow, and NoSQL models** repeatedly before the examination.

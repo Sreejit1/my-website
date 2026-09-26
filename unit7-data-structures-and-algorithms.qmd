@@ -1,0 +1,2318 @@
+---
+title: "Unit VII – Data Structures and Algorithms"
+subtitle: "UGC NET Computer Science and Applications – Paper 2"
+format:
+  html:
+    toc: true
+    number-sections: false
+    code-fold: true
+---
+
+
+## 1. Introduction
+
+A **data structure** is a method of organizing and storing data so that it can be accessed and modified efficiently.
+
+An **algorithm** is a finite sequence of well-defined steps used to solve a problem.
+
+### Examples
+
+- Array → store elements in contiguous positions.
+- Stack → follow LIFO.
+- Queue → follow FIFO.
+- Tree → represent hierarchical data.
+- Graph → represent relationships.
+- Hash table → provide fast average-case lookup.
+
+The major goals of this unit are:
+
+- Understand important data structures.
+- Analyze algorithm efficiency.
+- Learn algorithm design techniques.
+- Understand graph algorithms.
+- Understand computational complexity.
+- Study advanced algorithms.
+
+---
+
+# 2. Data Structures
+
+Data structures can broadly be classified as:
+
+### Linear Data Structures
+
+Elements are arranged sequentially.
+
+Examples:
+
+- Arrays
+- Linked lists
+- Stacks
+- Queues
+
+### Non-Linear Data Structures
+
+Elements are organized hierarchically or as networks.
+
+Examples:
+
+- Trees
+- Graphs
+
+---
+
+# 3. Arrays
+
+An **array** is a collection of elements stored in contiguous memory locations.
+
+Example:
+
+```text
+A = [10, 20, 30, 40, 50]
+```
+
+Indexes:
+
+```text
+Index:  0   1   2   3   4
+Value: 10  20  30  40  50
+```
+
+## 3.1 Advantages
+
+- Direct/random access
+- Simple representation
+- Efficient traversal
+- Good cache locality
+
+## 3.2 Disadvantages
+
+- Fixed-size arrays may be difficult to resize.
+- Insertion in the middle may require shifting.
+- Deletion may require shifting.
+
+## 3.3 Array Applications
+
+Arrays are used for:
+
+- Matrices
+- Tables
+- Strings
+- Heaps
+- Lookup tables
+- Implementing stacks and queues
+
+### Array Access
+
+Accessing an element by index is generally:
+
+**Time = O(1)**
+
+---
+
+# 4. Sparse Matrix
+
+A **sparse matrix** is a matrix in which most elements are zero.
+
+Example:
+
+```text
+0  0  0  5
+0  0  0  0
+0  3  0  0
+0  0  0  7
+```
+
+There are only a few non-zero values.
+
+Storing every zero wastes memory.
+
+## 4.1 Triplet Representation
+
+A sparse matrix can be represented using:
+
+```text
+Row   Column   Value
+1     4        5
+3     2        3
+4     4        7
+```
+
+A header may store:
+
+```text
+Rows   Columns   Non-zero elements
+4      4         3
+```
+
+## Applications
+
+Sparse matrices occur in:
+
+- Graph representation
+- Scientific computing
+- Machine learning
+- Information retrieval
+- Numerical methods
+
+---
+
+# 5. Stack
+
+A **stack** is a linear data structure that follows:
+
+**LIFO = Last In, First Out**
+
+Example:
+
+```text
+Push 10
+Push 20
+Push 30
+
+Top → 30
+       20
+       10
+```
+
+The first element removed is 30.
+
+## 5.1 Stack Operations
+
+### Push
+
+Adds an element.
+
+### Pop
+
+Removes the top element.
+
+### Peek/Top
+
+Returns the top element without removing it.
+
+### IsEmpty
+
+Checks whether the stack is empty.
+
+## 5.2 Applications
+
+Stacks are used in:
+
+- Function calls
+- Recursion
+- Expression evaluation
+- Parenthesis matching
+- Undo operations
+- Backtracking
+- Depth-First Search
+
+## Complexity
+
+For an array-based stack:
+
+- Push → O(1)
+- Pop → O(1)
+- Peek → O(1)
+
+---
+
+# 6. Queue
+
+A **queue** is a linear data structure that follows:
+
+**FIFO = First In, First Out**
+
+Example:
+
+```text
+Front → 10  20  30  40 ← Rear
+```
+
+10 is removed first.
+
+## 6.1 Queue Operations
+
+- Enqueue → insert at rear
+- Dequeue → remove from front
+- Front/Peek → inspect first element
+
+## Applications
+
+- CPU scheduling
+- Printer queues
+- Network buffering
+- Breadth-First Search
+- Customer service systems
+
+---
+
+# 7. Circular Queue
+
+A circular queue connects the last position back to the first position.
+
+This avoids wasting unused positions in a normal array queue.
+
+### Important Idea
+
+The rear can wrap around to the beginning.
+
+Circular queues are useful in:
+
+- Buffers
+- Scheduling
+- Streaming systems
+
+---
+
+# 8. Priority Queue
+
+A **priority queue** removes elements according to priority rather than simply arrival order.
+
+Example:
+
+```text
+Patient A → priority 2
+Patient B → priority 5
+Patient C → priority 1
+```
+
+If larger priority means more important, Patient B may be processed first.
+
+Priority queues are commonly implemented using **heaps**.
+
+## Applications
+
+- CPU scheduling
+- Dijkstra's algorithm
+- Prim's algorithm
+- Event simulation
+- Network routing
+
+---
+
+# 9. Linked Lists
+
+A linked list consists of nodes connected using links.
+
+A singly linked-list node contains:
+
+```text
+[Data | Next]
+```
+
+Example:
+
+```text
+10 → 20 → 30 → NULL
+```
+
+## Advantages
+
+- Dynamic size
+- Easy insertion/deletion when the position/node is known
+- Does not require contiguous memory
+
+## Disadvantages
+
+- No direct random access
+- Extra memory for links
+- Traversal is sequential
+
+---
+
+# 10. Types of Linked Lists
+
+## 10.1 Singly Linked List
+
+Each node points to the next node.
+
+```text
+10 → 20 → 30 → NULL
+```
+
+## 10.2 Doubly Linked List
+
+Each node has two links.
+
+```text
+NULL ← 10 ⇄ 20 ⇄ 30 → NULL
+```
+
+Links:
+
+- Previous
+- Next
+
+## 10.3 Circular Linked List
+
+The last node points back to the first.
+
+```text
+10 → 20 → 30
+↑         ↓
+└─────────┘
+```
+
+---
+
+# 11. Trees
+
+A **tree** is a non-linear hierarchical data structure.
+
+Important terms:
+
+- Root
+- Parent
+- Child
+- Sibling
+- Leaf
+- Internal node
+- Edge
+- Path
+- Level
+- Height
+- Depth
+- Subtree
+
+Example:
+
+```text
+        A
+       / \
+      B   C
+     / \
+    D   E
+```
+
+A is the root.
+
+D and E are leaf nodes.
+
+---
+
+# 12. Forest
+
+A **forest** is a collection of disjoint trees.
+
+Example:
+
+```text
+Tree 1        Tree 2
+
+   A             X
+  / \           / \
+ B   C         Y   Z
+```
+
+Together they form a forest.
+
+### Important Relationship
+
+Removing the root of a tree can produce a forest of its subtrees.
+
+---
+
+# 13. Binary Tree
+
+A **binary tree** is a tree in which each node has at most two children.
+
+The children are called:
+
+- Left child
+- Right child
+
+Example:
+
+```text
+        10
+       /  \
+      5    20
+```
+
+## Important Properties
+
+For a binary tree:
+
+- Maximum children of a node = 2.
+- Maximum nodes at level `i`, when root is at level 0 = 2^i.
+- Maximum nodes in a binary tree of height `h`, when height is measured in edges = 2^(h+1) - 1.
+
+---
+
+# 14. Tree Traversals
+
+## 14.1 Preorder
+
+Order:
+
+**Root → Left → Right**
+
+For:
+
+```text
+    A
+   / \
+  B   C
+```
+
+Preorder:
+
+**A B C**
+
+## 14.2 Inorder
+
+Order:
+
+**Left → Root → Right**
+
+Result:
+
+**B A C**
+
+## 14.3 Postorder
+
+Order:
+
+**Left → Right → Root**
+
+Result:
+
+**B C A**
+
+## 14.4 Level Order
+
+Visit nodes level by level.
+
+Result:
+
+**A B C**
+
+Level-order traversal commonly uses a queue.
+
+---
+
+# 15. Threaded Binary Tree
+
+In an ordinary binary tree, many child pointers may be NULL.
+
+A **threaded binary tree** uses otherwise unused pointers to store links to traversal-related nodes.
+
+In an inorder-threaded tree, a thread can point to the inorder predecessor or successor.
+
+### Advantage
+
+Traversal can be performed with less dependence on recursion or an explicit stack.
+
+---
+
+# 16. Binary Search Tree
+
+A **Binary Search Tree (BST)** is a binary tree satisfying an ordering property.
+
+For each node:
+
+**Left subtree values < Node value < Right subtree values**
+
+Example:
+
+```text
+       50
+      /  \
+    30    70
+   / \    / \
+ 20  40  60 80
+```
+
+## Searching
+
+At each node:
+
+- If target = node → found.
+- If target < node → search left.
+- If target > node → search right.
+
+## Complexity
+
+Average case for a balanced BST:
+
+**O(log n)**
+
+Worst case for a highly skewed BST:
+
+**O(n)**
+
+### Important UGC NET Point
+
+**Inorder traversal of a BST produces sorted order.**
+
+---
+
+# 17. AVL Tree
+
+An **AVL tree** is a self-balancing binary search tree.
+
+For every node:
+
+**Balance Factor = Height(left subtree) - Height(right subtree)**
+
+Allowed values:
+
+**-1, 0, +1**
+
+If the balance factor becomes outside this range, rotations are performed.
+
+## Types of Rotations
+
+- LL
+- RR
+- LR
+- RL
+
+### LL Case
+
+Solved using a right rotation.
+
+### RR Case
+
+Solved using a left rotation.
+
+### LR Case
+
+Left rotation followed by right rotation.
+
+### RL Case
+
+Right rotation followed by left rotation.
+
+## Complexity
+
+Search, insertion and deletion are:
+
+**O(log n)**
+
+in the worst case.
+
+---
+
+# 18. B-Tree
+
+A **B-tree** is a balanced multiway search tree.
+
+It is particularly useful for:
+
+- Databases
+- File systems
+- Secondary storage
+
+Unlike a binary tree, a B-tree node can contain multiple keys and children.
+
+### Important Properties
+
+- Balanced tree
+- Keys are stored in sorted order.
+- All leaves are at the same level.
+- Designed to reduce disk accesses.
+
+---
+
+# 19. B+ Tree
+
+A **B+ tree** is a variation of a B-tree commonly used in databases and file systems.
+
+Important characteristics:
+
+- Internal nodes mainly store keys for navigation.
+- Actual record pointers/data are typically stored at leaf nodes.
+- Leaf nodes are commonly linked.
+
+### Advantage
+
+Linked leaves make range queries efficient.
+
+Example:
+
+```text
+        [30 | 60]
+       /    |    \
+    Leaf  Leaf   Leaf
+      ⇄     ⇄      ⇄
+```
+
+---
+
+# 20. B* Tree
+
+A **B* tree** is a variant of the B-tree that aims for higher node occupancy.
+
+It generally redistributes keys with neighboring nodes before splitting.
+
+### Important Point
+
+B* trees are designed to use storage more efficiently by maintaining higher minimum occupancy than ordinary B-trees.
+
+---
+
+# 21. Data Structures for Sets
+
+A **set** is a collection of distinct elements.
+
+Common operations:
+
+- Insert
+- Delete
+- Search
+- Union
+- Intersection
+- Difference
+
+Possible implementations:
+
+- Arrays
+- Linked lists
+- Balanced search trees
+- Hash tables
+- Bit vectors
+
+## Disjoint Set / Union-Find
+
+A disjoint-set data structure maintains a collection of non-overlapping sets.
+
+Important operations:
+
+- Make-Set
+- Find
+- Union
+
+It is useful in:
+
+- Kruskal's minimum spanning tree algorithm
+- Connectivity problems
+
+### Optimization
+
+**Path compression** and **union by rank/size** make operations very efficient.
+
+---
+
+# 22. Graphs
+
+A **graph** consists of:
+
+- Vertices/nodes
+- Edges
+
+It is represented as:
+
+**G = (V, E)**
+
+where:
+
+- V = set of vertices
+- E = set of edges
+
+---
+
+# 23. Types of Graphs
+
+### Undirected Graph
+
+Edges do not have direction.
+
+```text
+A — B
+```
+
+### Directed Graph
+
+Edges have direction.
+
+```text
+A → B
+```
+
+### Weighted Graph
+
+Edges have weights/costs.
+
+```text
+A --5-- B
+```
+
+### Complete Graph
+
+Every pair of distinct vertices is connected by an edge.
+
+---
+
+# 24. Graph Representation
+
+## 24.1 Adjacency Matrix
+
+A two-dimensional matrix represents whether an edge exists.
+
+For `V` vertices:
+
+**Space = O(V²)**
+
+Good for dense graphs.
+
+## 24.2 Adjacency List
+
+Each vertex stores a list of adjacent vertices.
+
+Space:
+
+**O(V + E)**
+
+Good for sparse graphs.
+
+### Comparison
+
+| Adjacency Matrix | Adjacency List |
+|---|---|
+| O(V²) space | O(V + E) space |
+| Good for dense graphs | Good for sparse graphs |
+| Edge lookup is fast | Traversal is efficient for sparse graphs |
+
+---
+
+# 25. Sorting Algorithms
+
+Sorting arranges data in a specified order.
+
+Common algorithms:
+
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+- Heap Sort
+
+---
+
+# 26. Bubble Sort
+
+Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order.
+
+Example:
+
+```text
+5  2  4
+
+Compare 5 and 2
+2  5  4
+
+Compare 5 and 4
+2  4  5
+```
+
+### Complexity
+
+Worst case:
+
+**O(n²)**
+
+Average case:
+
+**O(n²)**
+
+Best case with an optimized implementation:
+
+**O(n)**
+
+### Stable?
+
+Yes, with the standard implementation.
+
+---
+
+# 27. Selection Sort
+
+Selection Sort repeatedly selects the smallest element and places it in the correct position.
+
+### Complexity
+
+Best/Average/Worst:
+
+**O(n²)**
+
+It performs relatively few swaps.
+
+---
+
+# 28. Insertion Sort
+
+Insertion Sort builds the sorted sequence one element at a time.
+
+Example:
+
+```text
+5  2  4
+
+5
+2 5
+2 4 5
+```
+
+### Complexity
+
+Best:
+
+**O(n)**
+
+Average:
+
+**O(n²)**
+
+Worst:
+
+**O(n²)**
+
+Insertion Sort works well for small or nearly sorted data.
+
+---
+
+# 29. Merge Sort
+
+Merge Sort uses **divide and conquer**.
+
+Steps:
+
+1. Divide the array.
+2. Recursively sort the parts.
+3. Merge the sorted parts.
+
+### Complexity
+
+Best/Average/Worst:
+
+**O(n log n)**
+
+### Space
+
+Typical array implementation requires:
+
+**O(n)** auxiliary space.
+
+### Important
+
+Merge Sort is generally stable.
+
+---
+
+# 30. Quick Sort
+
+Quick Sort uses a pivot.
+
+Basic steps:
+
+1. Select pivot.
+2. Partition the array.
+3. Recursively sort left and right parts.
+
+### Complexity
+
+Average:
+
+**O(n log n)**
+
+Worst:
+
+**O(n²)**
+
+The worst case can occur with consistently poor pivot choices.
+
+### Important
+
+Good pivot selection can greatly improve practical performance.
+
+---
+
+# 31. Heap Sort
+
+Heap Sort uses a heap.
+
+For ascending sorting, a max-heap can be used.
+
+### Complexity
+
+Best/Average/Worst:
+
+**O(n log n)**
+
+Typical in-place heap sort uses:
+
+**O(1)** auxiliary array space.
+
+---
+
+# 32. Sorting Comparison
+
+| Algorithm | Best | Average | Worst |
+|---|---:|---:|---:|
+| Bubble | O(n) | O(n²) | O(n²) |
+| Selection | O(n²) | O(n²) | O(n²) |
+| Insertion | O(n) | O(n²) | O(n²) |
+| Merge | O(n log n) | O(n log n) | O(n log n) |
+| Quick | O(n log n) | O(n log n) | O(n²) |
+| Heap | O(n log n) | O(n log n) | O(n log n) |
+
+---
+
+# 33. Searching Algorithms
+
+## 33.1 Linear Search
+
+Checks elements one by one.
+
+Best case:
+
+**O(1)**
+
+Worst case:
+
+**O(n)**
+
+Works on unsorted data.
+
+## 33.2 Binary Search
+
+Binary Search requires sorted data.
+
+Steps:
+
+1. Find middle element.
+2. Compare target with middle.
+3. Search left or right half.
+4. Repeat.
+
+Complexity:
+
+**O(log n)**
+
+### Important
+
+**Binary Search requires sorted data.**
+
+---
+
+# 34. Hashing
+
+Hashing maps a key to an index using a hash function.
+
+Example:
+
+**h(key) = key mod table_size**
+
+If:
+
+```text
+key = 27
+table_size = 10
+```
+
+then:
+
+**h(27) = 7**
+
+## Collision
+
+A collision occurs when two keys produce the same hash index.
+
+### Collision Resolution
+
+1. Separate chaining
+2. Open addressing
+
+Open addressing methods include:
+
+- Linear probing
+- Quadratic probing
+- Double hashing
+
+---
+
+# 35. Load Factor
+
+For a hash table:
+
+**Load Factor = Number of stored elements ÷ Table size**
+
+A high load factor can increase collisions.
+
+---
+
+# 36. Performance Analysis of Algorithms
+
+Algorithm analysis studies the resources required by an algorithm.
+
+Main resources:
+
+- Time
+- Space
+
+---
+
+# 37. Time Complexity
+
+Time complexity describes how running time grows with input size.
+
+Examples:
+
+- O(1)
+- O(log n)
+- O(n)
+- O(n log n)
+- O(n²)
+- O(2^n)
+- O(n!)
+
+Generally, polynomial-time growth is much more manageable than exponential or factorial growth for large inputs.
+
+---
+
+# 38. Space Complexity
+
+Space complexity describes the memory requirements of an algorithm.
+
+It may include:
+
+- Input storage
+- Auxiliary memory
+- Recursion stack
+- Temporary structures
+
+Example:
+
+An algorithm using an additional array of size n has:
+
+**Auxiliary space = O(n)**
+
+---
+
+# 39. Asymptotic Notation
+
+Asymptotic notation describes growth rates for large input sizes.
+
+## Big O
+
+**O(g(n))** gives an asymptotic upper bound.
+
+Example:
+
+If:
+
+**T(n) = 3n² + 5n + 2**
+
+then:
+
+**T(n) = O(n²)**
+
+## Big Omega
+
+**Ω(g(n))** gives an asymptotic lower bound.
+
+## Big Theta
+
+**Θ(g(n))** gives a tight asymptotic bound.
+
+Example:
+
+**3n² + 5n + 2 = Θ(n²)**
+
+### Important
+
+For:
+
+**T(n) = 5n + 10**
+
+the dominant term is n.
+
+Therefore:
+
+**T(n) = Θ(n)**
+
+---
+
+# 40. Growth Rate
+
+From generally smaller growth to larger growth:
+
+```text
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+O(n³)
+O(2^n)
+O(n!)
+```
+
+This ordering is important for UGC NET.
+
+---
+
+# 41. Recurrence Relations
+
+A recurrence relation describes the running time of a recursive algorithm in terms of smaller inputs.
+
+Example:
+
+**T(n) = 2T(n/2) + n**
+
+This describes an algorithm that creates two subproblems of size n/2 and performs n additional work.
+
+Its solution is:
+
+**T(n) = O(n log n)**
+
+---
+
+# 42. Master Theorem
+
+For recurrences of the form:
+
+**T(n) = aT(n/b) + f(n)**
+
+the Master Theorem can often be used.
+
+Compare:
+
+**f(n)**
+
+with:
+
+**n^(log_b a)**
+
+### Common Examples
+
+Merge Sort:
+
+**T(n) = 2T(n/2) + O(n)**
+
+Therefore:
+
+**T(n) = O(n log n)**
+
+Binary Search:
+
+**T(n) = T(n/2) + O(1)**
+
+Therefore:
+
+**T(n) = O(log n)**
+
+---
+
+# 43. Divide and Conquer
+
+Divide and Conquer has three major steps:
+
+1. Divide
+2. Conquer
+3. Combine
+
+Examples:
+
+- Merge Sort
+- Quick Sort
+- Binary Search
+
+### Example: Merge Sort
+
+Divide:
+
+Split array into two parts.
+
+Conquer:
+
+Sort each part.
+
+Combine:
+
+Merge sorted parts.
+
+---
+
+# 44. Dynamic Programming
+
+Dynamic Programming (DP) solves problems by storing results of overlapping subproblems.
+
+Two important characteristics are:
+
+- Overlapping subproblems
+- Optimal substructure
+
+Two common approaches:
+
+### Top-Down
+
+Memoization.
+
+### Bottom-Up
+
+Tabulation.
+
+## Examples
+
+- Fibonacci
+- 0/1 Knapsack
+- Matrix-chain multiplication
+- Longest Common Subsequence
+- Floyd-Warshall
+
+---
+
+# 45. Greedy Algorithms
+
+A greedy algorithm makes the locally best choice at each step.
+
+Examples:
+
+- Kruskal's algorithm
+- Prim's algorithm
+- Dijkstra's algorithm under its standard non-negative-edge assumption
+- Huffman coding
+- Fractional Knapsack
+
+### Important
+
+A greedy algorithm does not always produce an optimal solution for every problem.
+
+For example:
+
+**Fractional Knapsack → greedy works**
+
+**0/1 Knapsack → ordinary greedy strategy is not guaranteed to work**
+
+---
+
+# 46. Backtracking
+
+Backtracking builds a solution incrementally and abandons a partial solution when it cannot lead to a valid complete solution.
+
+Examples:
+
+- N-Queens
+- Sudoku
+- Graph coloring
+- Hamiltonian path
+
+General idea:
+
+```text
+Choose
+  ↓
+Check
+  ↓
+Continue if valid
+  ↓
+Undo if invalid
+```
+
+---
+
+# 47. Branch and Bound
+
+Branch and Bound is used for optimization problems.
+
+It systematically explores possible solutions while using bounds to eliminate branches that cannot produce a better solution.
+
+Applications:
+
+- Travelling Salesperson Problem
+- 0/1 Knapsack
+- Scheduling
+
+### Backtracking vs Branch and Bound
+
+| Backtracking | Branch and Bound |
+|---|---|
+| Usually constraint satisfaction | Usually optimization |
+| Prunes infeasible solutions | Prunes solutions that cannot improve bound |
+| N-Queens | TSP optimization |
+
+---
+
+# 48. Lower Bound Theory
+
+A lower bound tells us the minimum amount of computational work required for a problem under a particular computational model.
+
+For a problem, if every comparison-based sorting algorithm requires at least:
+
+**Ω(n log n)**
+
+comparisons in the worst case, then no comparison-based sorting algorithm can have a better asymptotic worst-case comparison bound.
+
+---
+
+# 49. Comparison Trees
+
+A comparison tree represents the comparisons performed by a comparison-based algorithm.
+
+For sorting n distinct elements:
+
+There are:
+
+**n!**
+
+possible input orderings.
+
+A binary comparison tree must have at least n! leaves.
+
+Therefore its height must satisfy:
+
+**2^h ≥ n!**
+
+Taking logarithms:
+
+**h ≥ log₂(n!)**
+
+Using Stirling-type reasoning:
+
+**log₂(n!) = Ω(n log n)**
+
+Therefore comparison-based sorting has a lower bound of:
+
+**Ω(n log n)**
+
+---
+
+# 50. Lower Bounds Through Reductions
+
+A reduction transforms one problem into another.
+
+If problem A can be transformed efficiently into problem B, and A is known to be hard, then B must be at least as hard under the relevant reduction.
+
+Reductions are important in:
+
+- Complexity theory
+- NP-completeness
+- Lower-bound arguments
+
+---
+
+# 51. Breadth-First Search
+
+**BFS** explores a graph level by level.
+
+It uses a **queue**.
+
+Basic steps:
+
+1. Start from a source vertex.
+2. Mark it visited.
+3. Insert it into a queue.
+4. Remove a vertex from the queue.
+5. Visit its unvisited neighbors.
+6. Continue.
+
+### Complexity
+
+With an adjacency list:
+
+**O(V + E)**
+
+### Application
+
+BFS finds shortest paths in an **unweighted graph** in terms of number of edges.
+
+---
+
+# 52. Depth-First Search
+
+**DFS** explores as deeply as possible before backtracking.
+
+It uses:
+
+- Recursion, or
+- Explicit stack
+
+### Complexity
+
+With an adjacency list:
+
+**O(V + E)**
+
+Applications:
+
+- Cycle detection
+- Topological sorting
+- Connected components
+- Path finding
+- Strongly connected component algorithms
+
+---
+
+# 53. BFS vs DFS
+
+| BFS | DFS |
+|---|---|
+| Uses queue | Uses stack/recursion |
+| Level-by-level | Depth-first |
+| Shortest path in unweighted graph | Useful for structural exploration |
+| O(V + E) | O(V + E) |
+
+---
+
+# 54. Shortest Path Algorithms
+
+Important algorithms:
+
+- Dijkstra
+- Bellman-Ford
+- Floyd-Warshall
+
+---
+
+# 55. Dijkstra's Algorithm
+
+Dijkstra's algorithm finds shortest paths from a source vertex when edge weights are non-negative.
+
+Basic idea:
+
+1. Select the unvisited vertex with smallest tentative distance.
+2. Finalize it.
+3. Relax its outgoing edges.
+4. Repeat.
+
+### Important
+
+**Dijkstra does not correctly handle graphs with negative edge weights.**
+
+---
+
+# 56. Bellman-Ford Algorithm
+
+Bellman-Ford finds single-source shortest paths and can handle negative edge weights.
+
+It can also detect a reachable negative-weight cycle.
+
+Typical complexity:
+
+**O(VE)**
+
+---
+
+# 57. Floyd-Warshall Algorithm
+
+Floyd-Warshall solves the all-pairs shortest path problem using dynamic programming.
+
+Typical complexity:
+
+**O(V³)**
+
+It can handle negative edge weights, provided there is no relevant negative cycle for the shortest-path interpretation.
+
+---
+
+# 58. Minimum Spanning Tree
+
+A **Minimum Spanning Tree (MST)** is a spanning tree of a connected weighted undirected graph with minimum total edge weight.
+
+Important algorithms:
+
+- Kruskal
+- Prim
+
+---
+
+# 59. Kruskal's Algorithm
+
+Kruskal's algorithm:
+
+1. Sort edges by increasing weight.
+2. Select the smallest edge that does not form a cycle.
+3. Continue until the MST has V - 1 edges.
+
+It commonly uses:
+
+**Disjoint Set / Union-Find**
+
+### Complexity
+
+With efficient sorting and union-find, a common bound is:
+
+**O(E log E)**
+
+---
+
+# 60. Prim's Algorithm
+
+Prim's algorithm grows one tree from a starting vertex.
+
+At each step, choose the minimum-weight edge connecting the current tree to an outside vertex.
+
+With a suitable priority queue and adjacency list, common implementations achieve:
+
+**O(E log V)**
+
+---
+
+# 61. Kruskal vs Prim
+
+| Kruskal | Prim |
+|---|---|
+| Edge-oriented | Vertex/tree-oriented |
+| Sorts edges | Uses minimum connecting edge |
+| Uses Union-Find | Commonly uses priority queue |
+| Often useful for sparse graphs | Often useful with adjacency structures |
+
+---
+
+# 62. Maximum Flow
+
+A flow network contains:
+
+- Source
+- Sink
+- Directed edges
+- Capacities
+
+The objective is to maximize the amount of flow from source to sink.
+
+Important concepts:
+
+- Capacity
+- Flow
+- Residual graph
+- Augmenting path
+- Minimum cut
+
+---
+
+# 63. Ford-Fulkerson Method
+
+Ford-Fulkerson repeatedly finds an augmenting path from source to sink and increases the flow along that path.
+
+The process stops when no augmenting path remains.
+
+### Important Theorem
+
+**Max-flow min-cut theorem:**
+
+The maximum flow value equals the minimum capacity of an s-t cut.
+
+---
+
+# 64. Edmonds-Karp Algorithm
+
+Edmonds-Karp is a specific implementation of Ford-Fulkerson that uses BFS to find augmenting paths.
+
+A commonly stated complexity is:
+
+**O(VE²)**
+
+---
+
+# 65. Complexity Theory
+
+Complexity theory studies the computational resources required to solve problems.
+
+Important classes:
+
+- P
+- NP
+- NP-hard
+- NP-complete
+
+---
+
+# 66. Class P
+
+**P** is the class of decision problems solvable by a deterministic algorithm in polynomial time.
+
+Examples include:
+
+- Sorting-related decision problems
+- Shortest path decision problems
+- Minimum spanning tree decision formulations
+
+---
+
+# 67. Class NP
+
+**NP** is the class of decision problems for which a proposed solution can be verified in polynomial time by a deterministic machine.
+
+Another equivalent characterization is that NP problems can be solved in polynomial time by a nondeterministic Turing machine.
+
+### Important
+
+NP does **not** simply mean "not polynomial."
+
+---
+
+# 68. NP-Hard
+
+A problem is **NP-hard** if every problem in NP can be reduced to it using the relevant polynomial-time reduction.
+
+An NP-hard problem:
+
+- Need not be in NP.
+- Need not be a decision problem.
+
+---
+
+# 69. NP-Complete
+
+A problem is **NP-complete** if:
+
+1. It belongs to NP.
+2. It is NP-hard.
+
+Therefore:
+
+**NP-complete = NP + NP-hard**
+
+Examples:
+
+- SAT
+- 3-SAT
+- Clique decision problem
+- Vertex Cover decision problem
+- Hamiltonian Cycle decision problem
+
+---
+
+# 70. Polynomial-Time Reducibility
+
+Suppose problem A can be transformed into problem B in polynomial time.
+
+This can be written as:
+
+**A ≤p B**
+
+If A is known to be NP-hard and:
+
+**A ≤p B**
+
+then B is at least as hard as A, and this can help establish that B is NP-hard.
+
+### Important Direction
+
+To prove B is NP-hard, reduce a known hard problem **to B**, not B to the known hard problem.
+
+---
+
+# 71. Number Theoretic Algorithms
+
+Number-theoretic algorithms operate on integers and their properties.
+
+Important topics:
+
+- Greatest Common Divisor
+- Extended Euclidean algorithm
+- Modular arithmetic
+- Modular exponentiation
+- Prime numbers
+
+---
+
+# 72. Euclidean Algorithm
+
+The Euclidean algorithm finds:
+
+**gcd(a, b)**
+
+using repeated remainders.
+
+Example:
+
+Find gcd(48, 18).
+
+```text
+48 = 18 × 2 + 12
+18 = 12 × 1 + 6
+12 = 6 × 2 + 0
+```
+
+Therefore:
+
+**gcd(48, 18) = 6**
+
+---
+
+# 73. Extended Euclidean Algorithm
+
+The Extended Euclidean algorithm finds integers x and y such that:
+
+**ax + by = gcd(a,b)**
+
+It is useful for:
+
+- Modular inverses
+- Number theory
+- Cryptographic algorithms
+
+---
+
+# 74. Polynomial Arithmetic
+
+A polynomial can be represented using:
+
+- Array
+- Linked list
+
+Example:
+
+**P(x) = 5x³ + 2x + 7**
+
+Array representation can store coefficients according to exponent.
+
+Polynomial operations include:
+
+- Addition
+- Subtraction
+- Multiplication
+- Evaluation
+
+---
+
+# 75. Fast Fourier Transform
+
+**FFT = Fast Fourier Transform**
+
+FFT efficiently computes the Discrete Fourier Transform.
+
+The straightforward DFT computation takes approximately:
+
+**O(n²)**
+
+FFT can reduce this to:
+
+**O(n log n)**
+
+FFT is important in:
+
+- Signal processing
+- Polynomial multiplication
+- Image processing
+- Audio processing
+- Scientific computing
+
+### Important UGC NET Point
+
+**FFT → O(n log n)**
+
+---
+
+# 76. String Matching Algorithms
+
+String matching finds occurrences of a pattern in a text.
+
+Important algorithms:
+
+- Naive string matching
+- KMP
+- Rabin-Karp
+- Boyer-Moore
+
+---
+
+# 77. Naive String Matching
+
+The pattern is compared with the text at every possible position.
+
+If:
+
+- Text length = n
+- Pattern length = m
+
+Worst-case complexity is:
+
+**O(nm)**
+
+---
+
+# 78. KMP Algorithm
+
+**KMP = Knuth-Morris-Pratt**
+
+KMP avoids unnecessary re-comparisons using a prefix-function/LPS table.
+
+LPS means:
+
+**Longest Proper Prefix which is also a Suffix**
+
+Typical complexity:
+
+**O(n + m)**
+
+---
+
+# 79. Rabin-Karp Algorithm
+
+Rabin-Karp uses hashing to compare pattern and text windows.
+
+It uses a rolling hash to update the hash efficiently.
+
+Average-case behavior can be efficient, while the worst case can be:
+
+**O(nm)**
+
+depending on collisions and implementation.
+
+---
+
+# 80. Boyer-Moore Algorithm
+
+Boyer-Moore compares characters from right to left and uses shifts to skip portions of the text.
+
+Important heuristics include:
+
+- Bad-character rule
+- Good-suffix rule
+
+It is often very efficient in practical text searching.
+
+---
+
+# 81. Advanced Algorithms
+
+Advanced topics include:
+
+- Parallel algorithms
+- Approximation algorithms
+- Randomized algorithms
+
+---
+
+# 82. Parallel Algorithms
+
+A parallel algorithm divides computation among multiple processors or computing units.
+
+The goals include:
+
+- Reduce execution time
+- Increase throughput
+- Process large datasets efficiently
+
+Examples:
+
+- Parallel sorting
+- Parallel searching
+- Parallel merging
+
+---
+
+# 83. Parallel Sorting
+
+Sorting can be parallelized by dividing data among processors.
+
+A common strategy:
+
+1. Divide data.
+2. Sort partitions in parallel.
+3. Merge sorted partitions.
+
+Parallel merge sort is an example.
+
+---
+
+# 84. Parallel Searching
+
+Search operations can be divided among processors.
+
+Example:
+
+An array of one million elements can be divided among multiple processors.
+
+Each processor searches its assigned portion.
+
+The results are then combined.
+
+---
+
+# 85. Parallel Merging
+
+Two sorted lists can be merged using multiple processors by dividing the merging task into independent ranges.
+
+The objective is to reduce total execution time.
+
+---
+
+# 86. Approximation Algorithms
+
+Some optimization problems are computationally difficult.
+
+An approximation algorithm finds a solution that is close to the optimum within a known or useful bound.
+
+Important concepts:
+
+- Approximation ratio
+- Polynomial-time approximation
+- Trade-off between solution quality and computation time
+
+Approximation algorithms are commonly studied for NP-hard optimization problems.
+
+---
+
+# 87. Randomized Algorithms
+
+A randomized algorithm uses random choices during execution.
+
+Types include:
+
+### Las Vegas Algorithm
+
+Always produces a correct result, but running time may vary.
+
+### Monte Carlo Algorithm
+
+Has a bounded or controlled running time but may have a probability of producing an incorrect result.
+
+### Easy Comparison
+
+| Las Vegas | Monte Carlo |
+|---|---|
+| Always correct | May be incorrect with some probability |
+| Running time may vary | Usually controlled/bounded time |
+| Randomness affects time | Randomness can affect correctness |
+
+---
+
+# 88. Important Complexity Table
+
+| Operation/Algorithm | Typical Complexity |
+|---|---:|
+| Array access | O(1) |
+| Linear search | O(n) |
+| Binary search | O(log n) |
+| Stack push | O(1) |
+| Stack pop | O(1) |
+| Queue enqueue | O(1) |
+| Queue dequeue | O(1) |
+| BST search average | O(log n) |
+| BST search worst | O(n) |
+| AVL search | O(log n) |
+| Merge Sort | O(n log n) |
+| Quick Sort average | O(n log n) |
+| Quick Sort worst | O(n²) |
+| Heap Sort | O(n log n) |
+| BFS | O(V + E) |
+| DFS | O(V + E) |
+| Dijkstra with binary heap | O((V + E) log V) |
+| Bellman-Ford | O(VE) |
+| Floyd-Warshall | O(V³) |
+| Kruskal | O(E log E) |
+| Prim with binary heap | O(E log V) |
+| FFT | O(n log n) |
+| KMP | O(n + m) |
+
+---
+
+# 89. Important Algorithm Design Comparison
+
+| Technique | Main Idea | Examples |
+|---|---|---|
+| Divide and Conquer | Divide into independent subproblems | Merge Sort |
+| Dynamic Programming | Store overlapping subproblem results | Knapsack, LCS |
+| Greedy | Take locally best choice | Kruskal, Prim |
+| Backtracking | Explore and abandon invalid choices | N-Queens |
+| Branch and Bound | Explore optimization choices and prune using bounds | TSP |
+
+---
+
+# 90. Important Tree Comparison
+
+| Tree | Important Characteristic |
+|---|---|
+| Binary Tree | At most 2 children |
+| BST | Ordered binary tree |
+| AVL | Self-balancing BST |
+| B-tree | Balanced multiway search tree |
+| B+ tree | Records typically at leaves; linked leaves |
+| B* tree | Higher node occupancy |
+| Threaded Binary Tree | Uses otherwise unused pointers as threads |
+
+---
+
+# 91. Important Searching Comparison
+
+| Algorithm | Requirement | Complexity |
+|---|---|---:|
+| Linear Search | No sorting required | O(n) |
+| Binary Search | Sorted data | O(log n) |
+| Hash Search | Hash function/table | Average O(1) under suitable assumptions |
+
+---
+
+# 92. Important Graph Algorithm Comparison
+
+| Algorithm | Purpose |
+|---|---|
+| BFS | Graph traversal; shortest path in unweighted graph |
+| DFS | Graph traversal and structural analysis |
+| Dijkstra | Single-source shortest path with non-negative edges |
+| Bellman-Ford | Single-source shortest path with negative edges |
+| Floyd-Warshall | All-pairs shortest paths |
+| Kruskal | Minimum spanning tree |
+| Prim | Minimum spanning tree |
+| Ford-Fulkerson | Maximum flow |
+
+---
+
+# 93. Common UGC NET Mistakes
+
+### Mistake 1
+
+Thinking binary search works on unsorted data.
+
+**Correction:** Binary search requires sorted data.
+
+### Mistake 2
+
+Thinking BST is always O(log n).
+
+**Correction:** A highly skewed BST can have O(n) search time.
+
+### Mistake 3
+
+Thinking NP means "not polynomial."
+
+**Correction:** NP refers to polynomial-time verification of certificates for decision problems.
+
+### Mistake 4
+
+Using Dijkstra with negative edge weights.
+
+**Correction:** Standard Dijkstra requires non-negative edge weights.
+
+### Mistake 5
+
+Confusing BFS and DFS.
+
+**BFS → Queue**
+
+**DFS → Stack/Recursion**
+
+### Mistake 6
+
+Confusing MST with shortest path.
+
+**MST:** connects all vertices with minimum total edge weight.
+
+**Shortest path:** minimizes path distance between specified vertices.
+
+### Mistake 7
+
+Confusing dynamic programming with divide and conquer.
+
+**DP:** overlapping subproblems + stored results.
+
+**Divide and conquer:** independently solve subproblems and combine.
+
+### Mistake 8
+
+Assuming greedy always gives the optimum.
+
+Greedy works optimally only for problems having the appropriate greedy-choice property and optimal-substructure conditions.
+
+---
+
+# 94. UGC NET High-Priority Topics
+
+Focus strongly on:
+
+1. Array operations
+2. Sparse matrices
+3. Stack and queue
+4. Circular queue
+5. Priority queue
+6. Linked lists
+7. Tree terminology
+8. Tree traversals
+9. BST
+10. AVL rotations
+11. B-tree
+12. B+ tree
+13. B* tree
+14. Graph representation
+15. Sorting complexities
+16. Searching algorithms
+17. Hashing and collision resolution
+18. Big O, Big Omega and Big Theta
+19. Recurrence relations
+20. Master Theorem
+21. Divide and conquer
+22. Dynamic programming
+23. Greedy algorithms
+24. Backtracking
+25. Branch and bound
+26. Comparison sorting lower bound
+27. BFS and DFS
+28. Dijkstra
+29. Bellman-Ford
+30. Floyd-Warshall
+31. Kruskal and Prim
+32. Maximum flow
+33. P and NP
+34. NP-hard and NP-complete
+35. Polynomial reductions
+36. Euclidean algorithm
+37. FFT
+38. KMP
+39. Parallel algorithms
+40. Approximation algorithms
+41. Randomized algorithms
+
+---
+
+# 95. One-Minute Revision
+
+## Linear Structures
+
+**Array → indexed storage**
+
+**Stack → LIFO**
+
+**Queue → FIFO**
+
+**Priority Queue → priority-based removal**
+
+**Linked List → nodes connected by links**
+
+## Trees
+
+**BST → ordered binary tree**
+
+**AVL → balanced BST**
+
+**B-tree → multiway balanced tree**
+
+**B+ tree → data/record entries typically at leaves**
+
+**B* tree → high occupancy**
+
+## Graphs
+
+**BFS → Queue**
+
+**DFS → Stack/Recursion**
+
+**Dijkstra → non-negative weighted shortest paths**
+
+**Bellman-Ford → negative edges allowed**
+
+**Floyd-Warshall → all-pairs shortest paths**
+
+**Kruskal/Prim → MST**
+
+## Design Techniques
+
+**Divide and Conquer → Divide, solve, combine**
+
+**DP → Store repeated subproblems**
+
+**Greedy → Local best choice**
+
+**Backtracking → Try and undo**
+
+**Branch and Bound → Optimize and prune**
+
+## Complexity
+
+**O → upper bound**
+
+**Ω → lower bound**
+
+**Θ → tight bound**
+
+**Comparison sorting lower bound → Ω(n log n)**
+
+## Complexity Classes
+
+**P → polynomial-time solvable decision problems**
+
+**NP → polynomial-time verifiable decision problems**
+
+**NP-complete → NP + NP-hard**
+
+**NP-hard → at least as hard as every NP problem under the relevant reduction**
+
+---
+
+# 96. Final Exam Strategy
+
+For UGC NET, practice both **conceptual questions and numerical problems**.
+
+### Must-practice calculations
+
+- Big O
+- Big Omega
+- Big Theta
+- Recurrence relations
+- Master Theorem
+- AVL balance factors
+- Tree traversal
+- Hash table indexing
+- Sorting comparisons
+- Graph traversal
+- Shortest paths
+- MST
+- Maximum flow
+- Cyclomatic-style graph reasoning where applicable to algorithms
+- Probability/expected behavior in randomized algorithms when included in questions
+
+### Must-memorize differences
+
+- Stack vs Queue
+- Array vs Linked List
+- BST vs AVL
+- B-tree vs B+ tree
+- BFS vs DFS
+- Dijkstra vs Bellman-Ford
+- Kruskal vs Prim
+- Divide and Conquer vs Dynamic Programming
+- Greedy vs Dynamic Programming
+- Backtracking vs Branch and Bound
+- P vs NP
+- NP-hard vs NP-complete
+- Las Vegas vs Monte Carlo
+
+---
+
+# 97. Final Summary
+
+Data Structures and Algorithms is one of the most important problem-solving areas in Computer Science.
+
+The unit can be remembered as:
+
+**Data Structures → Complexity → Design Techniques → Lower Bounds → Graph Algorithms → Complexity Theory → Selected Algorithms → Advanced Algorithms**
+
+The most important facts are:
+
+- **Array access → O(1)**
+- **Binary Search → O(log n)**
+- **Merge Sort → O(n log n)**
+- **Quick Sort average → O(n log n)**
+- **Quick Sort worst → O(n²)**
+- **Heap Sort → O(n log n)**
+- **BFS → O(V + E)**
+- **DFS → O(V + E)**
+- **Dijkstra → non-negative edge weights**
+- **Bellman-Ford → can handle negative edges**
+- **Floyd-Warshall → all-pairs shortest paths**
+- **Kruskal/Prim → MST**
+- **FFT → O(n log n)**
+- **KMP → O(n + m)**
+- **Comparison sorting lower bound → Ω(n log n)**
+- **P and NP are classes of decision problems**
+- **NP-complete = NP + NP-hard**
+
+For UGC NET, do not only memorize the names of algorithms. Learn:
+
+**What problem does the algorithm solve?**
+
+**What data structure does it use?**
+
+**What is its time complexity?**
+
+**What assumptions does it require?**
+
+**When should it be used?**
+
+These five questions make algorithm-based UGC NET questions much easier.
