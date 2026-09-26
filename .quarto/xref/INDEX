@@ -13,5 +13,71 @@
   },
   "unit1/mathematical-logic.qmd": {
     "mathematical-logic.html": "dddc47bd"
+  },
+  "paper1.qmd": {
+    "paper1.html": "ce7531a3"
+  },
+  "paper2.qmd": {
+    "paper2.html": "cb3df4c2"
+  },
+  "unit1-discrete-structures-and-optimization.qmd": {
+    "unit1-discrete-structures-and-optimization.html": "22e2f313"
+  },
+  "unit1-teaching-aptitude.qmd": {
+    "unit1-teaching-aptitude.html": "8c33b59a"
+  },
+  "unit10-artificial-intelligence.qmd": {
+    "unit10-artificial-intelligence.html": "03adb164"
+  },
+  "unit10-higher-education-system.qmd": {
+    "unit10-higher-education-system.html": "35c67e02"
+  },
+  "unit2-computer-system-architecture.qmd": {
+    "unit2-computer-system-architecture.html": "241cfe7c"
+  },
+  "unit2-research-aptitude.qmd": {
+    "unit2-research-aptitude.html": "d6a773b1"
+  },
+  "unit3-comprehension.qmd": {
+    "unit3-comprehension.html": "5cf1545d"
+  },
+  "unit3-programming-languages-and-computer-graphics.qmd": {
+    "unit3-programming-languages-and-computer-graphics.html": "f2fd85e1"
+  },
+  "unit4-communication.qmd": {
+    "unit4-communication.html": "6ef26c7b"
+  },
+  "unit4-database-management-systems.qmd": {
+    "unit4-database-management-systems.html": "49709b3d"
+  },
+  "unit5-mathematical-reasoning.qmd": {
+    "unit5-mathematical-reasoning.html": "31bfadfc"
+  },
+  "unit5-system-software-and-operating-system.qmd": {
+    "unit5-system-software-and-operating-system.html": "fb9f4a2b"
+  },
+  "unit6-logical-reasoning.qmd": {
+    "unit6-logical-reasoning.html": "84701b07"
+  },
+  "unit6-software-engineering.qmd": {
+    "unit6-software-engineering.html": "3566cf67"
+  },
+  "unit7-data-interpretation.qmd": {
+    "unit7-data-interpretation.html": "9ffe183b"
+  },
+  "unit7-data-structures-and-algorithms.qmd": {
+    "unit7-data-structures-and-algorithms.html": "482dbc40"
+  },
+  "unit8-information-and-communication-technology.qmd": {
+    "unit8-information-and-communication-technology.html": "670d0778"
+  },
+  "unit8-theory-of-computation-and-compilers.qmd": {
+    "unit8-theory-of-computation-and-compilers.html": "2fa11ecb"
+  },
+  "unit9-data-communication-and-computer-networks.qmd": {
+    "unit9-data-communication-and-computer-networks.html": "788516d2"
+  },
+  "unit9-people-development-environment.qmd": {
+    "unit9-people-development-environment.html": "e2507c3d"
   }
 }
